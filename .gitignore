@@ -4,3 +4,7 @@ tempfile.txt
 *.gz
 log/*.log
 log/*.log.[0-9]
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
