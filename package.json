@@ -1,0 +1,19 @@
+{
+  "name": "nadel-eins-studio-website",
+  "version": "1.0.0",
+  "description": "Nadel Eins Studio Berlin ",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sara Bento de Castro",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "del": "^3.0.0"
+  }
+}
