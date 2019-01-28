@@ -3,3 +3,12 @@ $black: #2E3645;
 $lightblue: #C0D5ED;
 $red: #FF0000;
 $yellow:#FFEE00;
+$blue: #4A90E2;
+
+
+%button-style-simple {
+	color:$blue;
+	background-color: transparent;
+	border:none;
+	border-bottom: $blue 1px solid;
+}

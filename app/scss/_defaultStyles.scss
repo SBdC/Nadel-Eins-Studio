@@ -29,6 +29,7 @@ textarea {
 	font-family:  'Helvetica', 'Arial', sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
+	font-kerning: normal;
 }
 
 h1,
@@ -38,4 +39,17 @@ h4,
 h5,
 h6 {
 	clear: both;
+}
+
+
+h2 {
+	font-size:2.3em;
+}
+
+
+h3 {
+	
+font-size: 2em;color: #2E3645;
+text-align: center;
+line-height: 32px;
 }

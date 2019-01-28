@@ -20,7 +20,8 @@ select,
 textarea {
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-size: 16px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-kerning: normal; }
 
 h1,
 h2,
@@ -30,5 +31,90 @@ h5,
 h6 {
   clear: both; }
 
-h1 {
-  color: black; }
+h2 {
+  font-size: 2.3em; }
+
+h3 {
+  font-size: 2em;
+  color: #2E3645;
+  text-align: center;
+  line-height: 32px; }
+
+.about button, .co-work button, .services button {
+  color: #4A90E2;
+  background-color: transparent;
+  border: none;
+  border-bottom: #4A90E2 1px solid; }
+
+@supports (display: flex) {
+  body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; } }
+
+/*--------------------------------------------------------------
+nav
+--------------------------------------------------------------*/
+nav {
+  background-color: #2E3645;
+  height: 100vh;
+  width: 70vw;
+  padding-top: 129px;
+  padding-left: 30px;
+  display: none; }
+  nav ul {
+    list-style: none; }
+    nav ul li h2 {
+      line-height: 40px;
+      color: #EDEDED; }
+      nav ul li h2:hover {
+        color: #FF0000;
+        cursor: pointer; }
+
+/*--------------------------------------------------------------
+header
+--------------------------------------------------------------*/
+header {
+  margin: 129px 20px 0 20px; }
+  header .title {
+    max-width: 10%; }
+    header .title h1 {
+      color: #2E3645;
+      font-size: 3em;
+      line-height: 60px;
+      font-weight: 700; }
+    header .title h2 {
+      font-weight: 700;
+      color: #2E3645; }
+
+/*--------------------------------------------------------------
+About and co-work
+--------------------------------------------------------------*/
+.about, .co-work {
+  background-color: #C0D5ED;
+  padding: 0px 20px 25px; }
+  .about h2, .co-work h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white; }
+
+/*--------------------------------------------------------------
+services
+--------------------------------------------------------------*/
+.services .service-header-wrap-right {
+  float: right;
+  padding-left: 20px; }
+
+.services .service-header-wrap-left {
+  float: left;
+  padding-right: 20px; }
+
+.services h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #2E3645;
+  padding: 0px 20px 25px; }
+
+.services article {
+  border: 1px solid black;
+  padding: 0px 20px 25px; }
