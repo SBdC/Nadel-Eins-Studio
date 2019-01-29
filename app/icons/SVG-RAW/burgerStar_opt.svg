@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="143px" viewBox="0 0 150 143" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>burgerStar_opt</title>
+    <desc>Created with Sketch.</desc>
+    <g id="burgerStar_opt" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <polygon id="Path" fill="#000000" points="98.3 0.5 110 23.9 135.8 27.7 131.4 53.4 150 71.7 131.3 89.9 135.7 115.6 109.9 119.4 98.3 142.8 75.2 130.6 52 142.8 40.4 119.4 14.6 115.6 19 90 0.4 71.7 19 53.4 14.6 27.7 40.4 23.9 52.1 0.5 75.1 12.7 98.4 0.5"></polygon>
+            <path d="M45,53 L101,53 L101,60 L45,60 L45,53 Z M45,70 L101,70 L101,77 L45,77 L45,70 Z M45,87 L101,87 L101,94 L45,94 L45,87 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
