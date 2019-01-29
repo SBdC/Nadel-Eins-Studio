@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="150px" height="143px" viewBox="0 0 150 143" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
     <title>burgerStar_opt</title>
     <desc>Created with Sketch.</desc>
     <g id="burgerStar_opt" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g>
-            <polygon id="Path" fill="#000000" points="98.3 0.5 110 23.9 135.8 27.7 131.4 53.4 150 71.7 131.3 89.9 135.7 115.6 109.9 119.4 98.3 142.8 75.2 130.6 52 142.8 40.4 119.4 14.6 115.6 19 90 0.4 71.7 19 53.4 14.6 27.7 40.4 23.9 52.1 0.5 75.1 12.7 98.4 0.5"></polygon>
-            <path d="M45,53 L101,53 L101,60 L45,60 L45,53 Z M45,70 L101,70 L101,77 L45,77 L45,70 Z M45,87 L101,87 L101,94 L45,94 L45,87 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <g transform="translate(2.000000, 4.000000)">
+            <polygon id="Path" fill="#000000" points="29.49 0.15034965 33 7.18671329 40.74 8.32937063 39.42 16.0573427 45 21.5601399 39.39 27.0328671 40.71 34.7608392 32.97 35.9034965 29.49 42.9398601 22.56 39.2713287 15.6 42.9398601 12.12 35.9034965 4.38 34.7608392 5.7 27.0629371 0.12 21.5601399 5.7 16.0573427 4.38 8.32937063 12.12 7.18671329 15.63 0.15034965 22.53 3.81888112 29.52 0.15034965"></polygon>
+            <path d="M13.5,15.9370629 L30.3,15.9370629 L30.3,18.041958 L13.5,18.041958 L13.5,15.9370629 Z M13.5,21.048951 L30.3,21.048951 L30.3,23.1538462 L13.5,23.1538462 L13.5,21.048951 Z M13.5,26.1608392 L30.3,26.1608392 L30.3,28.2657343 L13.5,28.2657343 L13.5,26.1608392 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
         </g>
     </g>
 </svg>
