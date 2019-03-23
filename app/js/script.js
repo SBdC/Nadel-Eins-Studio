@@ -1,13 +1,26 @@
-console.log("hello world");
 
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-function openNav() {
-  document.getElementById("mySidenav").style.width = "70vw";
-  document.getElementById("main").style.marginLeft = "250px";
+
+const TRIGGER = document.querySelector('.trigger');
+const CLOSE = document.querySelector('.burger');
+const BURGERBLACK= document.querySelector('.burger-black');
+const BURGERWHITE= document.querySelector('.burger-white');
+const NAV= document.querySelector('.navigation');
+const MENUITEMS = document.querySelector('.menu-items');
+let screenReaderText = document.querySelector('.trigger .screen-reader-text');
+
+
+
+function revealMenu() {
+	console.log("hello world");
+    NAV.classList.toggle('menu-items');
+    BURGERBLACK.classList.toggle('burger-white');
+    BURGERWHITE.classList.toggle('burger-black');
+    BURGERWHITE.classList.toggle('burger-white');
+    MENUITEMS.classList.toggle('open');
+    TRIGGER.getAttribute('aria-expanded') == 'false' ? TRIGGER.setAttribute('aria-expanded', true) : TRIGGER.setAttribute('aria-expanded', false);
+    screenReaderText.innerHTML == 'Reveal menu' ? screenReaderText.innerHTML = 'Hide menu' : screenReaderText.innerHTML = 'Reveal menu';
 }
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-} 
+TRIGGER.addEventListener('click', revealMenu, false);
+
+CLOSE.addEventListener('click', revealMenu, false);

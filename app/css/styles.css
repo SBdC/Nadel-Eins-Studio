@@ -11,7 +11,8 @@ img {
 
 body {
   background-color: white;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100vw; }
 
 body,
 button,
@@ -46,6 +47,38 @@ h3 {
   border: none;
   border-bottom: #4A90E2 1px solid; }
 
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar */ }
+
 @supports (display: flex) {
   body {
     display: flex;
@@ -55,35 +88,46 @@ h3 {
 /*--------------------------------------------------------------
 nav
 --------------------------------------------------------------*/
-nav .burger {
-  width: 60px;
-  height: 60px;
-  background-position: 50% 50%;
-  position: fixed; }
-
-nav .icon-burgerStar_opt-copy {
-  display: none; }
-
-nav .icon-burgerStar_opt {
-  transition: all 0.3s ease-in-out; }
-  nav .icon-burgerStar_opt:hover {
-    transform: rotate(350deg);
-    cursor: pointer; }
-
-nav ul {
-  list-style: none;
-  display: none;
+.open {
+  display: block;
+  position: absolute;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
   background-color: #2E3645;
+  list-style: none;
   height: 100vh;
   width: 70vw;
   padding-top: 129px;
   padding-left: 30px; }
-  nav ul li h2 {
-    line-height: 40px;
-    color: #EDEDED; }
-    nav ul li h2:hover {
-      color: #FF0000;
-      cursor: pointer; }
+  .open li {
+    margin-top: -50px; }
+    .open li h2 {
+      line-height: 70px;
+      color: #EDEDED; }
+      .open li h2:hover {
+        color: #FF0000;
+        cursor: pointer; }
+
+.burger:hover {
+  cursor: pointer;
+  padding: 20px; }
+
+.burger-black {
+  width: 60px;
+  height: 60px;
+  background-position: 50% 50%;
+  position: fixed;
+  z-index: 2000;
+  transition: all 0.3s ease-in-out; }
+  .burger-black:hover {
+    transform: rotate(350deg); }
+
+.burger-white {
+  display: none; }
+
+.menu-items {
+  display: none; }
 
 /*--------------------------------------------------------------
 header
