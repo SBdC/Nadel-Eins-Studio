@@ -14,8 +14,9 @@
 </script>
 <noscript><link href="icons/grunticon/icons.fallback.css" rel="stylesheet"></noscript>
 </head>
-<body>
-
+<body id="site">
+	
+ 
 	 <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
 	<div class="contact"></div>
@@ -25,7 +26,7 @@
 	<section class="main-nav">
 
 	<div class="trigger burger-black icon-burgerStar_opt" aria-expanded="false"><span class="screen-reader-text">Reveal menu</span></div>
-	<div class="burger burger-white icon-burgerStar_opt-copy"></div>
+	<div class="burger burger-white icon-burgerStar_opt-copy" aria-expanded="true"><span class="screen-reader-text">Hide menu</span></div>
 	
 	<nav >
 	<ul class="navigation menu-items">
@@ -39,7 +40,8 @@
 
 	</nav>
 	</section><!-- .main-nav -->
-
+   
+    <div id="overlay"></div>
 
 	<header >
 		<div class="banner icon-nadel-eins-logo-record-banner">
@@ -149,6 +151,7 @@
 	<footer class="theEnd">
 		
 	</footer>
+
 </body>
 <script type="text/javascript" src="js/script.js"> </script>
 </html>

@@ -9,10 +9,14 @@ html {
 img {
   max-width: 100%; }
 
+html, body {
+  min-height: 100%; }
+
 body {
   background-color: white;
   margin: 0 auto;
-  width: 100vw; }
+  width: 100vw;
+  position: relative; }
 
 body,
 button,
@@ -88,12 +92,23 @@ Accessibility
 /*--------------------------------------------------------------
 nav
 --------------------------------------------------------------*/
+nav {
+  z-index: 100;
+  position: fixed; }
+
+.opaque {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 3s ease-in-;
+  background-color: rgba(0, 0, 0, 0.5) !important; }
+
 .open {
-  display: block;
-  position: absolute;
+  position: fixed;
   margin: 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
   background-color: #2E3645;
   list-style: none;
   height: 100vh;
@@ -103,8 +118,10 @@ nav
   .open li {
     margin-top: -50px; }
     .open li h2 {
-      line-height: 70px;
-      color: #EDEDED; }
+      margin-left: 20px;
+      line-height: 80px;
+      color: #EDEDED;
+      z-index: 100; }
       .open li h2:hover {
         color: #FF0000;
         cursor: pointer; }
@@ -121,7 +138,8 @@ nav
   z-index: 2000;
   transition: all 0.3s ease-in-out; }
   .burger-black:hover {
-    transform: rotate(350deg); }
+    transform: rotate(350deg);
+    cursor: pointer; }
 
 .burger-white {
   display: none; }
@@ -135,10 +153,11 @@ header
 header .banner {
   min-height: 480px;
   margin-bottom: 20px;
-  background-position: 70% 50%; }
+  background-position: 70% 50%;
+  z-index: 2000; }
   header .banner .title {
     max-width: 10%;
-    padding: 50px 20px 0 20px; }
+    padding: 50px 20px 0 25px; }
     header .banner .title h1 {
       color: #2E3645;
       font-size: 3em;
