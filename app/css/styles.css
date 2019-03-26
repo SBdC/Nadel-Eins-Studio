@@ -46,10 +46,18 @@ h3 {
   line-height: 32px; }
 
 .about button, .co-work button, .services button {
-  color: #4A90E2;
+  color: #2E3645;
+  letter-spacing: 0.02em;
   background-color: transparent;
-  border: none;
-  border-bottom: #4A90E2 1px solid; }
+  border: #4A90E2 1px solid;
+  cursor: pointer;
+  margin-top: 30px;
+  padding: 10px 5px;
+  box-shadow: #4A90E2 4px 4px 0 0;
+  transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
+  .about button:hover, .co-work button:hover, .services button:hover {
+    transform: translateX(2px) translateY(2px);
+    box-shadow: 2px 2px 0 0; }
 
 /*--------------------------------------------------------------
 Accessibility
@@ -168,6 +176,12 @@ header .banner {
       color: #2E3645; }
 
 /*--------------------------------------------------------------
+button
+--------------------------------------------------------------*/
+button.viewLess {
+  display: none; }
+
+/*--------------------------------------------------------------
 About and co-work
 --------------------------------------------------------------*/
 .about, .co-work {
@@ -183,13 +197,23 @@ About and co-work
 /*--------------------------------------------------------------
 services
 --------------------------------------------------------------*/
+.services .service-mastering {
+  border-top: 2px solid black; }
+
+.services .service {
+  padding-bottom: 80px;
+  padding-top: 40px; }
+
 .services .service-header-wrap-right {
+  position: relative;
   float: right;
-  padding-top: 10px; }
+  padding-left: 15px;
+  margin: 5px 0; }
 
 .services .service-header-wrap-left {
   float: left;
-  padding-top: 10px; }
+  padding-right: 15px;
+  margin: 5px 0; }
 
 .services .service-text-right {
   text-align: right; }

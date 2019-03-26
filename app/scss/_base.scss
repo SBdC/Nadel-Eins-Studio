@@ -164,6 +164,16 @@ header{
 	}
  }
 
+
+/*--------------------------------------------------------------
+button
+--------------------------------------------------------------*/
+
+
+button.viewLess{
+	display:none;
+}
+
 /*--------------------------------------------------------------
 About and co-work
 --------------------------------------------------------------*/
@@ -198,22 +208,33 @@ services
 
 .services {
 
+	.service-mastering{
+		border-top:2px solid black;
+	}
+
+	.service{
+		padding-bottom:80px;
+		padding-top:40px;
+	}
 	
-
-
-		.service-header-wrap-right{
+	.service-header-wrap-right{
+		    position:relative;
 			float:right;
-			padding-top: 10px;
+			padding-left:15px;
+			margin: 5px 0;
 		
 	}
-		.service-header-wrap-left{
+	.service-header-wrap-left{
 			float:left;
-			padding-top: 10px;
+			padding-right:15px;
+			margin: 5px 0;
 		
 
 	}
-  		.service-text-right{
+  		
+  	.service-text-right{
     	text-align: right;
+
     }
 
 	.icon {
@@ -247,9 +268,7 @@ services
 		border: 1px solid black;
 		padding: 20px 20px 25px;
 
-
 	}
-
 
 
 	button {
