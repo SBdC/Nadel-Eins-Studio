@@ -177,14 +177,28 @@ button.viewLess{
 /*--------------------------------------------------------------
 About and co-work
 --------------------------------------------------------------*/
+.arrow-left {
+  width:100%;
+  height:0;
+  border-top: 30px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-left: 500px solid $lightblue;
+}
 
+.arrow-right {
+  width:100%;
+  height:0;
+  border-top: 0px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-right: 500px solid $lightblue;
+ 
+}
 
 .about, .co-work {
 
 	background-color: $lightblue;
 	padding:40px 0;
-	border-bottom:2px solid $black;
-	border-top:2px solid $black;
+	
 
 .about-text-wrapper, .co-work-text-wrapper {
 	padding: 0px 20px 25px;
@@ -217,7 +231,7 @@ slider
 .slideshow-container {
   max-width: 100vw;
   position: relative;
-  margin-bottom:0px;
+  margin:20px;
   padding:0;
  
 }
@@ -225,6 +239,7 @@ slider
 .image-slider img{
   width:100%;
   height:auto;
+  border-radius:10px;
 }
 
 /* Hide the images by default */
@@ -236,14 +251,14 @@ slider
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: calc(50% - 40px);
+  top: calc(50% - 20px);
   width: auto;
   padding: 12px;
   margin: 0 5px;
   color: $lightgrey;
   font-weight: bold;
   font-size: 16px;
-  transition: 0.6s ease;
+  transition: 1s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
 
@@ -262,60 +277,72 @@ slider
 }
 
 /* Caption text */
-.img-text {
-  color:rgba($black, 0.8);
-  background-color:$lightblue;
-  padding: 4px 0px 10px 0px;
-  width: 100%;
+
+
+figcaption.img-text p{
+font-size:14px;
+  color:rgba(white, 0.8);
   text-align: center;
-  margin-top:-16px;
-  z-index:1000;
+  padding:0;
+
+
 }
 
+
+.img-text{
+background-color: black;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+padding:1px;
+margin-top: -14px;
+z-index:5000;
+position:absolute;
+width:100%;
+}
 
 /* The dots/bullets/indicators */
 
 .dots-wrapper{
-	left: calc(50% - 38px);
-	bottom:0;
-	padding-bottom:60px;
-	position:absolute;
-
-}
+	text-align:center;
+	
+     margin-top:50px;
+	}
 
 
 .dot {
   cursor: pointer;
-  height: 0.8em;
-  width: 0.8em;
-  margin: 0 4px;
+  height: 0.7em;
+  width: 0.7em;
+  padding: 6px;
+  margin: 4px ;
   background-color: $lightgrey;
-  border-radius: 50%;
+  border-radius:50%;
   display: inline-block;
   transition: background-color 0.6s ease;
-  box-shadow:$black 2px 2px 0 0 ;
+  box-shadow:$black 3px 3px 0 0 ;
 }
 
 .active, .dot:hover {
-  background-color: $red;
+  background-color: $blue;
     box-shadow:$black 1px 1px 0 0 ;
 }
 
 /* Fading animation */
+
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+ 
+  -webkit-animation: fade 0.5s ease-in;
+  animation: fade 0.5s ease-in;
+
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .3} 
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .3} 
   to {opacity: 1}
 }
 
@@ -330,6 +357,7 @@ services
 
 
 padding-top:40px;
+
 
 
 div.icon.icon-mastering-cloud{
@@ -351,21 +379,29 @@ h3.service-consulting-title,
 
 	.service{
 		padding-bottom:80px;
-		padding-top:40px;
+		padding-top:80px;
 	}
 	
 	.service-header-wrap-right{
 		    position:relative;
 			float:right;
-			padding-left:15px;
-			margin: 5px 0;
+			padding:0 10px 40px 0px;
+			margin: -45px 0;
+			transform: rotate(-2deg);
 		
 	}
+
+   .service-header-wrap-other{
+		
+            transform: rotate(-2deg);
+	}
+
+
 	.service-header-wrap-left{
 			float:left;
-			padding-right:15px;
-			margin: 5px 0;
-		
+			padding:0 0px 40px 10px;
+			margin: -25px 0;
+		   transform: rotate(-2deg);
 
 	}
   		
@@ -379,6 +415,7 @@ h3.service-consulting-title,
 		width: 170px;
 		background-position: 50% 20%;
 		margin: 0 auto;
+
 
 	}
 
@@ -402,7 +439,7 @@ h3.service-consulting-title,
 
 	article{
         margin:0 6px;
-		border-top: 2px solid black;
+		// border-top: 2px solid black;
 
 	}
 

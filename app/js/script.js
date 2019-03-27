@@ -55,6 +55,7 @@ let hideText = (e) =>  {
   console.log(e.target.id);
   const goUp = document.querySelector(`p[data-hide="${e.target.id}"]`);
   goUp.style.display ="none";
+  goUp.style.transition ="all 2s";
   let otherButton = document.getElementById(`${e.target.id}`);
   otherButton.style.display="none";
   let button = document.querySelector(`button[data-type="${e.target.id}"]`);
@@ -72,7 +73,7 @@ erases.forEach(erase => erase.addEventListener('click', hideText, false));
 
 //slider
 
-let slideIndex = 1;
+var slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
