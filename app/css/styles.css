@@ -18,6 +18,10 @@ body {
   width: 100vw;
   position: relative; }
 
+figure {
+  padding: 0;
+  margin: 0; }
+
 body,
 button,
 input,
@@ -52,7 +56,7 @@ h3 {
   border: #4A90E2 1px solid;
   cursor: pointer;
   margin-top: 30px;
-  padding: 10px 5px;
+  padding: 8px 10px;
   box-shadow: #4A90E2 4px 4px 0 0;
   transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
   .about button:hover, .co-work button:hover, .services button:hover {
@@ -186,59 +190,158 @@ About and co-work
 --------------------------------------------------------------*/
 .about, .co-work {
   background-color: #C0D5ED;
-  padding: 0px 20px 25px; }
+  padding: 40px 0;
+  border-bottom: 2px solid #2E3645;
+  border-top: 2px solid #2E3645; }
+  .about .about-text-wrapper, .about .co-work-text-wrapper, .co-work .about-text-wrapper, .co-work .co-work-text-wrapper {
+    padding: 0px 20px 25px; }
   .about h2, .co-work h2 {
     text-transform: uppercase;
     font-weight: 700;
     color: white; }
+  .about button, .co-work button {
+    margin-bottom: 40px; }
   .about .about-more-text, .co-work .about-more-text {
     display: none; }
 
 /*--------------------------------------------------------------
+slider
+--------------------------------------------------------------*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100vw;
+  position: relative;
+  margin-bottom: 0px;
+  padding: 0; }
+
+.image-slider img {
+  width: 100%;
+  height: auto; }
+
+/* Hide the images by default */
+.mySlides {
+  display: none; }
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 40px);
+  width: auto;
+  padding: 12px;
+  margin: 0 5px;
+  color: #EDEDED;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none; }
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px; }
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: #FF0000; }
+
+/* Caption text */
+.img-text {
+  color: rgba(46, 54, 69, 0.8);
+  background-color: #C0D5ED;
+  padding: 4px 0px 10px 0px;
+  width: 100%;
+  text-align: center;
+  margin-top: -16px;
+  z-index: 1000; }
+
+/* The dots/bullets/indicators */
+.dots-wrapper {
+  left: calc(50% - 38px);
+  bottom: 0;
+  padding-bottom: 60px;
+  position: absolute; }
+
+.dot {
+  cursor: pointer;
+  height: 0.8em;
+  width: 0.8em;
+  margin: 0 4px;
+  background-color: #EDEDED;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  box-shadow: #2E3645 2px 2px 0 0; }
+
+.active, .dot:hover {
+  background-color: #FF0000;
+  box-shadow: #2E3645 1px 1px 0 0; }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+/*--------------------------------------------------------------
 services
 --------------------------------------------------------------*/
-.services .service-mastering {
-  border-top: 2px solid black; }
-
-.services .service {
-  padding-bottom: 80px;
+.services {
   padding-top: 40px; }
-
-.services .service-header-wrap-right {
-  position: relative;
-  float: right;
-  padding-left: 15px;
-  margin: 5px 0; }
-
-.services .service-header-wrap-left {
-  float: left;
-  padding-right: 15px;
-  margin: 5px 0; }
-
-.services .service-text-right {
-  text-align: right; }
-
-.services .icon {
-  height: 110px;
-  width: 170px;
-  background-position: 50% 20%;
-  margin: 0 auto; }
-
-.services .icon-recording-cloud {
-  margin-top: -15px; }
-
-.services h3 {
-  margin-top: 5px; }
-
-.services h2 {
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #2E3645;
-  padding: 0px 20px; }
-
-.services article {
-  border: 1px solid black;
-  padding: 20px 20px 25px; }
-
-.services .service-more-text {
-  display: none; }
+  .services div.icon.icon-mastering-cloud {
+    margin-left: 20px; }
+  .services div.icon.icon-sound-design-cloud {
+    margin-right: 20px;
+    padding-left: 4px; }
+  .services h3.service-recording-title,
+  .services h3.service-live-prep-title,
+  .services h3.service-consulting-title {
+    margin-top: 15px; }
+  .services .service {
+    padding-bottom: 80px;
+    padding-top: 40px; }
+  .services .service-header-wrap-right {
+    position: relative;
+    float: right;
+    padding-left: 15px;
+    margin: 5px 0; }
+  .services .service-header-wrap-left {
+    float: left;
+    padding-right: 15px;
+    margin: 5px 0; }
+  .services .service-text-right {
+    text-align: right; }
+  .services .icon {
+    height: 110px;
+    width: 170px;
+    background-position: 50% 20%;
+    margin: 0 auto; }
+  .services p, .services button {
+    margin-left: 25px;
+    margin-right: 25px; }
+  .services h3 {
+    margin: 4px; }
+  .services h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #2E3645;
+    padding: 0px 20px; }
+  .services article {
+    margin: 0 6px;
+    border-top: 2px solid black; }
+  .services .service-more-text {
+    display: none; }

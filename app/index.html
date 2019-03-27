@@ -52,6 +52,7 @@
         </div>
 	</header>
 	<section id="about" class="about">
+		<div class="about-text-wrapper">
 		<h2 class="about-title">About</h2>
 		<article class="about-text">
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> 
@@ -59,9 +60,55 @@
 		</article>
 		<button id="read-about" data-type="less-about" class="readMore">Read More</button>
 		<button id="less-about" data-type="read-about" class="viewLess">View Less</button>
-		<figure class="image-slider">
-			<img src="" alt="">
-		</figure>
+		</div>				
+							<!-- Slideshow container -->
+					<div class="slideshow-container">
+
+					  <!-- Full-width images with number and caption text -->
+					  <div class="mySlides fade">
+					    <figure class="image-slider"><img alt="placeholder from unsplash"  src="img/studio-image-1.jpg"> </figure>
+					    <figcaption class="img-text"><p>recording</p></figcaption>
+					  
+					  </div>
+
+					  <div class="mySlides fade">
+					  <figure class="image-slider"><img alt="placeholder from unsplash"  src="img/studio-image-2.jpg"> </figure>
+					   <figcaption class="img-text"><p>mixing</p></figcaption>
+					   
+					  </div>
+
+					  <div class="mySlides fade">
+					    <figure class="image-slider"><img alt="placeholder from unsplash"  src="img/studio-image-3.jpg"> </figure>
+					     <figcaption class="img-text"><p>consulting</p></figcaption>
+					    
+					  </div>
+
+					    <div class="mySlides fade">
+					    <figure class="image-slider"><img alt="placeholder from unsplash" src="img/studio-image-4.jpg"> </figure>
+					     <figcaption class="img-text"><p>mastering</p></figcaption>
+					    
+					  </div>
+
+									<!-- The dots/circles -->
+					<div class="dots-wrapper">
+					  <span class="dot" onclick="currentSlide(1)"></span> 
+					  <span class="dot" onclick="currentSlide(2)"></span> 
+					  <span class="dot" onclick="currentSlide(3)"></span> 
+					  <span class="dot" onclick="currentSlide(4)"></span> 
+					</div>
+
+						
+					  <!-- Next and previous buttons -->
+					  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				
+
+
+					</div>
+					
+
+				
 	</section>
 	<section id="services" class="services">
 		<h2 class="services-title">Services</h2>
@@ -136,10 +183,12 @@
 		</article>
 	</section>
 		<section id="co-work" class="co-work">
+			<div class="co-work-text-wrapper">
 			<h2 class="co-work-title">Co-Work</h2>
 				<article class="co-work-text">
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> 
 				</article>
+			</div>
 	</section>
 	<section class="music">
 	</section>
