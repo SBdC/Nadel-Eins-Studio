@@ -8,12 +8,12 @@ const BURGERWHITE= document.querySelector('.burger-white');
 const NAV= document.querySelector('.navigation');
 const MENUITEMS = document.querySelector('.menu-items');
 let screenReaderText = document.querySelector('.trigger .screen-reader-text');
-let points = Array.from(document.getElementsByTagName('li'));
+let points = Array.from(document.querySelectorAll('.nav-list'));
 
 
 function revealMenu(e) {
- 
-	OVERLAY.classList.toggle('opaque');
+    
+	  OVERLAY.classList.toggle('opaque');
     NAV.classList.toggle('menu-items');
     BURGERBLACK.classList.toggle('burger-white');
     BURGERWHITE.classList.toggle('burger-black');
@@ -52,7 +52,7 @@ let revealText = (e) =>  {
 
 let hideText = (e) =>  {
  
-  console.log(e.target.id);
+  
   const goUp = document.querySelector(`p[data-hide="${e.target.id}"]`);
   goUp.style.display ="none";
   goUp.style.transition ="all 2s";
@@ -73,8 +73,28 @@ erases.forEach(erase => erase.addEventListener('click', hideText, false));
 
 //slider
 
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
+const SLIDESHOW  = document.getElementById("slideshow");
+let captions =  Array.from(document.querySelectorAll('.img-text'));
+
+function revealCaption(){
+
+captions.forEach(caption=> caption.classList.add("img-text-reveal"));
+captions.forEach(caption=> caption.classList.remove("img-text"));
+
+}
+
+function hideCaption(){
+
+captions.forEach(caption=> caption.classList.remove("img-text-reveal"));
+captions.forEach(caption=> caption.classList.add("img-text"));
+
+}
+
+slideshow.addEventListener('mouseout', hideCaption, false)
+
+slideshow.addEventListener('mouseover', revealCaption, false)
 
 // Next/previous controls
 function plusSlides(n) {
