@@ -36,7 +36,8 @@ body,
 button,
 input,
 select,
-textarea {
+textarea,
+p {
 	font-family:  'Helvetica', 'Arial', sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
@@ -54,13 +55,13 @@ h6 {
 
 
 h2 {
-	font-size:2.3em;
+font-size:2.3em;
+text-transform:uppercase;
 }
 
 
 h3 {
-	
-font-size: 2em;color: #2E3645;
-text-align: center;
+font-size: 1.6em;
 line-height: 32px;
 }
+
