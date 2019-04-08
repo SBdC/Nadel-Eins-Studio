@@ -370,7 +370,7 @@ slider
 }
 
 
-.dot {
+.dots {
     cursor: pointer;
     height: 0.7em;
     width: 0.7em;
@@ -383,7 +383,7 @@ slider
 }
 
 .active,
-.dot:hover {
+.dots:hover {
    transform:translateX(2px) translateY(2px);
 		box-shadow: 2px 2px 0 0 ;
 		box-shadow:$blue 2px 2px 0 0 ;

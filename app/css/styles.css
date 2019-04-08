@@ -51,7 +51,7 @@ h3 {
   line-height: 32px; }
 
 .about button,
-.co-work button, .dot, .services button {
+.co-work button, .dots, .services button {
   color: #2E3645;
   letter-spacing: 0.02em;
   background-color: white;
@@ -62,7 +62,7 @@ h3 {
   box-shadow: #4A90E2 4px 4px 0 0;
   transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
   .about button:hover,
-  .co-work button:hover, .dot:hover, .services button:hover {
+  .co-work button:hover, .dots:hover, .services button:hover {
     transform: translateX(2px) translateY(2px);
     box-shadow: 2px 2px 0 0; }
 
@@ -312,7 +312,7 @@ slider
   margin-top: 30px;
   margin-bottom: 30px; }
 
-.dot {
+.dots {
   cursor: pointer;
   height: 0.7em;
   width: 0.7em;
@@ -322,7 +322,7 @@ slider
   display: inline-block; }
 
 .active,
-.dot:hover {
+.dots:hover {
   transform: translateX(2px) translateY(2px);
   box-shadow: 2px 2px 0 0;
   box-shadow: #4A90E2 2px 2px 0 0;

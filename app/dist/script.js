@@ -9,8 +9,6 @@ const MENUITEMS = document.querySelector(".menu-items");
 let screenReaderText = document.querySelector(".trigger .screen-reader-text");
 let points = Array.from(document.querySelectorAll(".nav-list"));
 
-
-
 function revealMenu() {
     OVERLAY.classList.toggle("opaque");
     NAV.classList.toggle("menu-items");
@@ -28,16 +26,13 @@ OVERLAY.addEventListener("click", revealMenu, false);
 TRIGGER.addEventListener("click", revealMenu, false);
 CLOSE.addEventListener("click", revealMenu, false);
 
-
-
 //READ MORE
 
 
 let reads = Array.from(document.querySelectorAll(".readMore"));
 let erases = Array.from(document.querySelectorAll(".viewLess"));
 
-
-let revealText = (e) => {
+let revealText = e => {
 
     let dropDown = document.querySelector(`p[data-key="${e.target.id}"]`);
     dropDown.style.display = "block";
@@ -47,7 +42,7 @@ let revealText = (e) => {
     otherButton.style.display = "inline-block";
 };
 
-let hideText = (e) => {
+let hideText = e => {
 
     const goUp = document.querySelector(`p[data-hide="${e.target.id}"]`);
     goUp.style.display = "none";
@@ -56,14 +51,10 @@ let hideText = (e) => {
     otherButton.style.display = "none";
     let button = document.querySelector(`button[data-type="${e.target.id}"]`);
     button.style.display = "inline-block";
-
 };
-
 
 reads.forEach(read => read.addEventListener("click", revealText, false));
 erases.forEach(erase => erase.addEventListener("click", hideText, false));
-
-
 
 //slider
 
@@ -79,51 +70,43 @@ function revealCaption() {
 
     captions.forEach(caption => caption.classList.add("img-text-reveal"));
     captions.forEach(caption => caption.classList.remove("img-text"));
-
 }
 
 function hideCaption() {
 
     captions.forEach(caption => caption.classList.remove("img-text-reveal"));
     captions.forEach(caption => caption.classList.add("img-text"));
-
 }
 
 SLIDESHOW.addEventListener("mouseout", hideCaption, false);
 SLIDESHOW.addEventListener("mouseover", revealCaption, false);
 
-
 // Next/previous controls
 function plusSlides() {
     showSlides(slideIndex += 1);
-   
 }
 function minusSlides() {
     showSlides(slideIndex -= 1);
-
-  
-   
 }
 
 // buttons image controls
 
 function currentSlide(n) {
- 
-  showSlides(slideIndex = `${n.target.dataset.id}`);
+
+    showSlides(slideIndex = `${n.target.dataset.id}`);
 }
 
-
-
-
 function showSlides(n) {
-    
+
     var i;
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dots");
-    if (n > slides.length) 
-      { slideIndex = 1; }
-    if (n < 1) 
-      { slideIndex = slides.length; }
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
@@ -132,13 +115,8 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
- 
 }
 
 prev.addEventListener("click", minusSlides, false);
 next.addEventListener("click", plusSlides, false);
 dots.forEach(dot => dot.addEventListener("click", currentSlide, false));
-
-
-
-
