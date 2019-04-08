@@ -11,7 +11,10 @@ img {
 
 html, body {
   min-height: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.5; }
 
 body {
   background-color: white;
@@ -29,9 +32,7 @@ input,
 select,
 textarea,
 p {
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 1em;
   font-kerning: normal; }
 
 h1,
@@ -42,13 +43,15 @@ h5,
 h6 {
   clear: both; }
 
+h1 {
+  font-size: 3em; }
+
 h2 {
   font-size: 2.3em;
   text-transform: uppercase; }
 
 h3 {
-  font-size: 1.6em;
-  line-height: 32px; }
+  font-size: 1.6em; }
 
 .about button,
 .co-work button, .dots, .services button {
@@ -141,15 +144,20 @@ nav {
   padding-left: 10px; }
   .open li {
     margin-top: -110px;
-    margin-left: 40px; }
-    .open li .nav-top {
-      color: #C0D5ED;
-      padding-bottom: 30px; }
+    margin-left: 14px; }
     .open li h2 {
       line-height: 140px;
       color: #EDEDED;
       z-index: 100; }
       .open li h2:hover {
+        color: #FF0000;
+        cursor: pointer; }
+    .open li h3 {
+      line-height: 20px;
+      color: #C0D5ED;
+      padding-bottom: 100px;
+      padding-top: 50px; }
+      .open li h3:hover {
         color: #FF0000;
         cursor: pointer; }
 
@@ -188,7 +196,6 @@ header .banner {
     padding: 50px 20px 0 25px; }
     header .banner .title h1 {
       color: #2E3645;
-      font-size: 3em;
       line-height: 50px;
       font-weight: 700; }
     header .banner .title h2 {
@@ -395,7 +402,7 @@ services
 .music {
   padding-top: 5em; }
   .music .cards {
-    margin: 0;
+    margin: 10px;
     padding: 0; }
   .music .music-text-wrapper {
     padding: 0px 20px 25px; }
@@ -408,16 +415,3 @@ services
   .music ul {
     list-style: none;
     text-align: center; }
-    .music ul li h3 {
-      line-height: 8px; }
-  .music figure img {
-    display: none; }
-  .music .icon-play {
-    display: inline-block; }
-  .music .icon {
-    height: 120px;
-    width: 120px;
-    background-position: 50% 50%;
-    margin-bottom: -40px;
-    margin-top: -30px;
-    padding: 0; }
