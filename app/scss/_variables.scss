@@ -3,7 +3,7 @@ $black: #2E3645;
 $lightblue: #C0D5ED;
 $red: #FF0000;
 $yellow:#FFEE00;
-$blue: #4A90E2;
+$blue: #449AFF;
 
 
 %button-style-simple {
@@ -21,4 +21,15 @@ $blue: #4A90E2;
 		transform:translateX(2px) translateY(2px);
 		box-shadow: 2px 2px 0 0 ;
 	} 
+}
+
+
+%icon-cloud-style{
+	  height: 113px;
+       width: 178px;
+       background-position: 50% 50%;
+       background-size: cover;
+       margin: 0;
+       padding: 0;
+     
 }

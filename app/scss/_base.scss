@@ -120,7 +120,7 @@ nav {
     background-color: $black;
     list-style: none;
     height: 100vh;
-    width: 70vw;
+    width: 250px;
     padding-top: 129px;
     padding-left: 10px;
 
@@ -200,20 +200,37 @@ header
 
 header {
 
+    .icon-cloud-line{
+        position: absolute;
+        right:15%;
+        @extend %icon-cloud-style;
+
+        p{
+            margin-left: 50px;
+            margin-top: 65px;
+            color:$blue;
+            &:hover{
+                color:$black;
+                cursor:pointer;
+            }
+        }
+    }
+
+
     .banner {
-        min-height: 480px;
-        margin-bottom: 20px;
-        background-position: 70% 50%;
+        margin-top:60px;
+        min-height: 600px;
+        background-position: 50% 50%;
         z-index: 2000;
 
 
 
         .title {
             max-width: 10%;
-            padding: 50px 20px 0 25px;
+            padding: 40px 20px 0 25px;
 
             h1 {
-                color: $black;
+                color: $red;
                 line-height: 50px;
                 font-weight: 700;
 
@@ -221,6 +238,7 @@ header {
 
 
             h2 {
+                margin-top:-10px;
                 font-weight: 700;
                 color: $black;
             }
@@ -275,16 +293,20 @@ About and co-work
 .about,
 .co-work {
 
-    // background-color: $lightblue;
-    padding: 40px 0;
+    padding: 20px 0;
 
 
     .about-text-wrapper,
     .co-work-text-wrapper {
         padding: 0px 20px 25px;
+
     }
+         
 
-
+    p{
+          background-color: white;
+          padding: 10px;
+    }
 
 
     h2 {
@@ -300,6 +322,7 @@ About and co-work
 
     .about-more-text {
         display: none;
+          background-color: white;
     }
 
 }
@@ -371,14 +394,13 @@ slider
 }
 
 
-
-.img-text-reveal {
-    background-color: rgba($black, 0.3);
-    margin-top: -58px;
+.img-text-reveal p {
+    background-color: transparent;
+    margin-top: -38px;
     z-index: 5000;
     position: absolute;
     width: 100%;
-    padding: 0;
+    padding: 20px 0;
     color: $yellow;
     text-align: center;
     padding: 0;
@@ -466,31 +488,29 @@ services
 
 
     .service {
-        padding-bottom: 80px;
-        padding-top: 80px;
+        
+        background-color: white;
+        margin:30px 0;
+        padding-top:20px;
+         
 
     }
 
     .service-header-wrap-right {
-        position: relative;
+    
         float: right;
-        padding: 0 10px 40px 0px;
-        margin: -45px 0;
-        transform: rotate(-2deg);
-
+         
+       
     }
 
-    .service-header-wrap-other {
-
-        transform: rotate(-2deg);
-    }
+ 
 
 
     .service-header-wrap-left {
         float: left;
-        padding: 0 0px 40px 10px;
-        margin: -25px 0;
-        transform: rotate(-2deg);
+        
+       
+        
 
     }
 
@@ -500,19 +520,16 @@ services
     }
 
     .icon {
-        height: 113px;
-        width: 178px;
-        background-position: 50% 50%;
-        margin: 0;
-        padding: 0;
+       @extend %icon-cloud-style;
 
     }
 
 
     p,
     button {
-        margin-left: 25px;
-        margin-right: 25px;
+
+        margin: 2px 25px 20px 25px;
+       
     }
 
 
@@ -564,15 +581,18 @@ services
         width: 90%;
         background-color: white;
         padding: 10px;
+        margin:10px;
 
     }
 
     ul {
         list-style: none;
         text-align: center;
+         line-height:25px;
 
 
     }
+
 
 
 

@@ -1,105 +1,126 @@
 
+.icon-burgerStar_opt-2 {
+	background-image: url('png/burgerStar_opt-2.png');
+	background-repeat: no-repeat;
+enhanceSVG:true;
+
+}
+
+.icon-burgerStar_opt-3 {
+	background-image: url('png/burgerStar_opt-3.png');
+	background-repeat: no-repeat;
+enhanceSVG:true;
+
+}
+
 .icon-burgerStar_opt-copy {
 	background-image: url('png/burgerStar_opt-copy.png');
 	background-repeat: no-repeat;
+enhanceSVG:true;
+
 }
 
 .icon-burgerStar_opt {
 	background-image: url('png/burgerStar_opt.png');
 	background-repeat: no-repeat;
+enhanceSVG:true;
+
 }
 
-.icon-cloud-darker {
-	background-image: url('png/cloud-darker.png');
+.icon-cloud-line {
+	background-image: url('png/cloud-line.png');
 	background-repeat: no-repeat;
+enhanceSVG:true;
+
 }
 
-.icon-cloud-lighter {
-	background-image: url('png/cloud-lighter.png');
+.icon-Consulting {
+	background-image: url('png/Consulting.png');
 	background-repeat: no-repeat;
+enhanceSVG:true;
+
 }
 
-.icon-consulting-cloud {
-	background-image: url('png/consulting-cloud.png');
+.icon-consuting-cloud {
+	background-image: url('png/consuting-cloud.png');
 	background-repeat: no-repeat;
+enhanceSVG:true;
+
 }
 
-.icon-consulting {
-	background-image: url('png/consulting.png');
+.icon-Live prep {
+	background-image: url('png/Live prep.png');
 	background-repeat: no-repeat;
-}
+enhanceSVG:true;
 
-.icon-down {
-	background-image: url('png/down.png');
-	background-repeat: no-repeat;
 }
 
 .icon-live-prep-cloud {
 	background-image: url('png/live-prep-cloud.png');
 	background-repeat: no-repeat;
-}
+enhanceSVG:true;
 
-.icon-live-prep {
-	background-image: url('png/live-prep.png');
-	background-repeat: no-repeat;
 }
 
 .icon-mastering-cloud {
 	background-image: url('png/mastering-cloud.png');
 	background-repeat: no-repeat;
+enhanceSVG:true;
+
 }
 
 .icon-mastering {
 	background-image: url('png/mastering.png');
 	background-repeat: no-repeat;
+enhanceSVG:true;
+
 }
 
 .icon-mixing-cloud {
 	background-image: url('png/mixing-cloud.png');
 	background-repeat: no-repeat;
+enhanceSVG:true;
+
 }
 
 .icon-mixing {
 	background-image: url('png/mixing.png');
 	background-repeat: no-repeat;
+enhanceSVG:true;
+
 }
 
 .icon-nadel-eins-logo-record-banner {
 	background-image: url('png/nadel-eins-logo-record-banner.png');
 	background-repeat: no-repeat;
-}
+enhanceSVG:true;
 
-.icon-play {
-	background-image: url('png/play.png');
-	background-repeat: no-repeat;
 }
 
 .icon-recording-cloud {
 	background-image: url('png/recording-cloud.png');
 	background-repeat: no-repeat;
+enhanceSVG:true;
+
 }
 
 .icon-recording {
 	background-image: url('png/recording.png');
 	background-repeat: no-repeat;
+enhanceSVG:true;
+
 }
 
-.icon-slide-left {
-	background-image: url('png/slide-left.png');
+.icon-sound design {
+	background-image: url('png/sound design.png');
 	background-repeat: no-repeat;
-}
+enhanceSVG:true;
 
-.icon-slide-right {
-	background-image: url('png/slide-right.png');
-	background-repeat: no-repeat;
 }
 
 .icon-sound-design-cloud {
 	background-image: url('png/sound-design-cloud.png');
 	background-repeat: no-repeat;
-}
+enhanceSVG:true;
 
-.icon-sound-design {
-	background-image: url('png/sound-design.png');
-	background-repeat: no-repeat;
 }
