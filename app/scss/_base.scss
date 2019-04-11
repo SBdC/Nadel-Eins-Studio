@@ -125,13 +125,13 @@ nav {
     padding-left: 10px;
 
     li {
-        margin-top: -110px;
+        
         margin-left: 14px;
 
 
         h2 {
 
-            line-height: 140px;
+            line-height: 40px;
             color: $lightgrey;
             z-index: 100;
 
@@ -141,21 +141,10 @@ nav {
             }
         }
 
-        h3 {
-            line-height: 20px;
-            color: $lightblue;
-            padding-bottom: 100px;
-            padding-top: 50px;
-
-            &:hover {
-                color: $red;
-                cursor: pointer;
-            }
-        }
+      
     }
 
 }
-
 
 
 
@@ -166,16 +155,16 @@ nav {
 }
 
 .burger-black {
-    margin: 2px 0 0 3px;
-    width: 60px;
-    height: 60px;
+    margin: 8px 0 0 5px;
+    width: 63px;
+    height: 63px;
     background-position: 50% 50%;
     position: fixed;
     z-index: 2000;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s  ease-in;
 
     &:hover {
-        transform: rotate(350deg);
+        transform: rotate(330deg);
         cursor: pointer;
 
     }
@@ -185,6 +174,7 @@ nav {
 
 .burger-white {
     display: none;
+
 }
 
 
