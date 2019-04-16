@@ -54,7 +54,7 @@ h3 {
   font-size: 1.6em; }
 
 .about button,
-.co-work button, .dots, .services button {
+.co-work button, .dots, .services button, .music .load, .prices button {
   color: #2E3645;
   letter-spacing: 0.02em;
   background-color: white;
@@ -65,11 +65,11 @@ h3 {
   box-shadow: #449AFF 4px 4px 0 0;
   transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
   .about button:hover,
-  .co-work button:hover, .dots:hover, .services button:hover {
+  .co-work button:hover, .dots:hover, .services button:hover, .music .load:hover, .prices button:hover {
     transform: translateX(2px) translateY(2px);
     box-shadow: 2px 2px 0 0; }
 
-header .icon-cloud-line, .services .icon {
+header .icon-cloud-line, .services .icon, .prices .icon {
   height: 113px;
   width: 178px;
   background-position: 50% 50%;
@@ -120,9 +120,11 @@ Accessibility
     flex-direction: column; } }
 
 body {
-  background-image: url("../img/cable-test.png");
-  background-position: top left;
-  background-size: 60%; }
+  background-image: url("../img/cable-test-6.svg");
+  background-position: bottom center;
+  background-size: 200%;
+  background-repeat: repeat;
+  background-attachment: fixed; }
 
 /*--------------------------------------------------------------
 nav
@@ -171,7 +173,7 @@ nav {
   background-position: 50% 50%;
   position: fixed;
   z-index: 2000;
-  transition: all 0.4s  ease-in; }
+  transition: all 0.4s ease-in; }
   .burger-black:hover {
     transform: rotate(330deg);
     cursor: pointer; }
@@ -220,53 +222,38 @@ button.viewLess {
   display: none; }
 
 /*--------------------------------------------------------------
+sections
+--------------------------------------------------------------*/
+section {
+  padding: 20px 0; }
+  section .about-text-wrapper,
+  section .co-work-text-wrapper,
+  section .music-text-wrapper,
+  section .prices-text-wrapper {
+    padding: 0px 20px 25px; }
+
+/*--------------------------------------------------------------
 About and co-work
 --------------------------------------------------------------*/
-.arrow-left {
-  width: 100%;
-  height: 0;
-  border-top: 60px solid transparent;
-  border-bottom: 0px solid transparent;
-  border-left: 500px solid #C0D5ED; }
+.about p,
+.co-work p {
+  background-color: white;
+  padding: 10px; }
 
-.arrow-left-grey {
-  width: 100%;
-  height: 0;
-  border-top: 60px solid transparent;
-  border-bottom: 0px solid transparent;
-  border-left: 500px solid #EDEDED; }
+.about h2,
+.co-work h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #449AFF; }
 
-.arrow-right {
-  width: 100%;
-  height: 0;
-  border-top: 0px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-right: 500px solid #C0D5ED; }
+.about button,
+.co-work button {
+  margin-bottom: 40px; }
 
-.about,
-.co-work {
-  padding: 20px 0; }
-  .about .about-text-wrapper,
-  .about .co-work-text-wrapper,
-  .co-work .about-text-wrapper,
-  .co-work .co-work-text-wrapper {
-    padding: 0px 20px 25px; }
-  .about p,
-  .co-work p {
-    background-color: white;
-    padding: 10px; }
-  .about h2,
-  .co-work h2 {
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #449AFF; }
-  .about button,
-  .co-work button {
-    margin-bottom: 40px; }
-  .about .about-more-text,
-  .co-work .about-more-text {
-    display: none;
-    background-color: white; }
+.about .about-more-text,
+.co-work .about-more-text {
+  display: none;
+  background-color: white; }
 
 /*--------------------------------------------------------------
 slider
@@ -378,9 +365,10 @@ services
     text-align: center;
     margin-top: -5px; }
   .services .service {
+    border: 3px solid #C0D5ED;
     background-color: white;
-    margin: 30px 0;
-    padding-top: 20px; }
+    margin: 20px 10px;
+    padding: 30px 30px; }
   .services .service-header-wrap-right {
     float: right; }
   .services .service-header-wrap-left {
@@ -389,7 +377,7 @@ services
     text-align: right; }
   .services p,
   .services button {
-    margin: 2px 25px 20px 25px; }
+    margin: 2px 5px 20px 5px; }
   .services h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -405,16 +393,56 @@ services
   .music .cards {
     margin: 10px;
     padding: 0; }
-  .music .music-text-wrapper {
-    padding: 0px 20px 25px; }
   .music .card {
     display: inline-block;
-    border: 1px solid #2E3645;
+    border: 3px solid #C0D5ED;
     width: 90%;
     background-color: white;
     padding: 10px;
-    margin: 10px; }
+    margin: 20px; }
   .music ul {
     list-style: none;
     text-align: center;
     line-height: 25px; }
+    .music ul h3 {
+      color: #449AFF; }
+    .music ul h3:nth-of-type(2n) {
+      color: #2E3645;
+      font-style: italic;
+      font-weight: normal; }
+  .music .load {
+    margin: 0 auto;
+    display: block; }
+  .music .visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0); }
+
+.prices {
+  background-color: #2E3645;
+  padding: 40px 0px; }
+  .prices .prices-text {
+    margin-bottom: 60px; }
+  .prices h2 {
+    color: #449AFF; }
+  .prices h3 {
+    color: #C0D5ED;
+    text-align: center; }
+  .prices p {
+    color: #EDEDED;
+    text-align: center; }
+  .prices .icon {
+    height: 90px;
+    width: 90px;
+    display: block;
+    margin: 0 auto; }
+  .prices .readMore {
+    display: block;
+    margin: 0 auto; }
+  .prices button {
+    background-color: #2E3645;
+    color: white;
+    border: #C0D5ED 1px solid;
+    box-shadow: #C0D5ED 4px 4px 0 0; }
+  .prices .prices-more-text {
+    display: none; }

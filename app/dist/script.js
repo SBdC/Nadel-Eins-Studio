@@ -39,7 +39,8 @@ let revealText = e => {
     let button = document.getElementById(`${e.target.id}`);
     button.style.display = "none";
     let otherButton = document.querySelector(`button[data-type="${e.target.id}"]`);
-    otherButton.style.display = "inline-block";
+    otherButton.style.display = "block";
+    otherButton.style.margin = "0 auto";
 };
 
 let hideText = e => {
@@ -50,7 +51,7 @@ let hideText = e => {
     let otherButton = document.getElementById(`${e.target.id}`);
     otherButton.style.display = "none";
     let button = document.querySelector(`button[data-type="${e.target.id}"]`);
-    button.style.display = "inline-block";
+    button.style.display = "block";
 };
 
 reads.forEach(read => read.addEventListener("click", revealText, false));
@@ -120,3 +121,51 @@ function showSlides(n) {
 prev.addEventListener("click", minusSlides, false);
 next.addEventListener("click", plusSlides, false);
 dots.forEach(dot => dot.addEventListener("click", currentSlide, false));
+
+//load more music albums
+
+let parent = document.querySelector("ul"),
+    items = parent.querySelectorAll("li"),
+    loadMoreBtn = document.querySelector("#loadMore"),
+    loadLessBtn = document.querySelector("#loadless"),
+    maxItems = 10,
+    hiddenClass = "visually-hidden",
+    showClass = "visually";
+
+[].forEach.call(items, function (item, idx) {
+    if (idx > maxItems - 1) {
+        item.classList.add(hiddenClass);
+    }
+});
+
+loadMoreBtn.addEventListener("click", function () {
+
+    [].forEach.call(document.querySelectorAll("." + hiddenClass), function (item, idx) {
+        console.log(item);
+        if (idx < maxItems - 1) {
+            item.classList.remove(hiddenClass);
+            item.classList.add(showClass);
+        }
+
+        if (document.querySelectorAll("." + hiddenClass).length === 0) {
+            loadMoreBtn.style.display = "none";
+            loadLessBtn.style.display = "block";
+        }
+    });
+});
+
+loadLessBtn.addEventListener("click", function () {
+
+    [].forEach.call(document.querySelectorAll("." + showClass), function (item, idx) {
+        console.log(item);
+        if (idx < maxItems - 1) {
+            item.classList.remove(showClass);
+            item.classList.add(hiddenClass);
+        }
+
+        if (document.querySelectorAll("." + showClass).length === 0) {
+            loadMoreBtn.style.display = "block";
+            loadLessBtn.style.display = "none";
+        }
+    });
+});

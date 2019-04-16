@@ -84,9 +84,12 @@ Accessibility
 
 body {
 
-    background-image: url("../img/cable-test.png");
-    background-position: top left;
-    background-size: 60%;
+    background-image: url("../img/cable-test-6.svg");
+    background-position: bottom center;
+    background-size: 200%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+
 }
 
 
@@ -125,7 +128,7 @@ nav {
     padding-left: 10px;
 
     li {
-        
+
         margin-left: 14px;
 
 
@@ -141,7 +144,7 @@ nav {
             }
         }
 
-      
+
     }
 
 }
@@ -161,7 +164,7 @@ nav {
     background-position: 50% 50%;
     position: fixed;
     z-index: 2000;
-    transition: all 0.4s  ease-in;
+    transition: all 0.4s ease-in;
 
     &:hover {
         transform: rotate(330deg);
@@ -190,25 +193,26 @@ header
 
 header {
 
-    .icon-cloud-line{
+    .icon-cloud-line {
         position: absolute;
-        right:15%;
+        right: 15%;
         @extend %icon-cloud-style;
 
-        p{
+        p {
             margin-left: 50px;
             margin-top: 65px;
-            color:$blue;
-            &:hover{
-                color:$black;
-                cursor:pointer;
+            color: $blue;
+
+            &:hover {
+                color: $black;
+                cursor: pointer;
             }
         }
     }
 
 
     .banner {
-        margin-top:60px;
+        margin-top: 60px;
         min-height: 600px;
         background-position: 50% 50%;
         z-index: 2000;
@@ -228,7 +232,7 @@ header {
 
 
             h2 {
-                margin-top:-10px;
+                margin-top: -10px;
                 font-weight: 700;
                 color: $black;
             }
@@ -247,55 +251,36 @@ button.viewLess {
     display: none;
 }
 
+
+/*--------------------------------------------------------------
+sections
+--------------------------------------------------------------*/
+section {
+    padding: 20px 0;
+
+    .about-text-wrapper,
+    .co-work-text-wrapper,
+    .music-text-wrapper,
+    .prices-text-wrapper {
+        padding: 0px 20px 25px;
+
+    }
+}
+
 /*--------------------------------------------------------------
 About and co-work
 --------------------------------------------------------------*/
-.arrow-left,
-    {
-    width: 100%;
-    height: 0;
-    border-top: 60px solid transparent;
-    border-bottom: 0px solid transparent;
-    border-left: 500px solid $lightblue;
-}
 
-.arrow-left-grey,
-    {
-    width: 100%;
-    height: 0;
-
-    border-top: 60px solid transparent;
-    border-bottom: 0px solid transparent;
-    border-left: 500px solid $lightgrey;
-
-}
-
-.arrow-right {
-    width: 100%;
-    height: 0;
-    border-top: 0px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-right: 500px solid $lightblue;
-
-
-}
 
 .about,
 .co-work {
 
-    padding: 20px 0;
 
 
-    .about-text-wrapper,
-    .co-work-text-wrapper {
-        padding: 0px 20px 25px;
 
-    }
-         
-
-    p{
-          background-color: white;
-          padding: 10px;
+    p {
+        background-color: white;
+        padding: 10px;
     }
 
 
@@ -312,7 +297,7 @@ About and co-work
 
     .about-more-text {
         display: none;
-          background-color: white;
+        background-color: white;
     }
 
 }
@@ -478,29 +463,24 @@ services
 
 
     .service {
-        
+        border: 3px solid $lightblue;
         background-color: white;
-        margin:30px 0;
-        padding-top:20px;
-         
-
+        margin: 20px 10px;
+        padding: 30px 30px
     }
 
     .service-header-wrap-right {
-    
+
         float: right;
-         
-       
+
     }
 
- 
 
 
     .service-header-wrap-left {
         float: left;
-        
-       
-        
+
+
 
     }
 
@@ -510,7 +490,7 @@ services
     }
 
     .icon {
-       @extend %icon-cloud-style;
+        @extend %icon-cloud-style;
 
     }
 
@@ -518,8 +498,8 @@ services
     p,
     button {
 
-        margin: 2px 25px 20px 25px;
-       
+        margin: 2px 5px 20px 5px;
+
     }
 
 
@@ -561,31 +541,110 @@ services
     }
 
 
-    .music-text-wrapper {
-        padding: 0px 20px 25px;
-    }
-
     .card {
         display: inline-block;
-        border: 1px solid $black;
+        border: 3px solid $lightblue;
         width: 90%;
         background-color: white;
         padding: 10px;
-        margin:10px;
+        margin: 20px;
 
     }
 
     ul {
         list-style: none;
         text-align: center;
-         line-height:25px;
+        line-height: 25px;
+
+        h3 {
+            color: $blue;
+        }
+
+        h3:nth-of-type(2n) {
+            color: $black;
+            font-style: italic;
+            font-weight: normal;
+
+
+        }
 
 
     }
 
 
+    .load {
+        @extend %button-style-simple;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .visually-hidden {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+
+    }
+
+
+}
 
 
 
 
+.prices {
+
+    background-color: $black;
+    padding: 40px 0px;
+
+
+    .prices-text {
+        margin-bottom: 60px;
+    }
+
+
+    h2,
+        {
+        color: $blue;
+    }
+
+    h3 {
+        color: $lightblue;
+        text-align: center;
+    }
+
+    p {
+        color: $lightgrey;
+        text-align: center;
+
+    }
+
+
+    .icon {
+        @extend %icon-cloud-style;
+        height: 90px;
+        width: 90px;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+    .readMore {
+        display: block;
+        margin: 0 auto;
+    }
+
+    button {
+
+        @extend %button-style-simple;
+        background-color: $black;
+        color: white;
+        border: $lightblue 1px solid;
+        box-shadow: $lightblue 4px 4px 0 0;
+
+    }
+
+
+    .prices-more-text {
+        display: none;
+    }
 }
