@@ -84,9 +84,9 @@ Accessibility
 
 body {
 
-    background-image: url("../img/cable-test-6.svg");
-    background-position: bottom center;
-    background-size: 200%;
+    background-image: url("../img/cable-test-12.svg") ;
+    background-position: center center;
+    background-size: 1600px;
     background-repeat: repeat;
     background-attachment: fixed;
 
@@ -120,16 +120,21 @@ nav {
 
     position: fixed;
     margin: 0;
-    background-color: $black;
+   
+   background-color: $black;
     list-style: none;
     height: 100vh;
-    width: 250px;
+    width: 82%;
     padding-top: 129px;
     padding-left: 10px;
 
     li {
 
         margin-left: 14px;
+
+      a{
+
+      }
 
 
         h2 {
@@ -199,9 +204,9 @@ header {
         @extend %icon-cloud-style;
 
         p {
-            margin-left: 50px;
+            margin-left: 45px;
             margin-top: 65px;
-            color: $blue;
+            color: $black;
 
             &:hover {
                 color: $black;
@@ -212,7 +217,7 @@ header {
 
 
     .banner {
-        margin-top: 60px;
+        margin-top: 80px;
         min-height: 600px;
         background-position: 50% 50%;
         z-index: 2000;
@@ -220,25 +225,40 @@ header {
 
 
         .title {
-            max-width: 10%;
-            padding: 40px 20px 0 25px;
+            
+            padding: 10px 20px 0 25px;
+             
 
             h1 {
+
                 color: $red;
                 line-height: 50px;
                 font-weight: 700;
 
             }
 
-
-            h2 {
-                margin-top: -10px;
-                font-weight: 700;
-                color: $black;
+            h1:nth-child(2){
+                color:$black;
+                background-color:transparent;
             }
+
+
+            // h2 {
+            //     margin-top: -10px;
+            //     font-weight: 700;
+            //     color: $black;
+            // }
 
         }
     }
+
+     .quote {
+                text-align: center;
+                padding:  80px 25px;
+                background-color:$black;
+                color: white;
+                margin-top
+:-30px;            }
 }
 
 
@@ -256,13 +276,16 @@ button.viewLess {
 sections
 --------------------------------------------------------------*/
 section {
+
     padding: 20px 0;
 
     .about-text-wrapper,
     .co-work-text-wrapper,
+    .services-text-wrapper,
     .music-text-wrapper,
     .prices-text-wrapper {
         padding: 0px 20px 25px;
+        margin:0;
 
     }
 }
@@ -276,18 +299,15 @@ About and co-work
 .co-work {
 
 
-
-
     p {
         background-color: white;
         padding: 10px;
+        border-radius:20px;
     }
 
 
     h2 {
-        text-transform: uppercase;
-        font-weight: 700;
-        color: $blue;
+      @extend %section-title;
     }
 
     button {
@@ -463,14 +483,10 @@ services
 
 
     .service {
-        border: 3px solid $lightblue;
-        background-color: white;
-        margin: 20px 10px;
-        padding: 30px 30px
+          @extend %box;
     }
 
     .service-header-wrap-right {
-
         float: right;
 
     }
@@ -491,6 +507,7 @@ services
 
     .icon {
         @extend %icon-cloud-style;
+        margin: 0 -5px;
 
     }
 
@@ -505,10 +522,8 @@ services
 
 
     h2 {
-        text-transform: uppercase;
-        font-weight: 700;
-        color: $black;
-        padding: 0px 20px;
+     
+      @extend %section-title;
 
     }
 
@@ -535,29 +550,22 @@ services
     padding-top: 5em;
     // background-color: $lightgrey;
 
+
     .cards {
-        margin: 10px;
-        padding: 0;
-    }
-
-
-    .card {
-        display: inline-block;
-        border: 3px solid $lightblue;
-        width: 90%;
-        background-color: white;
-        padding: 10px;
-        margin: 20px;
-
-    }
-
-    ul {
         list-style: none;
         text-align: center;
-        line-height: 25px;
+        
+        padding:0;
+    }
+
+     .card {
+        display: inline-block;
+        @extend %box;
+
 
         h3 {
             color: $blue;
+            line-height: 30px;
         }
 
         h3:nth-of-type(2n) {
@@ -567,6 +575,7 @@ services
 
 
         }
+
 
 
     }
@@ -598,24 +607,27 @@ services
 
 
     .prices-text {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 
 
-    h2,
+    h2
         {
-        color: $blue;
+        color: white;
     }
 
     h3 {
-        color: $lightblue;
+        color: $blue;
         text-align: center;
     }
 
     p {
         color: $lightgrey;
         text-align: center;
-
+        border-bottom: 1px solid $lightgrey;
+        border-top: 1px solid $lightgrey;
+        margin:0;
+        padding:5px;
     }
 
 
@@ -638,8 +650,9 @@ services
         @extend %button-style-simple;
         background-color: $black;
         color: white;
-        border: $lightblue 1px solid;
-        box-shadow: $lightblue 4px 4px 0 0;
+        border: $blue 1px solid;
+        box-shadow: $blue 4px 4px 0 0;
+
 
     }
 
@@ -647,4 +660,10 @@ services
     .prices-more-text {
         display: none;
     }
+
+    .center-viewLess{
+        margin:0 auto;
+
+    }
+
 }

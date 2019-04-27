@@ -13,7 +13,7 @@ html, body {
   min-height: 100%;
   overflow-x: hidden;
   font-family: 'Helvetica', 'Arial', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5; }
 
 body {
@@ -35,6 +35,9 @@ p {
   font-size: 1em;
   font-kerning: normal; }
 
+a {
+  text-decoration: none; }
+
 h1,
 h2,
 h3,
@@ -44,10 +47,10 @@ h6 {
   clear: both; }
 
 h1 {
-  font-size: 3em; }
+  font-size: 2.8em; }
 
 h2 {
-  font-size: 2.3em;
+  font-size: 2.2em;
   text-transform: uppercase; }
 
 h3 {
@@ -76,6 +79,19 @@ header .icon-cloud-line, .services .icon, .prices .icon {
   background-size: cover;
   margin: 0;
   padding: 0; }
+
+.services .service, .music .card {
+  border: #EDEDED solid 3px;
+  background-color: white;
+  margin: 20px auto;
+  padding: 10% 4%;
+  width: 300px; }
+
+.about h2,
+.co-work h2, .services h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #449AFF; }
 
 /*--------------------------------------------------------------
 Accessibility
@@ -120,9 +136,9 @@ Accessibility
     flex-direction: column; } }
 
 body {
-  background-image: url("../img/cable-test-6.svg");
-  background-position: bottom center;
-  background-size: 200%;
+  background-image: url("../img/cable-test-12.svg");
+  background-position: center center;
+  background-size: 1600px;
   background-repeat: repeat;
   background-attachment: fixed; }
 
@@ -149,7 +165,7 @@ nav {
   background-color: #2E3645;
   list-style: none;
   height: 100vh;
-  width: 250px;
+  width: 82%;
   padding-top: 129px;
   padding-left: 10px; }
   .open li {
@@ -191,29 +207,34 @@ header .icon-cloud-line {
   position: absolute;
   right: 15%; }
   header .icon-cloud-line p {
-    margin-left: 50px;
+    margin-left: 45px;
     margin-top: 65px;
-    color: #449AFF; }
+    color: #2E3645; }
     header .icon-cloud-line p:hover {
       color: #2E3645;
       cursor: pointer; }
 
 header .banner {
-  margin-top: 60px;
+  margin-top: 80px;
   min-height: 600px;
   background-position: 50% 50%;
   z-index: 2000; }
   header .banner .title {
-    max-width: 10%;
-    padding: 40px 20px 0 25px; }
+    padding: 10px 20px 0 25px; }
     header .banner .title h1 {
       color: #FF0000;
       line-height: 50px;
       font-weight: 700; }
-    header .banner .title h2 {
-      margin-top: -10px;
-      font-weight: 700;
-      color: #2E3645; }
+    header .banner .title h1:nth-child(2) {
+      color: #2E3645;
+      background-color: transparent; }
+
+header .quote {
+  text-align: center;
+  padding: 80px 25px;
+  background-color: #2E3645;
+  color: white;
+  margin-top: -30px; }
 
 /*--------------------------------------------------------------
 button
@@ -228,9 +249,11 @@ section {
   padding: 20px 0; }
   section .about-text-wrapper,
   section .co-work-text-wrapper,
+  section .services-text-wrapper,
   section .music-text-wrapper,
   section .prices-text-wrapper {
-    padding: 0px 20px 25px; }
+    padding: 0px 20px 25px;
+    margin: 0; }
 
 /*--------------------------------------------------------------
 About and co-work
@@ -238,13 +261,8 @@ About and co-work
 .about p,
 .co-work p {
   background-color: white;
-  padding: 10px; }
-
-.about h2,
-.co-work h2 {
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #449AFF; }
+  padding: 10px;
+  border-radius: 20px; }
 
 .about button,
 .co-work button {
@@ -364,25 +382,17 @@ services
   .services h3 {
     text-align: center;
     margin-top: -5px; }
-  .services .service {
-    border: 3px solid #C0D5ED;
-    background-color: white;
-    margin: 20px 10px;
-    padding: 30px 30px; }
   .services .service-header-wrap-right {
     float: right; }
   .services .service-header-wrap-left {
     float: left; }
   .services .service-text-right {
     text-align: right; }
+  .services .icon {
+    margin: 0 -5px; }
   .services p,
   .services button {
     margin: 2px 5px 20px 5px; }
-  .services h2 {
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #2E3645;
-    padding: 0px 20px; }
   .services article {
     margin: 0 6px; }
   .services .service-more-text {
@@ -391,22 +401,15 @@ services
 .music {
   padding-top: 5em; }
   .music .cards {
-    margin: 10px;
-    padding: 0; }
-  .music .card {
-    display: inline-block;
-    border: 3px solid #C0D5ED;
-    width: 90%;
-    background-color: white;
-    padding: 10px;
-    margin: 20px; }
-  .music ul {
     list-style: none;
     text-align: center;
-    line-height: 25px; }
-    .music ul h3 {
-      color: #449AFF; }
-    .music ul h3:nth-of-type(2n) {
+    padding: 0; }
+  .music .card {
+    display: inline-block; }
+    .music .card h3 {
+      color: #449AFF;
+      line-height: 30px; }
+    .music .card h3:nth-of-type(2n) {
       color: #2E3645;
       font-style: italic;
       font-weight: normal; }
@@ -422,15 +425,19 @@ services
   background-color: #2E3645;
   padding: 40px 0px; }
   .prices .prices-text {
-    margin-bottom: 60px; }
+    margin-bottom: 40px; }
   .prices h2 {
-    color: #449AFF; }
+    color: white; }
   .prices h3 {
-    color: #C0D5ED;
+    color: #449AFF;
     text-align: center; }
   .prices p {
     color: #EDEDED;
-    text-align: center; }
+    text-align: center;
+    border-bottom: 1px solid #EDEDED;
+    border-top: 1px solid #EDEDED;
+    margin: 0;
+    padding: 5px; }
   .prices .icon {
     height: 90px;
     width: 90px;
@@ -442,7 +449,9 @@ services
   .prices button {
     background-color: #2E3645;
     color: white;
-    border: #C0D5ED 1px solid;
-    box-shadow: #C0D5ED 4px 4px 0 0; }
+    border: #449AFF 1px solid;
+    box-shadow: #449AFF 4px 4px 0 0; }
   .prices .prices-more-text {
     display: none; }
+  .prices .center-viewLess {
+    margin: 0 auto; }

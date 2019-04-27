@@ -17,8 +17,9 @@ html, body{
   min-height: 100%;
   overflow-x: hidden;
   font-family:  'Helvetica', 'Arial', sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.5;
+
 }
 
 
@@ -45,6 +46,11 @@ p {
 	font-kerning: normal;
 }
 
+
+a{
+	text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -55,11 +61,11 @@ h6 {
 }
 
 h1{
-font-size:3em;
+font-size:2.8em;
 }
 
 h2 {
-font-size:2.3em;
+font-size:2.2em;
 text-transform:uppercase;
 }
 

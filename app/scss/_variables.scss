@@ -33,3 +33,19 @@ $blue: #449AFF;
        padding: 0;
      
 }
+
+
+%box {
+	border: $lightgrey solid 3px;
+	 background-color: white;
+     margin: 20px auto;
+     padding: 10% 4%;
+     width:300px;
+
+}
+
+%section-title {
+	  text-transform: uppercase;
+      font-weight: 700;
+      color: $blue;
+}

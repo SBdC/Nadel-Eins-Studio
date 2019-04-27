@@ -45,7 +45,7 @@ let revealText = (e) => {
     button.style.display = "none";
     let otherButton = document.querySelector(`button[data-type="${e.target.id}"]`);
     otherButton.style.display = "block";
-     otherButton.style.margin = "0 auto";
+     // otherButton.style.margin = "0 auto";
 };
 
 let hideText = (e) => {
