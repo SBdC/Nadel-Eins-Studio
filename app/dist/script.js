@@ -8,6 +8,7 @@ const NAV = document.querySelector(".navigation");
 const MENUITEMS = document.querySelector(".menu-items");
 let screenReaderText = document.querySelector(".trigger .screen-reader-text");
 let points = Array.from(document.querySelectorAll(".nav-list"));
+let imgs = Array.from(document.querySelectorAll(".zoom"));
 
 function revealMenu() {
     OVERLAY.classList.toggle("opaque");
@@ -40,7 +41,7 @@ let revealText = e => {
     button.style.display = "none";
     let otherButton = document.querySelector(`button[data-type="${e.target.id}"]`);
     otherButton.style.display = "block";
-    otherButton.style.margin = "0 auto";
+    // otherButton.style.margin = "0 auto";
 };
 
 let hideText = e => {
@@ -62,10 +63,12 @@ erases.forEach(erase => erase.addEventListener("click", hideText, false));
 let slideIndex = 1;
 showSlides(slideIndex);
 const SLIDESHOW = document.getElementById("slideshow");
-let captions = Array.from(document.querySelectorAll(".img-text"));
+
 let dots = Array.from(document.querySelectorAll(".dots"));
 let prev = document.getElementById("prev");
 let next = document.getElementById("next");
+
+let captions = Array.from(document.querySelectorAll(".img-text"));
 
 function revealCaption() {
 
@@ -121,6 +124,25 @@ function showSlides(n) {
 prev.addEventListener("click", minusSlides, false);
 next.addEventListener("click", plusSlides, false);
 dots.forEach(dot => dot.addEventListener("click", currentSlide, false));
+
+//Modal for zooming images
+// Get the <span> element that closes the modal
+const MODAL = document.getElementById("myModal");
+const SPAN = document.getElementsByClassName("close")[0];
+let modalImg = document.getElementById("img01");
+let captionText = document.getElementById("caption-modal");
+
+// When the user clicks on <span> (x), close the modal
+SPAN.onclick = function () {
+    MODAL.style.display = "none";
+};
+
+let zoomImage = e => {
+    MODAL.style.display = "block";
+    modalImg.src = e.target.src;
+    captionText.innerHTML = e.target.nextElementSibling.innerHTML;
+};
+imgs.forEach(img => img.addEventListener("click", zoomImage, false));
 
 //load more music albums
 

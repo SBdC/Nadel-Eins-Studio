@@ -9,10 +9,15 @@
   "author": "Sara Bento de Castro",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.1",
     "gulp-babel": "^7.0.1",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2"
@@ -21,11 +26,8 @@
     "del": "^3.0.0",
     "gulp-eslint": "^5.0.0"
   },
-  
   "eslintConfig": {
     "extends": "eslint:recommended",
-
-
     "env": {
       "browser": true,
       "es6": true,
@@ -33,27 +35,30 @@
       "node": true
     },
     "rules": {
-      "semi": ["error", "always"],
-      "quotes": ["error", "double"],
-
-         "no-console": "off",
-        "no-restricted-syntax": [
-            "error",
-            {
-                "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
-                "message": "Unexpected property on console object was called"
-            }
-        ]
-
-
+      "semi": [
+        "error",
+        "always"
+      ],
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "no-console": "off",
+      "no-restricted-syntax": [
+        "error",
+        {
+          "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+          "message": "Unexpected property on console object was called"
+        }
+      ]
     }
-
-
-  }
-
-
-
-
-
-
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SBdC/Nadel-Eins-Studio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SBdC/Nadel-Eins-Studio/issues"
+  },
+  "homepage": "https://github.com/SBdC/Nadel-Eins-Studio#readme"
 }

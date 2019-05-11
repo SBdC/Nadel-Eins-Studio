@@ -8,6 +8,7 @@ const NAV = document.querySelector(".navigation");
 const MENUITEMS = document.querySelector(".menu-items");
 let screenReaderText = document.querySelector(".trigger .screen-reader-text");
 let points = Array.from(document.querySelectorAll(".nav-list"));
+let imgs = Array.from(document.querySelectorAll(".zoom"));
 
 
 
@@ -66,15 +67,18 @@ erases.forEach(erase => erase.addEventListener("click", hideText, false));
 
 
 
+
 //slider
 
 let slideIndex = 1;
 showSlides(slideIndex);
 const SLIDESHOW = document.getElementById("slideshow");
-let captions = Array.from(document.querySelectorAll(".img-text"));
+
 let dots = Array.from(document.querySelectorAll(".dots"));
 let prev = document.getElementById("prev");
 let next = document.getElementById("next");
+
+let captions = Array.from(document.querySelectorAll(".img-text"));
 
 function revealCaption() {
 
@@ -97,19 +101,19 @@ SLIDESHOW.addEventListener("mouseover", revealCaption, false);
 // Next/previous controls
 function plusSlides() {
     showSlides(slideIndex += 1);
-   
+
 }
 function minusSlides() {
     showSlides(slideIndex -= 1);
 
-  
-   
+
+
 }
 
 // buttons image controls
 
 function currentSlide(n) {
- 
+
   showSlides(slideIndex = `${n.target.dataset.id}`);
 }
 
@@ -117,13 +121,13 @@ function currentSlide(n) {
 
 
 function showSlides(n) {
-    
+
     var i;
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dots");
-    if (n > slides.length) 
+    if (n > slides.length)
       { slideIndex = 1; }
-    if (n < 1) 
+    if (n < 1)
       { slideIndex = slides.length; }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
@@ -133,12 +137,44 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
- 
+
 }
 
 prev.addEventListener("click", minusSlides, false);
 next.addEventListener("click", plusSlides, false);
 dots.forEach(dot => dot.addEventListener("click", currentSlide, false));
+
+
+
+
+//Modal for zooming images
+// Get the <span> element that closes the modal
+const MODAL = document.getElementById("myModal");
+const SPAN = document.getElementsByClassName("close")[0];
+let modalImg = document.getElementById("img01");
+let captionText = document.getElementById("caption-modal");
+
+
+
+
+// When the user clicks on <span> (x), close the modal
+SPAN.onclick = function() {
+  MODAL.style.display = "none";
+};
+
+
+let zoomImage = (e) => {
+   MODAL.style.display = "block";
+   modalImg.src = e.target.src;
+   captionText.innerHTML = e.target.nextElementSibling.innerHTML;
+
+
+};
+imgs.forEach(img => img.addEventListener("click", zoomImage, false));
+
+
+
+
 
 
 
@@ -184,7 +220,7 @@ loadLessBtn.addEventListener("click", function(){
       if (idx < maxItems - 1) {
          item.classList.remove(showClass);
           item.classList.add(hiddenClass);
-         
+
       }
 
       if ( document.querySelectorAll("." + showClass).length === 0) {
@@ -195,24 +231,3 @@ loadLessBtn.addEventListener("click", function(){
   });
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

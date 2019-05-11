@@ -71,30 +71,48 @@
         </div>
         <!-- Slideshow container -->
         <div id="slideshow" class="slideshow-container">
+          <!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption-modal"></div>
+</div>
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-                <figure class="image-slider"><img alt="placeholder from unsplash" src="img/studio-image-1.jpg"> </figure>
-                <figcaption class="img-text">
-                    <p>recording</p>
-                </figcaption>
+                <figure class="image-slider">
+                  <img class="zoom" alt="recording - placeholder from unsplash" src="img/studio-image-1.jpg">
+                  <figcaption class="img-text">
+                      <p>recording</p>
+                  </figcaption>
+                </figure>
+
             </div>
             <div class="mySlides fade">
-                <figure class="image-slider"><img alt="placeholder from unsplash" src="img/studio-image-2.jpg"> </figure>
-                <figcaption class="img-text">
-                    <p>mixing</p>
-                </figcaption>
+                <figure class="image-slider">
+                  <img  class="zoom" alt="mixing-placeholder from unsplash" src="img/studio-image-2.jpg">
+                  <figcaption class="img-text"><p>mixing</p></figcaption>
+                </figure>
+
             </div>
             <div class="mySlides fade">
-                <figure class="image-slider"><img alt="placeholder from unsplash" src="img/studio-image-3.jpg"> </figure>
-                <figcaption class="img-text">
-                    <p>consulting</p>
-                </figcaption>
+                <figure class="image-slider"><img class="zoom" alt="placeholder from unsplash" src="img/studio-image-3.jpg">
+
+                  <figcaption class="img-text">
+                      <p>consulting</p>
+                  </figcaption>
+
+                </figure>
+
             </div>
             <div class="mySlides fade">
-                <figure class="image-slider"><img alt="placeholder from unsplash" src="img/studio-image-4.jpg"> </figure>
-                <figcaption class="img-text">
-                    <p>mastering </p>
-                </figcaption>
+                <figure class="image-slider"><img class="zoom" alt="placeholder from unsplash" src="img/studio-image-4.jpg">
+
+                  <figcaption class="img-text">
+                      <p>mastering </p>
+                  </figcaption>
+
+                </figure>
+
             </div>
             <!-- Next and previous buttons -->
             <a id="prev" class="prev">&#10094;</a>
@@ -108,7 +126,7 @@
             <span data-id="4" class="dots"></span>
         </div>
     </section>
-    <!-- 
+    <!--
     <div class="arrow-right"></div> -->
     <section id="services" class="services">
         <div class="services-text-wrapper">
@@ -265,9 +283,9 @@
             </div>
             <button class="load visually-hidden" id="loadless">show less</button>
         </div>
-        
+
     </section>
-   
+
    <section id="prices" class="prices">
     <div class="prices-text-wrapper">
                 <h2 class="prices-title">Prices</h2>
@@ -290,7 +308,7 @@
                         <div class="icon icon-recording"></div>
                         <h3 class="prices-recording-title"> Recording </h3>
                     </div>
-                    
+
                         <div class="prices-text">
                             <p>mastering track from 250€</p>
                             <p>mastering track from 250€</p>
@@ -312,7 +330,7 @@
                             <p>mastering track from 250€</p>
                             <p>mastering track from 250€</p>
                         <p data-key="read-mixing-prices" data-hide="less-mixing-prices" class="prices-more-text fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                       
+
                     </div>
                      <button id="read-mixing-prices" data-type="less-mixing" class="readMore">Read More</button>
                         <button id="less-mixing-prices" data-type="read-mixing" class="viewLess center-viewLess">View Less</button>
@@ -322,17 +340,17 @@
                         <div class="icon icon-sound-design"></div>
                         <h3 class="prices-sound-design-title"> Sound Design </h3>
                     </div>
-                    
+
                         <div class="prices-text">
                             <p>mastering track from 250€</p>
                             <p>mastering track from 250€</p>
                             <p>mastering track from 250€</p>
                             <p data-key="read-sound-design-prices" data-hide="less-sound-design-prices" class="prices-more-text fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                           
+
                         </div>
                          <button id="read-sound-design-prices" data-type="less-sound-design-prices" class="readMore">Read More</button>
                             <button id="less-sound-design-prices" data-type="read-sound-design-prices" class="viewLess center-viewLess">View Less</button>
-                    
+
                 </article>
                 <article class="prices prices-live-prep">
                     <div class="prices-header">
@@ -344,7 +362,7 @@
                             <p>mastering track from 250€</p>
                             <p>mastering track from 250€</p>
                         <p data-key="read-live-prep-prices" data-hide="less-live-prep-prices" class="prices-more-text fade">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                   
+
                     </div>
                          <button id="read-live-prep-prices" data-type="less-live-prep-prices" class="readMore">Read More</button>
                         <button id="less-live-prep-prices" data-type="read-live-prep-prices" class="viewLess center-viewLess">View Less</button>
@@ -354,7 +372,7 @@
                         <div class="icon icon-Consulting"></div>
                         <h3 class="prices-consulting-title"> Consulting</h3>
                     </div>
-                   
+
                         <div class="prices-text">
                             <p>mastering track from 250€</p>
                             <p>mastering track from 250€</p>
@@ -363,11 +381,11 @@
                         </div>
                          <button id="read-consulting-prices" data-type="less-consulting-prices" class="readMore">Read More</button>
                             <button id="less-consulting-prices" data-type="read-consulting-prices" class="viewLess center-viewLess">View Less</button>
-                   
+
                 </article>
          </div>
         </section>
-   
+
         <section id="contact" class="co-work">
             <div class="co-work-text-wrapper">
                 <h2 class="co-work-title">Contact</h2>
