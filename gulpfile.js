@@ -37,7 +37,7 @@ function css() {
     .pipe(sass())
     .pipe(gulp.dest("./app/css"))
     .pipe(browsersync.stream());
-    
+
 }
 
 
@@ -60,7 +60,7 @@ function scripts() {
     gulp
       .src(["app/js/**/*.js"])
       .pipe(plumber())
-      .pipe(babel())
+      .pipe(babel({presets: ["@babel/env"]}))
       .pipe(gulp.dest("app/dist"))
       .pipe(browsersync.stream())
   );
