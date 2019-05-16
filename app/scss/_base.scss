@@ -145,6 +145,15 @@ nav {
 /*--------------------------------------------------------------
 buttons close and arrow-up
 --------------------------------------------------------------*/
+.icon-close{
+  @extend %icon-button;
+  @extend %button-style-simple;
+  background-color: white;
+  border-radius: 50%;
+}
+
+
+
 #back-to-top {
   display: none;
   position: fixed;

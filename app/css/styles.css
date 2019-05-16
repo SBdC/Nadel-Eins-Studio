@@ -56,7 +56,7 @@ h2 {
 h3 {
   font-size: 1.6em; }
 
-#back-to-top, .about button,
+.icon-close, #back-to-top, .about button,
 .co-work button, .dots, .services button, .music .load, .prices button {
   color: #2E3645;
   letter-spacing: 0.02em;
@@ -67,12 +67,12 @@ h3 {
   padding: 8px 10px;
   box-shadow: #449AFF 4px 4px 0 0;
   transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
-  #back-to-top:hover, .about button:hover,
+  .icon-close:hover, #back-to-top:hover, .about button:hover,
   .co-work button:hover, .dots:hover, .services button:hover, .music .load:hover, .prices button:hover {
     transform: translateX(2px) translateY(2px);
     box-shadow: 2px 2px 0 0; }
 
-#back-to-top {
+.icon-close, #back-to-top {
   height: 40px;
   width: 40px;
   background-position: 50% 50%;
@@ -211,6 +211,10 @@ nav {
 /*--------------------------------------------------------------
 buttons close and arrow-up
 --------------------------------------------------------------*/
+.icon-close {
+  background-color: white;
+  border-radius: 50%; }
+
 #back-to-top {
   display: none;
   position: fixed;
