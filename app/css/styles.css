@@ -56,7 +56,7 @@ h2 {
 h3 {
   font-size: 1.6em; }
 
-.about button,
+#back-to-top, .about button,
 .co-work button, .dots, .services button, .music .load, .prices button {
   color: #2E3645;
   letter-spacing: 0.02em;
@@ -67,10 +67,18 @@ h3 {
   padding: 8px 10px;
   box-shadow: #449AFF 4px 4px 0 0;
   transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
-  .about button:hover,
+  #back-to-top:hover, .about button:hover,
   .co-work button:hover, .dots:hover, .services button:hover, .music .load:hover, .prices button:hover {
     transform: translateX(2px) translateY(2px);
     box-shadow: 2px 2px 0 0; }
+
+#back-to-top {
+  height: 40px;
+  width: 40px;
+  background-position: 50% 50%;
+  background-size: cover;
+  margin: 0;
+  padding: 0; }
 
 header .icon-cloud-line, .services .icon, .prices .icon {
   height: 113px;
@@ -105,12 +113,12 @@ Accessibility
   width: 1px;
   overflow: hidden; }
 
-.screen-reader-text-play:hover,
 .screen-reader-text-play:active,
 .screen-reader-text-play:focus,
-.screen-reader-text:hover,
+.screen-reader-text-play:hover,
 .screen-reader-text:active,
-.screen-reader-text:focus {
+.screen-reader-text:focus,
+.screen-reader-text:hover {
   background-color: #f1f1f1;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -138,7 +146,7 @@ Accessibility
 body {
   background-image: url("../img/cable-test-12.svg");
   background-position: center center;
-  background-size: 1600px;
+  background-size: 1300px;
   background-repeat: repeat;
   background-attachment: fixed; }
 
@@ -201,6 +209,39 @@ nav {
   display: none; }
 
 /*--------------------------------------------------------------
+buttons close and arrow-up
+--------------------------------------------------------------*/
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: #449AFF 2px solid;
+  box-shadow: #449AFF 2px 2px 0px 0px; }
+
+.btn-entrance {
+  animation: btnEntrance 0.5s both; }
+
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: scale3d(0, 100%, 0); }
+  to {
+    opacity: 1; } }
+
+.btn-exit {
+  animation: btnExit 0.25s both; }
+
+@keyframes btnExit {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: scale3d(0, 100%, 0); } }
+
+/*--------------------------------------------------------------
 header
 --------------------------------------------------------------*/
 header .icon-cloud-line {
@@ -222,7 +263,7 @@ header .banner {
   header .banner .title {
     padding: 10px 20px 0 25px; }
     header .banner .title h1 {
-      color: #2E3645;
+      color: #FF0000;
       line-height: 50px;
       font-weight: 700; }
     header .banner .title h1:nth-child(2) {
@@ -249,10 +290,10 @@ section {
   padding: 20px 0; }
   section .about-text-wrapper,
   section .co-work-text-wrapper,
-  section .services-text-wrapper,
   section .music-text-wrapper,
-  section .prices-text-wrapper {
-    padding: 0px 20px 25px;
+  section .prices-text-wrapper,
+  section .services-text-wrapper {
+    padding: 0 20px 25px;
     margin: 0; }
 
 /*--------------------------------------------------------------
@@ -294,9 +335,7 @@ slider
   /* Full height */
   overflow: auto;
   /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #2E3645;
   /* Black w/ opacity */ }
 
 /* Modal Content (image) */
@@ -319,7 +358,8 @@ slider
   text-transform: capitalize; }
 
 /* Add Animation - Zoom in the Modal */
-.modal-content, #caption-modal {
+#caption-modal,
+.modal-content {
   animation-name: zoom;
   animation-duration: 0.6s; }
 
@@ -338,15 +378,15 @@ slider
 /* The Close Button */
 .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 20px;
+  right: 40px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s; }
 
-.close:hover,
-.close:focus {
+.close:focus,
+.close:hover {
   color: #bbb;
   text-decoration: none;
   cursor: pointer; }
@@ -367,8 +407,8 @@ slider
   display: none; }
 
 /* Next & previous buttons */
-.prev,
-.next {
+.next,
+.prev {
   cursor: pointer;
   position: absolute;
   top: calc(50% - 20px);
@@ -388,8 +428,8 @@ slider
   border-radius: 3px 0 0 3px; }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
+.next:hover,
+.prev:hover {
   color: #FF0000; }
 
 /* Caption text */
@@ -438,13 +478,13 @@ slider
 
 @-webkit-keyframes fade {
   from {
-    opacity: .3; }
+    opacity: 0.3; }
   to {
     opacity: 1; } }
 
 @keyframes fade {
   from {
-    opacity: .3; }
+    opacity: 0.3; }
   to {
     opacity: 1; } }
 
@@ -464,9 +504,9 @@ services
     text-align: right; }
   .services .icon {
     margin: 0 -5px; }
-  .services p,
-  .services button {
-    margin: 2px 5px 20px 5px; }
+  .services button,
+  .services p {
+    margin: 2px 5px 20px; }
   .services article {
     margin: 0 6px; }
   .services .service-more-text {
@@ -497,7 +537,7 @@ services
 
 .prices {
   background-color: #2E3645;
-  padding: 40px 0px; }
+  padding: 40px 0; }
   .prices .prices-text {
     margin-bottom: 40px; }
   .prices h2 {

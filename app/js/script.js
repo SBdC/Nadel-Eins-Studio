@@ -13,14 +13,14 @@ let imgs = Array.from(document.querySelectorAll(".zoom"));
 
 
 function revealMenu() {
-    OVERLAY.classList.toggle("opaque");
-    NAV.classList.toggle("menu-items");
-    BURGERBLACK.classList.toggle("burger-white");
-    BURGERWHITE.classList.toggle("burger-black");
-    BURGERWHITE.classList.toggle("burger-white");
-    MENUITEMS.classList.toggle("open");
-    TRIGGER.getAttribute("aria-expanded") == "false" ? CLOSE.setAttribute("aria-expanded", true) : CLOSE.setAttribute("aria-expanded", false);
-    screenReaderText.innerHTML == "Reveal menu" ? screenReaderText.innerHTML = "Hide menu" : screenReaderText.innerHTML = "Reveal menu";
+  OVERLAY.classList.toggle("opaque");
+  NAV.classList.toggle("menu-items");
+  BURGERBLACK.classList.toggle("burger-white");
+  BURGERWHITE.classList.toggle("burger-black");
+  BURGERWHITE.classList.toggle("burger-white");
+  MENUITEMS.classList.toggle("open");
+  TRIGGER.getAttribute("aria-expanded") == "false" ? CLOSE.setAttribute("aria-expanded", true) : CLOSE.setAttribute("aria-expanded", false);
+  screenReaderText.innerHTML == "Reveal menu" ? screenReaderText.innerHTML = "Hide menu" : screenReaderText.innerHTML = "Reveal menu";
 }
 
 points.forEach(read => read.addEventListener("click", revealMenu, false));
@@ -40,24 +40,24 @@ let erases = Array.from(document.querySelectorAll(".viewLess"));
 
 let revealText = (e) => {
 
-    let dropDown = document.querySelector(`p[data-key="${e.target.id}"]`);
-    dropDown.style.display = "block";
-    let button = document.getElementById(`${e.target.id}`);
-    button.style.display = "none";
-    let otherButton = document.querySelector(`button[data-type="${e.target.id}"]`);
-    otherButton.style.display = "block";
-     // otherButton.style.margin = "0 auto";
+  let dropDown = document.querySelector(`p[data-key="${e.target.id}"]`);
+  dropDown.style.display = "block";
+  let button = document.getElementById(`${e.target.id}`);
+  button.style.display = "none";
+  let otherButton = document.querySelector(`button[data-type="${e.target.id}"]`);
+  otherButton.style.display = "block";
+  // otherButton.style.margin = "0 auto";
 };
 
 let hideText = (e) => {
 
-    const goUp = document.querySelector(`p[data-hide="${e.target.id}"]`);
-    goUp.style.display = "none";
-    goUp.style.transition = "all 2s";
-    let otherButton = document.getElementById(`${e.target.id}`);
-    otherButton.style.display = "none";
-    let button = document.querySelector(`button[data-type="${e.target.id}"]`);
-    button.style.display = "block";
+  const goUp = document.querySelector(`p[data-hide="${e.target.id}"]`);
+  goUp.style.display = "none";
+  goUp.style.transition = "all 2s";
+  let otherButton = document.getElementById(`${e.target.id}`);
+  otherButton.style.display = "none";
+  let button = document.querySelector(`button[data-type="${e.target.id}"]`);
+  button.style.display = "block";
 
 };
 
@@ -82,15 +82,15 @@ let captions = Array.from(document.querySelectorAll(".img-text"));
 
 function revealCaption() {
 
-    captions.forEach(caption => caption.classList.add("img-text-reveal"));
-    captions.forEach(caption => caption.classList.remove("img-text"));
+  captions.forEach(caption => caption.classList.add("img-text-reveal"));
+  captions.forEach(caption => caption.classList.remove("img-text"));
 
 }
 
 function hideCaption() {
 
-    captions.forEach(caption => caption.classList.remove("img-text-reveal"));
-    captions.forEach(caption => caption.classList.add("img-text"));
+  captions.forEach(caption => caption.classList.remove("img-text-reveal"));
+  captions.forEach(caption => caption.classList.add("img-text"));
 
 }
 
@@ -100,11 +100,12 @@ SLIDESHOW.addEventListener("mouseover", revealCaption, false);
 
 // Next/previous controls
 function plusSlides() {
-    showSlides(slideIndex += 1);
+  showSlides(slideIndex += 1);
 
 }
+
 function minusSlides() {
-    showSlides(slideIndex -= 1);
+  showSlides(slideIndex -= 1);
 
 
 
@@ -122,21 +123,23 @@ function currentSlide(n) {
 
 function showSlides(n) {
 
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dots");
-    if (n > slides.length)
-      { slideIndex = 1; }
-    if (n < 1)
-      { slideIndex = slides.length; }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dots");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 
 }
 
@@ -164,9 +167,9 @@ SPAN.onclick = function() {
 
 
 let zoomImage = (e) => {
-   MODAL.style.display = "block";
-   modalImg.src = e.target.src;
-   captionText.innerHTML = e.target.nextElementSibling.innerHTML;
+  MODAL.style.display = "block";
+  modalImg.src = e.target.src;
+  captionText.innerHTML = e.target.nextElementSibling.innerHTML;
 
 
 };
@@ -180,54 +183,141 @@ imgs.forEach(img => img.addEventListener("click", zoomImage, false));
 
 //load more music albums
 
-    let parent = document.querySelector("ul"),
-    items  = parent.querySelectorAll("li"),
-    loadMoreBtn =  document.querySelector("#loadMore"),
-    loadLessBtn =  document.querySelector("#loadless"),
-    maxItems = 10,
-    hiddenClass = "visually-hidden",
-    showClass = "visually";
+let parent = document.querySelector("ul"),
+  items = parent.querySelectorAll("li"),
+  loadMoreBtn = document.querySelector("#loadMore"),
+  loadLessBtn = document.querySelector("#loadless"),
+  maxItems = 10,
+  hiddenClass = "visually-hidden",
+  showClass = "visually";
 
-[].forEach.call(items, function(item, idx){
-    if (idx > maxItems - 1) {
-        item.classList.add(hiddenClass);
+[].forEach.call(items, function(item, idx) {
+  if (idx > maxItems - 1) {
+    item.classList.add(hiddenClass);
+  }
+});
+
+loadMoreBtn.addEventListener("click", function() {
+
+  [].forEach.call(document.querySelectorAll("." + hiddenClass), function(item, idx) {
+    console.log(item);
+    if (idx < maxItems - 1) {
+      item.classList.remove(hiddenClass);
+      item.classList.add(showClass);
     }
-});
 
-loadMoreBtn.addEventListener("click", function(){
-
-  [].forEach.call(document.querySelectorAll("." + hiddenClass), function(item, idx){
-      console.log(item);
-      if (idx < maxItems - 1) {
-          item.classList.remove(hiddenClass);
-           item.classList.add(showClass);
-      }
-
-      if ( document.querySelectorAll("." + hiddenClass).length === 0) {
-          loadMoreBtn.style.display = "none";
-            loadLessBtn.style.display = "block";
-      }
+    if (document.querySelectorAll("." + hiddenClass).length === 0) {
+      loadMoreBtn.style.display = "none";
+      loadLessBtn.style.display = "block";
+    }
 
   });
 
 });
 
 
-loadLessBtn.addEventListener("click", function(){
+loadLessBtn.addEventListener("click", function() {
 
-  [].forEach.call(document.querySelectorAll("." + showClass), function(item, idx){
-      console.log(item);
-      if (idx < maxItems - 1) {
-         item.classList.remove(showClass);
-          item.classList.add(hiddenClass);
+  [].forEach.call(document.querySelectorAll("." + showClass), function(item, idx) {
+    console.log(item);
+    if (idx < maxItems - 1) {
+      item.classList.remove(showClass);
+      item.classList.add(hiddenClass);
 
-      }
+    }
 
-      if ( document.querySelectorAll("." + showClass).length === 0) {
-          loadMoreBtn.style.display = "block";
-          loadLessBtn.style.display = "none";
-      }
+    if (document.querySelectorAll("." + showClass).length === 0) {
+      loadMoreBtn.style.display = "block";
+      loadLessBtn.style.display = "none";
+    }
 
   });
 
 });
+
+
+
+//back-to-top and smooth scrolling
+
+
+
+const backTop = document.querySelector("#back-to-top");
+
+
+// function smoothScroll (target,duration){
+//   var target = document.querySelector(target);
+//   var targetPosition = target.getBoundingClientRect().top;
+//   var startPosition = window.pageYOffset;
+//   var distance = targetPosition - startPosition;
+//   var startTime = null;
+//
+//   function animation (currentTime){
+//     if (startTime === null) startTime = currentTime;
+//     var timeLapsed = currentTime - startTime;
+//     var run =  ease(timeLapsed, startPosition, distance, duration);
+//     window.scrollTo(0, run);
+//     if(timeLapsed < duration) requestAnimationFrame(animation)
+//   }
+//
+//   function ease (t) { return t*(2-t) }
+//
+//
+//   requestAnimationFrame(animation);
+//
+// }
+//
+//
+//
+// backTop.addEventListener("click", function(){
+//
+//   smoothScroll('#top', 1000);
+//   console.log("weeee");
+// });
+//
+
+
+
+
+
+// Setup isScrolling variable
+let isScrolling;
+
+// Listen for scroll events
+window.addEventListener("scroll", function() {
+
+  // Clear our timeout throughout the scroll
+  window.clearTimeout(isScrolling);
+
+
+  if (backTop.classList.contains("btn-entrance")) {
+    backTop.classList.remove("btn-entrance");
+    backTop.classList.add("btn-exit");
+    setTimeout(function() {
+      backTop.style.display = "none";
+    }, 150);
+    console.log("Scrolling");
+  }
+
+  // Set a timeout to run after scrolling ends
+  isScrolling = setTimeout(function() {
+    if (window.pageYOffset > 300) {
+
+      backTop.classList.remove("btn-exit");
+      backTop.classList.add("btn-entrance");
+      backTop.style.display = "block";
+      console.log("Scrolling has stopped.");
+
+    }
+
+  }, 66);
+
+}, false);
+
+
+
+
+backTop.addEventListener("click", backToTop);
+
+function backToTop() {
+  window.scrollTo(0, 0);
+}

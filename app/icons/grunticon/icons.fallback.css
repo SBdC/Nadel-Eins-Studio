@@ -124,3 +124,17 @@ enhanceSVG:true;
 enhanceSVG:true;
 
 }
+.icon-arrow-up {
+	background-image: url('png/arrow-up.png');
+	background-repeat: no-repeat;
+}
+
+.icon-close {
+	background-image: url('png/close.png');
+	background-repeat: no-repeat;
+}
+
+.icon-nadel-eins-logo-record-banner {
+	background-image: url('png/nadel-eins-logo-record-banner.png');
+	background-repeat: no-repeat;
+}

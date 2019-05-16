@@ -17,21 +17,33 @@ $blue: #449AFF;
 	box-shadow:$blue 4px 4px 0 0 ;
 	transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out;
 	&:hover{
-		
+
 		transform:translateX(2px) translateY(2px);
 		box-shadow: 2px 2px 0 0 ;
-	} 
+	}
 }
+
+
+%icon-button{
+	  height: 40px;
+    width: 40px;
+    background-position: 50% 50%;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+
+}
+
 
 
 %icon-cloud-style{
 	  height: 113px;
-       width: 178px;
-       background-position: 50% 50%;
-       background-size: cover;
-       margin: 0;
-       padding: 0;
-     
+    width: 178px;
+    background-position: 50% 50%;
+    background-size: cover;
+    margin: 0;
+  padding: 0;
+
 }
 
 
