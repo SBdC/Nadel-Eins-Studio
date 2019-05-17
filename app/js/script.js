@@ -50,14 +50,18 @@ let revealText = (e) => {
 };
 
 let hideText = (e) => {
-
-  const goUp = document.querySelector(`p[data-hide="${e.target.id}"]`);
+  let targetService = e.target.id;
+  const goUp = document.querySelector(`p[data-hide="${targetService }"]`);
   goUp.style.display = "none";
   goUp.style.transition = "all 2s";
-  let otherButton = document.getElementById(`${e.target.id}`);
+  let otherButton = document.getElementById(`${targetService }`);
   otherButton.style.display = "none";
-  let button = document.querySelector(`button[data-type="${e.target.id}"]`);
+  let button = document.querySelector(`button[data-type="${targetService }"]`);
   button.style.display = "block";
+
+  let targetServiveElemnt=document.getElementById(targetService);
+  let parentTargetServiveElemnt = targetServiveElemnt.parentElement;
+  parentTargetServiveElemnt.scrollIntoView(true);
 
 };
 
@@ -156,7 +160,7 @@ const MODAL = document.getElementById("myModal");
 const SPAN = document.getElementsByClassName("close")[0];
 let modalImg = document.getElementById("img01");
 let captionText = document.getElementById("caption-modal");
-
+const BODY = document.getElementsByTagName("BODY")[0];
 
 
 
@@ -170,14 +174,9 @@ let zoomImage = (e) => {
   MODAL.style.display = "block";
   modalImg.src = e.target.src;
   captionText.innerHTML = e.target.nextElementSibling.innerHTML;
-
-
+  BODY.style.overflow = "hidden";
 };
 imgs.forEach(img => img.addEventListener("click", zoomImage, false));
-
-
-
-
 
 
 
@@ -236,49 +235,11 @@ loadLessBtn.addEventListener("click", function() {
 });
 
 
-
-//back-to-top and smooth scrolling
+//back-to-top
 
 
 
 const backTop = document.querySelector("#back-to-top");
-
-
-// function smoothScroll (target,duration){
-//   var target = document.querySelector(target);
-//   var targetPosition = target.getBoundingClientRect().top;
-//   var startPosition = window.pageYOffset;
-//   var distance = targetPosition - startPosition;
-//   var startTime = null;
-//
-//   function animation (currentTime){
-//     if (startTime === null) startTime = currentTime;
-//     var timeLapsed = currentTime - startTime;
-//     var run =  ease(timeLapsed, startPosition, distance, duration);
-//     window.scrollTo(0, run);
-//     if(timeLapsed < duration) requestAnimationFrame(animation)
-//   }
-//
-//   function ease (t) { return t*(2-t) }
-//
-//
-//   requestAnimationFrame(animation);
-//
-// }
-//
-//
-//
-// backTop.addEventListener("click", function(){
-//
-//   smoothScroll('#top', 1000);
-//   console.log("weeee");
-// });
-//
-
-
-
-
-
 // Setup isScrolling variable
 let isScrolling;
 
@@ -295,18 +256,15 @@ window.addEventListener("scroll", function() {
     setTimeout(function() {
       backTop.style.display = "none";
     }, 150);
-    console.log("Scrolling");
+
   }
 
   // Set a timeout to run after scrolling ends
   isScrolling = setTimeout(function() {
-    if (window.pageYOffset > 300) {
-
+    if (window.pageYOffset > 400) {
       backTop.classList.remove("btn-exit");
       backTop.classList.add("btn-entrance");
       backTop.style.display = "block";
-      console.log("Scrolling has stopped.");
-
     }
 
   }, 66);
@@ -314,10 +272,13 @@ window.addEventListener("scroll", function() {
 }, false);
 
 
-
-
 backTop.addEventListener("click", backToTop);
 
 function backToTop() {
   window.scrollTo(0, 0);
 }
+
+
+
+// Vanilla JavaScript Scroll to Anchor
+// @ https://perishablepress.com/vanilla-javascript-scroll-anchor/

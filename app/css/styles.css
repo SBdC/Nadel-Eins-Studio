@@ -89,7 +89,7 @@ header .icon-cloud-line, .services .icon, .prices .icon {
   padding: 0; }
 
 .services .service, .music .card {
-  border: #EDEDED solid 3px;
+  border: #E1E4E8 solid 2px;
   background-color: white;
   margin: 20px auto;
   padding: 10% 4%;
@@ -180,7 +180,7 @@ nav {
     margin-left: 14px; }
     .open li h2 {
       line-height: 40px;
-      color: #EDEDED;
+      color: #E1E4E8;
       z-index: 100; }
       .open li h2:hover {
         color: #FF0000;
@@ -321,26 +321,17 @@ About and co-work
 /*--------------------------------------------------------------
 slider
 --------------------------------------------------------------*/
-/* The Modal (background) */
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 3000;
-  /* Sit on top */
   padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
-  background-color: #2E3645;
-  /* Black w/ opacity */ }
+  background-color: #2E3645; }
 
 /* Modal Content (image) */
 .modal-content {
@@ -419,7 +410,7 @@ slider
   width: auto;
   padding: 12px;
   margin: 0 5px;
-  color: #EDEDED;
+  color: #E1E4E8;
   font-weight: bold;
   font-size: 16px;
   transition: 1s ease;
@@ -472,7 +463,7 @@ slider
   transform: translateX(2px) translateY(2px);
   box-shadow: 2px 2px 0 0;
   box-shadow: #449AFF 2px 2px 0 0;
-  background-color: #EDEDED;
+  background-color: #E1E4E8;
   margin-top: -3px; }
 
 /* Fading animation */
@@ -550,10 +541,10 @@ services
     color: #449AFF;
     text-align: center; }
   .prices p {
-    color: #EDEDED;
+    color: #E1E4E8;
     text-align: center;
-    border-bottom: 1px solid #EDEDED;
-    border-top: 1px solid #EDEDED;
+    border-bottom: 1px solid #E1E4E8;
+    border-top: 1px solid #E1E4E8;
     margin: 0;
     padding: 5px; }
   .prices .icon {

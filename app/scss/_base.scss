@@ -299,26 +299,19 @@ About and co-work
 /*--------------------------------------------------------------
 slider
 --------------------------------------------------------------*/
-/* The Modal (background) */
+
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 3000;
-  /* Sit on top */
   padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: $black;
-  /* Black w/ opacity */
+
 }
 /* Modal Content (image) */
 .modal-content {
@@ -557,6 +550,7 @@ services
 
   .card {
     display: inline-block;
+  
     @extend %box;
 
     h3 {
