@@ -1,7 +1,8 @@
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -100,6 +101,14 @@ header .icon-cloud-line, .services .icon, .prices .icon {
   text-transform: uppercase;
   font-weight: 700;
   color: #449AFF; }
+
+section .about-text-wrapper,
+section .co-work-text-wrapper,
+section .music-text-wrapper,
+section .prices-text-wrapper,
+section .services-text-wrapper, .theEnd .footer-content p {
+  padding: 0 20px 25px;
+  margin: 0; }
 
 /*--------------------------------------------------------------
 Accessibility
@@ -292,13 +301,6 @@ sections
 --------------------------------------------------------------*/
 section {
   padding: 20px 0; }
-  section .about-text-wrapper,
-  section .co-work-text-wrapper,
-  section .music-text-wrapper,
-  section .prices-text-wrapper,
-  section .services-text-wrapper {
-    padding: 0 20px 25px;
-    margin: 0; }
 
 /*--------------------------------------------------------------
 About and co-work
@@ -564,3 +566,17 @@ services
     display: none; }
   .prices .center-viewLess {
     margin: 0 auto; }
+
+/*--------------------------------------------------------------
+About and co-work
+--------------------------------------------------------------*/
+.theEnd {
+  background-color: #2E3645;
+  color: white;
+  height: 120px; }
+  .theEnd .footer-content {
+    position: absolute;
+    bottom: 10px; }
+    .theEnd .footer-content p {
+      line-height: 0.4;
+      font-size: 0.8em; }

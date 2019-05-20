@@ -280,5 +280,8 @@ function backToTop() {
 
 
 
-// Vanilla JavaScript Scroll to Anchor
-// @ https://perishablepress.com/vanilla-javascript-scroll-anchor/
+let today = new Date();
+let year = today.getFullYear();
+
+const copy = document.getElementById("copyright");
+copy.innerHTML = "<p> Franz Schuette " + year + " &#x24B8; All rights reserved</p>";

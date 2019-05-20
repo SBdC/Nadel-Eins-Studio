@@ -267,8 +267,7 @@ section {
   .music-text-wrapper,
   .prices-text-wrapper,
   .services-text-wrapper {
-    padding: 0 20px 25px;
-    margin: 0;
+  @extend %text-margin;
   }
 }
 /*--------------------------------------------------------------
@@ -550,7 +549,7 @@ services
 
   .card {
     display: inline-block;
-  
+
     @extend %box;
 
     h3 {
@@ -633,3 +632,26 @@ services
     margin: 0 auto;
   }
 }
+
+
+/*--------------------------------------------------------------
+About and co-work
+--------------------------------------------------------------*/
+.theEnd {
+
+    background-color: $black ;
+    color:white;
+    height:120px;
+
+    .footer-content{
+      position:absolute;
+      bottom:10px;
+
+      p{
+        line-height: 0.4;
+        @extend %text-margin;
+        font-size:0.8em;
+      }
+    }
+
+  }
