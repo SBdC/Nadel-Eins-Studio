@@ -42,6 +42,19 @@ Accessibility
     justify-content: center;
     flex-direction: column;
   }
+
+ .service-container{
+   display:flex;
+   justify-content: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+ }
+
+ .service{
+
+ }
+
+
   // .music{
   //     .cards {
   //          display:flex;
@@ -67,6 +80,7 @@ body {
   background-size: 1300px;
   background-repeat: repeat;
   background-attachment: fixed;
+
 }
 /*--------------------------------------------------------------
 nav
@@ -273,8 +287,8 @@ section {
 /*--------------------------------------------------------------
 About and co-work
 --------------------------------------------------------------*/
-.about,
-.co-work {
+.about
+ {
   p {
     background-color: white;
     padding: 10px;
@@ -295,6 +309,32 @@ About and co-work
     background-color: white;
   }
 }
+
+/*--------------------------------------------------------------
+About and co-work
+--------------------------------------------------------------*/
+.co-work {
+  background-color: $black;
+
+  p {
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  h2 {
+    @extend %section-title;
+  }
+
+  button {
+    @extend %button-style-simple;
+    margin-bottom: 40px;
+  }
+
+
+}
+
+
 /*--------------------------------------------------------------
 slider
 --------------------------------------------------------------*/

@@ -149,6 +149,7 @@ function showSlides(n) {
 
 prev.addEventListener("click", minusSlides, false);
 next.addEventListener("click", plusSlides, false);
+
 dots.forEach(dot => dot.addEventListener("click", currentSlide, false));
 
 

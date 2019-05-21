@@ -57,8 +57,7 @@ h2 {
 h3 {
   font-size: 1.6em; }
 
-.icon-close, #back-to-top, .about button,
-.co-work button, .dots, .services button, .music .load, .prices button {
+.icon-close, #back-to-top, .about button, .co-work button, .dots, .services button, .music .load, .prices button {
   color: #2E3645;
   letter-spacing: 0.02em;
   background-color: white;
@@ -68,8 +67,7 @@ h3 {
   padding: 8px 10px;
   box-shadow: #449AFF 4px 4px 0 0;
   transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
-  .icon-close:hover, #back-to-top:hover, .about button:hover,
-  .co-work button:hover, .dots:hover, .services button:hover, .music .load:hover, .prices button:hover {
+  .icon-close:hover, #back-to-top:hover, .about button:hover, .co-work button:hover, .dots:hover, .services button:hover, .music .load:hover, .prices button:hover {
     transform: translateX(2px) translateY(2px);
     box-shadow: 2px 2px 0 0; }
 
@@ -96,8 +94,7 @@ header .icon-cloud-line, .services .icon, .prices .icon {
   padding: 10% 4%;
   width: 300px; }
 
-.about h2,
-.co-work h2, .services h2 {
+.about h2, .co-work h2, .services h2 {
   text-transform: uppercase;
   font-weight: 700;
   color: #449AFF; }
@@ -150,7 +147,12 @@ Accessibility
   body {
     display: flex;
     justify-content: center;
-    flex-direction: column; } }
+    flex-direction: column; }
+  .service-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap; } }
 
 body {
   background-image: url("../img/cable-test-12.svg");
@@ -305,20 +307,29 @@ section {
 /*--------------------------------------------------------------
 About and co-work
 --------------------------------------------------------------*/
-.about p,
-.co-work p {
+.about p {
   background-color: white;
   padding: 10px;
   border-radius: 20px; }
 
-.about button,
-.co-work button {
+.about button {
   margin-bottom: 40px; }
 
-.about .about-more-text,
-.co-work .about-more-text {
+.about .about-more-text {
   display: none;
   background-color: white; }
+
+/*--------------------------------------------------------------
+About and co-work
+--------------------------------------------------------------*/
+.co-work {
+  background-color: #2E3645; }
+  .co-work p {
+    color: white;
+    padding: 10px;
+    border-radius: 20px; }
+  .co-work button {
+    margin-bottom: 40px; }
 
 /*--------------------------------------------------------------
 slider
