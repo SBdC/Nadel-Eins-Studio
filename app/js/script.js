@@ -284,5 +284,34 @@ function backToTop() {
 let today = new Date();
 let year = today.getFullYear();
 
-const copy = document.getElementById("copyright");
-copy.innerHTML = "<p> Franz Schuette " + year + " &#x24B8; All rights reserved</p>";
+const COPY = document.getElementById("copyright");
+COPY.innerHTML = "<p> Franz Schuette " + year + " &#x24B8; All rights reserved</p>";
+
+const IMPRESSUM = document.getElementById("impressum");
+let impressumText = document.getElementById("impressum-text");
+let impressumArrow = document.getElementById("impressum-arrow");
+
+let impressumTextContent = `<p class="impressum-text"> Nadel Eins Studio Berlin c/o Franz Schuette - Wattstrasse 24 - 13355 Berlin - Deutschland </p>
+  <p>  Verantwortlich nach $ 6 Teledienstgesetz: Franz Schuette </p>
+   <p> Hinweise: Nadel Eins bemueht sich auf dieser Webseite richtige und vollstaendige Informationen zur Verfuegung zu stellen, 
+  uebernimmt jedoch keine Haftung oder Garantie fuer die Aktualitaet, Richtigkeit und Vollstaendigkeit der auf dieser Webseite 
+  bereitgestellten Informationen. Dies gilt auch fuer alle Verbindungen ("Links"), auf die diese Webseite direkt oder indirekt verweist. 
+  Nadel Eins ist fuer den Inhalt einer Seite, die mit einem solchen Link erreicht wird, nicht verantwortlich. 
+  Die Redaktion uebernimmt keine Haftung fuer unverlangt eingesandte Manuskripte, Fotos, Illustrationen. 
+  Nadel Eins behaelt sich das Recht vor, ohne vorherige Ankuendigung Aenderungen oder Ergaenzungen der bereitgestellten Informationen vorzunehmen. 
+  Der Inhalt dieser Webseite ist urheberrechtlich geschuetzt. Vervielfaeltigung, Speicherung und Nachdruck nur mit ausdruecklicher,
+  schriftlicher Genehmigung von Nadel Eins. Nadel Eins beachtet die datenschutzrechtlichen Bestimmungen des Bundesdatenschutzgesetzes. 
+  Soweit personenbezogene Daten eingegeben werden, richten sich diese selbstverstaendlich nur an Nadel Eins. 
+  Nadel Eins wird diese ohne die Einwilligung des Nutzers nicht an Dritte weitergeben</p>`;
+
+
+function showImpressum (){
+
+  IMPRESSUM.getAttribute("aria-expanded") == "false" ? IMPRESSUM.setAttribute("aria-expanded", true) : IMPRESSUM.setAttribute("aria-expanded", false);
+  impressumText.innerHTML ==  impressumTextContent ? impressumText.innerHTML = "" : impressumText.innerHTML = impressumTextContent;
+  impressumArrow.style.transform = (impressumArrow.style.transform == "rotate(90deg)") ? "rotate(270deg)" : "rotate(90deg)";
+  window.scrollTo(0,document.body.scrollHeight)? window.scrollTo(IMPRESSUM) : window.scrollTo(0,document.body.scrollHeight);
+
+}
+
+IMPRESSUM.addEventListener("click", showImpressum, false);

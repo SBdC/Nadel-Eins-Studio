@@ -94,7 +94,7 @@ header .icon-cloud-line, .services .icon, .prices .icon {
   padding: 10% 4%;
   width: 300px; }
 
-.about h2, .co-work h2, .services h2 {
+.about h2, .co-work h2, .services h2, .contact h2 {
   text-transform: uppercase;
   font-weight: 700;
   color: #449AFF; }
@@ -103,7 +103,9 @@ section .about-text-wrapper,
 section .co-work-text-wrapper,
 section .music-text-wrapper,
 section .prices-text-wrapper,
-section .services-text-wrapper, .theEnd .footer-content p {
+section .services-text-wrapper,
+section .contact-text-wrapper,
+section .footer-content, .theEnd .footer-content p {
   padding: 0 20px 25px;
   margin: 0; }
 
@@ -150,9 +152,14 @@ Accessibility
     flex-direction: column; }
   .service-container {
     display: flex;
-    justify-content: center;
     flex-direction: row;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap;
+    justify-content: center; }
+  .music .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; } }
 
 body {
   background-image: url("../img/cable-test-12.svg");
@@ -320,7 +327,7 @@ About and co-work
   background-color: white; }
 
 /*--------------------------------------------------------------
-About and co-work
+co-work
 --------------------------------------------------------------*/
 .co-work {
   background-color: #2E3645; }
@@ -579,15 +586,27 @@ services
     margin: 0 auto; }
 
 /*--------------------------------------------------------------
-About and co-work
+co-work
+--------------------------------------------------------------*/
+.contact p {
+  color: #2E3645;
+  padding: 10px;
+  border-radius: 20px; }
+
+/*--------------------------------------------------------------
+Footer
 --------------------------------------------------------------*/
 .theEnd {
   background-color: #2E3645;
-  color: white;
-  height: 120px; }
+  color: white; }
   .theEnd .footer-content {
-    position: absolute;
-    bottom: 10px; }
+    margin-top: 30px; }
     .theEnd .footer-content p {
-      line-height: 0.4;
+      line-height: 1.3;
       font-size: 0.8em; }
+      .theEnd .footer-content p span {
+        margin-left: 3px;
+        display: inline-block;
+        transform: rotate(-90deg); }
+      .theEnd .footer-content p:hover {
+        cursor: pointer; }
