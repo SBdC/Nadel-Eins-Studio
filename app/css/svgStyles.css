@@ -1,0 +1,71 @@
+.cloud {
+  width: 80%;
+  height: 80%; }
+  .cloud .cloud-cable {
+    fill: none;
+    stroke-width: 3.6;
+    stroke: #449AFF; }
+  .cloud text {
+    fill: black;
+    stroke: transparent;
+    font-size: 24px; }
+
+.logo {
+  max-width: 75%;
+  max-height: 75%;
+  width: 75%;
+  height: 75%; }
+  .logo .nadel-eins-logo {
+    fill: none; }
+    .logo .nadel-eins-logo .needle,
+    .logo .nadel-eins-logo .bottom {
+      fill: white; }
+    .logo .nadel-eins-logo .needle,
+    .logo .nadel-eins-logo .bottom,
+    .logo .nadel-eins-logo .smile,
+    .logo .nadel-eins-logo .face,
+    .logo .nadel-eins-logo .surprise {
+      stroke-width: 3;
+      stroke: black; }
+    .logo .nadel-eins-logo .smiley .face {
+      fill: #FFEE00; }
+    .logo .nadel-eins-logo .smiley .eye-right,
+    .logo .nadel-eins-logo .smiley .eye-left {
+      fill: black; }
+    .logo .nadel-eins-logo .smiley .smileBar {
+      stroke-width: 0.8;
+      fill: black; }
+    .logo .nadel-eins-logo .smiley .surprise {
+      fill: transparent;
+      stroke: transparent; }
+    .logo .nadel-eins-logo .thunder {
+      stroke-width: 3; }
+
+@keyframes twink {
+  0% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1); } }
+
+.eye-right {
+  transform-origin: 55px 29px 4px;
+  animation: twink 5s alternate infinite ease-in; }
+
+.eye-left {
+  transform-origin: 31px 29px 4px;
+  animation: twink 5s alternate infinite ease-in; }
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+    fill: transparent; }
+  99% {
+    fill: red; }
+  100% {
+    stroke-dashoffset: 0;
+    fill: red; } }
+
+.thunder-happens {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 2s linear alternate forwards; }

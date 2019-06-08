@@ -315,3 +315,96 @@ function showImpressum (){
 }
 
 IMPRESSUM.addEventListener("click", showImpressum, false);
+
+
+
+
+
+//svg animations
+
+
+
+
+const face = document.getElementById("face");
+const thunder = document.querySelector(".thunder");
+const surprise = document.querySelector(".surprise");
+const smile = document.querySelector(".smile");
+const smileBar = document.querySelector(".smileBar");
+
+const faces = Array.from(document.querySelectorAll(".faces"));
+
+
+
+
+//thunders get drawn
+
+let thunderOn = () => {
+
+ 
+    face.style.fill = "red";
+    thunder.style.stroke ="black";
+    thunder.classList.add("thunder-happens");
+    smile.style.stroke ="transparent";
+    smileBar.style.fill ="transparent";
+    smileBar.style.stroke ="transparent";
+    surprise.style.fill ="white";
+    surprise.style.stroke ="black";
+    // title.style.color="red";
+    document.body.style.background="snow";
+    // city.style.background="snow";
+  
+};
+
+let thunderOff= () => {
+
+
+    face.style.fill = "yellow";
+    thunder.classList.remove("thunder-happens");
+    thunder.style.stroke ="transparent";
+    smile.style.stroke ="black";
+    smileBar.style.fill ="black";
+    smileBar.style.stroke ="black";
+    surprise.style.fill ="transparent";
+    surprise.style.stroke ="transparent";
+
+    document.body.style.background="";
+    // city.style.background="";
+    // title.style.color="black";
+    
+};
+
+
+// face.addEventListener("click", thunderOn, false);
+// face.addEventListener("mouseout", thunderOff , false);
+
+
+
+
+
+faces.forEach(face => face.addEventListener("mouseover", thunderOn, false));
+faces.forEach(face => face.addEventListener("mouseout", thunderOff, false));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

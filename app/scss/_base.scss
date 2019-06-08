@@ -1,3 +1,5 @@
+
+
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
@@ -38,11 +40,9 @@ Accessibility
 }
 
 @supports (display: flex) {
-    body {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
+  
+
+
 
     .service-container {
         display: flex;
@@ -72,8 +72,18 @@ body {
     background-size: 1300px;
     background-repeat: repeat;
     background-attachment: fixed;
+    width:100vw;
 
 }
+
+    .wrap-all{
+
+    max-width:1300px;
+        margin:auto;
+  
+    
+}
+
 
 /*--------------------------------------------------------------
 nav
@@ -208,10 +218,20 @@ buttons close and arrow-up
 /*--------------------------------------------------------------
 header
 --------------------------------------------------------------*/
+
+.header-for-desktop{
+    display:none;
+}
+
+
+
+
+
 header {
     .icon-cloud-line {
         position: absolute;
         right: 15%;
+        top:10px;
         @extend %icon-cloud-style;
 
         p {
@@ -720,6 +740,7 @@ Footer
     .footer-content {
 
         margin-top: 30px;
+        padding-top: 20px;
 
         p {
             line-height: 1.3;

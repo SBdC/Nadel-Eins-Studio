@@ -249,4 +249,46 @@ function showImpressum() {
   window.scrollTo(0, document.body.scrollHeight) ? window.scrollTo(IMPRESSUM) : window.scrollTo(0, document.body.scrollHeight);
 }
 
-IMPRESSUM.addEventListener("click", showImpressum, false);
+IMPRESSUM.addEventListener("click", showImpressum, false); //svg animations
+
+var face = document.getElementById("face");
+var thunder = document.querySelector(".thunder");
+var surprise = document.querySelector(".surprise");
+var smile = document.querySelector(".smile");
+var smileBar = document.querySelector(".smileBar");
+var faces = Array.from(document.querySelectorAll(".faces")); //thunders get drawn
+
+var thunderOn = function thunderOn() {
+  face.style.fill = "red";
+  thunder.style.stroke = "black";
+  thunder.classList.add("thunder-happens");
+  smile.style.stroke = "transparent";
+  smileBar.style.fill = "transparent";
+  smileBar.style.stroke = "transparent";
+  surprise.style.fill = "white";
+  surprise.style.stroke = "black"; // title.style.color="red";
+
+  document.body.style.background = "snow"; // city.style.background="snow";
+};
+
+var thunderOff = function thunderOff() {
+  face.style.fill = "yellow";
+  thunder.classList.remove("thunder-happens");
+  thunder.style.stroke = "transparent";
+  smile.style.stroke = "black";
+  smileBar.style.fill = "black";
+  smileBar.style.stroke = "black";
+  surprise.style.fill = "transparent";
+  surprise.style.stroke = "transparent";
+  document.body.style.background = ""; // city.style.background="";
+  // title.style.color="black";
+}; // face.addEventListener("click", thunderOn, false);
+// face.addEventListener("mouseout", thunderOff , false);
+
+
+faces.forEach(function (face) {
+  return face.addEventListener("mouseover", thunderOn, false);
+});
+faces.forEach(function (face) {
+  return face.addEventListener("mouseout", thunderOff, false);
+});

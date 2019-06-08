@@ -1,0 +1,151 @@
+$lightgrey: #E1E4E8;
+$text: #1b1b1c;
+$black: #000c2b;
+$lightblue: #C0D5ED;
+$red: #FF0000;
+$yellow:#FFEE00;
+$blue: #449AFF;
+
+
+.cloud {
+
+    width: 80%;
+    height: 80%;
+
+    .cloud-cable {
+        fill: none;
+        stroke-width: 3.6;
+        stroke: $blue;
+
+    }
+
+    text {
+        fill: black;
+        stroke: transparent;
+        font-size: 24px;
+    }
+
+
+}
+
+
+
+.logo {
+    max-width: 75%;
+    max-height: 75%;
+    width: 75%;
+    height: 75%;
+
+    .nadel-eins-logo {
+
+        fill: none;
+
+
+        .needle,
+        .bottom,
+
+            {
+            fill: white;
+
+        }
+
+        .needle,
+        .bottom,
+        .smile,
+        .face,
+        .surprise {
+            stroke-width: 3;
+            stroke: black;
+
+        }
+
+        .smiley {
+
+            .face {
+                fill: $yellow;
+            }
+
+            .eye-right,
+            .eye-left {
+                fill: black;
+            }
+
+            .smileBar {
+                stroke-width: 0.8;
+                fill: black;
+            }
+
+            .surprise {
+                fill: transparent;
+                stroke: transparent;
+            }
+
+
+        }
+
+        .thunder {
+            stroke-width: 3;
+        }
+
+    }
+
+
+}
+
+
+
+//eyes logo smiley
+
+
+@keyframes twink {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+.eye-right {
+    transform-origin: 55px 29px 4px;
+    animation: twink 5s alternate infinite ease-in;
+}
+
+.eye-left {
+    transform-origin: 31px 29px 4px;
+    animation: twink 5s alternate infinite ease-in;
+}
+
+
+//thunder
+
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1000;
+        fill: transparent;
+    }
+
+    99% {
+
+        fill: red;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: red;
+
+    }
+}
+
+.thunder-happens {
+
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 2s linear alternate forwards;
+
+
+}
