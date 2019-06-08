@@ -62,7 +62,7 @@ img{
     display: grid;
     background-color: black;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 60px auto auto 10px auto;
+    grid-template-rows: auto;
     grid-gap: 0px;
 }
 
@@ -95,7 +95,7 @@ img{
 }
 
 .muscle {
-    width: 110%;
+    width: 115%;
     padding: 20px;
 }
 
@@ -130,6 +130,7 @@ img{
 .banner1 {
     grid-column: 1/7;
     background-color: black;
+    padding-bottom:10px;: 
 }
 
 .item1 {
@@ -414,7 +415,7 @@ img{
 @media only screen and (max-width: 1070px) {
     .container {
         margin: 40px;
-        grid-template-rows: 50px 80px 80px 10px auto;
+        grid-template-rows: auto;
     }
  .micro {
     width: 30%;
@@ -427,7 +428,7 @@ img{
 @media only screen and (max-width: 880px) {
     .container {
         margin: 20px;
-        grid-template-rows: 40px 60px 60px 10px auto;
+        grid-template-rows: auto;
     }
 
  .micro {
@@ -464,17 +465,18 @@ img{
 @media only screen and (max-width: 660px) {
     .container {
         margin: 0;
-        grid-template-rows: 60px 100px 80px 80px 20px auto;
+        
     }
 
     .smiley {
         width: 24%;
-
-        animation: rotate 2s -1s linear infinite;
+       padding:10px 0 5px;
+        
     }
 
     .wheel {
         width: 26%;
+            padding:10px 0 5px;
 
     }
 
@@ -485,7 +487,8 @@ img{
 
 
     .muscle {
-        width: 55%;
+        width: 50%;
+        padding:10px 5px 20px;
     }
 
     .haddu,
@@ -493,6 +496,7 @@ img{
         width: 95%;
         margin-right: 10px;
         margin-left: 10px;
+        padding:5px;
     }
 
     .rabbit {
