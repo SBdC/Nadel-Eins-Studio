@@ -621,8 +621,8 @@ Footer
         cursor: pointer; }
 
 .cloud {
-  width: 80%;
-  height: 80%; }
+  width: 70%;
+  height: 70%; }
   .cloud .cloud-cable {
     fill: none;
     stroke-width: 3.6;
@@ -630,13 +630,44 @@ Footer
   .cloud text {
     fill: black;
     stroke: transparent;
-    font-size: 24px; }
+    font-size: 28px; }
+
+.drops {
+  display: none; }
+
+@keyframes slidein {
+  0% {
+    transform: translateX(0px); }
+  100% {
+    transform: translateX(150px); } }
+
+@keyframes slidein-other {
+  0% {
+    transform: translateX(0px); }
+  100% {
+    transform: translateX(-150px); } }
+
+.cloud-moves-2 {
+  animation: slidein 14s -6s alternate infinite linear; }
+
+.cloud-moves {
+  animation: slidein 13s  -2s alternate infinite linear; }
+
+.cloud-moves-4 {
+  animation: slidein-other 16s -5s alternate infinite linear; }
+
+.cloud-moves-5 {
+  animation: slidein-other 20s -6s alternate infinite linear; }
+
+.cloud-moves-6 {
+  animation: slidein 18s -5s alternate infinite linear; }
+
+.cloud-moves-7 {
+  animation: slidein-other 17s -4s alternate infinite linear; }
 
 .logo {
-  max-width: 75%;
-  max-height: 75%;
-  width: 75%;
-  height: 75%; }
+  width: 80%;
+  height: 80%; }
   .logo .nadel-eins-logo {
     fill: none; }
     .logo .nadel-eins-logo .needle,
@@ -702,7 +733,7 @@ Footer
         margin: 20px;
         display: grid;
         grid-template-columns: repeat(16, 1fr);
-        grid-template-rows: 8em auto;
+        grid-template-rows: 8em 7em auto;
         grid-gap: 0px; }
         .header-for-desktop .grid-container .item {
           display: grid;
@@ -710,85 +741,42 @@ Footer
           align-items: center;
           grid-gap: 5px;
           padding: 5px;
-          background-color: lightblue; }
+          background-color: transparent; }
         .header-for-desktop .grid-container .item1 {
           grid-column: 1/4;
-          background-color: red;
           display: flex;
           justify-content: center;
-          align-items: center; }
+          align-items: flex-start; }
         .header-for-desktop .grid-container .item2 {
           grid-column: 4/7;
-          background-color: green;
           display: flex;
           justify-content: center;
-          align-items: center; }
+          align-items: flex-end; }
         .header-for-desktop .grid-container .item3 {
           grid-column: 7/11;
-          background-color: yellow;
           grid-row: 1/6;
           display: flex;
           justify-content: center;
           align-items: center; }
         .header-for-desktop .grid-container .item4 {
           grid-column: 11/14;
-          background-color: red;
           display: flex;
           justify-content: center;
-          align-items: center; }
+          align-items: flex-start; }
         .header-for-desktop .grid-container .item5 {
           grid-column: 14/17;
-          background-color: green;
           display: flex;
           justify-content: center;
           align-items: center; }
         .header-for-desktop .grid-container .item6 {
-          grid-column: 1/4;
+          grid-column: 1/7;
           grid-row: 2/3;
-          background-color: blue;
           display: flex;
           justify-content: center;
-          align-items: center; }
+          align-items: flex-end; }
         .header-for-desktop .grid-container .item7 {
-          grid-column: 4/7;
+          grid-column: 11/17;
           grid-row: 2/3;
-          background-color: purple;
           display: flex;
           justify-content: center;
-          align-items: center; }
-        .header-for-desktop .grid-container .item8 {
-          grid-column: 11/14;
-          grid-row: 2/3;
-          background-color: blue; }
-        .header-for-desktop .grid-container .item9 {
-          grid-column: 14/17;
-          grid-row: 2/3;
-          background-color: purple; }
-        .header-for-desktop .grid-container .item10 {
-          grid-column: 1/4;
-          grid-row: 3/4;
-          background-color: red;
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-        .header-for-desktop .grid-container .item11 {
-          grid-column: 4/7;
-          grid-row: 3/4;
-          background-color: green;
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-        .header-for-desktop .grid-container .item12 {
-          grid-column: 11/14;
-          grid-row: 3/4;
-          background-color: red;
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-        .header-for-desktop .grid-container .item13 {
-          grid-column: 14/17;
-          grid-row: 3/4;
-          background-color: green;
-          display: flex;
-          justify-content: center;
-          align-items: center; } } }
+          align-items: flex-start; } } }

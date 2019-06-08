@@ -19,7 +19,7 @@
 				margin:20px;
                 display: grid;
                 grid-template-columns: repeat(16, 1fr);
-                grid-template-rows: 8em auto;
+                grid-template-rows: 8em 7em auto;
                 grid-gap: 0px;
 
 				.item {
@@ -28,7 +28,7 @@
 				    align-items: center;
 				    grid-gap: 5px;
 				    padding: 5px;
-					background-color: lightblue;
+					background-color: transparent;
 					}
 				
 
@@ -36,20 +36,20 @@
 				.item1{
 
 				grid-column: 1/4;
-				background-color:red;
+				// background-color:red;
 				display:flex;
 				justify-content:center;
-				align-items:center;
+				align-items:flex-start;
 
 				}
 
 				.item2{
-
+				
 				grid-column: 4/7;
-				background-color:green;
+				// background-color:green;
 				display:flex;
 				justify-content:center;
-				align-items:center;
+				align-items:flex-end;
 
 				}
 
@@ -57,7 +57,7 @@
 				.item3{
 
 				grid-column: 7/11;
-				background-color:yellow;
+				// background-color:yellow;
 				grid-row:1/6;
 					display:flex;
 				justify-content:center;
@@ -68,107 +68,52 @@
 				.item4{
 
 				grid-column: 11/14;
-				background-color:red;
+				// background-color:red;
 				display:flex;
 				justify-content:center;
-				align-items:center;
+				align-items:flex-start;
 
 				}
 
 				.item5{
 
 				grid-column: 14/17;
-				background-color:green;
+				// background-color:green;
 					display:flex;
 				justify-content:center;
 				align-items:center;
 
 				}
 
+		
+
+
 				.item6{
 
-				grid-column: 1/4;
+				grid-column: 1/7;
 				grid-row:2/3;
-				background-color:blue;
-					display:flex;
+				// background-color:red;
+				display:flex;
 				justify-content:center;
-				align-items:center;
+				align-items:flex-end;
 
 				}
 
 				.item7{
 
-				grid-column: 4/7;
+				grid-column: 11/17;
 				grid-row:2/3;
-				background-color:purple;
-					display:flex;
-				justify-content:center;
-				align-items:center;
-
-				}
-				.item8{
-
-				grid-column: 11/14;
-				grid-row:2/3;
-				background-color:blue;
-
-				}
-
-				.item9{
-
-				grid-column: 14/17;
-				grid-row:2/3;
-				background-color:purple;
-
-				}
-
-
-				.item10{
-
-				grid-column: 1/4;
-				grid-row:3/4;
-				background-color:red;
+				// background-color:green;
 				display:flex;
 				justify-content:center;
-				align-items:center;
-
-				}
-
-				.item11{
-
-				grid-column: 4/7;
-				grid-row:3/4;
-				background-color:green;
-				display:flex;
-				justify-content:center;
-				align-items:center;
+				align-items:flex-start;
 
 				}
 
 
 			
 
-				.item12{
-
-				grid-column: 11/14;
-				grid-row:3/4;
-				background-color:red;
-				display:flex;
-				justify-content:center;
-				align-items:center;
-
-				}
-
-				.item13{
-
-				grid-column: 14/17;
-				grid-row:3/4;
-				background-color:green;
-					display:flex;
-				justify-content:center;
-				align-items:center;
-
-				}
+			
 
 
 

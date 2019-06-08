@@ -1,6 +1,6 @@
 .cloud {
-  width: 80%;
-  height: 80%; }
+  width: 70%;
+  height: 70%; }
   .cloud .cloud-cable {
     fill: none;
     stroke-width: 3.6;
@@ -8,13 +8,44 @@
   .cloud text {
     fill: black;
     stroke: transparent;
-    font-size: 24px; }
+    font-size: 28px; }
+
+.drops {
+  display: none; }
+
+@keyframes slidein {
+  0% {
+    transform: translateX(0px); }
+  100% {
+    transform: translateX(150px); } }
+
+@keyframes slidein-other {
+  0% {
+    transform: translateX(0px); }
+  100% {
+    transform: translateX(-150px); } }
+
+.cloud-moves-2 {
+  animation: slidein 14s -6s alternate infinite linear; }
+
+.cloud-moves {
+  animation: slidein 13s  -2s alternate infinite linear; }
+
+.cloud-moves-4 {
+  animation: slidein-other 16s -5s alternate infinite linear; }
+
+.cloud-moves-5 {
+  animation: slidein-other 20s -6s alternate infinite linear; }
+
+.cloud-moves-6 {
+  animation: slidein 18s -5s alternate infinite linear; }
+
+.cloud-moves-7 {
+  animation: slidein-other 17s -4s alternate infinite linear; }
 
 .logo {
-  max-width: 75%;
-  max-height: 75%;
-  width: 75%;
-  height: 75%; }
+  width: 80%;
+  height: 80%; }
   .logo .nadel-eins-logo {
     fill: none; }
     .logo .nadel-eins-logo .needle,

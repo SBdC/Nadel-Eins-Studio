@@ -331,10 +331,14 @@ const surprise = document.querySelector(".surprise");
 const smile = document.querySelector(".smile");
 const smileBar = document.querySelector(".smileBar");
 
-const faces = Array.from(document.querySelectorAll(".faces"));
 
+const keys = Array.from(document.querySelectorAll('.key'));
+const faces = Array.from(document.querySelectorAll('.faces'));
+const texts = Array.from(document.querySelectorAll('.cloud-text'));
+const figures = Array.from(document.querySelectorAll('.cloud-icon'));
 
-
+const drops = document.getElementById('drops');
+const cloud = document.getElementById('cloud');
 
 //thunders get drawn
 
@@ -386,6 +390,57 @@ faces.forEach(face => face.addEventListener("mouseout", thunderOff, false));
 
 
 
+
+//cloud-menu
+
+
+let explodeAndReveal = (e) =>  {
+  
+  console.log(e.target);
+  const use = document.querySelector(`use[data-key="${e.target.id}"]`);
+
+
+  rain();
+
+}
+
+keys.forEach(key => key.addEventListener('click', explodeAndReveal, false));
+
+
+
+
+function rain() {
+  console.log(cloud);
+  cloud.classList.remove("cloud-on");
+  cloud.classList.add("no-cloud");
+  drops.classList.remove("no-drops");
+
+  
+
+  texts.forEach(text=> text.style.fill = "transparent");
+   texts.forEach(text=> text.style.stroke = "transparent");
+  figures.forEach(figure=> figure.classList.add("drops"));
+  figures.forEach(figure=> figure.classList.remove("other"));
+  setTimeout(cloudySky, 5000);
+
+
+}
+
+
+function cloudySky() {
+
+  cloud.classList.add("cloud");
+  cloud.classList.remove("no-cloud");
+  drops.classList.add("no-drops");
+  
+
+  texts.forEach(text=> text.style.fill = "#4A90E2");
+  figures.forEach(figure=> figure.classList.remove("drops"));
+  figures.forEach(figure=> figure.classList.add("other"));
+
+
+
+}
 
 
 

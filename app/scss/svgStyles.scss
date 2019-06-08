@@ -7,10 +7,38 @@ $yellow:#FFEE00;
 $blue: #449AFF;
 
 
+
+ 
+
+
+    .no-cloud {
+     stroke: transparent;
+     fill: transparent;
+     stroke-width: 0;
+
+    }
+
+    .no-drops{
+        fill: transparent;
+    }
+
+    .cloud-text{
+        font-family: $font-main;
+        font-size:4em;
+        font-weight: 800;
+        fill:$cyan;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+            fill:red;
+        }
+    }
+
+
 .cloud {
 
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
 
     .cloud-cable {
         fill: none;
@@ -22,19 +50,86 @@ $blue: #449AFF;
     text {
         fill: black;
         stroke: transparent;
-        font-size: 24px;
+        font-size: 28px;
     }
 
 
 }
 
 
+.drops{
+    display:none;
+}
+
+
+//cloud
+
+
+@keyframes slidein {
+
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(150px);
+  }
+}
+
+
+@keyframes slidein-other {
+
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-150px);
+  }
+}
+
+
+//extended way to see how to write minified animation
+// .cloude-moves {
+//   animation-name: slidein;
+//   animation-duration: 5s;
+//   animation-delay: 2s;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   animation-timing-function: ease;
+//   animation-fill-mode:forwards;
+// }
+
+.cloud-moves-2{
+  animation: slidein 14s -6s alternate infinite linear;
+}
+
+.cloud-moves {
+  animation: slidein 13s  -2s alternate infinite linear;
+}
+
+.cloud-moves-4{
+    animation: slidein-other 16s -5s alternate infinite linear;
+}
+
+
+.cloud-moves-5{
+    animation: slidein-other 20s -6s alternate infinite linear;
+}
+
+.cloud-moves-6{
+    animation: slidein 18s -5s alternate infinite linear;
+}
+
+
+.cloud-moves-7{
+    animation: slidein-other 17s -4s alternate infinite linear;
+}
+
+
 
 .logo {
-    max-width: 75%;
-    max-height: 75%;
-    width: 75%;
-    height: 75%;
+   
+    width: 80%;
+    height: 80%;
 
     .nadel-eins-logo {
 
@@ -149,3 +244,16 @@ $blue: #449AFF;
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
