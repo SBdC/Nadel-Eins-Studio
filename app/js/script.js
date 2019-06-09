@@ -332,15 +332,17 @@ const smile = document.querySelector(".smile");
 const smileBar = document.querySelector(".smileBar");
 
 
-const keys = Array.from(document.querySelectorAll('.key'));
+const keys = Array.from(document.querySelectorAll('.text-key'));
 const faces = Array.from(document.querySelectorAll('.faces'));
-const texts = Array.from(document.querySelectorAll('.cloud-text'));
-const figures = Array.from(document.querySelectorAll('.cloud-icon'));
+const droppings = Array.from(document.querySelectorAll('.dropping'));
+
 
 const drops = document.getElementById('drops');
-const cloud = document.getElementById('cloud');
+const cloud = document.getElementById('clouds');
 
-//thunders get drawn
+
+
+//thunders gets drawn
 
 let thunderOn = () => {
 
@@ -396,11 +398,21 @@ faces.forEach(face => face.addEventListener("mouseout", thunderOff, false));
 
 let explodeAndReveal = (e) =>  {
   
-  console.log(e.target);
-  const use = document.querySelector(`use[data-key="${e.target.id}"]`);
+  let clickedCloud = e.target;
+  let clickedCloudChild = clickedCloud.firstChild.textContent;
+  let cloudLink = document.getElementById(clickedCloudChild);
 
 
   rain();
+
+ 
+
+ let goLink =() =>{
+  cloudLink.scrollIntoView();
+ }
+
+
+ setTimeout(goLink, 1000);
 
 }
 
@@ -410,17 +422,17 @@ keys.forEach(key => key.addEventListener('click', explodeAndReveal, false));
 
 
 function rain() {
-  console.log(cloud);
-  cloud.classList.remove("cloud-on");
-  cloud.classList.add("no-cloud");
-  drops.classList.remove("no-drops");
 
-  
 
-  texts.forEach(text=> text.style.fill = "transparent");
-   texts.forEach(text=> text.style.stroke = "transparent");
-  figures.forEach(figure=> figure.classList.add("drops"));
-  figures.forEach(figure=> figure.classList.remove("other"));
+  clouds.style.stroke="transparent";
+  drops.style.stroke="#449AFF";
+   droppings.forEach(dropping=> dropping.classList.add("drops-go-down"));
+  console.log(drops)
+ 
+
+  keys.forEach(key=> key.style.fill = "transparent");
+  keys.forEach(key=> key.style.stroke = "transparent");
+
   setTimeout(cloudySky, 5000);
 
 
@@ -429,14 +441,13 @@ function rain() {
 
 function cloudySky() {
 
-  cloud.classList.add("cloud");
-  cloud.classList.remove("no-cloud");
-  drops.classList.add("no-drops");
+  
+  clouds.style.stroke="#449AFF";
+  drops.style.stroke="transparent"
+  droppings.forEach(dropping=> dropping.classList.remove("drops-go-down"));
   
 
-  texts.forEach(text=> text.style.fill = "#4A90E2");
-  figures.forEach(figure=> figure.classList.remove("drops"));
-  figures.forEach(figure=> figure.classList.add("other"));
+  keys.forEach(key=> key.style.fill = "#1b1b1c");
 
 
 

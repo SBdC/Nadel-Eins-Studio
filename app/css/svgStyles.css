@@ -1,17 +1,23 @@
 .cloud {
   width: 70%;
   height: 70%; }
-  .cloud .cloud-cable {
-    fill: none;
-    stroke-width: 3.6;
-    stroke: #449AFF; }
   .cloud text {
-    fill: black;
+    fill: #000c2b;
     stroke: transparent;
     font-size: 28px; }
+    .cloud text:hover {
+      fill: green;
+      cursor: pointer; }
+
+.clouds {
+  fill: none;
+  stroke-width: 3.6;
+  stroke: #449AFF; }
 
 .drops {
-  display: none; }
+  stroke: transparent;
+  fill: none;
+  stroke-width: 3.6; }
 
 @keyframes slidein {
   0% {
@@ -62,7 +68,8 @@
       fill: #FFEE00; }
     .logo .nadel-eins-logo .smiley .eye-right,
     .logo .nadel-eins-logo .smiley .eye-left {
-      fill: black; }
+      fill: black;
+      animation: twink 2s linear; }
     .logo .nadel-eins-logo .smiley .smileBar {
       stroke-width: 0.8;
       fill: black; }
@@ -100,3 +107,13 @@
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 2s linear alternate forwards; }
+
+@keyframes slidedown {
+  0% {
+    transform: translateY(86px); }
+  100% {
+    transform: translateY(1200px);
+    opacity: 0; } }
+
+.drops-go-down {
+  animation: slidedown 2s normal forwards ease-in; }

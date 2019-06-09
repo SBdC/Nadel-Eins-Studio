@@ -623,17 +623,23 @@ Footer
 .cloud {
   width: 70%;
   height: 70%; }
-  .cloud .cloud-cable {
-    fill: none;
-    stroke-width: 3.6;
-    stroke: #449AFF; }
   .cloud text {
-    fill: black;
+    fill: #000c2b;
     stroke: transparent;
     font-size: 28px; }
+    .cloud text:hover {
+      fill: green;
+      cursor: pointer; }
+
+.clouds {
+  fill: none;
+  stroke-width: 3.6;
+  stroke: #449AFF; }
 
 .drops {
-  display: none; }
+  stroke: transparent;
+  fill: none;
+  stroke-width: 3.6; }
 
 @keyframes slidein {
   0% {
@@ -684,7 +690,8 @@ Footer
       fill: #FFEE00; }
     .logo .nadel-eins-logo .smiley .eye-right,
     .logo .nadel-eins-logo .smiley .eye-left {
-      fill: black; }
+      fill: black;
+      animation: twink 2s linear; }
     .logo .nadel-eins-logo .smiley .smileBar {
       stroke-width: 0.8;
       fill: black; }
@@ -723,6 +730,16 @@ Footer
   stroke-dashoffset: 1000;
   animation: dash 2s linear alternate forwards; }
 
+@keyframes slidedown {
+  0% {
+    transform: translateY(86px); }
+  100% {
+    transform: translateY(1200px);
+    opacity: 0; } }
+
+.drops-go-down {
+  animation: slidedown 2s normal forwards ease-in; }
+
 @supports (grid-area: auto) {
   @media screen and (min-width: 400px) {
     .header-for-mobile {
@@ -733,7 +750,7 @@ Footer
         margin: 20px;
         display: grid;
         grid-template-columns: repeat(16, 1fr);
-        grid-template-rows: 8em 7em auto;
+        grid-template-rows: 8em 8em auto;
         grid-gap: 0px; }
         .header-for-desktop .grid-container .item {
           display: grid;
@@ -769,13 +786,25 @@ Footer
           justify-content: center;
           align-items: center; }
         .header-for-desktop .grid-container .item6 {
-          grid-column: 1/7;
+          grid-column: 1/4;
           grid-row: 2/3;
           display: flex;
           justify-content: center;
           align-items: flex-end; }
         .header-for-desktop .grid-container .item7 {
-          grid-column: 11/17;
+          grid-column: 4/7;
+          grid-row: 2/3;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start; }
+        .header-for-desktop .grid-container .item8 {
+          grid-column: 11/14;
+          grid-row: 2/3;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end; }
+        .header-for-desktop .grid-container .item9 {
+          grid-column: 14/17;
           grid-row: 2/3;
           display: flex;
           justify-content: center;
