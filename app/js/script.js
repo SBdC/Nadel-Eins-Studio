@@ -335,10 +335,10 @@ const smileBar = document.querySelector(".smileBar");
 const keys = Array.from(document.querySelectorAll('.text-key'));
 const faces = Array.from(document.querySelectorAll('.faces'));
 const droppings = Array.from(document.querySelectorAll('.dropping'));
+const serviceSvgs = Array.from(document.querySelectorAll('.service-svg'));
+const serviceTexts = Array.from(document.querySelectorAll('.service-text'));
 
-
-const drops = document.getElementById('drops');
-const cloud = document.getElementById('clouds');
+const gridContainer = document.getElementById("grid-container")
 
 
 
@@ -356,7 +356,7 @@ let thunderOn = () => {
     surprise.style.fill ="white";
     surprise.style.stroke ="black";
     // title.style.color="red";
-    document.body.style.background="snow";
+    gridContainer.style.background="snow";
     // city.style.background="snow";
   
 };
@@ -373,7 +373,7 @@ let thunderOff= () => {
     surprise.style.fill ="transparent";
     surprise.style.stroke ="transparent";
 
-    document.body.style.background="";
+    gridContainer.style.background="";
     // city.style.background="";
     // title.style.color="black";
     
@@ -426,12 +426,12 @@ function rain() {
 
   clouds.style.stroke="transparent";
   drops.style.stroke="#449AFF";
-   droppings.forEach(dropping=> dropping.classList.add("drops-go-down"));
+  droppings.forEach(dropping=> dropping.classList.add("drops-go-down"));
   console.log(drops)
  
-
-  keys.forEach(key=> key.style.fill = "transparent");
-  keys.forEach(key=> key.style.stroke = "transparent");
+  keys.forEach(key=> key.classList.remove("text-on"));
+  keys.forEach(key=> key.classList.add("text-off"));
+  
 
   setTimeout(cloudySky, 5000);
 
@@ -441,14 +441,12 @@ function rain() {
 
 function cloudySky() {
 
-  
   clouds.style.stroke="#449AFF";
   drops.style.stroke="transparent"
   droppings.forEach(dropping=> dropping.classList.remove("drops-go-down"));
-  
 
-  keys.forEach(key=> key.style.fill = "#1b1b1c");
-
+  keys.forEach(key=> key.classList.remove("text-off"));
+  keys.forEach(key=> key.classList.add("text-on"));
 
 
 }
@@ -456,19 +454,71 @@ function cloudySky() {
 
 
 
+let highlightSvg = (e) => {
+let mainEl = e.target.dataset.id;
+let svgText = document.querySelector(`text[id="${mainEl}"]`);
+ svgText.classList.remove("text-off");
+ svgText.classList.add("text-on");
+ console.log(e.target);
+
+
+}
+
+let highlightSvgOFF = (e) => {
+
+let mainEl = e.target.dataset.id;
+let svgText = document.querySelector(`text[id="${mainEl}"]`);
+svgText.classList.add("text-off");
+svgText.classList.remove("text-on");
+
+}
+
+
+
+serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseover", highlightSvg, false));
+serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseout", highlightSvgOFF, false));
 
 
 
 
 
 
+var element = document.querySelector(prompt('#micro-master-speaker', '#wheel'));
+var bbox = element.getBBox(),
+    x = bbox.x,
+    y = bbox.y,
+    w = bbox.width,
+    h = bbox.height
+;
 
+var result =
+  'center center' + "\n" +
+  (x + (w / 2)) + 'px ' +
+  (y + (h / 2)) + 'px;' +
+  "\n" +
+  "\n" +
+  'top left' + "\n" +
+  x + 'px ' +
+  y + 'px;' +
+  "\n" +
+  "\n" +
+  'top right' + "\n" +
+  (x + w) + 'px ' +
+  y + 'px;' +
+  "\n" +
+  "\n" +
+  'bottom right' + "\n" +
+  (x + w) + 'px ' +
+  (y + h) + 'px;' +
+  "\n" +
+  "\n" +
+  'bottom left' + "\n" +
+  x + 'px ' +
+  (y + h) + 'px;' +
+  "\n"
+;
 
-
-
-
-
-
+alert(result);
 
 
 

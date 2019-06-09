@@ -19,7 +19,7 @@
 				margin:20px;
                 display: grid;
                 grid-template-columns: repeat(16, 1fr);
-                grid-template-rows: 8em 8em auto;
+                grid-template-rows: 9em 9em auto;
                 grid-gap: 0px;
 
 				.item {
@@ -132,9 +132,29 @@
 				align-items:flex-start;
 
 				}
+
+					.item10{
+
+				grid-column: 1/8;
+				grid-row:3/6;
+				
+				display:flex;
+				justify-content:flex-end;
+				align-items:center;
+
+				}
 		
 
-			
+				.item11{
+
+				grid-column: 11/17;
+				grid-row:3/6;
+				
+				display:flex;
+				justify-content:flex-start;
+				align-items:center;
+
+				}
 
 
 

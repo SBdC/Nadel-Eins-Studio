@@ -620,16 +620,27 @@ Footer
       .theEnd .footer-content p:hover {
         cursor: pointer; }
 
+text {
+  font-family: helvetica;
+  font-size: 28px;
+  fill: #000c2b;
+  stroke: transparent; }
+
+.text-on {
+  fill: #000c2b;
+  stroke: transparent;
+  font-size: 28px; }
+  .text-on:hover {
+    fill: red;
+    cursor: pointer; }
+
+.text-off {
+  fill: transparent;
+  stroke: transparent; }
+
 .cloud {
   width: 70%;
   height: 70%; }
-  .cloud text {
-    fill: #000c2b;
-    stroke: transparent;
-    font-size: 28px; }
-    .cloud text:hover {
-      fill: green;
-      cursor: pointer; }
 
 .clouds {
   fill: none;
@@ -640,6 +651,40 @@ Footer
   stroke: transparent;
   fill: none;
   stroke-width: 3.6; }
+
+.speaker {
+  stroke: black; }
+
+.sound-design-svg,
+.micro-svg,
+.mastering-svg {
+  stroke: black; }
+  .sound-design-svg:hover,
+  .micro-svg:hover,
+  .mastering-svg:hover {
+    stroke: red;
+    cursor: pointer; }
+
+.speaker-comp,
+.live-master-speaker {
+  width: 80%;
+  height: 80%; }
+
+.speaker-small {
+  stroke: black; }
+
+.wheel {
+  transform-origin: 230.69629669px 323.29627227783203px;
+  -webkit-animation: rotate-center 1s linear infinite;
+  animation: rotate-center 1s linear infinite; }
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 @keyframes slidein {
   0% {
@@ -750,7 +795,7 @@ Footer
         margin: 20px;
         display: grid;
         grid-template-columns: repeat(16, 1fr);
-        grid-template-rows: 8em 8em auto;
+        grid-template-rows: 9em 9em auto;
         grid-gap: 0px; }
         .header-for-desktop .grid-container .item {
           display: grid;
@@ -808,4 +853,16 @@ Footer
           grid-row: 2/3;
           display: flex;
           justify-content: center;
-          align-items: flex-start; } } }
+          align-items: flex-start; }
+        .header-for-desktop .grid-container .item10 {
+          grid-column: 1/8;
+          grid-row: 3/6;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center; }
+        .header-for-desktop .grid-container .item11 {
+          grid-column: 11/17;
+          grid-row: 3/6;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center; } } }

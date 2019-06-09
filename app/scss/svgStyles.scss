@@ -8,7 +8,30 @@ $blue: #449AFF;
 
 
 
- 
+ text{
+    font-family:helvetica;
+    font-size:28px;
+    fill: $black;
+        stroke: transparent;
+ }
+
+ .text-on {
+        fill: $black;
+        stroke: transparent;
+        font-size: 28px;
+        &:hover{
+            fill:red;
+            cursor:pointer;
+        }
+        
+    }
+
+
+    .text-off {
+        fill: transparent;
+        stroke: transparent;
+       
+    }
 
 
 .cloud {
@@ -16,19 +39,7 @@ $blue: #449AFF;
     width: 70%;
     height: 70%;
 
-   text {
-        fill: $black;
-        stroke: transparent;
-        font-size: 28px;
-        &:hover{
-            fill:green;
-            cursor:pointer;
-        }
-        
-    }
-
-
-
+  
 
 }
 
@@ -49,6 +60,65 @@ $blue: #449AFF;
     stroke-width:3.6;
 }
 
+
+
+
+.speaker{
+    stroke:black;
+ 
+}
+
+.sound-design-svg,
+.micro-svg,
+.mastering-svg
+
+
+{
+    stroke:black;
+    &:hover{
+        stroke:red;
+        cursor:pointer;
+    }
+
+  
+
+}
+
+.speaker-comp,
+.live-master-speaker{
+    width: 80%;
+    height: 80%;
+}
+
+
+
+.speaker-small{
+    stroke:black;
+}
+
+
+
+
+.wheel {
+transform-origin: 230.69629669px 323.29627227783203px;
+
+  -webkit-animation: rotate-center 1s linear infinite;
+  animation: rotate-center 1s linear infinite;
+}
+
+
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg );
+    transform: rotate(360deg);
+  }
+}
 
 
 
