@@ -51,7 +51,9 @@ Accessibility
         justify-content: center;
     }
 
-    .service {}
+    .service {
+        
+    }
 
 
     .music {
@@ -265,12 +267,17 @@ header {
         }
     }
 
-    .quote {
+
+}
+
+
+.slogan{
+        .quote {
         text-align: center;
         padding: 80px 25px;
         background-color: $black;
         color: white;
-        margin-top: -30px;
+        margin-top: 10px;
     }
 }
 

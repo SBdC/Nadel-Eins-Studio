@@ -8,17 +8,25 @@ $blue: #449AFF;
 
 
 
- text{
-    font-family:helvetica;
-    font-size:28px;
-    fill: $black;
-        stroke: transparent;
- }
 
- .text-on {
+
+ .text-on-cloud {
+     font-family:helvetica;
         fill: $black;
         stroke: transparent;
         font-size: 28px;
+        &:hover{
+            fill:red;
+            cursor:pointer;
+        }
+        
+    }
+
+ .text-on tspan{
+     font-family:helvetica;
+        fill: $black;
+        stroke: transparent;
+        font-size: 30px;
         &:hover{
             fill:red;
             cursor:pointer;
@@ -59,10 +67,16 @@ $blue: #449AFF;
     stroke: transparent;
     fill: none;
     stroke-width:3.6;
+    transform:scale(0.9);
 }
 
 
-
+.big-speaker{
+    transform:scale(0.86) translateY(60px);
+}
+.sync{
+    transform:scale(0.86) translateX(60px) translateY(60px);
+}
 
 
 .sound-design-svg,
@@ -70,9 +84,9 @@ $blue: #449AFF;
 .mastering-svg,
 .recording-svg,
 .mixing-svg,
-.mixtech-svg
-
-
+.mixtech-svg,
+.consulting-svg,
+.soundDesign-svg
 
 {
     stroke:black;
@@ -88,20 +102,28 @@ $blue: #449AFF;
 
 
 
-.speaker-comp,
-.live-master-speaker,
+
+svg.speaker-comp,
+svg.live-master-speaker,
 {
-    width: 70%;
-   height: 70%;
-     -webkit-height: auto;
+    width: 50%;
+   height:50%;
+   max-width:50%;
+   height:auto;
+    
 }
 
+svg.consulting-soundDesign,
+svg.mixes{
+    width: 60%;
+   height: 60%;
+   max-width:60%;
+   height:auto;
+   
+}
 
-
-.mixes{
-    width: 70%;
-   height: 70%;
-     -webkit-height: auto;
+svg.mixes{
+ transform: translateY(-60px) translateX(20px) ;
 }
 
 
@@ -121,6 +143,7 @@ fill: #EDEDED;
 }
 
 
+
 @keyframes colorchange
     {
       0%   {fill:  #EDEDED;}
@@ -130,7 +153,7 @@ fill: #EDEDED;
      
     }
 
-    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    @-webkit-keyframes colorchange 
     {
      0%   {fill:  #EDEDED;}
       50%  {fill: $lightblue;}
@@ -142,12 +165,12 @@ fill: #EDEDED;
 
 @keyframes rotate-center {
   0% {
-    -webkit-transform: rotate(0);
+   transform: rotate(0);
     transform: rotate(0);
   }
 
   100% {
-    -webkit-transform: rotate(360deg );
+   transform: rotate(360deg );
     transform: rotate(360deg);
   }
 }
@@ -162,21 +185,26 @@ fill: #EDEDED;
 @keyframes slidein {
 
   0% {
+   transform: translateX(0px);
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(150px);
+   transform: translateX(150px);
   }
 }
+
+
 
 
 @keyframes slidein-other {
 
   0% {
+ 
     transform: translateX(0px);
   }
   100% {
     transform: translateX(-150px);
+  
   }
 }
 
@@ -194,28 +222,34 @@ fill: #EDEDED;
 
 .cloud-moves-2{
   animation: slidein 14s -6s alternate infinite linear;
+  -webkit-animation: slidein 14s -6s alternate infinite linear;
 }
 
 .cloud-moves {
   animation: slidein 13s  -2s alternate infinite linear;
+  -webkit-animation: slidein 13s  -2s alternate infinite linear;
 }
 
 .cloud-moves-4{
     animation: slidein-other 16s -5s alternate infinite linear;
+    -webkit-animation: slidein-other 16s -5s alternate infinite linear;
 }
 
 
 .cloud-moves-5{
     animation: slidein-other 20s -6s alternate infinite linear;
+   -webkit-animation: slidein-other 20s -6s alternate infinite linear;
 }
 
 .cloud-moves-6{
     animation: slidein 18s -5s alternate infinite linear;
+    -webkit-animation: slidein 18s -5s alternate infinite linear;
 }
 
 
 .cloud-moves-7{
     animation: slidein-other 17s -4s alternate infinite linear;
+    -webkit-animation: slidein-other 17s -4s alternate infinite linear;
 }
 
 
@@ -224,7 +258,7 @@ fill: #EDEDED;
    
     width: 70%;
     height: 70%;
-      -webkit-height: auto;
+   
 
     .nadel-eins-logo {
 
@@ -286,15 +320,30 @@ fill: #EDEDED;
 
 
 //eyes logo smiley
+@-webkit-keyframes twink {
+    0% {
+        transform: scale(0.9);
+  
+    }
+
+    100% {
+        transform: scale(1);
+       
+    }
+
+}
+
 
 
 @keyframes twink {
     0% {
         transform: scale(0.9);
+  
     }
 
     100% {
         transform: scale(1);
+       
     }
 
 }
@@ -303,16 +352,34 @@ fill: #EDEDED;
 .eye-right {
     transform-origin: 55px 29px 4px;
     animation: twink 5s alternate infinite ease-in;
+    -webkit-animation: twink 5s alternate infinite ease-in;
 }
 
 .eye-left {
     transform-origin: 31px 29px 4px;
     animation: twink 5s alternate infinite ease-in;
+     -webkit-animation: twink 5s alternate infinite ease-in;
 }
 
 
 //thunder
+@-webkit-keyframes dash {
+    0% {
+        stroke-dashoffset: 1000;
+        fill: transparent;
+    }
 
+    99% {
+
+        fill: red;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: red;
+
+    }
+}
 
 @keyframes dash {
     0% {
@@ -337,11 +404,109 @@ fill: #EDEDED;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: dash 2s linear alternate forwards;
-
+-webkit-animation: dash 2s linear alternate forwards;
 
 }
 
+.lines {
 
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 3s -2s linear infinite;
+
+ -webkit-animation: dash 1s -2s linear infinite;
+}
+
+
+
+.pencil{
+    animation: write 1s -6s linear infinite;
+}
+
+
+.mix-needles{
+   
+    animation: volume 1s -6s linear infinite;
+    stroke-width:1.6;
+}
+
+.lightButton{
+   
+    animation: blink 4s -1s ease-in infinite;
+    stroke-width:1.6;
+}
+
+@keyframes blink
+ {
+   from {
+    fill: rgba( 0, 0, 0 , 0.5);
+   }
+  to {
+    fill: #D0021B;
+   }
+ }
+
+
+@keyframes volume
+ {
+   
+     100%{
+        transform:rotate(-5deg);
+     }
+     
+    }
+
+    @-webkit-keyframes volume
+    {
+  
+     100%   {
+          transform:rotate(-5deg);
+     }
+     
+    }
+
+
+
+@keyframes write
+    {
+        0% {
+        transform:translateX(-120px);
+     }
+   
+     100%   {
+        transform:translateX(20px);
+     }
+     
+    }
+
+    @-webkit-keyframes write
+    {
+    
+        0% {
+        transform:translateX(-120px);
+     }
+   
+     100%   {
+        transform:translateX(20px);
+     }
+     
+    }
+
+
+
+
+
+@-webkit-keyframes slidedown {
+  0% {
+    transform: translateY(86px);
+
+  }
+
+  100% {
+    transform: translateY(1200px);
+    opacity: 0;
+  }
+}
 
 
 @keyframes slidedown {

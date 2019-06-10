@@ -41,12 +41,20 @@ let erases = Array.from(document.querySelectorAll(".viewLess"));
 let revealText = (e) => {
 
   let dropDown = document.querySelector(`p[data-key="${e.target.id}"]`);
-  dropDown.style.display = "block";
+   dropDown.style.display = "block";
+  let firstParent = e.target.parentElement;
+  let greatParent =firstParent.parentElement;
+ let greatGreatParent =greatParent.parentElement;
+  greatGreatParent.style.flex="0 1 calc(100%)";
+   greatGreatParent.style.order="-1";
   let button = document.getElementById(`${e.target.id}`);
   button.style.display = "none";
   let otherButton = document.querySelector(`button[data-type="${e.target.id}"]`);
   otherButton.style.display = "block";
-  // otherButton.style.margin = "0 auto";
+
+   window.scrollTo(greatGreatParent);
+
+
 };
 
 let hideText = (e) => {
@@ -59,9 +67,17 @@ let hideText = (e) => {
   let button = document.querySelector(`button[data-type="${targetService }"]`);
   button.style.display = "block";
 
+  let firstParent = e.target.parentElement;
+  let greatParent =firstParent.parentElement;
+ let greatGreatParent =greatParent.parentElement;
+  greatGreatParent.style.flex="";
+  greatGreatParent.style.order="";
+
   let targetServiveElemnt=document.getElementById(targetService);
   let parentTargetServiveElemnt = targetServiveElemnt.parentElement;
   parentTargetServiveElemnt.scrollIntoView(true);
+
+   window.scrollTo(greatGreatParent);
 
 };
 
@@ -355,8 +371,8 @@ let thunderOn = () => {
     smileBar.style.stroke ="transparent";
     surprise.style.fill ="white";
     surprise.style.stroke ="black";
-    // title.style.color="red";
-    gridContainer.style.background="snow";
+    title.style.color="white";
+    document.body.style.background="snow";
     // city.style.background="snow";
   
 };
@@ -373,9 +389,9 @@ let thunderOff= () => {
     surprise.style.fill ="transparent";
     surprise.style.stroke ="transparent";
 
-    gridContainer.style.background="";
-    // city.style.background="";
-    // title.style.color="black";
+   document.body.style.background="";
+    
+    title.style.color="red";
     
 };
 
@@ -429,7 +445,7 @@ function rain() {
   droppings.forEach(dropping=> dropping.classList.add("drops-go-down"));
   console.log(drops)
  
-  keys.forEach(key=> key.classList.remove("text-on"));
+  keys.forEach(key=> key.classList.remove("text-on-cloud"));
   keys.forEach(key=> key.classList.add("text-off"));
   
 
@@ -446,7 +462,7 @@ function cloudySky() {
   droppings.forEach(dropping=> dropping.classList.remove("drops-go-down"));
 
   keys.forEach(key=> key.classList.remove("text-off"));
-  keys.forEach(key=> key.classList.add("text-on"));
+  keys.forEach(key=> key.classList.add("text-on-cloud"));
 
 
 }
@@ -485,7 +501,6 @@ svgText.classList.remove("text-on");
 
 serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseover", highlightSvg, false));
 serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseout", highlightSvgOFF, false));
-
 
 
 

@@ -299,12 +299,12 @@ header .banner {
       font-weight: 600;
       max-width: 200px; }
 
-header .quote {
+.slogan .quote {
   text-align: center;
   padding: 80px 25px;
   background-color: #000c2b;
   color: white;
-  margin-top: -30px; }
+  margin-top: 10px; }
 
 /*--------------------------------------------------------------
 button
@@ -620,17 +620,21 @@ Footer
       .theEnd .footer-content p:hover {
         cursor: pointer; }
 
-text {
+.text-on-cloud {
   font-family: helvetica;
-  font-size: 28px;
-  fill: #000c2b;
-  stroke: transparent; }
-
-.text-on {
   fill: #000c2b;
   stroke: transparent;
   font-size: 28px; }
-  .text-on:hover {
+  .text-on-cloud:hover {
+    fill: red;
+    cursor: pointer; }
+
+.text-on tspan {
+  font-family: helvetica;
+  fill: #000c2b;
+  stroke: transparent;
+  font-size: 30px; }
+  .text-on tspan:hover {
     fill: red;
     cursor: pointer; }
 
@@ -651,34 +655,51 @@ text {
 .drops {
   stroke: transparent;
   fill: none;
-  stroke-width: 3.6; }
+  stroke-width: 3.6;
+  transform: scale(0.9); }
+
+.big-speaker {
+  transform: scale(0.86) translateY(60px); }
+
+.sync {
+  transform: scale(0.86) translateX(60px) translateY(60px); }
 
 .sound-design-svg,
 .micro-svg,
 .mastering-svg,
 .recording-svg,
 .mixing-svg,
-.mixtech-svg {
+.mixtech-svg,
+.consulting-svg,
+.soundDesign-svg {
   stroke: black; }
   .sound-design-svg:hover,
   .micro-svg:hover,
   .mastering-svg:hover,
   .recording-svg:hover,
   .mixing-svg:hover,
-  .mixtech-svg:hover {
+  .mixtech-svg:hover,
+  .consulting-svg:hover,
+  .soundDesign-svg:hover {
     stroke: red;
     cursor: pointer; }
 
-.speaker-comp,
-.live-master-speaker {
-  width: 70%;
-  height: 70%;
-  -webkit-height: auto; }
+svg.speaker-comp,
+svg.live-master-speaker {
+  width: 50%;
+  height: 50%;
+  max-width: 50%;
+  height: auto; }
 
-.mixes {
-  width: 70%;
-  height: 70%;
-  -webkit-height: auto; }
+svg.consulting-soundDesign,
+svg.mixes {
+  width: 60%;
+  height: 60%;
+  max-width: 60%;
+  height: auto; }
+
+svg.mixes {
+  transform: translateY(-60px) translateX(20px); }
 
 .wheel {
   transform-origin: 230.69629669px 323.29627227783203px;
@@ -700,7 +721,7 @@ text {
   100% {
     fill: #EDEDED; } }
 
-@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ {
+@-webkit-keyframes colorchange {
   0% {
     fill: #EDEDED; }
   50% {
@@ -712,14 +733,15 @@ text {
 
 @keyframes rotate-center {
   0% {
-    -webkit-transform: rotate(0);
+    transform: rotate(0);
     transform: rotate(0); }
   100% {
-    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 @keyframes slidein {
   0% {
+    transform: translateX(0px);
     transform: translateX(0px); }
   100% {
     transform: translateX(150px); } }
@@ -731,27 +753,32 @@ text {
     transform: translateX(-150px); } }
 
 .cloud-moves-2 {
-  animation: slidein 14s -6s alternate infinite linear; }
+  animation: slidein 14s -6s alternate infinite linear;
+  -webkit-animation: slidein 14s -6s alternate infinite linear; }
 
 .cloud-moves {
-  animation: slidein 13s  -2s alternate infinite linear; }
+  animation: slidein 13s  -2s alternate infinite linear;
+  -webkit-animation: slidein 13s  -2s alternate infinite linear; }
 
 .cloud-moves-4 {
-  animation: slidein-other 16s -5s alternate infinite linear; }
+  animation: slidein-other 16s -5s alternate infinite linear;
+  -webkit-animation: slidein-other 16s -5s alternate infinite linear; }
 
 .cloud-moves-5 {
-  animation: slidein-other 20s -6s alternate infinite linear; }
+  animation: slidein-other 20s -6s alternate infinite linear;
+  -webkit-animation: slidein-other 20s -6s alternate infinite linear; }
 
 .cloud-moves-6 {
-  animation: slidein 18s -5s alternate infinite linear; }
+  animation: slidein 18s -5s alternate infinite linear;
+  -webkit-animation: slidein 18s -5s alternate infinite linear; }
 
 .cloud-moves-7 {
-  animation: slidein-other 17s -4s alternate infinite linear; }
+  animation: slidein-other 17s -4s alternate infinite linear;
+  -webkit-animation: slidein-other 17s -4s alternate infinite linear; }
 
 .logo {
   width: 70%;
-  height: 70%;
-  -webkit-height: auto; }
+  height: 70%; }
   .logo .nadel-eins-logo {
     fill: none; }
     .logo .nadel-eins-logo .needle,
@@ -779,6 +806,12 @@ text {
     .logo .nadel-eins-logo .thunder {
       stroke-width: 3; }
 
+@-webkit-keyframes twink {
+  0% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1); } }
+
 @keyframes twink {
   0% {
     transform: scale(0.9); }
@@ -787,11 +820,23 @@ text {
 
 .eye-right {
   transform-origin: 55px 29px 4px;
-  animation: twink 5s alternate infinite ease-in; }
+  animation: twink 5s alternate infinite ease-in;
+  -webkit-animation: twink 5s alternate infinite ease-in; }
 
 .eye-left {
   transform-origin: 31px 29px 4px;
-  animation: twink 5s alternate infinite ease-in; }
+  animation: twink 5s alternate infinite ease-in;
+  -webkit-animation: twink 5s alternate infinite ease-in; }
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+    fill: transparent; }
+  99% {
+    fill: red; }
+  100% {
+    stroke-dashoffset: 0;
+    fill: red; } }
 
 @keyframes dash {
   0% {
@@ -806,7 +851,58 @@ text {
 .thunder-happens {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 2s linear alternate forwards; }
+  animation: dash 2s linear alternate forwards;
+  -webkit-animation: dash 2s linear alternate forwards; }
+
+.lines {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 3s -2s linear infinite;
+  -webkit-animation: dash 1s -2s linear infinite; }
+
+.pencil {
+  animation: write 1s -6s linear infinite; }
+
+.mix-needles {
+  animation: volume 1s -6s linear infinite;
+  stroke-width: 1.6; }
+
+.lightButton {
+  animation: blink 4s -1s ease-in infinite;
+  stroke-width: 1.6; }
+
+@keyframes blink {
+  from {
+    fill: rgba(0, 0, 0, 0.5); }
+  to {
+    fill: #D0021B; } }
+
+@keyframes volume {
+  100% {
+    transform: rotate(-5deg); } }
+
+@-webkit-keyframes volume {
+  100% {
+    transform: rotate(-5deg); } }
+
+@keyframes write {
+  0% {
+    transform: translateX(-120px); }
+  100% {
+    transform: translateX(20px); } }
+
+@-webkit-keyframes write {
+  0% {
+    transform: translateX(-120px); }
+  100% {
+    transform: translateX(20px); } }
+
+@-webkit-keyframes slidedown {
+  0% {
+    transform: translateY(86px); }
+  100% {
+    transform: translateY(1200px);
+    opacity: 0; } }
 
 @keyframes slidedown {
   0% {
@@ -820,96 +916,151 @@ text {
 
 @supports (grid-area: auto) {
   @media screen and (min-width: 651px) {
+    .title-desktop {
+      color: #FF0000;
+      font-weight: 600;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      padding: 0; }
     .header-for-mobile {
       display: none; }
     .header-for-desktop {
       display: block; }
       .header-for-desktop .grid-container {
-        margin: 20px;
+        margin: 10px 40px;
+        padding: 5px;
         display: grid;
         grid-template-columns: repeat(16, 1fr);
-        grid-template-rows: 8em 8em auto;
+        grid-template-rows: 2.8em 7.2em 7.2em auto;
         grid-gap: 0px; }
         .header-for-desktop .grid-container .item {
           display: grid;
           justify-content: center;
           align-items: center;
-          grid-gap: 5px;
           padding: 5px;
           background-color: transparent; }
+        .header-for-desktop .grid-container .title {
+          grid-column: 2/16;
+          grid-row: 1/2;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          margin-top: -20px; }
         .header-for-desktop .grid-container .item1 {
           grid-column: 1/4;
+          grid-row: 2/3;
           display: flex;
           justify-content: center;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item2 {
           grid-column: 4/7;
+          grid-row: 2/3;
           display: flex;
           justify-content: center;
           align-items: flex-end; }
         .header-for-desktop .grid-container .item3 {
           grid-column: 7/11;
+          padding-top: 36px;
           grid-row: 1/7;
           display: flex;
           justify-content: center;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item4 {
           grid-column: 11/14;
+          grid-row: 2/3;
           display: flex;
           justify-content: center;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item5 {
+          grid-row: 2/3;
           grid-column: 14/17;
           display: flex;
           justify-content: center;
           align-items: center; }
         .header-for-desktop .grid-container .item6 {
           grid-column: 1/4;
-          grid-row: 2/3;
+          grid-row: 3/4;
           display: flex;
           justify-content: center;
           align-items: flex-end; }
         .header-for-desktop .grid-container .item7 {
           grid-column: 4/7;
-          grid-row: 2/3;
+          grid-row: 3/4;
           display: flex;
           justify-content: center;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item8 {
           grid-column: 11/14;
-          grid-row: 2/3;
+          grid-row: 3/4;
           display: flex;
           justify-content: center;
           align-items: flex-end; }
         .header-for-desktop .grid-container .item9 {
           grid-column: 14/17;
-          grid-row: 2/3;
+          grid-row: 3/4;
           display: flex;
           justify-content: center;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item10 {
           grid-column: 1/8;
-          grid-row: 3/5;
+          grid-row: 4/5;
           display: flex;
           justify-content: flex-end;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item11 {
           grid-column: 11/17;
-          grid-row: 3/5;
+          grid-row: 4/5;
           display: flex;
           justify-content: flex-start;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item12 {
           grid-column: 1/9;
-          grid-row: 4/6;
+          grid-row: 5/6;
           display: flex;
           justify-content: center;
-          align-items: center; }
+          align-items: flex-start; }
         .header-for-desktop .grid-container .item13 {
           grid-column: 9/17;
-          grid-row: 4/6;
-          background-color: blue;
+          grid-row: 5/6;
           display: flex;
           justify-content: flex-start;
-          align-items: center;
-          z-index: -2; } } }
+          align-items: flex-start; }
+    .slogan {
+      margin-top: -50px; }
+    /*--------------------------------------------------------------
+services
+--------------------------------------------------------------*/
+    .services .service-header-wrap-right,
+    .services .service-header-wrap-left,
+    .services .service-text-right,
+    .services .service-header-wrap-other,
+    .services .service-more-text,
+    .services .service-text-right {
+      text-align: left;
+      margin: auto;
+      text-align: left; }
+    .services .viewLess {
+      margin: 20px auto; }
+    .services .service-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .services .service {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 0 1 calc(33% - 0.5em);
+      padding: 2%; }
+    .services .music .cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .services .music .cards .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 0 1 calc(33% - 0.5em);
+        padding: 2%; } } }
