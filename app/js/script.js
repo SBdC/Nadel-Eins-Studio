@@ -483,44 +483,5 @@ serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseout", highli
 
 
 
-var element = document.querySelector(prompt('#micro-master-speaker', '#wheel'));
-var bbox = element.getBBox(),
-    x = bbox.x,
-    y = bbox.y,
-    w = bbox.width,
-    h = bbox.height
-;
-
-var result =
-  'center center' + "\n" +
-  (x + (w / 2)) + 'px ' +
-  (y + (h / 2)) + 'px;' +
-  "\n" +
-  "\n" +
-  'top left' + "\n" +
-  x + 'px ' +
-  y + 'px;' +
-  "\n" +
-  "\n" +
-  'top right' + "\n" +
-  (x + w) + 'px ' +
-  y + 'px;' +
-  "\n" +
-  "\n" +
-  'bottom right' + "\n" +
-  (x + w) + 'px ' +
-  (y + h) + 'px;' +
-  "\n" +
-  "\n" +
-  'bottom left' + "\n" +
-  x + 'px ' +
-  (y + h) + 'px;' +
-  "\n"
-;
-
-alert(result);
-
-
-
 
 

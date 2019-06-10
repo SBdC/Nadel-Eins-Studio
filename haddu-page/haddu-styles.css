@@ -403,6 +403,7 @@ img{
     height: 250px;
     border: 0;
 
+
 }
 
 .videoWrapper iframe {
@@ -410,6 +411,13 @@ img{
     height: 515px;
     border: 0;
 
+}
+
+
+
+.widget{
+    width: 250px;
+    height: 250px;
 }
 
 @media only screen and (max-width: 1070px) {
@@ -630,6 +638,7 @@ img{
         grid-column: 1/7;
         display: flex;
         justify-content: center;
+        margin-top: 23px;
     }
 
     .bitem8 {

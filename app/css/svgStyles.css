@@ -35,11 +35,13 @@ text {
 
 .sound-design-svg,
 .micro-svg,
-.mastering-svg {
+.mastering-svg,
+.recording-svg {
   stroke: black; }
   .sound-design-svg:hover,
   .micro-svg:hover,
-  .mastering-svg:hover {
+  .mastering-svg:hover,
+  .recording-svg:hover {
     stroke: red;
     cursor: pointer; }
 
@@ -48,13 +50,35 @@ text {
   width: 80%;
   height: 80%; }
 
-.speaker-small {
-  stroke: black; }
-
 .wheel {
   transform-origin: 230.69629669px 323.29627227783203px;
   -webkit-animation: rotate-center 1s linear infinite;
   animation: rotate-center 1s linear infinite; }
+
+.screen {
+  fill: #EDEDED;
+  -webkit-animation: colorchange 20s linear infinite;
+  animation: colorchange 5s linear infinite; }
+
+@keyframes colorchange {
+  0% {
+    fill: #EDEDED; }
+  50% {
+    fill: #C0D5ED; }
+  80% {
+    fill: rgba(204, 253, 212, 0.6); }
+  100% {
+    fill: #EDEDED; } }
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ {
+  0% {
+    fill: #EDEDED; }
+  50% {
+    fill: #C0D5ED; }
+  80% {
+    fill: rgba(204, 253, 212, 0.6); }
+  100% {
+    fill: #EDEDED; } }
 
 @keyframes rotate-center {
   0% {
