@@ -36,8 +36,9 @@ $blue: #449AFF;
 
 .cloud {
 
-    width: 70%;
-    height: 70%;
+    width: 65%;
+    height: 65%;
+    -webkit-height: auto;
 
   
 
@@ -63,15 +64,14 @@ $blue: #449AFF;
 
 
 
-.speaker{
-    stroke:black;
- 
-}
 
 .sound-design-svg,
 .micro-svg,
 .mastering-svg,
-.recording-svg
+.recording-svg,
+.mixing-svg,
+.mixtech-svg
+
 
 
 {
@@ -85,14 +85,24 @@ $blue: #449AFF;
 
 }
 
+
+
+
 .speaker-comp,
-.live-master-speaker{
-    width: 80%;
-    height: 80%;
+.live-master-speaker,
+{
+    width: 70%;
+   height: 70%;
+     -webkit-height: auto;
 }
 
 
 
+.mixes{
+    width: 70%;
+   height: 70%;
+     -webkit-height: auto;
+}
 
 
 
@@ -212,8 +222,9 @@ fill: #EDEDED;
 
 .logo {
    
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
+      -webkit-height: auto;
 
     .nadel-eins-logo {
 

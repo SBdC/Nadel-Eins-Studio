@@ -17,8 +17,9 @@ text {
   stroke: transparent; }
 
 .cloud {
-  width: 70%;
-  height: 70%; }
+  width: 65%;
+  height: 65%;
+  -webkit-height: auto; }
 
 .clouds {
   fill: none;
@@ -30,25 +31,32 @@ text {
   fill: none;
   stroke-width: 3.6; }
 
-.speaker {
-  stroke: black; }
-
 .sound-design-svg,
 .micro-svg,
 .mastering-svg,
-.recording-svg {
+.recording-svg,
+.mixing-svg,
+.mixtech-svg {
   stroke: black; }
   .sound-design-svg:hover,
   .micro-svg:hover,
   .mastering-svg:hover,
-  .recording-svg:hover {
+  .recording-svg:hover,
+  .mixing-svg:hover,
+  .mixtech-svg:hover {
     stroke: red;
     cursor: pointer; }
 
 .speaker-comp,
 .live-master-speaker {
-  width: 80%;
-  height: 80%; }
+  width: 70%;
+  height: 70%;
+  -webkit-height: auto; }
+
+.mixes {
+  width: 70%;
+  height: 70%;
+  -webkit-height: auto; }
 
 .wheel {
   transform-origin: 230.69629669px 323.29627227783203px;
@@ -119,8 +127,9 @@ text {
   animation: slidein-other 17s -4s alternate infinite linear; }
 
 .logo {
-  width: 80%;
-  height: 80%; }
+  width: 70%;
+  height: 70%;
+  -webkit-height: auto; }
   .logo .nadel-eins-logo {
     fill: none; }
     .logo .nadel-eins-logo .needle,

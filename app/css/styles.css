@@ -639,8 +639,9 @@ text {
   stroke: transparent; }
 
 .cloud {
-  width: 70%;
-  height: 70%; }
+  width: 65%;
+  height: 65%;
+  -webkit-height: auto; }
 
 .clouds {
   fill: none;
@@ -652,25 +653,32 @@ text {
   fill: none;
   stroke-width: 3.6; }
 
-.speaker {
-  stroke: black; }
-
 .sound-design-svg,
 .micro-svg,
 .mastering-svg,
-.recording-svg {
+.recording-svg,
+.mixing-svg,
+.mixtech-svg {
   stroke: black; }
   .sound-design-svg:hover,
   .micro-svg:hover,
   .mastering-svg:hover,
-  .recording-svg:hover {
+  .recording-svg:hover,
+  .mixing-svg:hover,
+  .mixtech-svg:hover {
     stroke: red;
     cursor: pointer; }
 
 .speaker-comp,
 .live-master-speaker {
-  width: 80%;
-  height: 80%; }
+  width: 70%;
+  height: 70%;
+  -webkit-height: auto; }
+
+.mixes {
+  width: 70%;
+  height: 70%;
+  -webkit-height: auto; }
 
 .wheel {
   transform-origin: 230.69629669px 323.29627227783203px;
@@ -741,8 +749,9 @@ text {
   animation: slidein-other 17s -4s alternate infinite linear; }
 
 .logo {
-  width: 80%;
-  height: 80%; }
+  width: 70%;
+  height: 70%;
+  -webkit-height: auto; }
   .logo .nadel-eins-logo {
     fill: none; }
     .logo .nadel-eins-logo .needle,
@@ -819,7 +828,7 @@ text {
         margin: 20px;
         display: grid;
         grid-template-columns: repeat(16, 1fr);
-        grid-template-rows: 9em 9em auto;
+        grid-template-rows: 8em 8em auto;
         grid-gap: 0px; }
         .header-for-desktop .grid-container .item {
           display: grid;
@@ -840,10 +849,10 @@ text {
           align-items: flex-end; }
         .header-for-desktop .grid-container .item3 {
           grid-column: 7/11;
-          grid-row: 1/6;
+          grid-row: 1/7;
           display: flex;
           justify-content: center;
-          align-items: center; }
+          align-items: flex-start; }
         .header-for-desktop .grid-container .item4 {
           grid-column: 11/14;
           display: flex;
@@ -880,13 +889,27 @@ text {
           align-items: flex-start; }
         .header-for-desktop .grid-container .item10 {
           grid-column: 1/8;
-          grid-row: 3/6;
+          grid-row: 3/5;
           display: flex;
           justify-content: flex-end;
-          align-items: center; }
+          align-items: flex-start; }
         .header-for-desktop .grid-container .item11 {
           grid-column: 11/17;
-          grid-row: 3/6;
+          grid-row: 3/5;
           display: flex;
           justify-content: flex-start;
-          align-items: center; } } }
+          align-items: flex-start; }
+        .header-for-desktop .grid-container .item12 {
+          grid-column: 1/9;
+          grid-row: 4/6;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        .header-for-desktop .grid-container .item13 {
+          grid-column: 9/17;
+          grid-row: 4/6;
+          background-color: blue;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          z-index: -2; } } }

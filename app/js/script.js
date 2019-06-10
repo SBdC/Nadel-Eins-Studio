@@ -457,9 +457,13 @@ function cloudySky() {
 let highlightSvg = (e) => {
 let mainEl = e.target.dataset.id;
 let svgText = document.querySelector(`text[id="${mainEl}"]`);
+
+let svgPaths = Array.from(document.querySelectorAll(`path[data-id="${mainEl}"]`));
+svgPaths.forEach(svgPath=> svgPath.style.stroke="red");
+
  svgText.classList.remove("text-off");
  svgText.classList.add("text-on");
- console.log(e.target);
+
 
 
 }
@@ -468,6 +472,10 @@ let highlightSvgOFF = (e) => {
 
 let mainEl = e.target.dataset.id;
 let svgText = document.querySelector(`text[id="${mainEl}"]`);
+let svgPaths = Array.from(document.querySelectorAll(`path[data-id="${mainEl}"]`));
+svgPaths.forEach(svgPath=> svgPath.style.stroke="black");
+
+
 svgText.classList.add("text-off");
 svgText.classList.remove("text-on");
 
