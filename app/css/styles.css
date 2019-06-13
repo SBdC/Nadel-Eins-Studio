@@ -568,10 +568,10 @@ services
     color: #449AFF;
     text-align: center; }
   .prices p {
+    min-width: 260px;
     color: #E1E4E8;
     text-align: center;
     border-bottom: 1px solid #E1E4E8;
-    border-top: 1px solid #E1E4E8;
     margin: 0;
     padding: 5px; }
   .prices .icon {
@@ -581,7 +581,7 @@ services
     margin: 0 auto; }
   .prices .readMore {
     display: block;
-    margin: 0 auto; }
+    margin: 40px auto 80px; }
   .prices button {
     background-color: #000c2b;
     color: white;
@@ -590,7 +590,7 @@ services
   .prices .prices-more-text {
     display: none; }
   .prices .center-viewLess {
-    margin: 0 auto; }
+    margin: 30px auto 60px; }
 
 /*--------------------------------------------------------------
 co-work
@@ -1058,12 +1058,18 @@ services
       justify-content: center;
       flex: 0 1 calc(33% - 0.5em);
       padding: 2%; }
-    .services .music .cards {
+    .prices-container .price {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 0 1 calc(33% - 0.5em);
+      padding: 2%; }
+    .music .cards {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between; }
-      .services .music .cards .card {
+      .music .cards .card {
         display: flex;
         flex-direction: column;
         justify-content: center;

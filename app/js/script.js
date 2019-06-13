@@ -39,7 +39,7 @@ let erases = Array.from(document.querySelectorAll(".viewLess"));
 
 
 let revealText = (e) => {
-
+   
   let dropDown = document.querySelector(`p[data-key="${e.target.id}"]`);
    dropDown.style.display = "block";
   let firstParent = e.target.parentElement;
@@ -52,7 +52,8 @@ let revealText = (e) => {
   let otherButton = document.querySelector(`button[data-type="${e.target.id}"]`);
   otherButton.style.display = "block";
 
-   window.scrollTo(greatGreatParent);
+
+greatGreatParent.scrollIntoView({behavior: "smooth", block: "center",inline: "center"});
 
 
 };
@@ -62,6 +63,7 @@ let hideText = (e) => {
   const goUp = document.querySelector(`p[data-hide="${targetService }"]`);
   goUp.style.display = "none";
   goUp.style.transition = "all 2s";
+
   let otherButton = document.getElementById(`${targetService }`);
   otherButton.style.display = "none";
   let button = document.querySelector(`button[data-type="${targetService }"]`);
@@ -75,10 +77,10 @@ let hideText = (e) => {
 
   let targetServiveElemnt=document.getElementById(targetService);
   let parentTargetServiveElemnt = targetServiveElemnt.parentElement;
-  parentTargetServiveElemnt.scrollIntoView(true);
+  parentTargetServiveElemnt.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
 
-   window.scrollTo(greatGreatParent);
-
+   
+    
 };
 
 

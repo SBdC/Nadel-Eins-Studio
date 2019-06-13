@@ -68,8 +68,6 @@ Accessibility
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
-
-      
     }
 }
 
@@ -670,25 +668,31 @@ services
     }
 
     p {
+        min-width:260px;
         color: $lightgrey;
         text-align: center;
-        border-bottom: 1px solid $lightgrey;
-        border-top: 1px solid $lightgrey;
+        
+       border-bottom: 1px solid $lightgrey;
         margin: 0;
         padding: 5px;
     }
+
+    
+
+  
+  
 
     .icon {
         @extend %icon-cloud-style;
         height: 90px;
         width: 90px;
         display: block;
-        margin: 0 auto;
+        margin:  0 auto;
     }
 
     .readMore {
         display: block;
-        margin: 0 auto;
+        margin: 40px auto 80px;
 
     }
 
@@ -705,7 +709,7 @@ services
     }
 
     .center-viewLess {
-        margin: 0 auto;
+        margin: 30px auto 60px;
     }
 }
 

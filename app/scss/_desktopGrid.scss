@@ -277,6 +277,32 @@ services
     }
 
 
+	
+    }
+
+
+.prices-container{
+
+
+.price {
+
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+       flex: 0 1 calc(33% - 0.5em);
+        padding:2%;
+
+    }
+
+
+}
+
+ 
+
+
+
+
+
     .music {
         .cards {
             display: flex;
@@ -292,30 +318,17 @@ services
        padding:2%;
             }
         }
-    }
-
-}
 
 
 
-    }
-
-}
+ }
 
 
 
+ }
 
 
-
-
-
-
-
-
-
-
-
-
+ }
 
 
 
