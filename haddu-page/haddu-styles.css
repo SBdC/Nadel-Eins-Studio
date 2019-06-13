@@ -383,15 +383,15 @@ img{
 
 .final {
     grid-column: 1/7;
-    background-color: var(--purple);
-    color: black;
     height: 100px;
     align-items: flex-end;
+    background-color:black;
+      color: var(--green);
 }
 
 .final p a {
     text-decoration: none;
-    color: black;
+    color: var(--green);
 }
 
 .final p a:hover {
