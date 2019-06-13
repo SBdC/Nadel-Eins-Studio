@@ -159,7 +159,12 @@ Accessibility
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between; } }
+    justify-content: center; }
+  .prices-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; } }
 
 body {
   background-image: url("../img/cable-test-12.svg");
@@ -168,10 +173,6 @@ body {
   background-repeat: repeat;
   background-attachment: fixed;
   width: 100vw; }
-
-.wrap-all {
-  max-width: 1300px;
-  margin: auto; }
 
 /*--------------------------------------------------------------
 nav
@@ -192,13 +193,13 @@ nav {
 
 .open {
   position: fixed;
-  margin: 0;
   background-color: #000c2b;
   list-style: none;
   height: 100vh;
   width: 82%;
   padding-top: 129px;
-  padding-left: 10px; }
+  padding-left: 10px;
+  margin-top: -80px; }
   .open li {
     margin-left: 14px; }
     .open li h2 {
@@ -215,6 +216,7 @@ nav {
 
 .burger-black {
   margin: 8px 0 0 5px;
+  top: 0;
   width: 63px;
   height: 63px;
   background-position: 50% 50%;
@@ -560,8 +562,6 @@ services
 .prices {
   background-color: #000c2b;
   padding: 40px 0; }
-  .prices .prices-text {
-    margin-bottom: 40px; }
   .prices h2 {
     color: white; }
   .prices h3 {
@@ -916,6 +916,11 @@ svg.mixes {
 
 @supports (grid-area: auto) {
   @media screen and (min-width: 651px) {
+    .wrap-all {
+      max-width: 1400px;
+      margin: auto; }
+    .open {
+      margin: 0; }
     .title-desktop {
       color: #FF0000;
       font-weight: 600;
