@@ -37,10 +37,20 @@ var erases = Array.from(document.querySelectorAll(".viewLess"));
 var revealText = function revealText(e) {
   var dropDown = document.querySelector("p[data-key=\"".concat(e.target.id, "\"]"));
   dropDown.style.display = "block";
+  var firstParent = e.target.parentElement;
+  var greatParent = firstParent.parentElement;
+  var greatGreatParent = greatParent.parentElement;
+  greatGreatParent.style.flex = "0 1 calc(100%)";
+  greatGreatParent.style.order = "-1";
   var button = document.getElementById("".concat(e.target.id));
   button.style.display = "none";
   var otherButton = document.querySelector("button[data-type=\"".concat(e.target.id, "\"]"));
-  otherButton.style.display = "block"; // otherButton.style.margin = "0 auto";
+  otherButton.style.display = "block";
+  greatGreatParent.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "center"
+  });
 };
 
 var hideText = function hideText(e) {
@@ -52,9 +62,18 @@ var hideText = function hideText(e) {
   otherButton.style.display = "none";
   var button = document.querySelector("button[data-type=\"".concat(targetService, "\"]"));
   button.style.display = "block";
+  var firstParent = e.target.parentElement;
+  var greatParent = firstParent.parentElement;
+  var greatGreatParent = greatParent.parentElement;
+  greatGreatParent.style.flex = "";
+  greatGreatParent.style.order = "";
   var targetServiveElemnt = document.getElementById(targetService);
   var parentTargetServiveElemnt = targetServiveElemnt.parentElement;
-  parentTargetServiveElemnt.scrollIntoView(true);
+  parentTargetServiveElemnt.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "center"
+  });
 };
 
 reads.forEach(function (read) {
@@ -256,7 +275,13 @@ var thunder = document.querySelector(".thunder");
 var surprise = document.querySelector(".surprise");
 var smile = document.querySelector(".smile");
 var smileBar = document.querySelector(".smileBar");
-var faces = Array.from(document.querySelectorAll(".faces")); //thunders get drawn
+var clouds = document.getElementById("clouds");
+var drops = document.getElementById("drops");
+var keys = Array.from(document.querySelectorAll(".text-key"));
+var faces = Array.from(document.querySelectorAll(".faces"));
+var droppings = Array.from(document.querySelectorAll(".dropping"));
+var serviceSvgs = Array.from(document.querySelectorAll(".service-svg"));
+var title = document.getElementById("title-page"); //thunders gets drawn
 
 var thunderOn = function thunderOn() {
   face.style.fill = "red";
@@ -266,8 +291,8 @@ var thunderOn = function thunderOn() {
   smileBar.style.fill = "transparent";
   smileBar.style.stroke = "transparent";
   surprise.style.fill = "white";
-  surprise.style.stroke = "black"; // title.style.color="red";
-
+  surprise.style.stroke = "black";
+  title.style.color = "white";
   document.body.style.background = "snow"; // city.style.background="snow";
 };
 
@@ -280,8 +305,8 @@ var thunderOff = function thunderOff() {
   smileBar.style.stroke = "black";
   surprise.style.fill = "transparent";
   surprise.style.stroke = "transparent";
-  document.body.style.background = ""; // city.style.background="";
-  // title.style.color="black";
+  document.body.style.background = "";
+  title.style.color = "red";
 }; // face.addEventListener("click", thunderOn, false);
 // face.addEventListener("mouseout", thunderOff , false);
 
@@ -291,4 +316,79 @@ faces.forEach(function (face) {
 });
 faces.forEach(function (face) {
   return face.addEventListener("mouseout", thunderOff, false);
+}); //cloud-menu
+
+var explodeAndReveal = function explodeAndReveal(e) {
+  var clickedCloud = e.target;
+  var clickedCloudChild = clickedCloud.firstChild.textContent;
+  var cloudLink = document.getElementById(clickedCloudChild);
+  rain();
+
+  var goLink = function goLink() {
+    cloudLink.scrollIntoView();
+  };
+
+  setTimeout(goLink, 1000);
+};
+
+keys.forEach(function (key) {
+  return key.addEventListener("click", explodeAndReveal, false);
+});
+
+function rain() {
+  clouds.style.stroke = "transparent";
+  drops.style.stroke = "#449AFF";
+  droppings.forEach(function (dropping) {
+    return dropping.classList.add("drops-go-down");
+  });
+  keys.forEach(function (key) {
+    return key.classList.remove("text-on-cloud");
+  });
+  keys.forEach(function (key) {
+    return key.classList.add("text-off");
+  });
+  setTimeout(cloudySky, 5000);
+}
+
+function cloudySky() {
+  clouds.style.stroke = "#449AFF";
+  drops.style.stroke = "transparent";
+  droppings.forEach(function (dropping) {
+    return dropping.classList.remove("drops-go-down");
+  });
+  keys.forEach(function (key) {
+    return key.classList.remove("text-off");
+  });
+  keys.forEach(function (key) {
+    return key.classList.add("text-on-cloud");
+  });
+}
+
+var highlightSvg = function highlightSvg(e) {
+  var mainEl = e.target.dataset.id;
+  var svgText = document.querySelector("text[id=\"".concat(mainEl, "\"]"));
+  var svgPaths = Array.from(document.querySelectorAll("path[data-id=\"".concat(mainEl, "\"]")));
+  svgPaths.forEach(function (svgPath) {
+    return svgPath.style.stroke = "red";
+  });
+  svgText.classList.remove("text-off");
+  svgText.classList.add("text-on");
+};
+
+var highlightSvgOFF = function highlightSvgOFF(e) {
+  var mainEl = e.target.dataset.id;
+  var svgText = document.querySelector("text[id=\"".concat(mainEl, "\"]"));
+  var svgPaths = Array.from(document.querySelectorAll("path[data-id=\"".concat(mainEl, "\"]")));
+  svgPaths.forEach(function (svgPath) {
+    return svgPath.style.stroke = "black";
+  });
+  svgText.classList.add("text-off");
+  svgText.classList.remove("text-on");
+};
+
+serviceSvgs.forEach(function (serviceSvg) {
+  return serviceSvg.addEventListener("mouseover", highlightSvg, false);
+});
+serviceSvgs.forEach(function (serviceSvg) {
+  return serviceSvg.addEventListener("mouseout", highlightSvgOFF, false);
 });

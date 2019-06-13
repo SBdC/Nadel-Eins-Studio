@@ -1,5 +1,3 @@
-
-
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
@@ -40,7 +38,7 @@ Accessibility
 }
 
 @supports (display: flex) {
-  
+
 
 
 
@@ -51,7 +49,7 @@ Accessibility
         justify-content: center;
     }
 
- 
+
 
     .music {
         .cards {
@@ -62,12 +60,13 @@ Accessibility
 
         }
     }
+
     .prices-container {
-      
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -77,11 +76,11 @@ body {
     background-size: 1300px;
     background-repeat: repeat;
     background-attachment: fixed;
-    width:100vw;
+    width: 100vw;
 
 }
 
-  
+
 
 
 /*--------------------------------------------------------------
@@ -138,7 +137,7 @@ nav {
 
 .burger-black {
     margin: 8px 0 0 5px;
-    top:0;
+    top: 0;
     width: 63px;
     height: 63px;
     background-position: 50% 50%;
@@ -219,8 +218,8 @@ buttons close and arrow-up
 header
 --------------------------------------------------------------*/
 
-.header-for-desktop{
-    display:none;
+.header-for-desktop {
+    display: none;
 }
 
 
@@ -231,7 +230,7 @@ header {
     .icon-cloud-line {
         position: absolute;
         right: 15%;
-        top:10px;
+        top: 10px;
         @extend %icon-cloud-style;
 
         p {
@@ -259,7 +258,7 @@ header {
                 color: $red;
                 line-height: 60px;
                 font-weight: 600;
-                max-width:200px;
+                max-width: 200px;
             }
 
         }
@@ -269,8 +268,8 @@ header {
 }
 
 
-.slogan{
-        .quote {
+.slogan {
+    .quote {
         text-align: center;
         padding: 80px 25px;
         background-color: $black;
@@ -638,6 +637,14 @@ services
             font-style: italic;
             font-weight: normal;
         }
+
+
+        iframe {
+            border: 0;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto;
+        }
     }
 
     .load {
@@ -657,7 +664,7 @@ services
     background-color: $black;
     padding: 40px 0;
 
-   
+
     h2 {
         color: white;
     }
@@ -668,26 +675,28 @@ services
     }
 
     p {
-        min-width:260px;
+        min-width: 260px;
         color: $lightgrey;
         text-align: center;
-        
-       border-bottom: 1px solid $lightgrey;
+
+        border-bottom: 1px solid $lightgrey;
         margin: 0;
         padding: 5px;
     }
 
-    
 
-  
-  
+    p:first-of-type {
+        border-top: 1px solid $lightgrey;
+    }
+
+
 
     .icon {
         @extend %icon-cloud-style;
         height: 90px;
         width: 90px;
         display: block;
-        margin:  0 auto;
+        margin: 0 auto;
     }
 
     .readMore {
@@ -755,7 +764,7 @@ Footer
             line-height: 1.3;
             @extend %text-margin;
             font-size: 0.8em;
-            color:white;
+            color: white;
 
 
             span {

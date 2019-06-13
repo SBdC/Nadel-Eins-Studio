@@ -1,5 +1,14 @@
 
 .icon-live-tech {
+	background-image: url('png/live tech.png');
+	background-repeat: no-repeat;
+enhanceSVG:true;
+
+}
+
+
+
+.icon-live-tech-cloud {
 	background-image: url('png/live-tech.png');
 	background-repeat: no-repeat;
 enhanceSVG:true;
