@@ -79,7 +79,7 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
     width: 100vw;
-    
+
 
 }
 
@@ -92,6 +92,7 @@ nav
 nav {
     z-index: 100;
     position: fixed;
+  
 }
 
 .opaque {
@@ -113,10 +114,11 @@ nav {
     width: 82%;
     padding-top: 129px;
     padding-left: 10px;
-    margin-top: -80px;
+    margin:0;
+   
 
     li {
-        margin-left: 14px;
+        margin-left: 30px;
 
         a {}
 
@@ -248,10 +250,13 @@ header {
         }
     }
 
+    .bannerTwo{
+        display:none;}
+
     .banner {
         margin-top: 80px;
         min-height: 600px;
-        background-position: 50% 50%;
+        background-position: 25px 50%;
         z-index: 2000;
 
         .title {
@@ -806,3 +811,53 @@ Footer
     }
 
 }
+
+
+
+
+
+
+@media screen and (min-width: 561px) and (max-width:750px) {
+
+
+header{
+
+.banner{
+display:none;
+}
+
+
+.bannerTwo{
+display:block;
+    margin-top: 80px;
+        min-height: 600px;
+        background-position: 50% 50%;
+
+        z-index: 2000;
+
+        .title {
+            padding: 25px 20px 0 25px;
+
+            h1 {
+                color: black;
+                line-height: 60px;
+                max-width: 200px;
+            }
+
+        }
+
+
+
+}
+
+}
+
+  }
+
+
+
+
+
+
+
+

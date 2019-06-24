@@ -104,7 +104,7 @@ h1 {
   color: #1b1b1c;
   font-size: 2.8em;
   letter-spacing: 1px;
-  font-weight: 400; }
+  font-weight: 600; }
 
 h2 {
   color: #1b1b1c;
@@ -201,9 +201,9 @@ nav {
   width: 82%;
   padding-top: 129px;
   padding-left: 10px;
-  margin-top: -80px; }
+  margin: 0; }
   .open li {
-    margin-left: 14px; }
+    margin-left: 30px; }
     .open li h2 {
       line-height: 35px;
       color: #E1E4E8;
@@ -290,10 +290,13 @@ header .icon-cloud-line {
       color: #449AFF;
       cursor: pointer; }
 
+header .bannerTwo {
+  display: none; }
+
 header .banner {
   margin-top: 80px;
   min-height: 600px;
-  background-position: 50% 50%;
+  background-position: 25px 50%;
   z-index: 2000; }
   header .banner .title {
     padding: 25px 20px 0 25px; }
@@ -636,6 +639,22 @@ Footer
       .theEnd .footer-content p:hover {
         cursor: pointer; }
 
+@media screen and (min-width: 561px) and (max-width: 750px) {
+  header .banner {
+    display: none; }
+  header .bannerTwo {
+    display: block;
+    margin-top: 80px;
+    min-height: 600px;
+    background-position: 50% 50%;
+    z-index: 2000; }
+    header .bannerTwo .title {
+      padding: 25px 20px 0 25px; }
+      header .bannerTwo .title h1 {
+        color: black;
+        line-height: 60px;
+        max-width: 200px; } }
+
 .text-on-cloud {
   font-family: helvetica;
   fill: #000c2b;
@@ -930,10 +949,7 @@ svg.mixes {
   animation: slidedown 2s normal forwards ease-in; }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 561px) and (max-width: 699px) {
-    body {
-      background-color: yellow; } }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 751px) {
     .wrap-all {
       max-width: 1400px;
       margin: auto; }
