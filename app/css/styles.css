@@ -183,6 +183,10 @@ nav {
   z-index: 100;
   position: fixed; }
 
+button {
+  border: none;
+  background-color: transparent; }
+
 .opaque {
   z-index: 99;
   position: fixed;
@@ -367,7 +371,7 @@ slider
   background-color: #000c2b; }
 
 /* Modal Content (image) */
-.modal-content {
+.modal-content img {
   margin: auto;
   display: block;
   width: 95%; }
@@ -554,11 +558,16 @@ services
     display: inline-block; }
     .music .card h3 {
       color: #449AFF;
-      line-height: 30px; }
+      line-height: 30px;
+      font-weight: 400;
+      margin-top: 0px; }
     .music .card h3:nth-of-type(2n) {
       color: #1b1b1c;
       font-style: italic;
-      font-weight: normal; }
+      font-weight: 400;
+      margin-top: -10px; }
+    .music .card p {
+      margin-top: -10px; }
     .music .card iframe {
       border: 0;
       width: 180px;
@@ -619,14 +628,14 @@ co-work
 Footer
 --------------------------------------------------------------*/
 .theEnd {
-  padding-top: 10px;
+  padding-top: 30px;
   background-color: #000c2b;
   color: white; }
   .theEnd .subscribe {
     margin-left: 20px;
-    background-color: #000c2b; }
-    .theEnd .subscribe a {
-      color: white; }
+    background-color: #000c2b;
+    color: white;
+    padding: 10px 20px; }
   .theEnd .footer-content {
     margin-top: 30px;
     padding-top: 20px; }
@@ -1103,9 +1112,8 @@ svg.mixes {
     .services .service-header-wrap-right,
     .services .service-more-text,
     .services .service-text-right,
-    .services .service-text-right {
-      margin: auto;
-      text-align: left;
+    .services .service-text-right-dummy {
+      margin: 0 auto;
       text-align: left; }
     .services .viewLess {
       margin: 20px auto; }

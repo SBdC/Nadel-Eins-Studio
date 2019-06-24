@@ -227,11 +227,14 @@ font-size: 2.2em;
       .service-header-wrap-right,
       .service-more-text,
       .service-text-right,
-      .service-text-right {
-        margin: auto;
-        text-align: left;
+       .service-text-right-dummy
+       {
+        margin:0 auto;
         text-align: left;
       }
+
+      
+
 
       .viewLess {
         margin: 20px auto;

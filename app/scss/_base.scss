@@ -95,6 +95,12 @@ nav {
   
 }
 
+button{
+    border:none;
+    background-color:transparent;
+
+}
+
 .opaque {
     z-index: 99;
     position: fixed;
@@ -379,7 +385,7 @@ slider
 }
 
 /* Modal Content (image) */
-.modal-content {
+.modal-content img{
     margin: auto;
     display: block;
     width: 95%;
@@ -644,12 +650,19 @@ services
         h3 {
             color: $blue;
             line-height: 30px;
+            font-weight:400;
+            margin-top:0px;
         }
 
         h3:nth-of-type(2n) {
             color: $text;
             font-style: italic;
-            font-weight: normal;
+            font-weight:400;
+            margin-top: -10px;
+        }
+
+        p{
+            margin-top: -10px;
         }
 
 
@@ -764,20 +777,22 @@ co-work
 Footer
 --------------------------------------------------------------*/
 .theEnd {
-     padding-top: 10px;
+     padding-top: 30px;
     background-color: $black;
     color: white;
 
         .subscribe{
+            
         @extend %button-style-simple;
         margin-left: 20px;
-         background-color: $black;
+        background-color: $black;
+        color:white;
 
-        a{
-            color:white;
+        padding:10px 20px;
+
+        
 
         }
-    }
 
     .footer-content {
 
