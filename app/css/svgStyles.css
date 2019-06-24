@@ -234,10 +234,11 @@ svg.mixes {
 .lines {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 3s -2s linear infinite;
-  -webkit-animation: dash 1s -2s linear infinite; }
+  animation: dash 4s -2s linear infinite;
+  -webkit-animation: dash 4s -2s linear infinite; }
 
 .pencil {
+  animation: write 1s -6s linear infinite;
   animation: write 1s -6s linear infinite; }
 
 .mix-needles {

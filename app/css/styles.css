@@ -445,7 +445,7 @@ slider
   margin: 0 5px;
   color: #E1E4E8;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1em;
   transition: 1s ease;
   border-radius: 0 3px 3px 0;
   user-select: none; }
@@ -466,6 +466,7 @@ slider
 
 .img-text-reveal p {
   background-color: transparent;
+  font-size: 1em;
   z-index: 1;
   position: absolute;
   width: 100%;
@@ -474,7 +475,8 @@ slider
   color: #FFEE00;
   text-align: center;
   letter-spacing: 0.8px;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  text-shadow: 0px 1px 2px #000000; }
 
 /* The dots/bullets/indicators */
 .dots-wrapper {
@@ -579,7 +581,7 @@ services
     color: #449AFF;
     text-align: center; }
   .prices p {
-    min-width: 260px;
+    min-width: 300px;
     color: #E1E4E8;
     text-align: center;
     border-bottom: 1px solid #E1E4E8;
@@ -891,10 +893,11 @@ svg.mixes {
 .lines {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 3s -2s linear infinite;
-  -webkit-animation: dash 1s -2s linear infinite; }
+  animation: dash 4s -2s linear infinite;
+  -webkit-animation: dash 4s -2s linear infinite; }
 
 .pencil {
+  animation: write 1s -6s linear infinite;
   animation: write 1s -6s linear infinite; }
 
 .mix-needles {
@@ -1085,6 +1088,14 @@ svg.mixes {
       column-count: 2;
       column-gap: 30px; }
     /*--------------------------------------------------------------
+ slide-show
+ --------------------------------------------------------------*/
+    .next,
+    .prev {
+      font-size: 2.2em; }
+    .img-text-reveal p {
+      font-size: 2em; }
+    /*--------------------------------------------------------------
  services
  --------------------------------------------------------------*/
     .services .service-header-wrap-left,
@@ -1119,7 +1130,7 @@ svg.mixes {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between; }
+      justify-content: center; }
       .music .cards .card {
         display: flex;
         flex-direction: column;

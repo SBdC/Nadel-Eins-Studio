@@ -203,6 +203,22 @@ article.co-work-text  {
 
 
     /*--------------------------------------------------------------
+ slide-show
+ --------------------------------------------------------------*/
+.next,
+.prev{
+
+font-size: 2.2em;
+}
+
+
+.img-text-reveal p {
+  font-size: 2em;
+}
+
+
+
+    /*--------------------------------------------------------------
  services
  --------------------------------------------------------------*/
     .services {
@@ -252,7 +268,7 @@ article.co-work-text  {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
 
         .card {
           display: flex;
