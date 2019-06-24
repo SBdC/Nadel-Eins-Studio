@@ -16,29 +16,30 @@ $blue: #449AFF;
         stroke: transparent;
         font-size: 28px;
         &:hover{
-            fill:red;
+            fill:$blue;
             cursor:pointer;
+
         }
-        
+
     }
 
  .text-on tspan{
      font-family:helvetica;
-        fill: $black;
+        fill: $blue;
         stroke: transparent;
-        font-size: 30px;
+        font-size: 34px;
         &:hover{
-            fill:red;
+           
             cursor:pointer;
         }
-        
+
     }
 
 
     .text-off {
         fill: transparent;
         stroke: transparent;
-       
+
     }
 
 
@@ -48,7 +49,7 @@ $blue: #449AFF;
     height: 65%;
     -webkit-height: auto;
 
-  
+
 
 }
 
@@ -61,7 +62,7 @@ $blue: #449AFF;
 
     }
 
- 
+
 
     .drops{
     stroke: transparent;
@@ -91,11 +92,11 @@ $blue: #449AFF;
 {
     stroke:black;
     &:hover{
-        stroke:red;
+        stroke:$blue;
         cursor:pointer;
     }
 
-  
+
 
 }
 
@@ -110,7 +111,7 @@ svg.live-master-speaker,
    height:50%;
    max-width:50%;
    height:auto;
-    
+
 }
 
 svg.consulting-soundDesign,
@@ -119,7 +120,7 @@ svg.mixes{
    height: 60%;
    max-width:60%;
    height:auto;
-   
+
 }
 
 svg.mixes{
@@ -150,16 +151,16 @@ fill: #EDEDED;
       50%  {fill: $lightblue;}
          80% {fill: rgba(204,253,212, 0.6);}
              100%   {fill:  #EDEDED;}
-     
+
     }
 
-    @-webkit-keyframes colorchange 
+    @-webkit-keyframes colorchange
     {
      0%   {fill:  #EDEDED;}
       50%  {fill: $lightblue;}
     80% {fill: rgba(204,253,212, 0.6);}
       100%   {fill:  #EDEDED;}
-     
+
     }
 
 
@@ -199,12 +200,12 @@ fill: #EDEDED;
 @keyframes slidein-other {
 
   0% {
- 
+
     transform: translateX(0px);
   }
   100% {
     transform: translateX(-150px);
-  
+
   }
 }
 
@@ -255,10 +256,10 @@ fill: #EDEDED;
 
 
 .logo {
-   
+
     width: 70%;
     height: 70%;
-   
+
 
     .nadel-eins-logo {
 
@@ -323,12 +324,12 @@ fill: #EDEDED;
 @-webkit-keyframes twink {
     0% {
         transform: scale(0.9);
-  
+
     }
 
     100% {
         transform: scale(1);
-       
+
     }
 
 }
@@ -338,12 +339,12 @@ fill: #EDEDED;
 @keyframes twink {
     0% {
         transform: scale(0.9);
-  
+
     }
 
     100% {
         transform: scale(1);
-       
+
     }
 
 }
@@ -425,13 +426,13 @@ fill: #EDEDED;
 
 
 .mix-needles{
-   
+
     animation: volume 1s -6s linear infinite;
     stroke-width:1.6;
 }
 
 .lightButton{
-   
+
     animation: blink 4s -1s ease-in infinite;
     stroke-width:1.6;
 }
@@ -449,20 +450,20 @@ fill: #EDEDED;
 
 @keyframes volume
  {
-   
+
      100%{
         transform:rotate(-5deg);
      }
-     
+
     }
 
     @-webkit-keyframes volume
     {
-  
+
      100%   {
           transform:rotate(-5deg);
      }
-     
+
     }
 
 
@@ -472,24 +473,24 @@ fill: #EDEDED;
         0% {
         transform:translateX(-120px);
      }
-   
+
      100%   {
         transform:translateX(20px);
      }
-     
+
     }
 
     @-webkit-keyframes write
     {
-    
+
         0% {
         transform:translateX(-120px);
      }
-   
+
      100%   {
         transform:translateX(20px);
      }
-     
+
     }
 
 
@@ -527,12 +528,3 @@ fill: #EDEDED;
   animation: slidedown 2s normal forwards ease-in;
 
 }
-
-
-
-
-
-
-
-
-

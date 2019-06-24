@@ -37,6 +37,8 @@ Accessibility
     /* Above WP toolbar */
 }
 
+
+
 @supports (display: flex) {
 
 
@@ -77,6 +79,7 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
     width: 100vw;
+    
 
 }
 
@@ -255,9 +258,9 @@ header {
             padding: 25px 20px 0 25px;
 
             h1 {
-                color: $red;
+                color: black;
                 line-height: 60px;
-                font-weight: 600;
+                
                 max-width: 200px;
             }
 
@@ -582,6 +585,7 @@ services
 
     .service-text-right {
         text-align: right;
+        margin: 2px 5px 20px;
     }
 
     .icon {
@@ -589,8 +593,7 @@ services
         margin: 0 -5px;
     }
 
-    button,
-    p {
+    button {
         margin: 2px 5px 20px;
     }
 
@@ -609,6 +612,11 @@ services
 
     .service-more-text {
         display: none;
+
+    }
+
+    .service-text-right-dummy{
+        margin: 2px 5px 20px;
     }
 }
 
@@ -750,15 +758,28 @@ co-work
 Footer
 --------------------------------------------------------------*/
 .theEnd {
-
+     padding-top: 10px;
     background-color: $black;
     color: white;
 
+        .subscribe{
+        @extend %button-style-simple;
+        margin-left: 20px;
+         background-color: $black;
+
+        a{
+            color:white;
+
+        }
+    }
 
     .footer-content {
 
         margin-top: 30px;
         padding-top: 20px;
+
+
+
 
         p {
             line-height: 1.3;

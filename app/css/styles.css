@@ -1,4 +1,4 @@
-.icon-close, #back-to-top, .about button, .co-work button, .dots, .services button, .music .load, .prices button {
+.icon-close, #back-to-top, .about button, .co-work button, .dots, .services button, .music .load, .prices button, .theEnd .subscribe {
   color: #000c2b;
   letter-spacing: 0.02em;
   background-color: white;
@@ -8,7 +8,7 @@
   padding: 8px 10px;
   box-shadow: #449AFF 4px 4px 0 0;
   transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
-  .icon-close:hover, #back-to-top:hover, .about button:hover, .co-work button:hover, .dots:hover, .services button:hover, .music .load:hover, .prices button:hover {
+  .icon-close:hover, #back-to-top:hover, .about button:hover, .co-work button:hover, .dots:hover, .services button:hover, .music .load:hover, .prices button:hover, .theEnd .subscribe:hover {
     transform: translateX(2px) translateY(2px);
     box-shadow: 2px 2px 0 0; }
 
@@ -102,7 +102,9 @@ h6 {
 
 h1 {
   color: #1b1b1c;
-  font-size: 2.8em; }
+  font-size: 2.8em;
+  letter-spacing: 1px;
+  font-weight: 400; }
 
 h2 {
   color: #1b1b1c;
@@ -296,9 +298,8 @@ header .banner {
   header .banner .title {
     padding: 25px 20px 0 25px; }
     header .banner .title h1 {
-      color: #FF0000;
+      color: black;
       line-height: 60px;
-      font-weight: 600;
       max-width: 200px; }
 
 .slogan .quote {
@@ -525,16 +526,18 @@ services
   .services .service-header-wrap-left {
     float: left; }
   .services .service-text-right {
-    text-align: right; }
+    text-align: right;
+    margin: 2px 5px 20px; }
   .services .icon {
     margin: 0 -5px; }
-  .services button,
-  .services p {
+  .services button {
     margin: 2px 5px 20px; }
   .services article {
     margin: 0 6px; }
   .services .service-more-text {
     display: none; }
+  .services .service-text-right-dummy {
+    margin: 2px 5px 20px; }
 
 .music {
   padding-top: 5em; }
@@ -611,8 +614,14 @@ co-work
 Footer
 --------------------------------------------------------------*/
 .theEnd {
+  padding-top: 10px;
   background-color: #000c2b;
   color: white; }
+  .theEnd .subscribe {
+    margin-left: 20px;
+    background-color: #000c2b; }
+    .theEnd .subscribe a {
+      color: white; }
   .theEnd .footer-content {
     margin-top: 30px;
     padding-top: 20px; }
@@ -633,16 +642,15 @@ Footer
   stroke: transparent;
   font-size: 28px; }
   .text-on-cloud:hover {
-    fill: red;
+    fill: #449AFF;
     cursor: pointer; }
 
 .text-on tspan {
   font-family: helvetica;
-  fill: #000c2b;
+  fill: #449AFF;
   stroke: transparent;
-  font-size: 30px; }
+  font-size: 34px; }
   .text-on tspan:hover {
-    fill: red;
     cursor: pointer; }
 
 .text-off {
@@ -688,7 +696,7 @@ Footer
   .mixtech-svg:hover,
   .consulting-svg:hover,
   .soundDesign-svg:hover {
-    stroke: red;
+    stroke: #449AFF;
     cursor: pointer; }
 
 svg.speaker-comp,
@@ -922,135 +930,155 @@ svg.mixes {
   animation: slidedown 2s normal forwards ease-in; }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 651px) {
+  @media screen and (min-width: 561px) and (max-width: 699px) {
+    body {
+      background-color: yellow; } }
+  @media screen and (min-width: 700px) {
     .wrap-all {
       max-width: 1400px;
       margin: auto; }
     .open {
       margin: 0; }
     .title-desktop {
-      color: #FF0000;
-      font-weight: 600;
       width: 100%;
-      text-align: center;
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      text-align: center;
+      color: black; }
     .header-for-mobile {
       display: none; }
     .header-for-desktop {
-      display: block; }
+      display: block;
+      max-width: 1150px;
+      margin: 10px auto; }
       .header-for-desktop .grid-container {
+        display: grid;
         margin: 10px 40px;
         padding: 5px;
-        display: grid;
         grid-template-columns: repeat(16, 1fr);
         grid-template-rows: 2.8em 7.2em 7.2em auto;
-        grid-gap: 0px; }
+        grid-gap: 0; }
         .header-for-desktop .grid-container .item {
           display: grid;
-          justify-content: center;
-          align-items: center;
           padding: 5px;
-          background-color: transparent; }
+          background-color: transparent;
+          justify-content: center;
+          align-items: center; }
         .header-for-desktop .grid-container .title {
+          display: flex;
+          margin-top: -20px;
+          font-size: 1em;
           grid-column: 2/16;
           grid-row: 1/2;
-          display: flex;
           justify-content: center;
-          align-items: flex-start;
-          margin-top: -20px; }
+          align-items: flex-start; }
         .header-for-desktop .grid-container .item1 {
+          display: flex;
           grid-column: 1/4;
           grid-row: 2/3;
-          display: flex;
           justify-content: center;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item2 {
+          display: flex;
           grid-column: 4/7;
           grid-row: 2/3;
-          display: flex;
           justify-content: center;
           align-items: flex-end; }
         .header-for-desktop .grid-container .item3 {
-          grid-column: 7/11;
-          padding-top: 36px;
-          grid-row: 1/7;
           display: flex;
+          padding-top: 36px;
+          grid-column: 7/11;
+          grid-row: 1/7;
           justify-content: center;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item4 {
+          display: flex;
           grid-column: 11/14;
           grid-row: 2/3;
-          display: flex;
           justify-content: center;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item5 {
+          display: flex;
           grid-row: 2/3;
           grid-column: 14/17;
-          display: flex;
           justify-content: center;
           align-items: center; }
         .header-for-desktop .grid-container .item6 {
+          display: flex;
           grid-column: 1/4;
           grid-row: 3/4;
-          display: flex;
           justify-content: center;
           align-items: flex-end; }
         .header-for-desktop .grid-container .item7 {
+          display: flex;
           grid-column: 4/7;
           grid-row: 3/4;
-          display: flex;
           justify-content: center;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item8 {
+          display: flex;
           grid-column: 11/14;
           grid-row: 3/4;
-          display: flex;
           justify-content: center;
           align-items: flex-end; }
         .header-for-desktop .grid-container .item9 {
+          display: flex;
           grid-column: 14/17;
           grid-row: 3/4;
-          display: flex;
           justify-content: center;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item10 {
+          display: flex;
           grid-column: 1/8;
           grid-row: 4/5;
-          display: flex;
           justify-content: flex-end;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item11 {
+          display: flex;
           grid-column: 11/17;
           grid-row: 4/5;
-          display: flex;
           justify-content: flex-start;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item12 {
+          display: flex;
           grid-column: 1/9;
           grid-row: 5/6;
-          display: flex;
           justify-content: center;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item13 {
+          display: flex;
           grid-column: 9/17;
           grid-row: 5/6;
-          display: flex;
           justify-content: flex-start;
           align-items: flex-start; }
     .slogan {
       margin-top: -50px; }
     /*--------------------------------------------------------------
-services
---------------------------------------------------------------*/
-    .services .service-header-wrap-right,
+ about, co-work text
+ --------------------------------------------------------------*/
+    article.about-text p:first-child,
+    article.co-work-text p:first-child {
+      margin-top: 0px; }
+    article.about-text p,
+    article.co-work-text p {
+      margin-bottom: -30px;
+      text-align: justify; }
+    article.about-text,
+    article.co-work-text {
+      padding-bottom: 40px;
+      column-count: 2;
+      column-gap: 30px; }
+    /*--------------------------------------------------------------
+ services
+ --------------------------------------------------------------*/
     .services .service-header-wrap-left,
-    .services .service-text-right,
     .services .service-header-wrap-other,
+    .services .service-header-wrap-right,
     .services .service-more-text,
+    .services .service-text-right,
     .services .service-text-right {
-      text-align: left;
       margin: auto;
+      text-align: left;
       text-align: left; }
     .services .viewLess {
       margin: 20px auto; }
@@ -1062,15 +1090,15 @@ services
     .services .service {
       display: flex;
       flex-direction: column;
+      padding: 2%;
       justify-content: center;
-      flex: 0 1 calc(33% - 0.5em);
-      padding: 2%; }
+      flex: 0 1 calc(33% - .5em); }
     .prices-container .price {
       display: flex;
       flex-direction: column;
+      padding: 2%;
       justify-content: center;
-      flex: 0 1 calc(33% - 0.5em);
-      padding: 2%; }
+      flex: 0 1 calc(33% - .5em); }
     .music .cards {
       display: flex;
       flex-direction: row;
@@ -1079,6 +1107,6 @@ services
       .music .cards .card {
         display: flex;
         flex-direction: column;
+        padding: 2%;
         justify-content: center;
-        flex: 0 1 calc(33% - 0.5em);
-        padding: 2%; } } }
+        flex: 0 1 calc(33% - .5em); } } }

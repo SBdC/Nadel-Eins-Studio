@@ -4,16 +4,15 @@
   stroke: transparent;
   font-size: 28px; }
   .text-on-cloud:hover {
-    fill: red;
+    fill: #449AFF;
     cursor: pointer; }
 
 .text-on tspan {
   font-family: helvetica;
-  fill: #000c2b;
+  fill: #449AFF;
   stroke: transparent;
-  font-size: 30px; }
+  font-size: 34px; }
   .text-on tspan:hover {
-    fill: red;
     cursor: pointer; }
 
 .text-off {
@@ -59,7 +58,7 @@
   .mixtech-svg:hover,
   .consulting-svg:hover,
   .soundDesign-svg:hover {
-    stroke: red;
+    stroke: #449AFF;
     cursor: pointer; }
 
 svg.speaker-comp,

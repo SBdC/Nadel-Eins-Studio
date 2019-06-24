@@ -259,7 +259,7 @@ COPY.innerHTML = "<p> Franz Schuette " + year + " &#x24B8; All rights reserved</
 var IMPRESSUM = document.getElementById("impressum");
 var impressumText = document.getElementById("impressum-text");
 var impressumArrow = document.getElementById("impressum-arrow");
-var impressumTextContent = "<p class=\"impressum-text\"> Nadel Eins Studio Berlin c/o Franz Schuette - Wattstrasse 24 - 13355 Berlin - Deutschland </p>\n  <p>  Verantwortlich nach $ 6 Teledienstgesetz: Franz Schuette </p>\n   <p> Hinweise: Nadel Eins bemueht sich auf dieser Webseite richtige und vollstaendige Informationen zur Verfuegung zu stellen, \n  uebernimmt jedoch keine Haftung oder Garantie fuer die Aktualitaet, Richtigkeit und Vollstaendigkeit der auf dieser Webseite \n  bereitgestellten Informationen. Dies gilt auch fuer alle Verbindungen (\"Links\"), auf die diese Webseite direkt oder indirekt verweist. \n  Nadel Eins ist fuer den Inhalt einer Seite, die mit einem solchen Link erreicht wird, nicht verantwortlich. \n  Die Redaktion uebernimmt keine Haftung fuer unverlangt eingesandte Manuskripte, Fotos, Illustrationen. \n  Nadel Eins behaelt sich das Recht vor, ohne vorherige Ankuendigung Aenderungen oder Ergaenzungen der bereitgestellten Informationen vorzunehmen. \n  Der Inhalt dieser Webseite ist urheberrechtlich geschuetzt. Vervielfaeltigung, Speicherung und Nachdruck nur mit ausdruecklicher,\n  schriftlicher Genehmigung von Nadel Eins. Nadel Eins beachtet die datenschutzrechtlichen Bestimmungen des Bundesdatenschutzgesetzes. \n  Soweit personenbezogene Daten eingegeben werden, richten sich diese selbstverstaendlich nur an Nadel Eins. \n  Nadel Eins wird diese ohne die Einwilligung des Nutzers nicht an Dritte weitergeben</p>";
+var impressumTextContent = "<p class=\"impressum-text\"> Nadel Eins Studio Berlin c/o Franz Schuette - Wattstrasse 24 - 13355 Berlin - Deutschland </p>\n  <p>  Verantwortlich nach $ 6 Teledienstgesetz: Franz Schuette </p>\n   <p> Hinweise: Nadel Eins bemueht sich auf dieser Webseite richtige und vollstaendige Informationen zur Verfuegung zu stellen,\n  uebernimmt jedoch keine Haftung oder Garantie fuer die Aktualitaet, Richtigkeit und Vollstaendigkeit der auf dieser Webseite\n  bereitgestellten Informationen. Dies gilt auch fuer alle Verbindungen (\"Links\"), auf die diese Webseite direkt oder indirekt verweist.\n  Nadel Eins ist fuer den Inhalt einer Seite, die mit einem solchen Link erreicht wird, nicht verantwortlich.\n  Die Redaktion uebernimmt keine Haftung fuer unverlangt eingesandte Manuskripte, Fotos, Illustrationen.\n  Nadel Eins behaelt sich das Recht vor, ohne vorherige Ankuendigung Aenderungen oder Ergaenzungen der bereitgestellten Informationen vorzunehmen.\n  Der Inhalt dieser Webseite ist urheberrechtlich geschuetzt. Vervielfaeltigung, Speicherung und Nachdruck nur mit ausdruecklicher,\n  schriftlicher Genehmigung von Nadel Eins. Nadel Eins beachtet die datenschutzrechtlichen Bestimmungen des Bundesdatenschutzgesetzes.\n  Soweit personenbezogene Daten eingegeben werden, richten sich diese selbstverstaendlich nur an Nadel Eins.\n  Nadel Eins wird diese ohne die Einwilligung des Nutzers nicht an Dritte weitergeben</p>";
 
 function showImpressum() {
   IMPRESSUM.getAttribute("aria-expanded") == "false" ? IMPRESSUM.setAttribute("aria-expanded", true) : IMPRESSUM.setAttribute("aria-expanded", false);
@@ -364,12 +364,38 @@ function cloudySky() {
   });
 }
 
+var svgToService = function svgToService(e) {
+  var mainEl = e.target.dataset.id;
+  var matchingService = document.querySelector("article[data-svg=\"".concat(mainEl, "\"]"));
+  matchingService.style.flex = "0 1 calc(100%)";
+  matchingService.style.order = "-1";
+  var dropDown = document.querySelector("p[data-text=\"".concat(mainEl, "\"]"));
+  dropDown.style.display = "block";
+  var button = document.querySelector("button[data-svgRead=\"".concat(mainEl, "\"]"));
+  button.style.display = "none";
+  var otherButton = document.querySelector("button[data-svgLess=\"".concat(mainEl, "\"]"));
+  otherButton.style.display = "block";
+  matchingService.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "center"
+  });
+};
+
 var highlightSvg = function highlightSvg(e) {
   var mainEl = e.target.dataset.id;
   var svgText = document.querySelector("text[id=\"".concat(mainEl, "\"]"));
   var svgPaths = Array.from(document.querySelectorAll("path[data-id=\"".concat(mainEl, "\"]")));
+  var svgEllipses = Array.from(document.querySelectorAll("ellipse[data-id=\"".concat(mainEl, "\"]")));
+  var svgRet = Array.from(document.querySelectorAll("ret[data-id=\"".concat(mainEl, "\"]")));
   svgPaths.forEach(function (svgPath) {
-    return svgPath.style.stroke = "red";
+    return svgPath.style.stroke = "#449AFF";
+  });
+  svgEllipses.forEach(function (svgPath) {
+    return svgPath.style.stroke = "#449AFF";
+  });
+  svgRet.forEach(function (svgPath) {
+    return svgPath.style.stroke = "#449AFF";
   });
   svgText.classList.remove("text-off");
   svgText.classList.add("text-on");
@@ -379,13 +405,24 @@ var highlightSvgOFF = function highlightSvgOFF(e) {
   var mainEl = e.target.dataset.id;
   var svgText = document.querySelector("text[id=\"".concat(mainEl, "\"]"));
   var svgPaths = Array.from(document.querySelectorAll("path[data-id=\"".concat(mainEl, "\"]")));
+  var svgEllipses = Array.from(document.querySelectorAll("ellipse[data-id=\"".concat(mainEl, "\"]")));
+  var svgRet = Array.from(document.querySelectorAll("ret[data-id=\"".concat(mainEl, "\"]")));
   svgPaths.forEach(function (svgPath) {
+    return svgPath.style.stroke = "black";
+  });
+  svgEllipses.forEach(function (svgPath) {
+    return svgPath.style.stroke = "black";
+  });
+  svgRet.forEach(function (svgPath) {
     return svgPath.style.stroke = "black";
   });
   svgText.classList.add("text-off");
   svgText.classList.remove("text-on");
 };
 
+serviceSvgs.forEach(function (serviceSvg) {
+  return serviceSvg.addEventListener("click", svgToService, false);
+});
 serviceSvgs.forEach(function (serviceSvg) {
   return serviceSvg.addEventListener("mouseover", highlightSvg, false);
 });
