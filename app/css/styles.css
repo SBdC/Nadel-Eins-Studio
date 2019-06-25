@@ -37,7 +37,7 @@ header .icon-cloud-line, .services .icon, .prices .icon {
 
 .about h2, .co-work h2, .services h2, .contact h2 {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   color: #449AFF; }
 
 section .about-text-wrapper,
@@ -108,12 +108,14 @@ h1 {
 
 h2 {
   color: #1b1b1c;
-  font-size: 2.2em;
-  text-transform: uppercase; }
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 400; }
 
 h3 {
   color: #1b1b1c;
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  font-weight: 400; }
 
 /*--------------------------------------------------------------
 Accessibility
@@ -539,7 +541,7 @@ services
   padding-top: 40px; }
   .services h3 {
     text-align: center;
-    margin-top: -5px; }
+    margin: 0; }
   .services .service-header-wrap-right {
     float: right; }
   .services .service-header-wrap-left {
@@ -578,12 +580,8 @@ services
       margin-top: -10px; }
     .music .card p {
       margin-top: -10px; }
-    .music .card #music-frame {
-      width: 100%;
-      height: 250px;
-      margin-top: 26px; }
     .music .card iframe.musicPlayer {
-      border: 0;
+      border: none;
       width: 180px;
       height: 180px;
       margin: 0 auto; }
@@ -633,7 +631,7 @@ services
 /*--------------------------------------------------------------
 co-work
 --------------------------------------------------------------*/
-.contact p {
+.contact a {
   color: #1b1b1c;
   padding: 10px;
   border-radius: 20px; }
@@ -1100,15 +1098,16 @@ svg.mixes {
     /*--------------------------------------------------------------
  about, co-work text
  --------------------------------------------------------------*/
-    article.about-text p:first-child,
-    article.co-work-text p:first-child {
+    div.about-text p:first-child {
       margin-top: 0px; }
-    article.about-text p,
-    article.co-work-text p {
+    div.co-work-text p:first-child {
+      margin-top: -10px; }
+    div.about-text p,
+    div.co-work-text p {
       margin-bottom: -30px;
       text-align: justify; }
-    article.about-text,
-    article.co-work-text {
+    div.about-text,
+    div.co-work-text {
       padding-bottom: 40px;
       column-count: 2;
       column-gap: 30px; }
@@ -1162,7 +1161,8 @@ svg.mixes {
         flex-direction: column;
         padding: 2%;
         justify-content: center;
-        flex: 0 1 calc(33% - .5em); }
+        flex: 0 1 calc(33% - .5em);
+        min-height: 460px; }
         .music .cards .card .music-info {
           display: flex;
           flex-direction: column;

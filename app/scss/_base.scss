@@ -593,7 +593,7 @@ services
 
     h3 {
         text-align: center;
-        margin-top: -5px;
+        margin: 0;
     }
 
     .service {
@@ -769,7 +769,7 @@ co-work
 --------------------------------------------------------------*/
 .contact {
 
-    p {
+    a {
         color: $text;
         padding: 10px;
         border-radius: 20px;
