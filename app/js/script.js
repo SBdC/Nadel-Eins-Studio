@@ -185,27 +185,46 @@ dots.forEach(dot => dot.addEventListener("click", currentSlide, false));
 // Get the <span> element that closes the modal
 const MODAL = document.getElementById("myModal");
 const SPAN = document.getElementsByClassName("close")[0];
-let modalImg = document.getElementById("img01");
-let captionText = document.getElementById("caption-modal");
+
 const BODY = document.getElementsByTagName("BODY")[0];
 
 
 
 // When the user clicks on <span> (x), close the modal
 SPAN.onclick = function() {
+  let modalImg = document.getElementById("img01");
+  let captionText = document.getElementById("caption-modal");
+  MODAL.removeChild(modalImg);
+  MODAL.removeChild(captionText);
   MODAL.style.display = "none";
 };
 
 
+// let zoomImage = (e) => {
+//   MODAL.style.display = "block";
+
+//   modalImg.src = e.target.src;
+//   captionText.innerHTML = e.target.nextElementSibling.innerHTML;
+//   BODY.style.overflow = "hidden";
+// };
+// imgs.forEach(img => img.addEventListener("click", zoomImage, false));
+
 let zoomImage = (e) => {
-  MODAL.style.display = "block";
-  modalImg.src = e.target.src;
-  captionText.innerHTML = e.target.nextElementSibling.innerHTML;
-  BODY.style.overflow = "hidden";
+    MODAL.style.display = "block";
+
+    let img = document.createElement("img");
+    let div = document.createElement("div");
+    MODAL.appendChild(img);
+    MODAL.appendChild(div);
+
+    img.setAttribute("src", e.target.src);
+    img.setAttribute("class", "modal-content");
+    img.setAttribute("id", "img01");
+    div.setAttribute("id", "caption-modal");
+    div.innerHTML = e.target.nextElementSibling.innerHTML;
+    BODY.style.overflow = "hidden";
 };
 imgs.forEach(img => img.addEventListener("click", zoomImage, false));
-
-
 
 //load more music albums
 

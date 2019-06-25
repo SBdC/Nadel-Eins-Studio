@@ -104,7 +104,7 @@ h1 {
   color: #1b1b1c;
   font-size: 2.8em;
   letter-spacing: 1px;
-  font-weight: 600; }
+  font-weight: 400; }
 
 h2 {
   color: #1b1b1c;
@@ -837,7 +837,8 @@ svg.mixes {
 
 .logo {
   width: 70%;
-  height: 70%; }
+  height: 70%;
+  margin-top: 20px; }
   .logo .nadel-eins-logo {
     fill: none; }
     .logo .nadel-eins-logo .needle,
@@ -1008,7 +1009,7 @@ svg.mixes {
           align-items: center; }
         .header-for-desktop .grid-container .title {
           display: flex;
-          margin-top: -20px;
+          margin-top: -15px;
           font-size: 1em;
           grid-column: 2/16;
           grid-row: 1/2;

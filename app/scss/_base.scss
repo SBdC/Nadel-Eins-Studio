@@ -680,18 +680,8 @@ services
 
 
 
-        #music-frame {
-
-            width: 100%;
-            height: 250px;
-            margin-top:26px
-
-
-        }
-
-
         iframe.musicPlayer {
-            border: 0;
+            border: none; 
             width: 180px;
             height: 180px;
             margin: 0 auto;

@@ -159,18 +159,34 @@ dots.forEach(function (dot) {
 
 var MODAL = document.getElementById("myModal");
 var SPAN = document.getElementsByClassName("close")[0];
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption-modal");
 var BODY = document.getElementsByTagName("BODY")[0]; // When the user clicks on <span> (x), close the modal
 
 SPAN.onclick = function () {
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption-modal");
+  MODAL.removeChild(modalImg);
+  MODAL.removeChild(captionText);
   MODAL.style.display = "none";
-};
+}; // let zoomImage = (e) => {
+//   MODAL.style.display = "block";
+//   modalImg.src = e.target.src;
+//   captionText.innerHTML = e.target.nextElementSibling.innerHTML;
+//   BODY.style.overflow = "hidden";
+// };
+// imgs.forEach(img => img.addEventListener("click", zoomImage, false));
+
 
 var zoomImage = function zoomImage(e) {
   MODAL.style.display = "block";
-  modalImg.src = e.target.src;
-  captionText.innerHTML = e.target.nextElementSibling.innerHTML;
+  var img = document.createElement("img");
+  var div = document.createElement("div");
+  MODAL.appendChild(img);
+  MODAL.appendChild(div);
+  img.setAttribute("src", e.target.src);
+  img.setAttribute("class", "modal-content");
+  img.setAttribute("id", "img01");
+  div.setAttribute("id", "caption-modal");
+  div.innerHTML = e.target.nextElementSibling.innerHTML;
   BODY.style.overflow = "hidden";
 };
 
@@ -281,7 +297,7 @@ var keys = Array.from(document.querySelectorAll(".text-key"));
 var faces = Array.from(document.querySelectorAll(".faces"));
 var droppings = Array.from(document.querySelectorAll(".dropping"));
 var serviceSvgs = Array.from(document.querySelectorAll(".service-svg"));
-var title = document.getElementById("title-page"); //thunders gets drawn
+var title = document.getElementById("title"); //thunders gets drawn
 
 var thunderOn = function thunderOn() {
   face.style.fill = "red";

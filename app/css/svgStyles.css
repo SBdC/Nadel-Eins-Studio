@@ -155,7 +155,8 @@ svg.mixes {
 
 .logo {
   width: 70%;
-  height: 70%; }
+  height: 70%;
+  margin-top: 20px; }
   .logo .nadel-eins-logo {
     fill: none; }
     .logo .nadel-eins-logo .needle,

@@ -818,9 +818,9 @@
             <h3 class="quote">Our studio makes sound sound better</h3>
         </section>
         <section id="About" class="about">
-            <div class="about-text-wrapper">
+            <article class="about-text-wrapper">
                 <h2 class="about-title">About</h2>
-                <article class="about-text">
+                <div class="about-text">
                     <p>The Nadel Eins Studio Berlin was founded way back in the 90ies by the band Jeans Team. This is where they recorded all their music and slowly developed their technical skills. After several moves and different setups throughout all those years,
                         Franz Schütte decided to finally turn it into a real high-end music studio with the approach to create a room that sounds just beautiful.</p>
                     <p>It became a minimal but very verasatile plug and play work-station where musicians and technicians can easily addapt and find their way around. It works very well for all kind of audio purposes. Not only the classical recording, mixing and mastering.
@@ -829,10 +829,10 @@
                     <p data-key="read-about" data-hide="less-about" class="about-more-text fade ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
                         with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </article>
+                </div>
                 <button id="read-about" data-type="less-about" class="readMore">Read More</button>
                 <button id="less-about" data-type="read-about" class="viewLess">View Less</button>
-            </div>
+            </article>
             <!-- Slideshow container -->
             <div id="slideshow" class="slideshow-container">
                 <!-- The Modal -->
@@ -840,8 +840,7 @@
                     <div class="close">
                         <div class="icon icon-close"></div>
                     </div>
-                    <img src="//:0" alt="zoomed pic" class="modal-content" id="img01">
-                    <div id="caption-modal"></div>
+                    
                 </div>
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
@@ -1003,14 +1002,14 @@
              </div>
         </section>
         <section id="Work-Station" class="co-work">
-            <div class="co-work-text-wrapper">
+            <article class="co-work-text-wrapper">
                 <h2 class="co-work-title">Work-Station</h2>
-                <article class="co-work-text">
+                <div class="co-work-text">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
                         with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </article>
-            </div>
+                </div>
+            </article>
         </section>
         <section id="Listen" class="music">
             <div class="music-text-wrapper">
@@ -1034,7 +1033,7 @@
                                 <p>Recorded at Nadel Eins Studio</p>
                             </div>
                         </div>
-                        <iframe class="musicPlayer" src="https://www.youtube.com/embed/fftF9Cg7hWY" frameborder="0"></iframe>
+                        <iframe class="musicPlayer" src="https://www.youtube.com/embed/fftF9Cg7hWY" ></iframe>
                     </li>
                 
                           <li class="card">
@@ -1067,7 +1066,7 @@
                             </div>
                         </div>
                         <div class="frame-box">
-                       <iframe class="musicPlayer" src="https://www.youtube.com/embed/P8CaGSZ4UHA" frameborder="0"></iframe>
+                       <iframe class="musicPlayer" src="https://www.youtube.com/embed/P8CaGSZ4UHA" ></iframe>
                        </div>
                     </li>
                       <li class="card">
@@ -1079,7 +1078,7 @@
                             </div>
                         </div>
                         
-                       <iframe class="musicPlayer"src="https://www.youtube.com/embed/gSHuatK-fws" frameborder="0" ></iframe>
+                       <iframe class="musicPlayer" src="https://www.youtube.com/embed/gSHuatK-fws" ></iframe>
                     </li>
                     
                         <li class="card visually-hidden">
@@ -1316,13 +1315,16 @@
             <button onclick="window.open('http://eepurl.com/gu86Aj')" class="subscribe" >Subscribe to our Newsletter</button>
             <div class="footer-content">
                 <div id="copyright"></div>
-                <p id="impressum" class="impressum" aria-role="button" aria-expanded="false"> Impressum <span id="impressum-arrow">&#10094;</span> </p>
+                <p id="impressum" class="impressum" role="button" aria-expanded="false"> Impressum <span id="impressum-arrow">&#10094;</span> </p>
                 <div id="impressum-text"></div>
                 <p> Web Dev by SBdC</p>
             </div>
         </footer>
     </div>
-</body>
+
 <script src="js/script.js"></script>
+    
+</body>
+
 
 </html>
