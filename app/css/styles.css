@@ -113,7 +113,7 @@ h2 {
 
 h3 {
   color: #1b1b1c;
-  font-size: 1.6em; }
+  font-size: 1.4em; }
 
 /*--------------------------------------------------------------
 Accessibility
@@ -282,10 +282,19 @@ header
 .header-for-desktop {
   display: none; }
 
+@keyframes appear {
+  from {
+    transform: translateY(-200px);
+    opacity: 0; }
+  to {
+    transform: translateY(0px);
+    opacity: 100%; } }
+
 header .icon-cloud-line {
   position: absolute;
   right: 15%;
-  top: 10px; }
+  top: 10px;
+  animation: appear 2s forwards; }
   header .icon-cloud-line p {
     margin-left: 40px;
     margin-top: 65px;
@@ -411,7 +420,7 @@ slider
 .close {
   position: absolute;
   top: 20px;
-  right: 40px;
+  right: 20px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
@@ -432,7 +441,8 @@ slider
 
 .image-slider img {
   width: 100%;
-  height: auto; }
+  height: auto;
+  cursor: zoom-in; }
 
 /* Hide the images by default */
 .mySlides {
@@ -568,7 +578,11 @@ services
       margin-top: -10px; }
     .music .card p {
       margin-top: -10px; }
-    .music .card iframe {
+    .music .card #music-frame {
+      width: 100%;
+      height: 250px;
+      margin-top: 26px; }
+    .music .card iframe.musicPlayer {
       border: 0;
       width: 180px;
       height: 180px;
@@ -679,7 +693,7 @@ Footer
   font-family: helvetica;
   fill: #449AFF;
   stroke: transparent;
-  font-size: 34px; }
+  font-size: 36px; }
   .text-on tspan:hover {
     cursor: pointer; }
 
@@ -984,7 +998,7 @@ svg.mixes {
         margin: 10px 40px;
         padding: 5px;
         grid-template-columns: repeat(16, 1fr);
-        grid-template-rows: 2.8em 7.2em 7.2em auto;
+        grid-template-rows: 2.8em 7.4em 7.4em auto;
         grid-gap: 0; }
         .header-for-desktop .grid-container .item {
           display: grid;
@@ -1042,13 +1056,13 @@ svg.mixes {
           grid-column: 4/7;
           grid-row: 3/4;
           justify-content: center;
-          align-items: flex-start; }
+          align-items: center; }
         .header-for-desktop .grid-container .item8 {
           display: flex;
           grid-column: 11/14;
           grid-row: 3/4;
           justify-content: center;
-          align-items: flex-end; }
+          align-items: flex-start; }
         .header-for-desktop .grid-container .item9 {
           display: flex;
           grid-column: 14/17;
@@ -1078,7 +1092,8 @@ svg.mixes {
           grid-column: 9/17;
           grid-row: 5/6;
           justify-content: flex-start;
-          align-items: flex-start; }
+          align-items: flex-start;
+          margin-top: -40px; }
     .slogan {
       margin-top: -50px; }
     /*--------------------------------------------------------------
@@ -1103,7 +1118,9 @@ svg.mixes {
     .prev {
       font-size: 2.2em; }
     .img-text-reveal p {
-      font-size: 2em; }
+      font-size: 1.6em; }
+    #caption-modal p {
+      font-size: 1.6em; }
     /*--------------------------------------------------------------
  services
  --------------------------------------------------------------*/
@@ -1144,4 +1161,16 @@ svg.mixes {
         flex-direction: column;
         padding: 2%;
         justify-content: center;
-        flex: 0 1 calc(33% - .5em); } } }
+        flex: 0 1 calc(33% - .5em); }
+        .music .cards .card .music-info {
+          display: flex;
+          flex-direction: column;
+          flex: 1 1;
+          justify-items: flex-end; }
+      .music .cards iframe.musicPlayer {
+        border: 0;
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end; } } }

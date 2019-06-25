@@ -366,7 +366,7 @@ const faces = Array.from(document.querySelectorAll(".faces"));
 const droppings = Array.from(document.querySelectorAll(".dropping"));
 const serviceSvgs = Array.from(document.querySelectorAll(".service-svg"));
 
-const title = document.getElementById("title-page");
+const title = document.getElementById("title");
 
 
 //thunders gets drawn
@@ -547,3 +547,21 @@ let highlightSvgOFF = (e) => {
 serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("click", svgToService, false));
 serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseover", highlightSvg, false));
 serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseout", highlightSvgOFF, false));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
