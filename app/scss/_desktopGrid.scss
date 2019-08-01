@@ -49,7 +49,7 @@
 
                 .title {
                     display: flex;
-                    margin-top: -15px;
+                    // margin-top: -15px;
                     font-size: 1em;
                     grid-column: 2/16;
                     grid-row: 1/2;
@@ -207,8 +207,7 @@
         div.co-work-text {
 
             padding-bottom: 40px;
-            column-count: 2;
-            column-gap: 30px;
+           
         }
 
 

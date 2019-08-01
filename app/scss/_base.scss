@@ -313,6 +313,11 @@ button.viewLess {
     display: none;
 }
 
+
+.more-text-right{
+    text-align: right;
+}
+
 /*--------------------------------------------------------------
 sections
 --------------------------------------------------------------*/
@@ -403,6 +408,7 @@ slider
     margin: auto;
     display: block;
     width: 95%;
+
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -473,7 +479,8 @@ slider
 }
 
 .image-slider img {
-    width: 100%;
+    width:100%;
+  
     height: auto;
     cursor: zoom-in;
 }

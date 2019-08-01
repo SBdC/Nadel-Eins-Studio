@@ -38,26 +38,37 @@ let reads = Array.from(document.querySelectorAll(".readMore"));
 let erases = Array.from(document.querySelectorAll(".viewLess"));
 
 
+
+
 let revealText = (e) => {
 
-  let dropDown = document.querySelector(`p[data-key="${e.target.id}"]`);
+  let idTarget = e.target.id;
+
+  let dropDown = document.querySelector(`p[data-key="${idTarget}"]`);
   dropDown.style.display = "block";
-  let firstParent = e.target.parentElement;
-  let greatParent = firstParent.parentElement;
-  let greatGreatParent = greatParent.parentElement;
-  greatGreatParent.style.flex = "0 1 calc(100%)";
-  greatGreatParent.style.order = "-1";
-  let button = document.getElementById(`${e.target.id}`);
+
+  let button = document.getElementById(`${idTarget}`);
   button.style.display = "none";
-  let otherButton = document.querySelector(`button[data-type="${e.target.id}"]`);
+  let otherButton = document.querySelector(`button[data-type="${idTarget}"]`);
   otherButton.style.display = "block";
 
 
-  greatGreatParent.scrollIntoView({
-    behavior: "smooth",
-    block: "center",
-    inline: "center"
-  });
+
+  if(idTarget != "read-about"){
+     let firstParent = e.target.parentElement;
+     let greatParent = firstParent.parentElement;
+     let greatGreatParent = greatParent.parentElement;
+     greatGreatParent.style.flex = "0 1 calc(100%)";
+     greatGreatParent.style.order = "-1";
+
+      greatGreatParent.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center"
+      });
+
+  }
+
 
 
 };
@@ -90,6 +101,7 @@ let hideText = (e) => {
 
 
 };
+
 
 
 reads.forEach(read => read.addEventListener("click", revealText, false));

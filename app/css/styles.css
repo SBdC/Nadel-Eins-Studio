@@ -37,7 +37,6 @@ header .icon-cloud-line, .services .icon, .prices .icon {
 
 .about h2, .co-work h2, .services h2, .contact h2 {
   text-transform: uppercase;
-  font-weight: 400;
   color: #449AFF; }
 
 section .about-text-wrapper,
@@ -102,19 +101,19 @@ h6 {
 
 h1 {
   color: #1b1b1c;
-  font-size: 2.8em;
+  font-size: 3.2em;
   letter-spacing: 1px;
-  font-weight: 400; }
+  font-weight: 700; }
 
 h2 {
   color: #1b1b1c;
-  font-size: 2em;
+  font-size: 2.2em;
   text-transform: uppercase;
-  font-weight: 400; }
+  font-weight: 700; }
 
 h3 {
   color: #1b1b1c;
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-weight: 400; }
 
 /*--------------------------------------------------------------
@@ -332,6 +331,9 @@ button
 --------------------------------------------------------------*/
 button.viewLess {
   display: none; }
+
+.more-text-right {
+  text-align: right; }
 
 /*--------------------------------------------------------------
 sections
@@ -1007,7 +1009,6 @@ svg.mixes {
           align-items: center; }
         .header-for-desktop .grid-container .title {
           display: flex;
-          margin-top: -15px;
           font-size: 1em;
           grid-column: 2/16;
           grid-row: 1/2;
@@ -1108,9 +1109,7 @@ svg.mixes {
       text-align: justify; }
     div.about-text,
     div.co-work-text {
-      padding-bottom: 40px;
-      column-count: 2;
-      column-gap: 30px; }
+      padding-bottom: 40px; }
     /*--------------------------------------------------------------
  slide-show
  --------------------------------------------------------------*/
