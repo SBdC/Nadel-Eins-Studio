@@ -8,16 +8,34 @@ $blue: #449AFF;
 
 
 
+#mast tspan,
+#sd tspan,
+#mt tspan,
+#cons tspan,
+#mixT tspan,
+
+{
+  font-size:38px;
+
+}
 
 
- .text-on-cloud {
+
+
+
+
+.text-on-cloud  tspan  {
      font-family:helvetica;
         fill: $black;
         stroke: transparent;
-        font-size: 28px;
+         font-size:30px;
+        
         &:hover{
             fill:$blue;
             cursor:pointer;
+            font-size:31px;
+            transition: all 2s;
+
 
         }
 
@@ -27,7 +45,7 @@ $blue: #449AFF;
      font-family:helvetica;
         fill: $blue;
         stroke: transparent;
-        font-size: 36px;
+     
         &:hover{
            
             cursor:pointer;
@@ -45,14 +63,11 @@ $blue: #449AFF;
 
 .cloud {
 
-    width: 65%;
-    height: 65%;
+    width: 85%;
+    height: 85%;
     -webkit-height: auto;
 
-
-
 }
-
 
 
     .clouds {
@@ -73,10 +88,10 @@ $blue: #449AFF;
 
 
 .big-speaker{
-    transform:scale(0.86) translateY(60px);
+    transform:scale(0.90) translateY(60px);
 }
 .sync{
-    transform:scale(0.86) translateX(60px) translateY(60px);
+    transform:scale(0.90) translateX(60px) translateY(60px);
 }
 
 

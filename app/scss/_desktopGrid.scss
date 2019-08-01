@@ -4,31 +4,41 @@
 
 
     @media screen and (min-width: 751px) {
-        .wrap-all {
-            max-width: 1400px;
-            margin: auto;
+
+
+
+
+
+        // .wrap-all {
+        //     max-width: 1400px;
+        //     margin: auto;
+        // }
+
+
+           .title-desktop {
+
+            transform: rotate(-90deg);
+            margin: 0;
+            padding: 0;
+            position:absolute;
+            color: $black;
+            left:-210px;
+            top:380px;
+
         }
+
 
         .open {
             margin: 0;
         }
 
-        .title-desktop {
-
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            color: black;
-        }
-
+     
         .header-for-mobile {
             display: none;
         }
 
         .header-for-desktop {
             display: block;
-            max-width: 1150px;
             margin: 10px auto;
 
             .grid-container {
@@ -36,7 +46,7 @@
                 margin: 10px 40px;
                 padding: 5px;
                 grid-template-columns: repeat(16, 1fr);
-                grid-template-rows: 2.8em 7.4em 7.4em auto;
+                grid-template-rows: 0.5em 7.4em 7.4em auto;
                 grid-gap: 0;
 
                 .item {

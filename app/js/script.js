@@ -84,6 +84,11 @@ let hideText = (e) => {
   let button = document.querySelector(`button[data-type="${targetService }"]`);
   button.style.display = "block";
 
+
+
+
+
+  
   let firstParent = e.target.parentElement;
   let greatParent = firstParent.parentElement;
   let greatGreatParent = greatParent.parentElement;
@@ -420,20 +425,21 @@ let thunderOn = () => {
 };
 
 let thunderOff = () => {
-
+   
+  let black = "#1b1b1c";
 
   face.style.fill = "yellow";
   thunder.classList.remove("thunder-happens");
   thunder.style.stroke = "transparent";
-  smile.style.stroke = "black";
-  smileBar.style.fill = "black";
-  smileBar.style.stroke = "black";
+  smile.style.stroke = black;
+  smileBar.style.fill = black;
+  smileBar.style.stroke = black;
   surprise.style.fill = "transparent";
   surprise.style.stroke = "transparent";
 
   document.body.style.background = "";
 
-  title.style.color = "red";
+  title.style.color = black;
 
 };
 

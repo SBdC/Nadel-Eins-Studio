@@ -101,7 +101,7 @@ h6 {
 
 h1 {
   color: #1b1b1c;
-  font-size: 3.2em;
+  font-size: 2.8em;
   letter-spacing: 1px;
   font-weight: 700; }
 
@@ -680,20 +680,28 @@ Footer
         line-height: 60px;
         max-width: 200px; } }
 
-.text-on-cloud {
+#mast tspan,
+#sd tspan,
+#mt tspan,
+#cons tspan,
+#mixT tspan {
+  font-size: 38px; }
+
+.text-on-cloud tspan {
   font-family: helvetica;
   fill: #000c2b;
   stroke: transparent;
-  font-size: 28px; }
-  .text-on-cloud:hover {
+  font-size: 30px; }
+  .text-on-cloud tspan:hover {
     fill: #449AFF;
-    cursor: pointer; }
+    cursor: pointer;
+    font-size: 31px;
+    transition: all 2s; }
 
 .text-on tspan {
   font-family: helvetica;
   fill: #449AFF;
-  stroke: transparent;
-  font-size: 36px; }
+  stroke: transparent; }
   .text-on tspan:hover {
     cursor: pointer; }
 
@@ -702,8 +710,8 @@ Footer
   stroke: transparent; }
 
 .cloud {
-  width: 65%;
-  height: 65%;
+  width: 85%;
+  height: 85%;
   -webkit-height: auto; }
 
 .clouds {
@@ -718,10 +726,10 @@ Footer
   transform: scale(0.9); }
 
 .big-speaker {
-  transform: scale(0.86) translateY(60px); }
+  transform: scale(0.9) translateY(60px); }
 
 .sync {
-  transform: scale(0.86) translateX(60px) translateY(60px); }
+  transform: scale(0.9) translateX(60px) translateY(60px); }
 
 .sound-design-svg,
 .micro-svg,
@@ -977,29 +985,27 @@ svg.mixes {
 
 @supports (grid-area: auto) {
   @media screen and (min-width: 751px) {
-    .wrap-all {
-      max-width: 1400px;
-      margin: auto; }
-    .open {
-      margin: 0; }
     .title-desktop {
-      width: 100%;
+      transform: rotate(-90deg);
       margin: 0;
       padding: 0;
-      text-align: center;
-      color: black; }
+      position: absolute;
+      color: #000c2b;
+      left: -210px;
+      top: 380px; }
+    .open {
+      margin: 0; }
     .header-for-mobile {
       display: none; }
     .header-for-desktop {
       display: block;
-      max-width: 1150px;
       margin: 10px auto; }
       .header-for-desktop .grid-container {
         display: grid;
         margin: 10px 40px;
         padding: 5px;
         grid-template-columns: repeat(16, 1fr);
-        grid-template-rows: 2.8em 7.4em 7.4em auto;
+        grid-template-rows: 0.5em 7.4em 7.4em auto;
         grid-gap: 0; }
         .header-for-desktop .grid-container .item {
           display: grid;

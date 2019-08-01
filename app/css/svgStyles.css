@@ -1,17 +1,25 @@
-.text-on-cloud {
+#mast tspan,
+#sd tspan,
+#mt tspan,
+#cons tspan,
+#mixT tspan {
+  font-size: 38px; }
+
+.text-on-cloud tspan {
   font-family: helvetica;
   fill: #000c2b;
   stroke: transparent;
-  font-size: 28px; }
-  .text-on-cloud:hover {
+  font-size: 30px; }
+  .text-on-cloud tspan:hover {
     fill: #449AFF;
-    cursor: pointer; }
+    cursor: pointer;
+    font-size: 31px;
+    transition: all 2s; }
 
 .text-on tspan {
   font-family: helvetica;
   fill: #449AFF;
-  stroke: transparent;
-  font-size: 36px; }
+  stroke: transparent; }
   .text-on tspan:hover {
     cursor: pointer; }
 
@@ -20,8 +28,8 @@
   stroke: transparent; }
 
 .cloud {
-  width: 65%;
-  height: 65%;
+  width: 85%;
+  height: 85%;
   -webkit-height: auto; }
 
 .clouds {
@@ -36,10 +44,10 @@
   transform: scale(0.9); }
 
 .big-speaker {
-  transform: scale(0.86) translateY(60px); }
+  transform: scale(0.9) translateY(60px); }
 
 .sync {
-  transform: scale(0.86) translateX(60px) translateY(60px); }
+  transform: scale(0.9) translateX(60px) translateY(60px); }
 
 .sound-design-svg,
 .micro-svg,
