@@ -6,21 +6,61 @@ $red: #FF0000;
 $yellow:#FFEE00;
 $blue: #449AFF;
 
+// fix size of svg text- hacky :(
+//mastering
+#mast tspan
 
-
-#mast tspan,
-#sd tspan,
-#mt tspan,
-#cons tspan,
-#mixT tspan,
 
 {
   font-size:38px;
 
 }
+//recording
+#mt tspan
 
 
+{
+  font-size:36px;
 
+}
+
+// sound design
+
+#sd tspan{
+  font-size:36px;
+}
+
+
+//consulting
+
+#cons tspan
+
+{
+  font-size:34px;
+
+}
+
+
+// mixing
+
+
+#mixT tspan,
+
+
+#mixS tspan
+
+{
+  font-size:32px;
+
+}
+
+//live prep
+#mi tspan
+
+{
+  font-size:36px;
+
+}
 
 
 

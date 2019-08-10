@@ -52,6 +52,8 @@ Accessibility
     }
 
 
+ 
+
 
     .music {
         .cards {
@@ -422,25 +424,7 @@ slider
     animation-duration: 0.6s;
 }
 
-@-webkit-keyframes zoom {
-    from {
-        -webkit-transform: scale(0);
-    }
 
-    to {
-        -webkit-transform: scale(1);
-    }
-}
-
-@keyframes zoom {
-    from {
-        transform: scale(0);
-    }
-
-    to {
-        transform: scale(1);
-    }
-}
 
 /* The Close Button */
 .close {
@@ -470,7 +454,7 @@ slider
 
 .image-slider img {
     width:100%;
-  
+    margin-left: 6px;
     height: auto;
     cursor: zoom-in;
 }
@@ -500,7 +484,13 @@ slider
 /* Position the "next button" to the right */
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    
+}
+
+
+.prev {
+    left: 5px;
+    
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -562,25 +552,7 @@ slider
     animation: fade 0.5s ease-in;
 }
 
-@-webkit-keyframes fade {
-    from {
-        opacity: 0.3;
-    }
 
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.3;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
 
 /*--------------------------------------------------------------
 services
@@ -599,6 +571,7 @@ services
 
     .service-header-wrap-right {
         float: right;
+
     }
 
     .service-header-wrap-left {
@@ -621,6 +594,7 @@ services
 
     h2 {
         @extend %section-title;
+        color:$black;
     }
 
     article {
@@ -654,6 +628,8 @@ services
 
     .card {
         display: inline-block;
+        min-height: 460px;
+                    min-width:100%;
 
         @extend %box;
 
@@ -679,8 +655,8 @@ services
 
         iframe.musicPlayer {
             border: none; 
-            width: 180px;
-            height: 180px;
+            width: 220px;
+            height: 220px;
             margin: 0 auto;
         }
     }

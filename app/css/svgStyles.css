@@ -1,9 +1,21 @@
-#mast tspan,
-#sd tspan,
-#mt tspan,
-#cons tspan,
-#mixT tspan {
+#mast tspan {
   font-size: 38px; }
+
+#mt tspan {
+  font-size: 36px; }
+
+#sd tspan {
+  font-size: 36px; }
+
+#cons tspan {
+  font-size: 34px; }
+
+#mixT tspan,
+#mixS tspan {
+  font-size: 32px; }
+
+#mi tspan {
+  font-size: 36px; }
 
 .text-on-cloud tspan {
   font-family: helvetica;

@@ -33,7 +33,7 @@ header .icon-cloud-line, .services .icon, .prices .icon {
   background-color: white;
   margin: 20px auto;
   padding: 10% 4%;
-  width: 300px; }
+  min-width: 320px; }
 
 .about h2, .co-work h2, .services h2, .contact h2 {
   text-transform: uppercase;
@@ -110,7 +110,8 @@ h2 {
   color: #1b1b1c;
   font-size: 2.2em;
   text-transform: uppercase;
-  font-weight: 700; }
+  font-weight: 600;
+  letter-spacing: 1px; }
 
 h3 {
   color: #1b1b1c;
@@ -403,18 +404,6 @@ slider
   animation-name: zoom;
   animation-duration: 0.6s; }
 
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(0); }
-  to {
-    -webkit-transform: scale(1); } }
-
-@keyframes zoom {
-  from {
-    transform: scale(0); }
-  to {
-    transform: scale(1); } }
-
 /* The Close Button */
 .close {
   position: absolute;
@@ -440,6 +429,7 @@ slider
 
 .image-slider img {
   width: 100%;
+  margin-left: 6px;
   height: auto;
   cursor: zoom-in; }
 
@@ -465,8 +455,10 @@ slider
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px; }
+  right: 0; }
+
+.prev {
+  left: 5px; }
 
 /* On hover, add a black background color with a little bit see-through */
 .next:hover,
@@ -519,18 +511,6 @@ slider
   -webkit-animation: fade 0.5s ease-in;
   animation: fade 0.5s ease-in; }
 
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.3; }
-  to {
-    opacity: 1; } }
-
-@keyframes fade {
-  from {
-    opacity: 0.3; }
-  to {
-    opacity: 1; } }
-
 /*--------------------------------------------------------------
 services
 --------------------------------------------------------------*/
@@ -550,6 +530,8 @@ services
     margin: 0 -5px; }
   .services button {
     margin: 2px 5px 20px; }
+  .services h2 {
+    color: #000c2b; }
   .services article {
     margin: 0 6px; }
   .services .service-more-text {
@@ -564,7 +546,9 @@ services
     text-align: center;
     padding: 0; }
   .music .card {
-    display: inline-block; }
+    display: inline-block;
+    min-height: 460px;
+    min-width: 100%; }
     .music .card h3 {
       color: #449AFF;
       line-height: 30px;
@@ -579,8 +563,8 @@ services
       margin-top: -10px; }
     .music .card iframe.musicPlayer {
       border: none;
-      width: 180px;
-      height: 180px;
+      width: 220px;
+      height: 220px;
       margin: 0 auto; }
   .music .load {
     margin: 0 auto;
@@ -675,12 +659,24 @@ Footer
         line-height: 60px;
         max-width: 200px; } }
 
-#mast tspan,
-#sd tspan,
-#mt tspan,
-#cons tspan,
-#mixT tspan {
+#mast tspan {
   font-size: 38px; }
+
+#mt tspan {
+  font-size: 36px; }
+
+#sd tspan {
+  font-size: 36px; }
+
+#cons tspan {
+  font-size: 34px; }
+
+#mixT tspan,
+#mixS tspan {
+  font-size: 32px; }
+
+#mi tspan {
+  font-size: 36px; }
 
 .text-on-cloud tspan {
   font-family: helvetica;
@@ -919,6 +915,9 @@ svg.mixes {
     #item3 {
       align-items: center; } }
   @media screen and (min-width: 751px) {
+    /*--------------------------------------------------------------
+header desktop
+ --------------------------------------------------------------*/
     @supports not (writing-mode: vertical-lr) {
       .title-desk {
         display: block;
@@ -951,6 +950,8 @@ svg.mixes {
     .open {
       margin: 0;
       width: 100%; }
+      .open li {
+        text-align: center; }
     .header-for-mobile {
       display: none; }
     .header-for-desktop {
@@ -1057,24 +1058,36 @@ svg.mixes {
           align-items: flex-start;
           margin-top: -40px; }
     .slogan {
-      margin-top: -50px; }
+      margin-top: -150px; }
+    #quote {
+      padding: 200px 0; }
     /*--------------------------------------------------------------
- about, co-work text
+general styles
  --------------------------------------------------------------*/
-    div.about-text p:first-child {
-      margin-top: 0px; }
-    div.co-work-text p:first-child {
-      margin-top: -10px; }
-    div.about-text p,
-    div.co-work-text p {
-      margin-bottom: -30px;
-      text-align: justify; }
-    div.about-text,
-    div.co-work-text {
-      padding-bottom: 40px; }
+    .about-text-wrapper p,
+    .co-work-text-wrapper p {
+      max-width: 1000px;
+      margin: 0 auto;
+      font-size: 1.4em; }
+    section .music-text-wrapper,
+    section .prices-text-wrapper,
+    section .services-text-wrapper,
+    section .contact-text-wrapper,
+    section .footer-content {
+      padding: 0 150px; }
+    section h2 {
+      font-size: 2.6em;
+      margin-left: -20px; }
+    section .about-text-wrapper,
+    section .co-work-text-wrapper {
+      padding: 0 150px 100px; }
+    .services button {
+      margin-top: 20px; }
     /*--------------------------------------------------------------
  slide-show
  --------------------------------------------------------------*/
+    .slideshow-container {
+      margin-top: 40px; }
     .next,
     .prev {
       font-size: 2.2em; }
@@ -1085,57 +1098,75 @@ svg.mixes {
     /*--------------------------------------------------------------
  services
  --------------------------------------------------------------*/
-    .services .service-header-wrap-left,
-    .services .service-header-wrap-other,
-    .services .service-header-wrap-right,
-    .services .service-more-text,
-    .services .service-text-right,
-    .services .service-text-right-dummy {
-      margin: 0 auto;
-      text-align: left; }
-    .services .viewLess {
-      margin: 20px auto; }
-    .services .service-container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center; }
-    .services .service {
-      display: flex;
-      flex-direction: column;
-      padding: 2%;
-      justify-content: center;
-      flex: 0 1 calc(33% - .5em); }
+    .services {
+      margin-bottom: 50px; }
+      .services .service-header-wrap-left,
+      .services .service-header-wrap-other,
+      .services .service-header-wrap-right,
+      .services .service-more-text,
+      .services .service-text-right,
+      .services .service-text-right-dummy {
+        margin: 0 auto;
+        text-align: left; }
+      .services .viewLess {
+        margin: 20px auto; }
+      .services .service-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; }
+      .services .service {
+        display: flex;
+        flex-direction: column;
+        padding: 4% 6%;
+        justify-content: center;
+        flex: 0 1 calc(33% - .5em);
+        min-width: 400px; }
+      .services .service-header-wrap-other {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1;
+        justify-items: flex-start;
+        align-items: flex-end; }
+    /*--------------------------------------------------------------
+ services
+ --------------------------------------------------------------*/
     .prices-container .price {
       display: flex;
       flex-direction: column;
       padding: 2%;
       justify-content: center;
       flex: 0 1 calc(33% - .5em); }
-    .music .cards {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center; }
-      .music .cards .card {
+    .music {
+      margin-bottom: 50px; }
+      .music .cards {
         display: flex;
-        flex-direction: column;
-        padding: 2%;
-        justify-content: center;
-        flex: 0 1 calc(33% - .5em);
-        min-height: 460px; }
-        .music .cards .card .music-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; }
+        .music .cards .card {
           display: flex;
           flex-direction: column;
-          flex: 1 1;
-          justify-items: flex-end; }
-      .music .cards iframe.musicPlayer {
-        border: 0;
-        width: 250px;
-        height: 250px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: flex-end; } } }
+          padding: 4% 6%;
+          justify-content: center;
+          flex: 0 1 calc(33% - .5em);
+          min-height: 460px;
+          min-width: 400px; }
+          .music .cards .card .music-info {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1;
+            justify-items: flex-end; }
+        .music .cards iframe.musicPlayer {
+          border: 0;
+          width: 250px;
+          height: 250px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: flex-end; }
+      .music #loadMore {
+        margin-top: 40px; } } }
 
 @-webkit-keyframes twink {
   0% {
@@ -1216,3 +1247,27 @@ svg.mixes {
   to {
     transform: translateY(0px);
     opacity: 100%; } }
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0); }
+  to {
+    -webkit-transform: scale(1); } }
+
+@keyframes zoom {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.3; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: 0.3; }
+  to {
+    opacity: 1; } }

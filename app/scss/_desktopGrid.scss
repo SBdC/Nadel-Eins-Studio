@@ -23,8 +23,9 @@
 
  @media screen and (min-width: 751px) {
 
-
-
+        /*--------------------------------------------------------------
+header desktop
+ --------------------------------------------------------------*/
     @supports not ( writing-mode: vertical-lr) {
        .title-desk{
           display: block;
@@ -75,6 +76,12 @@
         .open {
             margin: 0;
             width:100%;
+
+            li{
+                text-align: center;
+               
+
+            }
         }
 
      
@@ -228,48 +235,76 @@
         }
 
         .slogan {
-            margin-top: -50px;
+            margin-top: -150px;
+
+        }
+
+        #quote{
+
+            padding:200px 0;
+
         }
 
 
         /*--------------------------------------------------------------
- about, co-work text
+general styles
  --------------------------------------------------------------*/
 
-        div.about-text p:first-child {
+ 
 
-            margin-top: 0px;
 
+    .about-text-wrapper p,
+    .co-work-text-wrapper p
+    {
+        max-width:1000px;
+        margin:0 auto;
+        font-size: 1.4em;
+      
         }
+    
+   section {
+    
+
+ 
+    .music-text-wrapper,
+    .prices-text-wrapper,
+    .services-text-wrapper,
+    .contact-text-wrapper,
+    .footer-content {
+        padding:0 150px;
+
+    }
+
+  h2{
+        font-size: 2.6em;
+        margin-left:-20px;
+    }
 
 
-       
-        div.co-work-text p:first-child {
+    .about-text-wrapper,
+      .co-work-text-wrapper{
+    
+     padding:0 150px 100px;
+ }
 
-            margin-top: -10px;
+}
 
-        }
-
-
-        div.about-text p,
-        div.co-work-text p {
-
-            margin-bottom: -30px;
-            text-align: justify;
-
-        }
-
-        div.about-text,
-        div.co-work-text {
-
-            padding-bottom: 40px;
-           
-        }
+.services button{
+    margin-top:20px;
+}
 
 
         /*--------------------------------------------------------------
  slide-show
  --------------------------------------------------------------*/
+
+    .slideshow-container{
+        margin-top: 40px;
+    }
+
+
+
+
         .next,
         .prev {
 
@@ -290,6 +325,8 @@
  --------------------------------------------------------------*/
         .services {
 
+            margin-bottom:50px;
+
             .service-header-wrap-left,
             .service-header-wrap-other,
             .service-header-wrap-right,
@@ -300,8 +337,8 @@
                 text-align: left;
             }
 
-
-
+            
+         
 
             .viewLess {
                 margin: 20px auto;
@@ -314,14 +351,42 @@
                 justify-content: center;
             }
 
+
             .service {
                 display: flex;
                 flex-direction: column;
-                padding: 2%;
+                padding: 4% 6%;
                 justify-content: center;
                 flex: 0 1 calc(33% - .5em);
+                min-width:400px;
+
+
+
             }
+
+           
+
+
+
+            
+         
+
+            .service-header-wrap-other{
+                margin-top:20px;
+                 display: flex;
+                flex-direction: column;
+                flex: 1 1;
+                justify-items: flex-start;
+                align-items: flex-end;
+            }
+
+
         }
+
+
+                /*--------------------------------------------------------------
+ services
+ --------------------------------------------------------------*/
 
         .prices-container {
             .price {
@@ -334,6 +399,9 @@
         }
 
         .music {
+
+             margin-bottom:50px;
+                        
             .cards {
                 display: flex;
                 flex-direction: row;
@@ -343,10 +411,11 @@
                 .card {
                     display: flex;
                     flex-direction: column;
-                    padding: 2%;
+                      padding: 4% 6%;
                     justify-content: center;
                     flex: 0 1 calc(33% - .5em);
                     min-height: 460px;
+                    min-width:400px;
 
 
 
@@ -355,10 +424,10 @@
                         display: flex;
                         flex-direction: column;
                         flex: 1 1;
-
                         justify-items: flex-end;
 
                     }
+
 
 
                 }
@@ -376,7 +445,9 @@
 
             }
 
-
+            #loadMore{
+                    margin-top: 40px;
+                   }
 
 
         }
