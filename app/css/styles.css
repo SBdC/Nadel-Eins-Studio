@@ -86,7 +86,8 @@ textarea,
 p {
   color: #1b1b1c;
   font-size: 1em;
-  font-kerning: normal; }
+  font-kerning: normal;
+  text-justify: inter-word; }
 
 a {
   text-decoration: none; }
@@ -101,9 +102,9 @@ h6 {
 
 h1 {
   color: #1b1b1c;
-  font-size: 2.8em;
+  font-size: 3em;
   letter-spacing: 1px;
-  font-weight: 700; }
+  font-weight: 300; }
 
 h2 {
   color: #1b1b1c;
@@ -280,16 +281,9 @@ buttons close and arrow-up
 /*--------------------------------------------------------------
 header
 --------------------------------------------------------------*/
-.header-for-desktop {
+.header-for-desktop,
+.title-desk {
   display: none; }
-
-@keyframes appear {
-  from {
-    transform: translateY(-200px);
-    opacity: 0; }
-  to {
-    transform: translateY(0px);
-    opacity: 100%; } }
 
 header .icon-cloud-line {
   position: absolute;
@@ -322,9 +316,9 @@ header .banner {
 .slogan .quote {
   text-align: center;
   padding: 80px 25px;
-  background-color: #000c2b;
   color: white;
-  margin-top: 10px; }
+  margin-top: 10px;
+  background-color: #000c2b; }
 
 /*--------------------------------------------------------------
 button
@@ -332,8 +326,9 @@ button
 button.viewLess {
   display: none; }
 
-.more-text-right {
-  text-align: right; }
+#read-about,
+#less-about {
+  float: right; }
 
 /*--------------------------------------------------------------
 sections
@@ -709,10 +704,11 @@ Footer
   fill: transparent;
   stroke: transparent; }
 
-.cloud {
-  width: 85%;
-  height: 85%;
-  -webkit-height: auto; }
+svg.cloud {
+  width: 75%;
+  height: 75%;
+  -webkit-height: auto;
+  z-index: 100; }
 
 .clouds {
   fill: none;
@@ -874,18 +870,6 @@ svg.mixes {
     .logo .nadel-eins-logo .thunder {
       stroke-width: 3; }
 
-@-webkit-keyframes twink {
-  0% {
-    transform: scale(0.9); }
-  100% {
-    transform: scale(1); } }
-
-@keyframes twink {
-  0% {
-    transform: scale(0.9); }
-  100% {
-    transform: scale(1); } }
-
 .eye-right {
   transform-origin: 55px 29px 4px;
   animation: twink 5s alternate infinite ease-in;
@@ -895,26 +879,6 @@ svg.mixes {
   transform-origin: 31px 29px 4px;
   animation: twink 5s alternate infinite ease-in;
   -webkit-animation: twink 5s alternate infinite ease-in; }
-
-@-webkit-keyframes dash {
-  0% {
-    stroke-dashoffset: 1000;
-    fill: transparent; }
-  99% {
-    fill: red; }
-  100% {
-    stroke-dashoffset: 0;
-    fill: red; } }
-
-@keyframes dash {
-  0% {
-    stroke-dashoffset: 1000;
-    fill: transparent; }
-  99% {
-    fill: red; }
-  100% {
-    stroke-dashoffset: 0;
-    fill: red; } }
 
 .thunder-happens {
   stroke-dasharray: 1000;
@@ -940,72 +904,61 @@ svg.mixes {
   animation: blink 4s -1s ease-in infinite;
   stroke-width: 1.6; }
 
-@keyframes blink {
-  from {
-    fill: rgba(0, 0, 0, 0.5); }
-  to {
-    fill: #D0021B; } }
-
-@keyframes volume {
-  100% {
-    transform: rotate(-5deg); } }
-
-@-webkit-keyframes volume {
-  100% {
-    transform: rotate(-5deg); } }
-
-@keyframes write {
-  0% {
-    transform: translateX(-120px); }
-  100% {
-    transform: translateX(20px); } }
-
-@-webkit-keyframes write {
-  0% {
-    transform: translateX(-120px); }
-  100% {
-    transform: translateX(20px); } }
-
-@-webkit-keyframes slidedown {
-  0% {
-    transform: translateY(86px); }
-  100% {
-    transform: translateY(1200px);
-    opacity: 0; } }
-
-@keyframes slidedown {
-  0% {
-    transform: translateY(86px); }
-  100% {
-    transform: translateY(1200px);
-    opacity: 0; } }
-
 .drops-go-down {
   animation: slidedown 2s normal forwards ease-in; }
 
 @supports (grid-area: auto) {
+  @media screen and (min-width: 751px) and (max-width: 1100px) {
+    h1 {
+      font-size: 2.4em; }
+    #title-desk {
+      border: none;
+      background-color: transparent; } }
   @media screen and (min-width: 751px) {
+    @supports not (writing-mode: vertical-lr) {
+      .title-desk {
+        display: block;
+        margin-top: -10px;
+        margin-left: 0px;
+        line-height: 20px;
+        width: 100vw;
+        z-index: 1; }
+      .title-desktop {
+        text-align: left;
+        padding: 0 90px; } }
+    .wrap-all {
+      margin-left: 80px; }
+    .title-desk {
+      writing-mode: vertical-lr;
+      text-orientation: sideways-right;
+      display: block;
+      position: fixed;
+      height: 100vh;
+      transform: rotate(180deg);
+      background-color: white;
+      border-left: 3px solid #1b1b1c;
+      z-index: 1; }
     .title-desktop {
-      transform: rotate(-90deg);
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      color: #000c2b;
-      left: -210px;
-      top: 380px; }
+      padding-right: 10px;
+      padding-bottom: 100px;
+      text-align: right;
+      line-height: 10px;
+      animation: appear 2s forwards; }
     .open {
-      margin: 0; }
+      margin: 0;
+      width: 100%; }
     .header-for-mobile {
       display: none; }
     .header-for-desktop {
       display: block;
-      margin: 10px auto; }
+      margin: 10px auto;
+      max-width: 1800px; }
       .header-for-desktop .grid-container {
         display: grid;
         margin: 10px 40px;
         padding: 5px;
         grid-template-columns: repeat(16, 1fr);
-        grid-template-rows: 0.5em 7.4em 7.4em auto;
+        grid-template-rows: auto;
         grid-gap: 0; }
         .header-for-desktop .grid-container .item {
           display: grid;
@@ -1180,3 +1133,83 @@ svg.mixes {
         margin: 0 auto;
         display: flex;
         justify-content: flex-end; } } }
+
+@-webkit-keyframes twink {
+  0% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes twink {
+  0% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1); } }
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+    fill: transparent; }
+  99% {
+    fill: red; }
+  100% {
+    stroke-dashoffset: 0;
+    fill: red; } }
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+    fill: transparent; }
+  99% {
+    fill: red; }
+  100% {
+    stroke-dashoffset: 0;
+    fill: red; } }
+
+@keyframes blink {
+  from {
+    fill: rgba(0, 0, 0, 0.5); }
+  to {
+    fill: #D0021B; } }
+
+@keyframes volume {
+  100% {
+    transform: rotate(-5deg); } }
+
+@-webkit-keyframes volume {
+  100% {
+    transform: rotate(-5deg); } }
+
+@keyframes write {
+  0% {
+    transform: translateX(-120px); }
+  100% {
+    transform: translateX(20px); } }
+
+@-webkit-keyframes write {
+  0% {
+    transform: translateX(-120px); }
+  100% {
+    transform: translateX(20px); } }
+
+@-webkit-keyframes slidedown {
+  0% {
+    transform: translateY(86px); }
+  100% {
+    transform: translateY(1200px);
+    opacity: 0; } }
+
+@keyframes slidedown {
+  0% {
+    transform: translateY(86px); }
+  100% {
+    transform: translateY(1200px);
+    opacity: 0; } }
+
+@keyframes appear {
+  from {
+    transform: translateY(-200px);
+    opacity: 0; }
+  to {
+    transform: translateY(0px);
+    opacity: 100%; } }

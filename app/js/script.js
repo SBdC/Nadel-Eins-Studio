@@ -39,7 +39,6 @@ let erases = Array.from(document.querySelectorAll(".viewLess"));
 
 
 
-
 let revealText = (e) => {
 
   let idTarget = e.target.id;

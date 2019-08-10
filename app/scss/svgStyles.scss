@@ -61,11 +61,12 @@ $blue: #449AFF;
     }
 
 
-.cloud {
+svg.cloud {
 
-    width: 85%;
-    height: 85%;
+    width: 75%;
+    height: 75%;
     -webkit-height: auto;
+    z-index:100;
 
 }
 
@@ -337,34 +338,6 @@ fill: #EDEDED;
 
 
 
-//eyes logo smiley
-@-webkit-keyframes twink {
-    0% {
-        transform: scale(0.9);
-
-    }
-
-    100% {
-        transform: scale(1);
-
-    }
-
-}
-
-
-
-@keyframes twink {
-    0% {
-        transform: scale(0.9);
-
-    }
-
-    100% {
-        transform: scale(1);
-
-    }
-
-}
 
 
 .eye-right {
@@ -380,49 +353,12 @@ fill: #EDEDED;
 }
 
 
-//thunder
-@-webkit-keyframes dash {
-    0% {
-        stroke-dashoffset: 1000;
-        fill: transparent;
-    }
-
-    99% {
-
-        fill: red;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-        fill: red;
-
-    }
-}
-
-@keyframes dash {
-    0% {
-        stroke-dashoffset: 1000;
-        fill: transparent;
-    }
-
-    99% {
-
-        fill: red;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-        fill: red;
-
-    }
-}
-
 .thunder-happens {
 
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: dash 2s linear alternate forwards;
--webkit-animation: dash 2s linear alternate forwards;
+   -webkit-animation: dash 2s linear alternate forwards;
 
 }
 
@@ -432,7 +368,7 @@ fill: #EDEDED;
     stroke-dashoffset: 1000;
     animation: dash 4s -2s linear infinite;
 
- -webkit-animation: dash 4s -2s linear infinite;
+   -webkit-animation: dash 4s -2s linear infinite;
 }
 
 
@@ -455,90 +391,6 @@ fill: #EDEDED;
     stroke-width:1.6;
 }
 
-@keyframes blink
- {
-   from {
-    fill: rgba( 0, 0, 0 , 0.5);
-   }
-  to {
-    fill: #D0021B;
-   }
- }
-
-
-@keyframes volume
- {
-
-     100%{
-        transform:rotate(-5deg);
-     }
-
-    }
-
-    @-webkit-keyframes volume
-    {
-
-     100%   {
-          transform:rotate(-5deg);
-     }
-
-    }
-
-
-
-@keyframes write
-    {
-        0% {
-        transform:translateX(-120px);
-     }
-
-     100%   {
-        transform:translateX(20px);
-     }
-
-    }
-
-    @-webkit-keyframes write
-    {
-
-        0% {
-        transform:translateX(-120px);
-     }
-
-     100%   {
-        transform:translateX(20px);
-     }
-
-    }
-
-
-
-
-
-@-webkit-keyframes slidedown {
-  0% {
-    transform: translateY(86px);
-
-  }
-
-  100% {
-    transform: translateY(1200px);
-    opacity: 0;
-  }
-}
-
-
-@keyframes slidedown {
-  0% {
-    transform: translateY(86px);
-
-  }
-
-  100% {
-    transform: translateY(1200px);
-    opacity: 0;
-  }
-}
 
 
 .drops-go-down{

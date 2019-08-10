@@ -232,21 +232,11 @@ buttons close and arrow-up
 header
 --------------------------------------------------------------*/
 
-.header-for-desktop {
+.header-for-desktop,
+.title-desk {
     display: none;
 }
 
-
-@keyframes appear{
-    from{
-        transform: translateY( -200px);
-        opacity: 0;
-    }
-     to {
-        transform: translateY( 0px);
-        opacity: 100%;
-    }
-}
 
 
 header {
@@ -300,9 +290,10 @@ header {
     .quote {
         text-align: center;
         padding: 80px 25px;
-        background-color: $black;
+       
         color: white;
         margin-top: 10px;
+        background-color: $black;
     }
 }
 
@@ -314,10 +305,10 @@ button.viewLess {
 }
 
 
-.more-text-right{
-    text-align: right;
+#read-about,
+#less-about {
+    float:right;
 }
-
 /*--------------------------------------------------------------
 sections
 --------------------------------------------------------------*/

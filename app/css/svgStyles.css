@@ -27,10 +27,11 @@
   fill: transparent;
   stroke: transparent; }
 
-.cloud {
-  width: 85%;
-  height: 85%;
-  -webkit-height: auto; }
+svg.cloud {
+  width: 75%;
+  height: 75%;
+  -webkit-height: auto;
+  z-index: 100; }
 
 .clouds {
   fill: none;
@@ -192,18 +193,6 @@ svg.mixes {
     .logo .nadel-eins-logo .thunder {
       stroke-width: 3; }
 
-@-webkit-keyframes twink {
-  0% {
-    transform: scale(0.9); }
-  100% {
-    transform: scale(1); } }
-
-@keyframes twink {
-  0% {
-    transform: scale(0.9); }
-  100% {
-    transform: scale(1); } }
-
 .eye-right {
   transform-origin: 55px 29px 4px;
   animation: twink 5s alternate infinite ease-in;
@@ -213,26 +202,6 @@ svg.mixes {
   transform-origin: 31px 29px 4px;
   animation: twink 5s alternate infinite ease-in;
   -webkit-animation: twink 5s alternate infinite ease-in; }
-
-@-webkit-keyframes dash {
-  0% {
-    stroke-dashoffset: 1000;
-    fill: transparent; }
-  99% {
-    fill: red; }
-  100% {
-    stroke-dashoffset: 0;
-    fill: red; } }
-
-@keyframes dash {
-  0% {
-    stroke-dashoffset: 1000;
-    fill: transparent; }
-  99% {
-    fill: red; }
-  100% {
-    stroke-dashoffset: 0;
-    fill: red; } }
 
 .thunder-happens {
   stroke-dasharray: 1000;
@@ -257,46 +226,6 @@ svg.mixes {
 .lightButton {
   animation: blink 4s -1s ease-in infinite;
   stroke-width: 1.6; }
-
-@keyframes blink {
-  from {
-    fill: rgba(0, 0, 0, 0.5); }
-  to {
-    fill: #D0021B; } }
-
-@keyframes volume {
-  100% {
-    transform: rotate(-5deg); } }
-
-@-webkit-keyframes volume {
-  100% {
-    transform: rotate(-5deg); } }
-
-@keyframes write {
-  0% {
-    transform: translateX(-120px); }
-  100% {
-    transform: translateX(20px); } }
-
-@-webkit-keyframes write {
-  0% {
-    transform: translateX(-120px); }
-  100% {
-    transform: translateX(20px); } }
-
-@-webkit-keyframes slidedown {
-  0% {
-    transform: translateY(86px); }
-  100% {
-    transform: translateY(1200px);
-    opacity: 0; } }
-
-@keyframes slidedown {
-  0% {
-    transform: translateY(86px); }
-  100% {
-    transform: translateY(1200px);
-    opacity: 0; } }
 
 .drops-go-down {
   animation: slidedown 2s normal forwards ease-in; }
