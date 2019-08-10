@@ -315,9 +315,9 @@ header .banner {
 
 .slogan .quote {
   text-align: center;
-  padding: 80px 25px;
+  padding: 90px 25px 120px;
   color: white;
-  margin-top: 10px;
+  margin-top: -20px;
   background-color: #000c2b; }
 
 /*--------------------------------------------------------------
@@ -707,8 +707,8 @@ Footer
 svg.cloud {
   width: 75%;
   height: 75%;
-  -webkit-height: auto;
-  z-index: 100; }
+  max-width: 75%;
+  height: auto; }
 
 .clouds {
   fill: none;
@@ -839,36 +839,37 @@ svg.mixes {
   animation: slidein-other 17s -4s alternate infinite linear;
   -webkit-animation: slidein-other 17s -4s alternate infinite linear; }
 
-.logo {
-  width: 70%;
-  height: 70%;
-  margin-top: 20px; }
-  .logo .nadel-eins-logo {
-    fill: none; }
-    .logo .nadel-eins-logo .needle,
-    .logo .nadel-eins-logo .bottom {
-      fill: white; }
-    .logo .nadel-eins-logo .needle,
-    .logo .nadel-eins-logo .bottom,
-    .logo .nadel-eins-logo .smile,
-    .logo .nadel-eins-logo .face,
-    .logo .nadel-eins-logo .surprise {
-      stroke-width: 3;
-      stroke: black; }
-    .logo .nadel-eins-logo .smiley .face {
-      fill: #FFEE00; }
-    .logo .nadel-eins-logo .smiley .eye-right,
-    .logo .nadel-eins-logo .smiley .eye-left {
-      fill: black;
-      animation: twink 2s linear; }
-    .logo .nadel-eins-logo .smiley .smileBar {
-      stroke-width: 0.8;
-      fill: black; }
-    .logo .nadel-eins-logo .smiley .surprise {
-      fill: transparent;
-      stroke: transparent; }
-    .logo .nadel-eins-logo .thunder {
-      stroke-width: 3; }
+.logo-wrapper {
+  width: 60%;
+  height: 60%;
+  max-width: 60%; }
+
+.logo .nadel-eins-logo {
+  fill: none; }
+  .logo .nadel-eins-logo .needle,
+  .logo .nadel-eins-logo .bottom {
+    fill: white; }
+  .logo .nadel-eins-logo .needle,
+  .logo .nadel-eins-logo .bottom,
+  .logo .nadel-eins-logo .smile,
+  .logo .nadel-eins-logo .face,
+  .logo .nadel-eins-logo .surprise {
+    stroke-width: 3;
+    stroke: black; }
+  .logo .nadel-eins-logo .smiley .face {
+    fill: #FFEE00; }
+  .logo .nadel-eins-logo .smiley .eye-right,
+  .logo .nadel-eins-logo .smiley .eye-left {
+    fill: black;
+    animation: twink 2s linear; }
+  .logo .nadel-eins-logo .smiley .smileBar {
+    stroke-width: 0.8;
+    fill: black; }
+  .logo .nadel-eins-logo .smiley .surprise {
+    fill: transparent;
+    stroke: transparent; }
+  .logo .nadel-eins-logo .thunder {
+    stroke-width: 3; }
 
 .eye-right {
   transform-origin: 55px 29px 4px;
@@ -912,8 +913,11 @@ svg.mixes {
     h1 {
       font-size: 2.4em; }
     #title-desk {
-      border: none;
-      background-color: transparent; } }
+      background-color: transparent; }
+    #grid-container {
+      height: 80vh; }
+    #item3 {
+      align-items: center; } }
   @media screen and (min-width: 751px) {
     @supports not (writing-mode: vertical-lr) {
       .title-desk {
@@ -927,7 +931,7 @@ svg.mixes {
         text-align: left;
         padding: 0 90px; } }
     .wrap-all {
-      margin-left: 80px; }
+      margin-left: 74px; }
     .title-desk {
       writing-mode: vertical-lr;
       text-orientation: sideways-right;
@@ -955,11 +959,10 @@ svg.mixes {
       max-width: 1800px; }
       .header-for-desktop .grid-container {
         display: grid;
-        margin: 10px 40px;
-        padding: 5px;
         grid-template-columns: repeat(16, 1fr);
         grid-template-rows: auto;
-        grid-gap: 0; }
+        grid-gap: 0;
+        height: 100vh; }
         .header-for-desktop .grid-container .item {
           display: grid;
           padding: 5px;

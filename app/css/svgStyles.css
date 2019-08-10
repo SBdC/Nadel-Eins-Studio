@@ -30,8 +30,8 @@
 svg.cloud {
   width: 75%;
   height: 75%;
-  -webkit-height: auto;
-  z-index: 100; }
+  max-width: 75%;
+  height: auto; }
 
 .clouds {
   fill: none;
@@ -162,36 +162,37 @@ svg.mixes {
   animation: slidein-other 17s -4s alternate infinite linear;
   -webkit-animation: slidein-other 17s -4s alternate infinite linear; }
 
-.logo {
-  width: 70%;
-  height: 70%;
-  margin-top: 20px; }
-  .logo .nadel-eins-logo {
-    fill: none; }
-    .logo .nadel-eins-logo .needle,
-    .logo .nadel-eins-logo .bottom {
-      fill: white; }
-    .logo .nadel-eins-logo .needle,
-    .logo .nadel-eins-logo .bottom,
-    .logo .nadel-eins-logo .smile,
-    .logo .nadel-eins-logo .face,
-    .logo .nadel-eins-logo .surprise {
-      stroke-width: 3;
-      stroke: black; }
-    .logo .nadel-eins-logo .smiley .face {
-      fill: #FFEE00; }
-    .logo .nadel-eins-logo .smiley .eye-right,
-    .logo .nadel-eins-logo .smiley .eye-left {
-      fill: black;
-      animation: twink 2s linear; }
-    .logo .nadel-eins-logo .smiley .smileBar {
-      stroke-width: 0.8;
-      fill: black; }
-    .logo .nadel-eins-logo .smiley .surprise {
-      fill: transparent;
-      stroke: transparent; }
-    .logo .nadel-eins-logo .thunder {
-      stroke-width: 3; }
+.logo-wrapper {
+  width: 60%;
+  height: 60%;
+  max-width: 60%; }
+
+.logo .nadel-eins-logo {
+  fill: none; }
+  .logo .nadel-eins-logo .needle,
+  .logo .nadel-eins-logo .bottom {
+    fill: white; }
+  .logo .nadel-eins-logo .needle,
+  .logo .nadel-eins-logo .bottom,
+  .logo .nadel-eins-logo .smile,
+  .logo .nadel-eins-logo .face,
+  .logo .nadel-eins-logo .surprise {
+    stroke-width: 3;
+    stroke: black; }
+  .logo .nadel-eins-logo .smiley .face {
+    fill: #FFEE00; }
+  .logo .nadel-eins-logo .smiley .eye-right,
+  .logo .nadel-eins-logo .smiley .eye-left {
+    fill: black;
+    animation: twink 2s linear; }
+  .logo .nadel-eins-logo .smiley .smileBar {
+    stroke-width: 0.8;
+    fill: black; }
+  .logo .nadel-eins-logo .smiley .surprise {
+    fill: transparent;
+    stroke: transparent; }
+  .logo .nadel-eins-logo .thunder {
+    stroke-width: 3; }
 
 .eye-right {
   transform-origin: 55px 29px 4px;

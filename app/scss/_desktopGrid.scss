@@ -7,8 +7,16 @@
        
      }
     #title-desk{
-        border:none;
+        
         background-color:transparent;
+    }
+
+    #grid-container{
+        height: 80vh;
+    }
+
+    #item3{
+        align-items: center;
     }
 
 }
@@ -38,7 +46,7 @@
         
 
         .wrap-all{
-            margin-left:80px;
+            margin-left:74px;
         }
 
         .title-desk{
@@ -83,11 +91,10 @@
 
             .grid-container {
                 display: grid;
-                margin: 10px 40px;
-                padding: 5px;
                 grid-template-columns: repeat(16, 1fr);
                 grid-template-rows:auto;
                 grid-gap: 0;
+                height: 100vh;
 
                 .item {
                     display: grid;
@@ -133,11 +140,10 @@
                     justify-content: center;
                     align-items: flex-start;
 
-
                 }
 
                 .item4 {
-                    // background-color:red;
+                  
                     display: flex;
                     grid-column: 11/14;
                     grid-row: 2/3;
@@ -146,7 +152,7 @@
                 }
 
                 .item5 {
-                    // background-color:green;
+                   
                     display: flex;
                     grid-row: 2/3;
                     grid-column: 14/17;
