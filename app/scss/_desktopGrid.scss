@@ -258,8 +258,8 @@ general styles
     {
         max-width:1000px;
         margin:0 auto;
-        font-size: 1.4em;
-      
+        font-size: 1.5em;
+
         }
     
    section {
@@ -267,24 +267,28 @@ general styles
 
  
     .music-text-wrapper,
-    .prices-text-wrapper,
+    
     .services-text-wrapper,
     .contact-text-wrapper,
     .footer-content {
         padding:0 150px;
 
+      
+
     }
 
   h2{
-        font-size: 2.6em;
+        font-size: 2.7em;
         margin-left:-20px;
     }
 
-
+.prices-text-wrapper,
     .about-text-wrapper,
       .co-work-text-wrapper{
     
      padding:0 150px 100px;
+        margin: 0 auto;
+        max-width:1400px;
  }
 
 }
@@ -299,18 +303,31 @@ general styles
  --------------------------------------------------------------*/
 
     .slideshow-container{
-        margin-top: 40px;
+        margin: 40px auto;
+         max-width: 80vw;
     }
 
-
-
-
+    .image-slider img{
+        margin-left: 2px;
+    }
+        .next{
+         
+        }
         .next,
         .prev {
 
-            font-size: 2.2em;
+            font-size: 3em;
+            padding:20px;
+             top: calc(50% - 100px);
         }
-
+        .prev span,
+        .next span{
+            
+            
+            padding: 10px 20px;
+           
+            
+        }
 
         .img-text-reveal p {
             font-size: 1.6em;
@@ -326,6 +343,8 @@ general styles
         .services {
 
             margin-bottom:50px;
+            margin: 0 auto;
+        max-width:1400px;
 
             .service-header-wrap-left,
             .service-header-wrap-other,
@@ -358,18 +377,13 @@ general styles
                 padding: 4% 6%;
                 justify-content: center;
                 flex: 0 1 calc(33% - .5em);
-                min-width:400px;
+                min-width:300px;
 
 
 
             }
 
-           
-
-
-
-            
-         
+      
 
             .service-header-wrap-other{
                 margin-top:20px;
@@ -389,17 +403,21 @@ general styles
  --------------------------------------------------------------*/
 
         .prices-container {
+
+             
             .price {
                 display: flex;
                 flex-direction: column;
                 padding: 2%;
                 justify-content: center;
-                flex: 0 1 calc(33% - .5em);
+                flex: 1 1 calc(33% - .5em);
+
             }
         }
 
         .music {
-
+             margin: 0 auto;
+             max-width:1400px;
              margin-bottom:50px;
                         
             .cards {
@@ -411,11 +429,10 @@ general styles
                 .card {
                     display: flex;
                     flex-direction: column;
-                      padding: 4% 6%;
                     justify-content: center;
                     flex: 0 1 calc(33% - .5em);
                     min-height: 460px;
-                    min-width:400px;
+                    min-width:300px;
 
 
 
@@ -425,6 +442,8 @@ general styles
                         flex-direction: column;
                         flex: 1 1;
                         justify-items: flex-end;
+                        margin-bottom: 20px;
+                        margin-top: -40px;
 
                     }
 
