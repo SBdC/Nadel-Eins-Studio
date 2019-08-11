@@ -1,90 +1,91 @@
 @supports (grid-area: auto) {
 
-@media screen and (min-width: 751px) and (max-width:1100px){
+    @media screen and (min-width: 751px) and (max-width:1100px) {
 
-    h1{
-        font-size:2.4em;
-       
-     }
-    #title-desk{
-        
-        background-color:transparent;
+        h1 {
+            font-size: 2.4em;
+
+        }
+
+        #title-desk {
+
+            background-color: transparent;
+        }
+
+        #grid-container {
+            height: 100vh;
+        }
+
+        #item3 {
+            align-items: center;
+        }
+
     }
 
-    #grid-container{
-        height: 80vh;
-    }
-
-    #item3{
-        align-items: center;
-    }
-
-}
-
- @media screen and (min-width: 751px) {
+    @media screen and (min-width: 751px) {
 
         /*--------------------------------------------------------------
 header desktop
  --------------------------------------------------------------*/
-    @supports not ( writing-mode: vertical-lr) {
-       .title-desk{
-          display: block;
-          margin-top:-10px;
-          margin-left: 0px;
-          line-height: 20px;
-          width:100vw;
-          z-index:1;
+        @supports not (writing-mode: vertical-lr) {
+            .title-desk {
+                display: block;
+                margin-top: -10px;
+                margin-left: 0px;
+                line-height: 20px;
+                width: 100vw;
+                z-index: 1;
 
-          }
+            }
 
-           .title-desktop {
+            .title-desktop {
 
-            text-align: left;
-            padding: 0 90px;
+                text-align: left;
+                padding: 0 90px;
 
-        }
-      }
-        
-
-        .wrap-all{
-            margin-left:74px;
+            }
         }
 
-        .title-desk{
 
-             writing-mode: vertical-lr;
-             text-orientation: sideways-right;
-             display: block;
-             position:fixed;
-             height:100vh;
-             transform: rotate(180deg);
-             background-color: white;
-             border-left: 3px solid $text;
-              z-index:1;
+        .wrap-all {
+            margin-left: 74px;
+        }
+
+        .title-desk {
+
+            writing-mode: vertical-lr;
+            text-orientation: sideways-right;
+            display: block;
+            position: fixed;
+            height: 100vh;
+            transform: rotate(180deg);
+            background-color: white;
+            border-left: 3px solid $text;
+            z-index: 1;
 
         }
-      
-           .title-desktop {
+
+        .title-desktop {
             padding-right: 10px;
             padding-bottom: 100px;
             text-align: right;
             line-height: 10px;
-             animation:appear 2s forwards;
+            animation: appear 2s forwards;
         }
 
 
         .open {
             margin: 0;
-            width:100%;
+            width: 100%;
 
-            li{
+            li {
                 text-align: center;
-               
+
 
             }
         }
 
-     
+
         .header-for-mobile {
             display: none;
         }
@@ -92,14 +93,14 @@ header desktop
         .header-for-desktop {
             display: block;
             margin: 10px auto;
-             max-width: 1800px;
-           
-           
+            max-width: 1800px;
+
+
 
             .grid-container {
                 display: grid;
                 grid-template-columns: repeat(16, 1fr);
-                grid-template-rows:auto;
+                grid-template-rows: auto;
                 grid-gap: 0;
                 height: 100vh;
 
@@ -150,7 +151,7 @@ header desktop
                 }
 
                 .item4 {
-                  
+
                     display: flex;
                     grid-column: 11/14;
                     grid-row: 2/3;
@@ -159,7 +160,7 @@ header desktop
                 }
 
                 .item5 {
-                   
+
                     display: flex;
                     grid-row: 2/3;
                     grid-column: 14/17;
@@ -235,13 +236,21 @@ header desktop
         }
 
         .slogan {
-            margin-top: -150px;
+            margin-top: -110px;
+
+            h2 {
+
+                margin-left: 0;
+            }
+
 
         }
 
-        #quote{
+        #quote {
 
-            padding:200px 0;
+            padding: 200px 0;
+
+
 
         }
 
@@ -250,83 +259,109 @@ header desktop
 general styles
  --------------------------------------------------------------*/
 
- 
 
 
-    .about-text-wrapper p,
-    .co-work-text-wrapper p
-    {
-        max-width:1000px;
-        margin:0 auto;
-        font-size: 1.5em;
+        .contact-text-wrapper p,
+        .about-text-wrapper p,
+        .co-work-text-wrapper p,
+        .contact-text-wrapper p {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.3em;
 
         }
-    
-   section {
-    
 
- 
-    .music-text-wrapper,
-    
-    .services-text-wrapper,
-    .contact-text-wrapper,
-    .footer-content {
-        padding:0 150px;
+        section {
 
-      
 
-    }
+            .music-text-wrapper,
+            .services-text-wrapper,
+            .contact-text-wrapper,
+            .footer-content {
+                padding: 0 150px;
 
-  h2{
-        font-size: 2.7em;
-        margin-left:-20px;
-    }
 
-.prices-text-wrapper,
-    .about-text-wrapper,
-      .co-work-text-wrapper{
-    
-     padding:0 150px 100px;
-        margin: 0 auto;
-        max-width:1400px;
- }
+            }
 
-}
+            h2 {
+                font-size: 2.7em;
+                margin-left: -20px;
+            }
 
-.services button{
-    margin-top:20px;
-}
+            .prices-text-wrapper,
+            .about-text-wrapper,
+            .co-work-text-wrapper {
+
+                padding: 0 150px 100px;
+                margin: 0 auto;
+                max-width: 1400px;
+            }
+
+            .contact-text-wrapper {
+                padding-bottom: 60px;
+            }
+
+            .contact-text-wrapper a {
+                font-size: 1.3em;
+                text-align: center;
+            }
+
+
+
+
+        }
+
+        .services button {
+            margin-top: 20px;
+        }
+
+
+        .call-write {
+            margin-left: 180px;
+
+
+            a {
+                color: $text;
+                padding: 10px;
+                border-radius: 20px;
+                display: inline-block;
+            }
+
+
+
+        }
 
 
         /*--------------------------------------------------------------
  slide-show
  --------------------------------------------------------------*/
 
-    .slideshow-container{
-        margin: 40px auto;
-         max-width: 80vw;
-    }
-
-    .image-slider img{
-        margin-left: 2px;
-    }
-        .next{
-         
+        .slideshow-container {
+            margin: 40px auto;
+            max-width: 80vw;
         }
+
+        .image-slider img {
+            margin-left: 2px;
+        }
+
+        .next {}
+
         .next,
         .prev {
 
             font-size: 3em;
-            padding:20px;
-             top: calc(50% - 100px);
+            padding: 20px;
+            top: calc(50% - 100px);
         }
+
         .prev span,
-        .next span{
-            
-            
+        .next span {
+
+
             padding: 10px 20px;
-           
-            
+
+
         }
 
         .img-text-reveal p {
@@ -342,9 +377,9 @@ general styles
  --------------------------------------------------------------*/
         .services {
 
-            margin-bottom:50px;
+            margin-bottom: 50px;
             margin: 0 auto;
-        max-width:1400px;
+            max-width: 1400px;
 
             .service-header-wrap-left,
             .service-header-wrap-other,
@@ -356,8 +391,8 @@ general styles
                 text-align: left;
             }
 
-            
-         
+
+
 
             .viewLess {
                 margin: 20px auto;
@@ -377,17 +412,17 @@ general styles
                 padding: 4% 6%;
                 justify-content: center;
                 flex: 0 1 calc(33% - .5em);
-                min-width:300px;
+                min-width: 300px;
 
 
 
             }
 
-      
 
-            .service-header-wrap-other{
-                margin-top:20px;
-                 display: flex;
+
+            .service-header-wrap-other {
+                margin-top: 20px;
+                display: flex;
                 flex-direction: column;
                 flex: 1 1;
                 justify-items: flex-start;
@@ -398,13 +433,15 @@ general styles
         }
 
 
-                /*--------------------------------------------------------------
- services
+        /*--------------------------------------------------------------
+prices music 
  --------------------------------------------------------------*/
+
+
 
         .prices-container {
 
-             
+
             .price {
                 display: flex;
                 flex-direction: column;
@@ -416,10 +453,10 @@ general styles
         }
 
         .music {
-             margin: 0 auto;
-             max-width:1400px;
-             margin-bottom:50px;
-                        
+            margin: 0 auto;
+            max-width: 1400px;
+            margin-bottom: 50px;
+
             .cards {
                 display: flex;
                 flex-direction: row;
@@ -432,7 +469,7 @@ general styles
                     justify-content: center;
                     flex: 0 1 calc(33% - .5em);
                     min-height: 460px;
-                    min-width:300px;
+                    min-width: 300px;
 
 
 
@@ -464,11 +501,18 @@ general styles
 
             }
 
-            #loadMore{
-                    margin-top: 40px;
-                   }
+            #loadMore {
+                margin-top: 40px;
+            }
 
 
         }
+
+        footer.theEnd .footer-content {
+            text-align: left;
+
+        }
+
+
     }
 }

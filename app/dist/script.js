@@ -35,27 +35,31 @@ var reads = Array.from(document.querySelectorAll(".readMore"));
 var erases = Array.from(document.querySelectorAll(".viewLess"));
 
 var revealText = function revealText(e) {
-  var dropDown = document.querySelector("p[data-key=\"".concat(e.target.id, "\"]"));
+  var idTarget = e.target.id;
+  var dropDown = document.querySelector("div[data-key=\"".concat(idTarget, "\"]"));
   dropDown.style.display = "block";
-  var firstParent = e.target.parentElement;
-  var greatParent = firstParent.parentElement;
-  var greatGreatParent = greatParent.parentElement;
-  greatGreatParent.style.flex = "0 1 calc(100%)";
-  greatGreatParent.style.order = "-1";
-  var button = document.getElementById("".concat(e.target.id));
+  var button = document.getElementById("".concat(idTarget));
   button.style.display = "none";
-  var otherButton = document.querySelector("button[data-type=\"".concat(e.target.id, "\"]"));
+  var otherButton = document.querySelector("button[data-type=\"".concat(idTarget, "\"]"));
   otherButton.style.display = "block";
-  greatGreatParent.scrollIntoView({
-    behavior: "smooth",
-    block: "center",
-    inline: "center"
-  });
+
+  if (idTarget != "read-about") {
+    var firstParent = e.target.parentElement;
+    var greatParent = firstParent.parentElement;
+    var greatGreatParent = greatParent.parentElement;
+    greatGreatParent.style.flex = "0 1 calc(100%)";
+    greatGreatParent.style.order = "-1";
+    greatGreatParent.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center"
+    });
+  }
 };
 
 var hideText = function hideText(e) {
   var targetService = e.target.id;
-  var goUp = document.querySelector("p[data-hide=\"".concat(targetService, "\"]"));
+  var goUp = document.querySelector("div[data-hide=\"".concat(targetService, "\"]"));
   goUp.style.display = "none";
   goUp.style.transition = "all 2s";
   var otherButton = document.getElementById("".concat(targetService));
@@ -178,11 +182,12 @@ SPAN.onclick = function () {
 
 var zoomImage = function zoomImage(e) {
   MODAL.style.display = "block";
+  var src = e.target.dataset.id;
   var img = document.createElement("img");
   var div = document.createElement("div");
   MODAL.appendChild(img);
   MODAL.appendChild(div);
-  img.setAttribute("src", e.target.src);
+  img.setAttribute("src", src);
   img.setAttribute("class", "modal-content");
   img.setAttribute("id", "img01");
   div.setAttribute("id", "caption-modal");
@@ -192,6 +197,45 @@ var zoomImage = function zoomImage(e) {
 
 imgs.forEach(function (img) {
   return img.addEventListener("click", zoomImage, false);
+}); //google wed development lazy load images
+
+document.addEventListener("DOMContentLoaded", function () {
+  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+  var active = false;
+
+  var lazyLoad = function lazyLoad() {
+    if (active === false) {
+      active = true;
+      setTimeout(function () {
+        lazyImages.forEach(function (lazyImage) {
+          if (lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0 && getComputedStyle(lazyImage).display !== "none") {
+            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.classList.remove("lazy");
+            lazyImages = lazyImages.filter(function (image) {
+              return image !== lazyImage;
+            });
+
+            if (lazyImages.length === 0) {
+              document.removeEventListener("scroll", lazyLoad);
+              window.removeEventListener("resize", lazyLoad);
+              window.removeEventListener("orientationchange", lazyLoad);
+            }
+          }
+        });
+        active = false;
+      }, 200);
+    }
+  };
+
+  document.addEventListener("scroll", lazyLoad);
+  window.addEventListener("resize", lazyLoad);
+  window.addEventListener("orientationchange", lazyLoad);
+  prev.addEventListener("click", lazyLoad);
+  next.addEventListener("click", lazyLoad);
+  dots.forEach(function (dot) {
+    return dot.addEventListener("click", lazyLoad);
+  });
 }); //load more music albums
 
 var parent = document.querySelector("ul"),
@@ -208,8 +252,6 @@ var parent = document.querySelector("ul"),
 });
 loadMoreBtn.addEventListener("click", function () {
   [].forEach.call(document.querySelectorAll("." + hiddenClass), function (item, idx) {
-    console.log(item);
-
     if (idx < maxItems - 1) {
       item.classList.remove(hiddenClass);
       item.classList.add(showClass);
@@ -221,10 +263,8 @@ loadMoreBtn.addEventListener("click", function () {
     }
   });
 });
-loadLessBtn.addEventListener("click", function () {
+loadLessBtn.addEventListener("click", function (e) {
   [].forEach.call(document.querySelectorAll("." + showClass), function (item, idx) {
-    console.log(item);
-
     if (idx < maxItems - 1) {
       item.classList.remove(showClass);
       item.classList.add(hiddenClass);
@@ -233,6 +273,11 @@ loadLessBtn.addEventListener("click", function () {
     if (document.querySelectorAll("." + showClass).length === 0) {
       loadMoreBtn.style.display = "block";
       loadLessBtn.style.display = "none";
+      e.target.previousElementSibling.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center"
+      });
     }
   });
 }); //back-to-top
@@ -313,18 +358,18 @@ var thunderOn = function thunderOn() {
 };
 
 var thunderOff = function thunderOff() {
+  var black = "#1b1b1c";
   face.style.fill = "yellow";
   thunder.classList.remove("thunder-happens");
   thunder.style.stroke = "transparent";
-  smile.style.stroke = "black";
-  smileBar.style.fill = "black";
-  smileBar.style.stroke = "black";
+  smile.style.stroke = black;
+  smileBar.style.fill = black;
+  smileBar.style.stroke = black;
   surprise.style.fill = "transparent";
   surprise.style.stroke = "transparent";
   document.body.style.background = "";
-  title.style.color = "red";
+  title.style.color = black;
 }; // face.addEventListener("click", thunderOn, false);
-// face.addEventListener("mouseout", thunderOff , false);
 
 
 faces.forEach(function (face) {

@@ -52,7 +52,7 @@ Accessibility
     }
 
 
- 
+
 
 
     .music {
@@ -198,7 +198,7 @@ buttons close and arrow-up
     border-radius: 50%;
     border: $blue 2px solid;
     box-shadow: $blue 2px 2px 0px 0px;
-    z-index:99;
+    z-index: 99;
 }
 
 .btn-entrance {
@@ -248,7 +248,7 @@ header {
         right: 15%;
         top: 10px;
         @extend %icon-cloud-style;
-        animation:appear 2s forwards;
+        animation: appear 2s forwards;
 
         p {
             margin-left: 40px;
@@ -309,8 +309,9 @@ button.viewLess {
 
 #read-about,
 #less-about {
-    float:right;
+    float: right;
 }
+
 /*--------------------------------------------------------------
 sections
 --------------------------------------------------------------*/
@@ -454,7 +455,7 @@ slider
 }
 
 .image-slider img {
-    width:100%;
+    width: 100%;
     height: auto;
     cursor: zoom-in;
 }
@@ -476,39 +477,39 @@ slider
     cursor: pointer;
     position: absolute;
     top: calc(50% - 20px);
-  
+
     padding: 20px;
     margin: 0 5px;
     color: $blue;
-    
+
     font-size: 2em;
     transition: 1s ease;
-   
+
     user-select: none;
-  
+
 }
 
 /* Position the "next button" to the right */
 .next {
     right: -6%;
- 
-    
+
+
 }
 
 
 .prev {
     left: -6%;
 
-    
+
 }
 
 .prev span,
-.next span{
-         @extend %button-style-simple;
-      border-radius: 100%;
+.next span {
+    @extend %button-style-simple;
+    border-radius: 100%;
     padding: 5px 10px;
     border: 1px solid $blue;
-    
+
 }
 
 
@@ -537,6 +538,7 @@ slider
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    margin-right: 30px;
 }
 
 .dots {
@@ -607,7 +609,7 @@ services
 
     h2 {
         @extend %section-title;
-        color:$black;
+        color: $black;
     }
 
     article {
@@ -642,7 +644,7 @@ services
     .card {
         display: inline-block;
         min-height: 400px;
-        min-width:100%;
+        min-width: 100%;
 
         @extend %box;
 
@@ -667,7 +669,7 @@ services
 
 
         iframe.musicPlayer {
-            border: none; 
+            border: none;
             width: 220px;
             height: 220px;
             margin: 0 auto;
@@ -744,6 +746,10 @@ services
         display: none;
     }
 
+    .prices-sound-design {
+        margin-bottom: 156px;
+    }
+
     .center-viewLess {
         margin: 30px auto 60px;
     }
@@ -755,11 +761,31 @@ co-work
 --------------------------------------------------------------*/
 .contact {
 
-    a {
-        color: $text;
-        padding: 10px;
-        border-radius: 20px;
+
+    .call-write {
+
+        span:first-child {
+            font-size: 1.8em;
+        }
+
+        span:last-child {
+            font-size: 2.5em;
+        }
+
+
+        a {
+            color: $text;
+            padding: 10px;
+            border-radius: 20px;
+            display: inline-block;
+
+            &:hover {
+                color: red;
+            }
+        }
+
     }
+
 
     h2 {
         @extend %section-title;
@@ -771,24 +797,34 @@ co-work
 
 
 
-
-
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
 .theEnd {
     padding-top: 30px;
-    background-color: $black;
+    padding-left: 20px;
+    background-color: rgba($black, 1);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
     color: white;
+
+    .flicker-5 {
+        -webkit-animation: flicker-5 8s linear infinite both;
+        animation: flicker-5 8s linear infinite both;
+    }
+
+
 
     .subscribe {
 
         @extend %button-style-simple;
         margin-left: 20px;
-        background-color: $black;
         color: white;
-
+        background-color: $black;
         padding: 10px 20px;
+
 
 
 
@@ -796,10 +832,14 @@ Footer
 
     .footer-content {
 
+
         margin-top: 30px;
         padding-top: 20px;
+        text-align: right;
 
-
+        a {
+            color: $blue;
+        }
 
 
         p {
