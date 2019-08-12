@@ -310,6 +310,7 @@ button.viewLess {
 #read-about,
 #less-about {
     float: right;
+    margin-right: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -318,6 +319,7 @@ sections
 section {
     padding: 20px 0;
 
+    .staff-text-wrapper,
     .about-text-wrapper,
     .co-work-text-wrapper,
     .music-text-wrapper,
@@ -333,24 +335,36 @@ section {
 About and co-work
 --------------------------------------------------------------*/
 .about {
-    p {
-        background-color: white;
-        padding: 10px;
-        border-radius: 20px;
-    }
 
-    h2 {
-        @extend %section-title;
-    }
+    background-color: $lightgrey;
+    padding: 50px 0;
+    margin-top: -80px;
 
-    button {
-        @extend %button-style-simple;
-        margin-bottom: 40px;
-    }
+    .about-text-wrapper {
 
-    .about-more-text {
-        display: none;
-        background-color: white;
+
+
+
+        p {
+
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        h2 {
+            @extend %section-title;
+        }
+
+        button {
+            @extend %button-style-simple;
+            margin-bottom: 40px;
+        }
+
+        .about-more-text {
+            display: none;
+            background-color: white;
+        }
+
     }
 }
 
@@ -370,18 +384,86 @@ co-work
         @extend %section-title;
     }
 
-    button {
-        @extend %button-style-simple;
-        margin-bottom: 40px;
-    }
+
 
 
 }
 
 
 /*--------------------------------------------------------------
+staff
+--------------------------------------------------------------*/
+.staff {
+    background-color: $lightgrey;
+    padding-bottom: 60px;
+
+
+    p {
+        color: $text;
+        padding: 10px;
+        border-radius: 20px;
+        margin-bottom: -25px;
+    }
+
+    .staff-pics {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        margin-top: 30px;
+
+
+
+
+
+        figure.staff-pic {
+
+            margin: 40px 5px;
+
+        }
+
+        figure.staff-pic img {
+
+            width: 120px;
+            border-radius: 100%;
+
+            padding: 0 15px;
+
+        }
+
+        .staff-img-text {
+            font-size: 0.8em;
+            width: 140px;
+        }
+
+    }
+
+    h2 {
+        @extend %section-title;
+    }
+
+
+
+}
+
+
+
+
+
+/*--------------------------------------------------------------
 slider
 --------------------------------------------------------------*/
+
+.slideshow-wrapper{
+   
+    padding-top:100px;
+    padding-bottom:80px;
+
+}
+
+
 
 .modal {
     display: none;
@@ -449,8 +531,7 @@ slider
 /* Slideshow container */
 .slideshow-container {
     max-width: 90vw;
-    position: relative;
-    margin: 20px;
+    margin: 20px auto;
     padding: 0;
 }
 
@@ -470,19 +551,21 @@ slider
 /* Next & previous buttons */
 
 
-
+.slideshow-wrapper{
+    position:relative;
+}
 
 .next,
 .prev {
     cursor: pointer;
     position: absolute;
-    top: calc(50% - 20px);
+    
 
     padding: 20px;
-    margin: 0 5px;
+    top:40%;
     color: $blue;
 
-    font-size: 2em;
+    font-size: 1em;
     transition: 1s ease;
 
     user-select: none;
@@ -491,14 +574,14 @@ slider
 
 /* Position the "next button" to the right */
 .next {
-    right: -6%;
+    right: 0;
 
 
 }
 
 
 .prev {
-    left: -6%;
+    left: -6px;
 
 
 }
@@ -507,7 +590,7 @@ slider
 .next span {
     @extend %button-style-simple;
     border-radius: 100%;
-    padding: 5px 10px;
+    padding: 5px 8px;
     border: 1px solid $blue;
 
 }
@@ -604,7 +687,7 @@ services
     }
 
     button {
-        margin: 2px 5px 20px;
+        margin: 36px 5px 20px;
     }
 
     h2 {
@@ -639,12 +722,12 @@ services
         list-style: none;
         text-align: center;
         padding: 0;
-        margin:0;
+        margin: 0;
     }
 
     .card {
         display: inline-block;
-       
+
         width: 350px;
         padding-top: 40px;
 
@@ -766,6 +849,9 @@ co-work
 
     .call-write {
 
+        text-align: center;
+        margin-top:20px;
+
         span:first-child {
             font-size: 1.8em;
         }
@@ -780,6 +866,7 @@ co-work
             padding: 10px;
             border-radius: 20px;
             display: inline-block;
+
 
             &:hover {
                 color: red;

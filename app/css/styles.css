@@ -1,4 +1,4 @@
-.icon-close, #back-to-top, .about button, .co-work button, .prev span,
+.icon-close, #back-to-top, .about .about-text-wrapper button, .prev span,
 .next span, .dots, .services button, .music .load, .prices button, .theEnd .subscribe {
   color: #000c2b;
   letter-spacing: 0.02em;
@@ -9,7 +9,7 @@
   padding: 8px 10px;
   box-shadow: #449AFF 4px 4px 0 0;
   transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
-  .icon-close:hover, #back-to-top:hover, .about button:hover, .co-work button:hover, .prev span:hover,
+  .icon-close:hover, #back-to-top:hover, .about .about-text-wrapper button:hover, .prev span:hover,
   .next span:hover, .dots:hover, .services button:hover, .music .load:hover, .prices button:hover, .theEnd .subscribe:hover {
     transform: translateX(2px) translateY(2px);
     box-shadow: 2px 2px 0 0; }
@@ -37,10 +37,11 @@ header .icon-cloud-line, .services .icon, .prices .icon {
   padding: 10% 4%;
   min-width: 320px; }
 
-.about h2, .co-work h2, .services h2, .contact h2 {
+.about .about-text-wrapper h2, .co-work h2, .staff h2, .services h2, .contact h2 {
   text-transform: uppercase;
   color: #449AFF; }
 
+section .staff-text-wrapper,
 section .about-text-wrapper,
 section .co-work-text-wrapper,
 section .music-text-wrapper,
@@ -89,7 +90,8 @@ p {
   color: #1b1b1c;
   font-size: 1em;
   font-kerning: normal;
-  text-justify: inter-word; }
+  text-justify: inter-word;
+  margin-bottom: -20px; }
 
 a {
   text-decoration: none; }
@@ -332,7 +334,8 @@ button.viewLess {
 
 #read-about,
 #less-about {
-  float: right; }
+  float: right;
+  margin-right: 20px; }
 
 /*--------------------------------------------------------------
 sections
@@ -343,17 +346,18 @@ section {
 /*--------------------------------------------------------------
 About and co-work
 --------------------------------------------------------------*/
-.about p {
-  background-color: white;
-  padding: 10px;
-  border-radius: 20px; }
-
-.about button {
-  margin-bottom: 40px; }
-
-.about .about-more-text {
-  display: none;
-  background-color: white; }
+.about {
+  background-color: #E1E4E8;
+  padding: 50px 0;
+  margin-top: -80px; }
+  .about .about-text-wrapper p {
+    padding: 10px;
+    border-radius: 20px; }
+  .about .about-text-wrapper button {
+    margin-bottom: 40px; }
+  .about .about-text-wrapper .about-more-text {
+    display: none;
+    background-color: white; }
 
 /*--------------------------------------------------------------
 co-work
@@ -364,12 +368,41 @@ co-work
     color: white;
     padding: 10px;
     border-radius: 20px; }
-  .co-work button {
-    margin-bottom: 40px; }
+
+/*--------------------------------------------------------------
+staff
+--------------------------------------------------------------*/
+.staff {
+  background-color: #E1E4E8;
+  padding-bottom: 60px; }
+  .staff p {
+    color: #1b1b1c;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: -25px; }
+  .staff .staff-pics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 30px; }
+    .staff .staff-pics figure.staff-pic {
+      margin: 40px 5px; }
+    .staff .staff-pics figure.staff-pic img {
+      width: 120px;
+      border-radius: 100%;
+      padding: 0 15px; }
+    .staff .staff-pics .staff-img-text {
+      font-size: 0.8em;
+      width: 140px; }
 
 /*--------------------------------------------------------------
 slider
 --------------------------------------------------------------*/
+.slideshow-wrapper {
+  padding-top: 100px;
+  padding-bottom: 80px; }
+
 .modal {
   display: none;
   position: fixed;
@@ -426,8 +459,7 @@ slider
 /* Slideshow container */
 .slideshow-container {
   max-width: 90vw;
-  position: relative;
-  margin: 20px;
+  margin: 20px auto;
   padding: 0; }
 
 .image-slider img {
@@ -441,29 +473,31 @@ slider
   padding: 0 20px; }
 
 /* Next & previous buttons */
+.slideshow-wrapper {
+  position: relative; }
+
 .next,
 .prev {
   cursor: pointer;
   position: absolute;
-  top: calc(50% - 20px);
   padding: 20px;
-  margin: 0 5px;
+  top: 40%;
   color: #449AFF;
-  font-size: 2em;
+  font-size: 1em;
   transition: 1s ease;
   user-select: none; }
 
 /* Position the "next button" to the right */
 .next {
-  right: -6%; }
+  right: 0; }
 
 .prev {
-  left: -6%; }
+  left: -6px; }
 
 .prev span,
 .next span {
   border-radius: 100%;
-  padding: 5px 10px;
+  padding: 5px 8px;
   border: 1px solid #449AFF; }
 
 /* Caption text */
@@ -531,7 +565,7 @@ services
   .services .icon {
     margin: 0 -5px; }
   .services button {
-    margin: 2px 5px 20px; }
+    margin: 36px 5px 20px; }
   .services h2 {
     color: #000c2b; }
   .services article {
@@ -617,19 +651,20 @@ services
 /*--------------------------------------------------------------
 co-work
 --------------------------------------------------------------*/
-.contact .call-write span:first-child {
-  font-size: 1.8em; }
-
-.contact .call-write span:last-child {
-  font-size: 2.5em; }
-
-.contact .call-write a {
-  color: #1b1b1c;
-  padding: 10px;
-  border-radius: 20px;
-  display: inline-block; }
-  .contact .call-write a:hover {
-    color: red; }
+.contact .call-write {
+  text-align: center;
+  margin-top: 20px; }
+  .contact .call-write span:first-child {
+    font-size: 1.8em; }
+  .contact .call-write span:last-child {
+    font-size: 2.5em; }
+  .contact .call-write a {
+    color: #1b1b1c;
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block; }
+    .contact .call-write a:hover {
+      color: red; }
 
 /*--------------------------------------------------------------
 Footer
@@ -1042,7 +1077,7 @@ header desktop
           align-items: center; }
         .header-for-desktop .grid-container .item6 {
           display: flex;
-          grid-column: 1/4;
+          grid-column: 7/10;
           grid-row: 3/4;
           justify-content: center;
           align-items: flex-end; }
@@ -1098,6 +1133,7 @@ header desktop
     /*--------------------------------------------------------------
 general styles
  --------------------------------------------------------------*/
+    .staff-text-wrapper p,
     .contact-text-wrapper p,
     .about-text-wrapper p,
     .co-work-text-wrapper p,
@@ -1113,6 +1149,7 @@ general styles
     section h2 {
       font-size: 2.7em;
       margin-left: -20px; }
+    section .staff-text-wrapper,
     section .prices-text-wrapper,
     section .about-text-wrapper,
     section .co-work-text-wrapper {
@@ -1125,7 +1162,7 @@ general styles
       font-size: 1.3em;
       text-align: center; }
     .services button {
-      margin-top: 20px; }
+      margin-top: 40px; }
     .call-write {
       margin-left: 180px; }
       .call-write a {
@@ -1133,6 +1170,10 @@ general styles
         padding: 10px;
         border-radius: 20px;
         display: inline-block; }
+    .staff .staff-pics figure.staff-pic img {
+      width: 200px; }
+    .staff .staff-pics figure.staff-pic {
+      margin: 40px; }
     /*--------------------------------------------------------------
  slide-show
  --------------------------------------------------------------*/
@@ -1141,6 +1182,10 @@ general styles
       max-width: 80vw; }
     .image-slider img {
       margin-left: 2px; }
+    .next {
+      right: 2%; }
+    .prev {
+      left: 2%; }
     .next,
     .prev {
       font-size: 3em;
@@ -1148,7 +1193,7 @@ general styles
       top: calc(50% - 100px); }
     .prev span,
     .next span {
-      padding: 10px 20px; }
+      padding: 9px 18px; }
     .img-text-reveal p {
       font-size: 1.6em; }
     #caption-modal p {

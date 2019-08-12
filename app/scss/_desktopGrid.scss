@@ -37,6 +37,8 @@
 
         }
 
+       
+
     }
 
     @media screen and (min-width: 751px) {
@@ -187,7 +189,7 @@ header desktop
 
                 .item6 {
                     display: flex;
-                    grid-column: 1/4;
+                    grid-column: 7/10;
                     grid-row: 3/4;
                     justify-content: center;
                     align-items: flex-end;
@@ -277,7 +279,7 @@ general styles
  --------------------------------------------------------------*/
 
 
-
+        .staff-text-wrapper p,
         .contact-text-wrapper p,
         .about-text-wrapper p,
         .co-work-text-wrapper p,
@@ -304,7 +306,7 @@ general styles
                 font-size: 2.7em;
                 margin-left: -20px;
             }
-
+            .staff-text-wrapper,
             .prices-text-wrapper,
             .about-text-wrapper,
             .co-work-text-wrapper {
@@ -323,13 +325,13 @@ general styles
                 text-align: center;
             }
 
-
+            
 
 
         }
 
         .services button {
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
 
@@ -348,6 +350,18 @@ general styles
 
         }
 
+    
+
+        .staff .staff-pics figure.staff-pic img{
+            width:200px;
+
+        }
+
+         .staff .staff-pics figure.staff-pic {
+           margin: 40px;
+
+        }
+ 
 
         /*--------------------------------------------------------------
  slide-show
@@ -362,10 +376,21 @@ general styles
             margin-left: 2px;
         }
 
+         .next
+        {
+            
+            right:2%;
+        }
+  .prev
+        {
+            left:2%;
+            
+        }
+
 
         .next,
         .prev {
-
+            
             font-size: 3em;
             padding: 20px;
             top: calc(50% - 100px);
@@ -374,8 +399,8 @@ general styles
         .prev span,
         .next span {
 
-
-            padding: 10px 20px;
+           
+            padding: 9px 18px;
 
 
         }
