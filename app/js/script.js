@@ -596,7 +596,7 @@ let svgToService = (e) => {
     matchingService.style.flex = "0 1 calc(100%)";
     matchingService.style.order = "-1";
 
-    let dropDown = document.querySelector(`p[data-text="${mainEl}"]`);
+    let dropDown = document.querySelector(`div[data-text="${mainEl}"]`);
     dropDown.style.display = "block";
 
     let button = document.querySelector(`button[data-svgRead="${mainEl}"]`);
