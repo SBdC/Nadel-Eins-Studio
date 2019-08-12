@@ -26,8 +26,8 @@ function revealMenu() {
 points.forEach(function (read) {
   return read.addEventListener("click", revealMenu, false);
 }); //remeber to check the focus for aria
+// OVERLAY.addEventListener("click", revealMenu, false);
 
-OVERLAY.addEventListener("click", revealMenu, false);
 TRIGGER.addEventListener("click", revealMenu, false);
 CLOSE.addEventListener("click", revealMenu, false); //READ MORE
 

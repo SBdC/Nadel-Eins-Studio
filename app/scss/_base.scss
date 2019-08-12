@@ -122,9 +122,9 @@ button {
     background-color: $black;
     list-style: none;
     height: 100vh;
-    width: 82%;
-    padding-top: 95px;
-    padding-left: 10px;
+    width: 100vw;
+    padding-top: 65px;
+    padding-left: 65px;
     margin: 0;
 
 
@@ -340,6 +340,7 @@ button.viewLess {
 #less-about {
     float: right;
 
+
  
 }
 
@@ -372,7 +373,7 @@ About and co-work
 
     .about-text-wrapper {
 
-
+       padding-bottom: 80px;
         p {
             background-color: white;
             padding: 10px;
@@ -566,7 +567,15 @@ slider
     padding: 0;
 }
 
+.image-slider{
+
+    padding:0;
+     margin: 0;
+
+}
+
 .image-slider img {
+  
     width: 100%;
     height: auto;
     cursor: zoom-in;
@@ -577,13 +586,12 @@ slider
     display: none;
     padding: 0 20px;
 
+
 }
 
 /* Next & previous buttons */
 
-.slideshow-container{
-   
-}
+
 
 .next,
 .prev {

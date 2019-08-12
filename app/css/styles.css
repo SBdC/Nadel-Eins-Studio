@@ -206,9 +206,9 @@ button {
   background-color: #000c2b;
   list-style: none;
   height: 100vh;
-  width: 82%;
-  padding-top: 95px;
-  padding-left: 10px;
+  width: 100vw;
+  padding-top: 65px;
+  padding-left: 65px;
   margin: 0; }
   .open li {
     margin-left: 30px; }
@@ -349,16 +349,18 @@ About and co-work
 .about {
   padding: 50px 0;
   margin-top: -80px; }
-  .about .about-text-wrapper p {
-    background-color: white;
-    padding: 10px;
-    border-radius: 20px;
-    margin-bottom: -20px; }
-  .about .about-text-wrapper button {
-    margin-bottom: 40px; }
-  .about .about-text-wrapper .about-more-text {
-    display: none;
-    background-color: white; }
+  .about .about-text-wrapper {
+    padding-bottom: 80px; }
+    .about .about-text-wrapper p {
+      background-color: white;
+      padding: 10px;
+      border-radius: 20px;
+      margin-bottom: -20px; }
+    .about .about-text-wrapper button {
+      margin-bottom: 40px; }
+    .about .about-text-wrapper .about-more-text {
+      display: none;
+      background-color: white; }
 
 /*--------------------------------------------------------------
 co-work
@@ -464,6 +466,10 @@ slider
   max-width: 100vw;
   margin: 0;
   padding: 0; }
+
+.image-slider {
+  padding: 0;
+  margin: 0; }
 
 .image-slider img {
   width: 100%;

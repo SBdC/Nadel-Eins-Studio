@@ -12,6 +12,7 @@ let imgs = Array.from(document.querySelectorAll(".zoom"));
 
 
 
+
 function revealMenu() {
     OVERLAY.classList.toggle("opaque");
     NAV.classList.toggle("menu-items");
@@ -25,7 +26,7 @@ function revealMenu() {
 
 points.forEach(read => read.addEventListener("click", revealMenu, false));
 //remeber to check the focus for aria
-OVERLAY.addEventListener("click", revealMenu, false);
+// OVERLAY.addEventListener("click", revealMenu, false);
 TRIGGER.addEventListener("click", revealMenu, false);
 CLOSE.addEventListener("click", revealMenu, false);
 
