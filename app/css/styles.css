@@ -1,5 +1,4 @@
-.icon-close, #back-to-top, .about .about-text-wrapper button, .prev span,
-.next span, .dots, .services button, .music .load, .prices button, .theEnd .subscribe {
+.icon-close, #back-to-top, .about .about-text-wrapper button, .dots, .services button, .music .load, .prices button, .theEnd .subscribe {
   color: #000c2b;
   letter-spacing: 0.02em;
   background-color: white;
@@ -9,8 +8,7 @@
   padding: 8px 10px;
   box-shadow: #449AFF 4px 4px 0 0;
   transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
-  .icon-close:hover, #back-to-top:hover, .about .about-text-wrapper button:hover, .prev span:hover,
-  .next span:hover, .dots:hover, .services button:hover, .music .load:hover, .prices button:hover, .theEnd .subscribe:hover {
+  .icon-close:hover, #back-to-top:hover, .about .about-text-wrapper button:hover, .dots:hover, .services button:hover, .music .load:hover, .prices button:hover, .theEnd .subscribe:hover {
     transform: translateX(2px) translateY(2px);
     box-shadow: 2px 2px 0 0; }
 
@@ -90,8 +88,7 @@ p {
   color: #1b1b1c;
   font-size: 1em;
   font-kerning: normal;
-  text-justify: inter-word;
-  margin-bottom: -20px; }
+  text-justify: inter-word; }
 
 a {
   text-decoration: none; }
@@ -210,7 +207,7 @@ button {
   list-style: none;
   height: 100vh;
   width: 82%;
-  padding-top: 129px;
+  padding-top: 95px;
   padding-left: 10px;
   margin: 0; }
   .open li {
@@ -319,12 +316,16 @@ header .banner {
       line-height: 60px;
       max-width: 200px; }
 
-.slogan .quote {
-  text-align: center;
-  padding: 90px 25px 120px;
-  color: white;
-  margin-top: -20px;
-  background-color: #000c2b; }
+.slogan {
+  z-index: 1; }
+  .slogan .quote {
+    text-align: center;
+    padding: 70px 25px 120px;
+    color: white;
+    margin-top: 20px;
+    background-color: #000c2b;
+    font-weight: 400;
+    line-height: 80px; }
 
 /*--------------------------------------------------------------
 button
@@ -334,8 +335,7 @@ button.viewLess {
 
 #read-about,
 #less-about {
-  float: right;
-  margin-right: 20px; }
+  float: right; }
 
 /*--------------------------------------------------------------
 sections
@@ -347,12 +347,13 @@ section {
 About and co-work
 --------------------------------------------------------------*/
 .about {
-  background-color: #E1E4E8;
   padding: 50px 0;
   margin-top: -80px; }
   .about .about-text-wrapper p {
+    background-color: white;
     padding: 10px;
-    border-radius: 20px; }
+    border-radius: 20px;
+    margin-bottom: -20px; }
   .about .about-text-wrapper button {
     margin-bottom: 40px; }
   .about .about-text-wrapper .about-more-text {
@@ -367,7 +368,8 @@ co-work
   .co-work p {
     color: white;
     padding: 10px;
-    border-radius: 20px; }
+    border-radius: 20px;
+    margin-bottom: -20px; }
 
 /*--------------------------------------------------------------
 staff
@@ -458,8 +460,9 @@ slider
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 90vw;
-  margin: 20px auto;
+  position: relative;
+  max-width: 100vw;
+  margin: 0;
   padding: 0; }
 
 .image-slider img {
@@ -473,15 +476,11 @@ slider
   padding: 0 20px; }
 
 /* Next & previous buttons */
-.slideshow-wrapper {
-  position: relative; }
-
 .next,
 .prev {
   cursor: pointer;
   position: absolute;
-  padding: 20px;
-  top: 40%;
+  top: 55%;
   color: #449AFF;
   font-size: 1em;
   transition: 1s ease;
@@ -492,13 +491,16 @@ slider
   right: 0; }
 
 .prev {
-  left: -6px; }
+  left: 0; }
 
 .prev span,
 .next span {
   border-radius: 100%;
   padding: 5px 8px;
   border: 1px solid #449AFF; }
+  .prev span:hover,
+  .next span:hover {
+    background-color: white; }
 
 /* Caption text */
 .img-text p {
@@ -521,9 +523,7 @@ slider
 /* The dots/bullets/indicators */
 .dots-wrapper {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-right: 30px; }
+  margin: 30px; }
 
 .dots {
   cursor: pointer;
@@ -716,7 +716,11 @@ Footer
       header .bannerTwo .title h1 {
         color: black;
         line-height: 60px;
-        max-width: 200px; } }
+        max-width: 200px; }
+  #next,
+  #prev {
+    font-size: 1.5em;
+    top: calc(50% + 20px); } }
 
 #mast tspan {
   font-size: 38px; }
@@ -975,12 +979,11 @@ svg.mixes {
       align-items: center; }
     #next,
     #prev {
-      font-size: 2.4em;
-      padding: 20px;
-      top: calc(50% - 100px); }
+      font-size: 2em;
+      top: calc(50% - 50px); }
     #prev span,
     #next span {
-      padding: 5px 12px; } }
+      padding: 9px 16px; } }
   @media screen and (min-width: 751px) {
     /*--------------------------------------------------------------
 header desktop
@@ -1182,18 +1185,22 @@ general styles
       max-width: 80vw; }
     .image-slider img {
       margin-left: 2px; }
-    .next {
-      right: 2%; }
     .prev {
-      left: 2%; }
+      padding-right: 20px;
+      left: -2%; }
+    .next {
+      padding-left: 20px;
+      right: -2%; }
     .next,
     .prev {
       font-size: 3em;
-      padding: 20px;
-      top: calc(50% - 100px); }
+      top: calc(50% - 50px); }
     .prev span,
     .next span {
       padding: 9px 18px; }
+    .dots {
+      width: 1em;
+      height: 1em; }
     .img-text-reveal p {
       font-size: 1.6em; }
     #caption-modal p {
@@ -1290,6 +1297,18 @@ prices music
     transform: scale(0.9); }
   100% {
     transform: scale(1); } }
+
+@-webkit-keyframes dashi {
+  0% {
+    stroke-dashoffset: 1000; }
+  100% {
+    stroke-dashoffset: 0; } }
+
+@keyframes dashi {
+  0% {
+    stroke-dashoffset: 1000; }
+  100% {
+    stroke-dashoffset: 0; } }
 
 @-webkit-keyframes dash {
   0% {

@@ -430,7 +430,7 @@ var svgToService = function svgToService(e) {
   var matchingService = document.querySelector("article[data-svg=\"".concat(mainEl, "\"]"));
   matchingService.style.flex = "0 1 calc(100%)";
   matchingService.style.order = "-1";
-  var dropDown = document.querySelector("p[data-text=\"".concat(mainEl, "\"]"));
+  var dropDown = document.querySelector("div[data-text=\"".concat(mainEl, "\"]"));
   dropDown.style.display = "block";
   var button = document.querySelector("button[data-svgRead=\"".concat(mainEl, "\"]"));
   button.style.display = "none";

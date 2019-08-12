@@ -29,6 +29,40 @@
 }
 
 
+//waves
+@-webkit-keyframes dashi {
+    0% {
+        stroke-dashoffset: 1000;
+  
+    }
+
+
+
+    100% {
+        stroke-dashoffset: 0;
+  
+
+    }
+}
+
+@keyframes dashi {
+    0% {
+        stroke-dashoffset: 1000;
+    
+    }
+
+    
+
+    100% {
+        stroke-dashoffset: 0;
+      
+
+    }
+}
+
+
+
+
 //thunder
 @-webkit-keyframes dash {
     0% {
