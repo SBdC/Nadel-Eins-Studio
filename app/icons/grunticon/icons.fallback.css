@@ -1,34 +1,23 @@
 
-.icon-studio {
-	background-image: url('png/studio.png');
+.icon-live-tech-cloud {
+	background-image: url('png/live-tech-cloud.png');
 	background-repeat: no-repeat;
-enhanceSVG:true;
+}
 
+.icon-live-tech {
+	background-image: url('png/live-tech.png');
+	background-repeat: no-repeat;
 }
 
 .icon-nadel-eins-logo-record-banner-speaker {
 	background-image: url('png/nadel-eins-logo-record-banner-speaker.png');
 	background-repeat: no-repeat;
-enhanceSVG:true;
-
 }
 
-.icon-live-tech {
-	background-image: url('png/live tech.png');
+.icon-studio {
+	background-image: url('png/studio.png');
 	background-repeat: no-repeat;
-enhanceSVG:true;
-
 }
-
-
-
-.icon-live-tech-cloud {
-	background-image: url('png/live-tech.png');
-	background-repeat: no-repeat;
-enhanceSVG:true;
-
-}
-
 
 
 .icon-burgerStar_opt-3 {

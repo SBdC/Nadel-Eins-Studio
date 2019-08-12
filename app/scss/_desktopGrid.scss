@@ -20,6 +20,23 @@
             align-items: center;
         }
 
+        #next,
+        #prev {
+
+            font-size: 2.4em;
+            padding: 20px;
+            top: calc(50% - 100px);
+        }
+
+        #prev span,
+        #next span {
+
+
+            padding: 5px 12px;
+
+
+        }
+
     }
 
     @media screen and (min-width: 751px) {
@@ -345,7 +362,6 @@ general styles
             margin-left: 2px;
         }
 
-        .next {}
 
         .next,
         .prev {
@@ -469,7 +485,8 @@ prices music
                     justify-content: center;
                     flex: 0 1 calc(33% - .5em);
                     min-height: 460px;
-                    min-width: 300px;
+                    width: 300px;
+                    padding-top: 80px;
 
 
 
