@@ -52,9 +52,6 @@ Accessibility
     }
 
 
-
-
-
     .music {
         .cards {
             display: flex;
@@ -65,7 +62,6 @@ Accessibility
         }
 
     }
-
 
 
     .prices-container {
@@ -83,8 +79,6 @@ body {
     background-size: 1300px;
     background-repeat: repeat;
     background-attachment: fixed;
-    width: 100vw;
-
 
 }
 
@@ -131,18 +125,21 @@ button {
     li {
         margin-left: 30px;
 
-        a {}
-
-        h2 {
-            line-height: 35px;
-            color: $lightgrey;
+        a {
+            line-height: 55px;
+            color: $lightblue;
             z-index: 100;
+            font-size: 1.6em;
+            text-transform: uppercase;
+            font-weight: 700;
 
             &:hover {
                 color: $red;
                 cursor: pointer;
             }
         }
+
+       
     }
 }
 
@@ -695,6 +692,7 @@ services
 .services {
     padding-top: 40px;
 
+  
     h3 {
         text-align: center;
         margin: 0;
@@ -720,7 +718,7 @@ services
 
     .icon {
         @extend %icon-cloud-style;
-        margin: 0 -5px;
+        margin-bottom:10px;
     }
 
     button {
