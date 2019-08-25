@@ -21,12 +21,13 @@
   font-family: helvetica;
   fill: #000c2b;
   stroke: transparent;
-  font-size: 30px; }
+  font-size: 30px;
+  text-transform: uppercase; }
   .text-on-cloud tspan:hover {
-    fill: #449AFF;
+    fill: red;
     cursor: pointer;
-    font-size: 31px;
-    transition: all 2s; }
+    font-size: 30px;
+    transition: all 1s; }
 
 .text-on tspan {
   font-family: helvetica;
@@ -43,6 +44,12 @@ svg.cloud {
   width: 75%;
   height: 75%;
   max-width: 75%;
+  height: auto; }
+
+svg.cloud-service {
+  width: 15%;
+  height: 15%;
+  max-width: 15%;
   height: auto; }
 
 .clouds {
@@ -155,8 +162,8 @@ svg.mixes {
   -webkit-animation: slidein 14s -6s alternate infinite linear; }
 
 .cloud-moves {
-  animation: slidein 13s  -2s alternate infinite linear;
-  -webkit-animation: slidein 13s  -2s alternate infinite linear; }
+  animation: slidein 13s -2s alternate infinite linear;
+  -webkit-animation: slidein 13s -2s alternate infinite linear; }
 
 .cloud-moves-4 {
   animation: slidein-other 16s -5s alternate infinite linear;

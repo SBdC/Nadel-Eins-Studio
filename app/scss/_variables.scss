@@ -39,10 +39,10 @@ $blue: #449AFF;
 
 
 %icon-cloud-style {
-    height: 113px;
-    width: 178px;
+    height: calc(113px *1.2);
+    width: calc(178px *1.2);
     background-position: 50% 50%;
-    background-size: cover;
+    background-size: contain;
     margin: 0;
     padding: 0;
 
@@ -50,17 +50,17 @@ $blue: #449AFF;
 
 
 %box {
-    border: $lightgrey solid 2px;
-    background-color: white;
-    margin: 20px auto;
+    
+    margin: 0 auto;
     padding: 10% 4%;
     min-width: 320px;
    
 }
 
 %section-title {
+   margin: 80px auto;
     text-transform: uppercase;
-    color: $blue;
+    color: $black;
 }
 
 %text-margin {

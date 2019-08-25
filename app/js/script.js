@@ -656,3 +656,41 @@ let highlightSvgOFF = (e) => {
 serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("click", svgToService, false));
 serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseover", highlightSvg, false));
 serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseout", highlightSvgOFF, false));
+
+
+
+
+// const contactCloud = document.getElementById("cloud-desktop-contact");
+
+
+
+
+// // Listen for scroll events
+// window.addEventListener("scroll", function() {
+
+  
+
+//     // Set a timeout to run after scrolling ends
+//     isScrolling = setTimeout(function() {
+//         if (window.pageYOffset > 20) {
+//             contactCloud.classList.remove("cloud-moves-5");
+//            contactCloud.style.position="fixed";
+//            contactCloud.style.width="250px";
+           
+//             }
+//             else{
+//                  title.classList.add("cloud-moves-5");
+//             contactCloud.style.position="relative";
+//             }
+
+//     }, 66);
+
+// }, false);
+
+
+
+
+
+
+
+

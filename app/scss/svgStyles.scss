@@ -19,35 +19,28 @@ $blue: #449AFF;
 
 // fix size of svg text- hacky :(
 //mastering
-#mast tspan
-
-
-{
-  font-size:38px;
+#mast tspan {
+    font-size: 38px;
 
 }
+
 //recording
-#mt tspan
-
-
-{
-  font-size:36px;
+#mt tspan {
+    font-size: 36px;
 
 }
 
 // sound design
 
-#sd tspan{
-  font-size:36px;
+#sd tspan {
+    font-size: 36px;
 }
 
 
 //consulting
 
-#cons tspan
-
-{
-  font-size:34px;
+#cons tspan {
+    font-size: 34px;
 
 }
 
@@ -58,93 +51,106 @@ $blue: #449AFF;
 #mixT tspan,
 
 
-#mixS tspan
-
-{
-  font-size:32px;
+#mixS tspan {
+    font-size: 32px;
 
 }
 
 //live prep
-#mi tspan
-
-{
-  font-size:36px;
+#mi tspan {
+    font-size: 36px;
 
 }
 
 
 
-.text-on-cloud  tspan  {
-     font-family:helvetica;
-        fill: $black;
-        stroke: transparent;
-         font-size:30px;
-        
-        &:hover{
-            fill:$blue;
-            cursor:pointer;
-            font-size:31px;
-            transition: all 2s;
+.text-on-cloud tspan {
+    font-family: helvetica;
+    fill: $black;
+    stroke: transparent;
+    font-size: 30px;
+    text-transform: uppercase;
 
 
-        }
+    &:hover {
+        fill: red;
+        cursor: pointer;
+        font-size: 30px;
+        transition: all 1s;
+
 
     }
 
- .text-on tspan{
-     font-family:helvetica;
-        fill: $blue;
-        stroke: transparent;
-     
-        &:hover{
-           
-            cursor:pointer;
-        }
+}
 
+.text-on tspan {
+    font-family: helvetica;
+    fill: $blue;
+    stroke: transparent;
+
+    &:hover {
+
+        cursor: pointer;
     }
 
+}
 
-    .text-off {
-        fill: transparent;
-        stroke: transparent;
 
-    }
+.text-off {
+    fill: transparent;
+    stroke: transparent;
+
+}
 
 
 svg.cloud {
 
     width: 75%;
     height: 75%;
-    max-width:75%;
+    max-width: 75%;
     height: auto;
-    
 
 }
 
 
-    .clouds {
-        fill: none;
-        stroke-width: 3.6;
-        stroke: $blue;
+svg.cloud-service {
 
-    }
+    width: 15%;
+    height: 15%;
+    max-width: 15%;
+    height: auto;
+
+}
 
 
 
-    .drops{
+
+
+
+.clouds {
+    fill: none;
+    stroke-width: 3.6;
+    stroke: $blue;
+
+
+}
+
+
+
+.drops {
     stroke: transparent;
     fill: none;
-    stroke-width:3.6;
-    transform:scale(0.9);
+    stroke-width: 3.6;
+    transform: scale(0.9);
 }
 
 
-.big-speaker{
-    transform:scale(0.90) translateY(60px);
+.big-speaker {
+    transform: scale(0.90) translateY(60px);
 }
-.sync{
-    transform:scale(0.90) translateX(60px) translateY(60px);
+
+.sync {
+    transform: scale(0.90) translateX(60px) translateY(60px);
 }
 
 
@@ -155,13 +161,12 @@ svg.cloud {
 .mixing-svg,
 .mixtech-svg,
 .consulting-svg,
-.soundDesign-svg
+.soundDesign-svg {
+    stroke: black;
 
-{
-    stroke:black;
-    &:hover{
-        stroke:$blue;
-        cursor:pointer;
+    &:hover {
+        stroke: $blue;
+        cursor: pointer;
     }
 
 
@@ -174,74 +179,94 @@ svg.cloud {
 
 svg.speaker-comp,
 svg.live-master-speaker,
-{
+    {
     width: 50%;
-   height:50%;
-   max-width:50%;
-   height:auto;
+    height: 50%;
+    max-width: 50%;
+    height: auto;
 
 }
 
 svg.consulting-soundDesign,
-svg.mixes{
+svg.mixes {
     width: 60%;
-   height: 60%;
-   max-width:60%;
-   height:auto;
+    height: 60%;
+    max-width: 60%;
+    height: auto;
 
 }
 
-svg.mixes{
- transform: translateY(-60px) translateX(20px) ;
+svg.mixes {
+    transform: translateY(-60px) translateX(20px);
 }
 
 
 
 
 .wheel {
-transform-origin: 230.69629669px 323.29627227783203px;
-  -webkit-animation: rotate-center 1s linear infinite;
-  animation: rotate-center 1s linear infinite;
+    transform-origin: 230.69629669px 323.29627227783203px;
+    -webkit-animation: rotate-center 1s linear infinite;
+    animation: rotate-center 1s linear infinite;
 }
 
 
 .screen {
-fill: #EDEDED;
--webkit-animation: colorchange 20s linear infinite;
-  animation: colorchange 5s linear infinite;
+    fill: #EDEDED;
+    -webkit-animation: colorchange 20s linear infinite;
+    animation: colorchange 5s linear infinite;
 }
 
 
 
-@keyframes colorchange
-    {
-      0%   {fill:  #EDEDED;}
-      50%  {fill: $lightblue;}
-         80% {fill: rgba(204,253,212, 0.6);}
-             100%   {fill:  #EDEDED;}
-
+@keyframes colorchange {
+    0% {
+        fill: #EDEDED;
     }
 
-    @-webkit-keyframes colorchange
-    {
-     0%   {fill:  #EDEDED;}
-      50%  {fill: $lightblue;}
-    80% {fill: rgba(204,253,212, 0.6);}
-      100%   {fill:  #EDEDED;}
-
+    50% {
+        fill: $lightblue;
     }
+
+    80% {
+        fill: rgba(204, 253, 212, 0.6);
+    }
+
+    100% {
+        fill: #EDEDED;
+    }
+
+}
+
+@-webkit-keyframes colorchange {
+    0% {
+        fill: #EDEDED;
+    }
+
+    50% {
+        fill: $lightblue;
+    }
+
+    80% {
+        fill: rgba(204, 253, 212, 0.6);
+    }
+
+    100% {
+        fill: #EDEDED;
+    }
+
+}
 
 
 @keyframes rotate-center {
-  0% {
-   transform: rotate(0);
-    transform: rotate(0);
-  }
+    0% {
+        transform: rotate(0);
+        transform: rotate(0);
+    }
 
-  100% {
-   transform: rotate(360deg );
-    transform: rotate(360deg);
-  }
+    100% {
+        transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -253,13 +278,14 @@ fill: #EDEDED;
 
 @keyframes slidein {
 
-  0% {
-   transform: translateX(0px);
-    transform: translateX(0px);
-  }
-  100% {
-   transform: translateX(150px);
-  }
+    0% {
+        transform: translateX(0px);
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(150px);
+    }
 }
 
 
@@ -267,14 +293,15 @@ fill: #EDEDED;
 
 @keyframes slidein-other {
 
-  0% {
+    0% {
 
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(-150px);
+        transform: translateX(0px);
+    }
 
-  }
+    100% {
+        transform: translateX(-150px);
+
+    }
 }
 
 
@@ -289,43 +316,43 @@ fill: #EDEDED;
 //   animation-fill-mode:forwards;
 // }
 
-.cloud-moves-2{
-  animation: slidein 14s -6s alternate infinite linear;
-  -webkit-animation: slidein 14s -6s alternate infinite linear;
+.cloud-moves-2 {
+    animation: slidein 14s -6s alternate infinite linear;
+    -webkit-animation: slidein 14s -6s alternate infinite linear;
 }
 
 .cloud-moves {
-  animation: slidein 13s  -2s alternate infinite linear;
-  -webkit-animation: slidein 13s  -2s alternate infinite linear;
+    animation: slidein 13s -2s alternate infinite linear;
+    -webkit-animation: slidein 13s -2s alternate infinite linear;
 }
 
-.cloud-moves-4{
+.cloud-moves-4 {
     animation: slidein-other 16s -5s alternate infinite linear;
     -webkit-animation: slidein-other 16s -5s alternate infinite linear;
 }
 
 
-.cloud-moves-5{
+.cloud-moves-5 {
     animation: slidein-other 20s -6s alternate infinite linear;
-   -webkit-animation: slidein-other 20s -6s alternate infinite linear;
+    -webkit-animation: slidein-other 20s -6s alternate infinite linear;
 }
 
-.cloud-moves-6{
+.cloud-moves-6 {
     animation: slidein 18s -5s alternate infinite linear;
     -webkit-animation: slidein 18s -5s alternate infinite linear;
 }
 
 
-.cloud-moves-7{
+.cloud-moves-7 {
     animation: slidein-other 17s -4s alternate infinite linear;
     -webkit-animation: slidein-other 17s -4s alternate infinite linear;
 }
 
 
-.logo-wrapper{
-  width:60%;
-  height:60%;
-  max-width: 60%;
+.logo-wrapper {
+    width: 60%;
+    height: 60%;
+    max-width: 60%;
 }
 
 .logo {
@@ -402,7 +429,7 @@ fill: #EDEDED;
 .eye-left {
     transform-origin: 31px 29px 4px;
     animation: twink 5s alternate infinite ease-in;
-     -webkit-animation: twink 5s alternate infinite ease-in;
+    -webkit-animation: twink 5s alternate infinite ease-in;
 }
 
 
@@ -411,7 +438,7 @@ fill: #EDEDED;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: dash 2s linear alternate forwards;
-   -webkit-animation: dash 2s linear alternate forwards;
+    -webkit-animation: dash 2s linear alternate forwards;
 
 }
 
@@ -421,33 +448,33 @@ fill: #EDEDED;
     stroke-dashoffset: 1000;
     animation: dash 4s -2s linear infinite;
 
-   -webkit-animation: dash 4s -2s linear infinite;
+    -webkit-animation: dash 4s -2s linear infinite;
 }
 
 
 
-.pencil{
+.pencil {
     animation: write 1s -6s linear infinite;
-   animation: write 1s -6s linear infinite;
+    animation: write 1s -6s linear infinite;
 }
 
 
-.mix-needles{
+.mix-needles {
 
     animation: volume 1s -6s linear infinite;
-    stroke-width:1.6;
+    stroke-width: 1.6;
 }
 
-.lightButton{
+.lightButton {
 
     animation: blink 4s -1s ease-in infinite;
-    stroke-width:1.6;
+    stroke-width: 1.6;
 }
 
 
 
-.drops-go-down{
+.drops-go-down {
 
-  animation: slidedown 2s normal forwards ease-in;
+    animation: slidedown 2s normal forwards ease-in;
 
 }

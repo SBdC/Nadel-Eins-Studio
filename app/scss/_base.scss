@@ -80,9 +80,12 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
 
+
 }
 
-
+.contact-desk-wrapper{
+           display:none;
+        }
 
 
 /*--------------------------------------------------------------
@@ -139,7 +142,7 @@ button {
             }
         }
 
-       
+
     }
 }
 
@@ -245,6 +248,8 @@ header {
         right: 15%;
         top: 10px;
         @extend %icon-cloud-style;
+        height: calc(113px);
+        width: calc(178px);
         animation: appear 2s forwards;
 
         p {
@@ -287,39 +292,38 @@ header {
 
 
 .slogan {
-   
-    z-index:1;
+
+    background-color: $black;
+
+    z-index: 1;
+
     .quote {
         text-align: center;
-        padding: 70px 25px 120px;
         color: white;
-        margin-top: 20px;
-
-        background-color: $black;
-        font-weight:400;
+        font-weight: 400;
         line-height: 80px;
     }
 
-  //   .wave{
-  //       margin-top:-580px;
-  //       top:20%;
+    //   .wave{
+    //       margin-top:-580px;
+    //       top:20%;
 
 
 
-  
-  // #line-wave{
-  //   opacity:0.1;
-           
-  //               stroke-dasharray: 1000;
-  //   stroke-dashoffset: 1000;
-  //   animation: dash 4s -2s linear infinite;
 
-  //  -webkit-animation: dashi 4s -2s linear infinite;
+    // #line-wave{
+    //   opacity:0.1;
 
-  //       }
+    //               stroke-dasharray: 1000;
+    //   stroke-dashoffset: 1000;
+    //   animation: dash 4s -2s linear infinite;
 
-       
-  //   }
+    //  -webkit-animation: dashi 4s -2s linear infinite;
+
+    //       }
+
+
+    //   }
 }
 
 
@@ -338,14 +342,16 @@ button.viewLess {
     float: right;
 
 
- 
+
 }
 
 /*--------------------------------------------------------------
 sections
 --------------------------------------------------------------*/
 section {
+    margin: 0;
     padding: 20px 0;
+    border-top: 3px solid $black;
 
     .staff-text-wrapper,
     .about-text-wrapper,
@@ -364,15 +370,16 @@ About and co-work
 --------------------------------------------------------------*/
 .about {
 
-   
+
     padding: 50px 0;
-    margin-top: -80px;
+
 
     .about-text-wrapper {
 
-       padding-bottom: 80px;
+        padding-bottom: 80px;
+
         p {
-            background-color: white;
+            color: $text;
             padding: 10px;
             border-radius: 20px;
             margin-bottom: -20px;
@@ -399,20 +406,25 @@ About and co-work
 co-work
 --------------------------------------------------------------*/
 .co-work {
-    background-color: $black;
+    padding: 50px 0;
 
-    p {
-        color: white;
-        padding: 10px;
-        border-radius: 20px;
-        margin-bottom: -20px;
+    .co-work-text-wrapper {
+
+        padding-bottom: 80px;
+
+        p {
+            color: $text;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: -20px;
+        }
+
+        h2 {
+            @extend %section-title;
+
+        }
+
     }
-
-    h2 {
-        @extend %section-title;
-    }
-
-
 
 
 }
@@ -422,56 +434,59 @@ co-work
 staff
 --------------------------------------------------------------*/
 .staff {
-    background-color: $lightgrey;
-    padding-bottom: 60px;
 
 
-    p {
-        color: $text;
-        padding: 10px;
-        border-radius: 20px;
-        margin-bottom: -25px;
-    }
+    padding: 50px 0;
 
-    .staff-pics {
+    .staff-text-wrapper {
+        padding-bottom: 80px;
 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
+        p {
+            color: $text;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: -25px;
+        }
 
-        margin-top: 30px;
+        .staff-pics {
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            margin-top: 30px;
 
 
 
+            figure.staff-pic {
 
+                margin: 40px 15px;
 
-        figure.staff-pic {
+            }
 
-            margin: 40px 5px;
+            figure.staff-pic img {
+
+                width: 120px;
+                height: auto;
+                border-radius: 100%;
+                padding: 0 15px;
+
+            }
+
+            .staff-img-text {
+                font-size: 0.8em;
+                width: 140px;
+            }
 
         }
 
-        figure.staff-pic img {
-
-            width: 120px;
-            border-radius: 100%;
-
-            padding: 0 15px;
-
+        h2 {
+            @extend %section-title;
         }
 
-        .staff-img-text {
-            font-size: 0.8em;
-            width: 140px;
-        }
 
     }
-
-    h2 {
-        @extend %section-title;
-    }
-
 
 
 }
@@ -484,10 +499,10 @@ staff
 slider
 --------------------------------------------------------------*/
 
-.slideshow-wrapper{
-   
-    padding-top:100px;
-    padding-bottom:80px;
+.slideshow-wrapper {
+
+    padding-top: 100px;
+    padding-bottom: 80px;
 
 }
 
@@ -558,21 +573,21 @@ slider
 
 /* Slideshow container */
 .slideshow-container {
-    position: relative; 
+    position: relative;
     max-width: 100vw;
     margin: 0;
     padding: 0;
 }
 
-.image-slider{
+.image-slider {
 
-    padding:0;
-     margin: 0;
+    padding: 0;
+    margin: 0;
 
 }
 
 .image-slider img {
-  
+
     width: 100%;
     height: auto;
     cursor: zoom-in;
@@ -594,7 +609,7 @@ slider
 .prev {
     cursor: pointer;
     position: absolute;
-    top:55%;
+    top: 55%;
     color: $blue;
     font-size: 1em;
     transition: 1s ease;
@@ -619,12 +634,13 @@ slider
 
 .prev span,
 .next span {
-   
+
     border-radius: 100%;
     padding: 5px 8px;
     border: 1px solid $blue;
-    &:hover{
-        background-color:white;
+
+    &:hover {
+        background-color: white;
     }
 
 }
@@ -654,7 +670,7 @@ slider
 .dots-wrapper {
     text-align: center;
     margin: 30px;
-   
+
 }
 
 .dots {
@@ -690,12 +706,18 @@ slider
 services
 --------------------------------------------------------------*/
 .services {
-    padding-top: 40px;
 
-  
+    position: relative;
+    padding: 50px 0;
+
+    a{
+        text-decoration: underline;
+    }
+
     h3 {
         text-align: center;
         margin: 0;
+        color: $blue;
     }
 
     .service {
@@ -718,7 +740,7 @@ services
 
     .icon {
         @extend %icon-cloud-style;
-        margin-bottom:10px;
+        margin-bottom: 10px;
     }
 
     button {
@@ -728,6 +750,7 @@ services
     h2 {
         @extend %section-title;
         color: $black;
+
     }
 
     article {
@@ -750,9 +773,13 @@ services
 }
 
 .music {
-    padding-top: 5em;
+    padding: 50px 0;
 
-    // background-color: $lightgrey;
+    h2 {
+        @extend %section-title;
+        color: $black;
+    }
+
     .cards {
         list-style: none;
         text-align: center;
@@ -768,23 +795,34 @@ services
 
         @extend %box;
 
-        h3 {
-            color: $blue;
-            line-height: 30px;
-            font-weight: 400;
-            margin-top: 0px;
-        }
-
-        h3:nth-of-type(2n) {
-            color: $text;
-            font-style: italic;
-            font-weight: 400;
-            margin-top: -10px;
+        .music-info {
+            order: 2;
         }
 
         p {
-            margin-top: -10px;
+            color: $blue;
+            font-weight: 700;
+            margin-bottom: -10px;
+            text-transform: uppercase;
+
         }
+
+        p:nth-of-type(2) {
+            color: $text;
+            font-style: italic;
+            font-weight: 400;
+
+        }
+
+
+        p:last-of-type {
+            color: $text;
+
+            font-weight: 400;
+            text-transform: capitalize;
+
+        }
+
 
 
 
@@ -810,11 +848,15 @@ services
 }
 
 .prices {
+
+
     background-color: $black;
-    padding: 40px 0;
+     position: relative;
+    padding: 50px 0;
 
 
     h2 {
+        @extend %section-title;
         color: white;
     }
 
@@ -838,12 +880,18 @@ services
         border-top: 1px solid $lightgrey;
     }
 
+    .empty-line{
+        
+        height:36px;
+    }
 
-
+    p.price-disclamer{
+        padding-top:60px;
+        border:none;
+    }
     .icon {
         @extend %icon-cloud-style;
-        height: 90px;
-        width: 90px;
+
         display: block;
         margin: 0 auto;
     }
@@ -877,15 +925,18 @@ services
 
 
 /*--------------------------------------------------------------
-co-work
+contact
 --------------------------------------------------------------*/
 .contact {
+    padding: 50px 0;
 
 
     .call-write {
 
+        padding-bottom: 80px;
+
         text-align: center;
-        margin-top:20px;
+        margin-top: 20px;
 
         span:first-child {
             font-size: 1.8em;
@@ -994,6 +1045,32 @@ Footer
 
 
 
+.services,
+.contact,
+.co-work,
+.music,
+.about,
+.services,
+.staff {
+
+
+    .icon-cloud-line {
+
+        display: none;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 561px) and (max-width:750px) {
 
@@ -1030,12 +1107,12 @@ Footer
 
     }
 
-     #next,
-      #prev {
-            
-            font-size: 1.5em;
-            top: calc(50% + 20px);
+    #next,
+    #prev {
 
-        }
+        font-size: 1.5em;
+        top: calc(50% + 20px);
+
+    }
 
 }

@@ -16,11 +16,11 @@
             height: 100vh;
         }
 
-       
 
-       #next,
+
+        #next,
         #prev {
-            
+
             font-size: 2em;
             top: calc(50% - 50px);
         }
@@ -28,23 +28,33 @@
         #prev span,
         #next span {
 
-           
+
             padding: 9px 16px;
 
 
         }
 
-        #navi{
-              li {
-                font-size:25px;
-                text-align:center;
-                 line-height: 80px;
+        #navi {
+            li {
+                font-size: 25px;
+                text-align: center;
+                line-height: 80px;
 
             }
         }
 
+        #service-recording,
+        #service-mastering,
+        #service-mixing,
+        #service-sound-design,
+        #service-live-prep,
+        #service-consulting,
+        #service-live-tech {
+            margin-bottom: -80px;
+            margin-top: 40px;
+        }
 
-       
+
 
     }
 
@@ -86,47 +96,91 @@ header desktop
             position: fixed;
             height: 100vh;
             transform: rotate(180deg);
-           padding-right:80px;
-           border-left:3px solid black;
+            padding-right: 80px;
+            border-left: 3px solid black;
             background-color: white;
-           
+
             z-index: 1;
 
 
         }
 
         .title-desktop {
-           
+
             position: fixed;
             text-align: right;
             line-height: 20px;
             animation: appear 2s forwards;
             white-space: nowrap;
-            right:0;
-            bottom:100px;
+            right: 0;
+            bottom: 100px;
         }
+
+
 
 
         .open {
             margin: 0;
             width: 100vw;
             height: 100vh;
-              display:flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-              
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
 
 
             li {
-                font-size:2.2em;
-                text-align:center;
-                 line-height: 80px;
+                font-size: 1.8em;
+                text-align: center;
+                line-height: 80px;
 
 
             }
         }
-      
+
+
+        .contact-desk-wrapper {
+            position: relative;
+            display: block;
+
+            .contact-desk {
+
+                position: fixed;
+
+                bottom: 0;
+                left: 13px;
+                z-index: 98;
+                cursor: pointer;
+
+                p {
+                    border: 2px solid $blue;
+                    padding: 0 10px;
+                    line-height: 40px;
+                    text-align: center;
+                    color: $text;
+
+                    &:hover {
+                        background-color: $blue;
+                        color: white;
+                    }
+
+                }
+
+                p:first-child {
+                    font-size: 1.8em;
+                }
+
+                p:last-child {
+                    margin-top: -30px;
+                    font-size: 2.5em;
+
+                }
+
+            }
+
+        }
+
         .header-for-mobile {
             display: none;
         }
@@ -136,17 +190,18 @@ header desktop
             margin: 10px auto;
             width: 80vw;
 
-            
+
 
 
             .grid-container {
-                
+
                 display: grid;
                 grid-template-columns: repeat(16, 1fr);
                 grid-template-rows: auto;
                 grid-gap: 0;
-             
-              
+                margin-bottom: 30px;
+
+
 
                 .title {
                     display: flex;
@@ -170,7 +225,7 @@ header desktop
                 .item2 {
                     // background-color:green;
                     display: flex;
-                    grid-column: 4/7;
+                    grid-column: 5/8;
                     grid-row: 1/2;
                     justify-content: center;
                     align-items: flex-end;
@@ -183,14 +238,14 @@ header desktop
                     grid-row: 1/4;
                     justify-content: center;
                     align-items: flex-start;
-               
+
 
                 }
 
                 .item4 {
 
                     display: flex;
-                    grid-column: 11/14;
+                    grid-column: 10/13;
                     grid-row: 1/2;
                     justify-content: center;
                     align-items: flex-start;
@@ -207,10 +262,10 @@ header desktop
 
                 .item6 {
                     display: flex;
-                    grid-column:12/15;
-                    grid-row: 2/3;
-                    justify-content: center;
-                    align-items: flex-start;
+                    grid-column: 12/15;
+                    grid-row: 1/2;
+                    justify-content: flex-start;
+                    align-items: flex-end;
                 }
 
                 .item7 {
@@ -223,13 +278,13 @@ header desktop
 
                 .item8 {
                     display: flex;
-                    grid-column: 9/12;
+                    grid-column: 8/11;
                     grid-row: 2/3;
                     justify-content: center;
                     align-items: flex-end;
                 }
 
-              
+
 
                 .item10 {
                     display: flex;
@@ -244,7 +299,7 @@ header desktop
                     grid-column: 11/17;
                     grid-row: 3/4;
                     justify-content: flex-start;
-                    align-items:center;
+                    align-items: center;
                 }
 
                 .item12 {
@@ -253,7 +308,7 @@ header desktop
                     grid-row: 4/5;
                     justify-content: center;
                     align-items: flex-start;
-                    
+
 
                 }
 
@@ -261,27 +316,18 @@ header desktop
                     display: flex;
                     grid-column: 9/17;
                     grid-row: 4/5;
-                  
+
                     align-items: flex-start;
-                   
+
                 }
             }
         }
 
-        .slogan {
-            background-attachment: fixed;
-
-            h2 {
-
-                margin-left: 0;
-            }
-
-
-        }
+        .slogan {}
 
         #quote {
 
-            padding: 150px 0;
+            // padding: 70px 0;
 
 
 
@@ -320,6 +366,7 @@ general styles
                 font-size: 2.7em;
                 margin-left: -20px;
             }
+
             .staff-text-wrapper,
             .prices-text-wrapper,
             .about-text-wrapper,
@@ -327,7 +374,7 @@ general styles
 
                 padding: 0 150px 100px;
                 margin: 0 auto;
-                max-width: 1400px;
+
             }
 
             .contact-text-wrapper {
@@ -339,7 +386,7 @@ general styles
                 text-align: center;
             }
 
-            
+
 
 
         }
@@ -364,18 +411,10 @@ general styles
 
         }
 
-    
 
-        .staff .staff-pics figure.staff-pic img{
-            width:200px;
 
-        }
 
-         .staff .staff-pics figure.staff-pic {
-           margin: 40px;
 
-        }
- 
 
         /*--------------------------------------------------------------
  slide-show
@@ -390,44 +429,44 @@ general styles
             margin-left: 2px;
         }
 
-    
-     
+
+
         .prev {
-            
-         
+
+
             padding-right: 20px;
-            left:-2%;
-            
+            left: -2%;
+
         }
 
 
         .next {
-          
-           padding-left: 20px;
-           right:-2%;
-           
+
+            padding-left: 20px;
+            right: -2%;
+
         }
 
         .next,
         .prev {
-            
+
             font-size: 3em;
-    
+
             top: calc(50% - 50px);
         }
 
         .prev span,
         .next span {
 
-           
+
             padding: 9px 18px;
 
 
         }
 
         .dots {
-            width:1em;
-            height:1em;
+            width: 1em;
+            height: 1em;
         }
 
         .img-text-reveal p {
@@ -441,11 +480,40 @@ general styles
         /*--------------------------------------------------------------
  services
  --------------------------------------------------------------*/
+
+
+
+        .services,
+        .contact,
+        .co-work,
+        .music,
+        .about,
+        .prices,
+        .staff {
+
+            position: relative;
+
+            .icon-cloud-line {
+
+                display: block;
+                margin: 0;
+                padding: 0;
+                height: calc(113px);
+                width: calc(178px);
+                background-position: 50% 50%;
+                position: absolute;
+
+                top: 30px;
+                left: 140px;
+
+            }
+
+
+        }
+
+
         .services {
 
-            margin-bottom: 50px;
-            margin: 0 auto;
-            max-width: 1400px;
 
             .service-header-wrap-left,
             .service-header-wrap-other,
@@ -459,7 +527,6 @@ general styles
 
 
 
-
             .viewLess {
                 margin: 20px auto;
             }
@@ -469,23 +536,22 @@ general styles
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
+
             }
 
 
             .service {
                 display: flex;
                 flex-direction: column;
-                padding: 4% 6%;
-                justify-content: center;
+                padding: 4% 4%;
                 flex: 1 1 calc(25% - 20px);
-                    min-height: 460px;
-                    min-width: 300px;
-                    margin: 10px;
+                min-height: 460px;
+                min-width: 300px;
+
 
 
 
             }
-
 
 
             .service-header-wrap-other {
@@ -500,34 +566,39 @@ general styles
 
         }
 
+        .service:nth-child(2n) {
+
+            margin-top: 100px;
+        }
+
+        .service:last-of-type {
+
+            margin-top: -50px;
+        }
 
         /*--------------------------------------------------------------
 prices music 
  --------------------------------------------------------------*/
 
 
-
         .prices-container {
-
 
             .price {
                 display: flex;
                 flex-direction: column;
-                 padding: 4% 6%;
-                    min-height: 460px;
-                    min-width: 300px;
+                padding: 4% 6%;
+                min-height: 460px;
+                min-width: 300px;
                 justify-content: flex-start;
-                align-items:center;
-               flex: 1 1 calc(25% - 20px);
-                  margin: 10px;
+                align-items: center;
+                flex: 1 1 calc(25% - 20px);
+                margin: 10px;
 
             }
         }
 
         .music {
-            margin: 0 auto;
-            max-width: 1400px;
-            margin-bottom: 50px;
+
 
             .cards {
                 display: flex;
@@ -538,40 +609,45 @@ prices music
                 .card {
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: flex-start;
                     flex: 1 1 calc(25% - 20px);
-                     padding: 4% 6%;
+                    padding: 6% 6%;
                     min-height: 460px;
                     min-width: 300px;
                     margin: 10px;
-
-                    padding-top: 80px;
-
-
+                    align-items: center;
 
 
                     .music-info {
+
                         display: flex;
                         flex-direction: column;
-                        flex: 1 1;
-                        justify-items: flex-end;
+                        height: 100%;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                    }
+
+                    .player-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        height: 100%;
+                        margin-top: -10px;
                         margin-bottom: 20px;
-                        margin-top: -40px;
 
                     }
 
 
+                    iframe.musicPlayer {
+                        border: 0;
+                        width: 250px;
+                        height: 250px;
+                        margin: 0 auto;
 
-                }
+                    }
 
 
-                iframe.musicPlayer {
-                    border: 0;
-                    width: 250px;
-                    height: 250px;
-                    margin: 0 auto;
-                    display: flex;
-                    justify-content: flex-end;
                 }
 
 
@@ -587,8 +663,5 @@ prices music
         footer.theEnd .footer-content {
             text-align: left;
 
-        }
-
-
-    }
+        }   }
 }

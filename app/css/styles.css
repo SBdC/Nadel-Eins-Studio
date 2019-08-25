@@ -21,23 +21,22 @@
   padding: 0; }
 
 header .icon-cloud-line, .services .icon, .prices .icon {
-  height: 113px;
-  width: 178px;
+  height: calc(113px *1.2);
+  width: calc(178px *1.2);
   background-position: 50% 50%;
-  background-size: cover;
+  background-size: contain;
   margin: 0;
   padding: 0; }
 
 .services .service, .music .card {
-  border: #E1E4E8 solid 2px;
-  background-color: white;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 10% 4%;
   min-width: 320px; }
 
-.about .about-text-wrapper h2, .co-work h2, .staff h2, .services h2, .contact h2 {
+.about .about-text-wrapper h2, .co-work .co-work-text-wrapper h2, .staff .staff-text-wrapper h2, .services h2, .music h2, .prices h2, .contact h2 {
+  margin: 80px auto;
   text-transform: uppercase;
-  color: #449AFF; }
+  color: #000c2b; }
 
 section .staff-text-wrapper,
 section .about-text-wrapper,
@@ -91,7 +90,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #449AFF; }
+  color: #1b1b1c; }
 
 h1,
 h2,
@@ -103,7 +102,7 @@ h6 {
 
 h1 {
   color: #1b1b1c;
-  font-size: 3em;
+  font-size: 2.6em;
   letter-spacing: 1px;
   font-weight: 300; }
 
@@ -116,7 +115,7 @@ h2 {
 
 h3 {
   color: #1b1b1c;
-  font-size: 1.6em;
+  font-size: 1.8em;
   font-weight: 400; }
 
 /*--------------------------------------------------------------
@@ -178,6 +177,9 @@ body {
   background-size: 1300px;
   background-repeat: repeat;
   background-attachment: fixed; }
+
+.contact-desk-wrapper {
+  display: none; }
 
 /*--------------------------------------------------------------
 nav
@@ -294,6 +296,8 @@ header .icon-cloud-line {
   position: absolute;
   right: 15%;
   top: 10px;
+  height: calc(113px);
+  width: calc(178px);
   animation: appear 2s forwards; }
   header .icon-cloud-line p {
     margin-left: 40px;
@@ -319,13 +323,11 @@ header .banner {
       max-width: 200px; }
 
 .slogan {
+  background-color: #000c2b;
   z-index: 1; }
   .slogan .quote {
     text-align: center;
-    padding: 70px 25px 120px;
     color: white;
-    margin-top: 20px;
-    background-color: #000c2b;
     font-weight: 400;
     line-height: 80px; }
 
@@ -343,18 +345,19 @@ button.viewLess {
 sections
 --------------------------------------------------------------*/
 section {
-  padding: 20px 0; }
+  margin: 0;
+  padding: 20px 0;
+  border-top: 3px solid #000c2b; }
 
 /*--------------------------------------------------------------
 About and co-work
 --------------------------------------------------------------*/
 .about {
-  padding: 50px 0;
-  margin-top: -80px; }
+  padding: 50px 0; }
   .about .about-text-wrapper {
     padding-bottom: 80px; }
     .about .about-text-wrapper p {
-      background-color: white;
+      color: #1b1b1c;
       padding: 10px;
       border-radius: 20px;
       margin-bottom: -20px; }
@@ -368,39 +371,43 @@ About and co-work
 co-work
 --------------------------------------------------------------*/
 .co-work {
-  background-color: #000c2b; }
-  .co-work p {
-    color: white;
-    padding: 10px;
-    border-radius: 20px;
-    margin-bottom: -20px; }
+  padding: 50px 0; }
+  .co-work .co-work-text-wrapper {
+    padding-bottom: 80px; }
+    .co-work .co-work-text-wrapper p {
+      color: #1b1b1c;
+      padding: 10px;
+      border-radius: 20px;
+      margin-bottom: -20px; }
 
 /*--------------------------------------------------------------
 staff
 --------------------------------------------------------------*/
 .staff {
-  background-color: #E1E4E8;
-  padding-bottom: 60px; }
-  .staff p {
-    color: #1b1b1c;
-    padding: 10px;
-    border-radius: 20px;
-    margin-bottom: -25px; }
-  .staff .staff-pics {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-top: 30px; }
-    .staff .staff-pics figure.staff-pic {
-      margin: 40px 5px; }
-    .staff .staff-pics figure.staff-pic img {
-      width: 120px;
-      border-radius: 100%;
-      padding: 0 15px; }
-    .staff .staff-pics .staff-img-text {
-      font-size: 0.8em;
-      width: 140px; }
+  padding: 50px 0; }
+  .staff .staff-text-wrapper {
+    padding-bottom: 80px; }
+    .staff .staff-text-wrapper p {
+      color: #1b1b1c;
+      padding: 10px;
+      border-radius: 20px;
+      margin-bottom: -25px; }
+    .staff .staff-text-wrapper .staff-pics {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 30px; }
+      .staff .staff-text-wrapper .staff-pics figure.staff-pic {
+        margin: 40px 15px; }
+      .staff .staff-text-wrapper .staff-pics figure.staff-pic img {
+        width: 120px;
+        height: auto;
+        border-radius: 100%;
+        padding: 0 15px; }
+      .staff .staff-text-wrapper .staff-pics .staff-img-text {
+        font-size: 0.8em;
+        width: 140px; }
 
 /*--------------------------------------------------------------
 slider
@@ -559,10 +566,14 @@ slider
 services
 --------------------------------------------------------------*/
 .services {
-  padding-top: 40px; }
+  position: relative;
+  padding: 50px 0; }
+  .services a {
+    text-decoration: underline; }
   .services h3 {
     text-align: center;
-    margin: 0; }
+    margin: 0;
+    color: #449AFF; }
   .services .service-header-wrap-right {
     float: right; }
   .services .service-header-wrap-left {
@@ -584,7 +595,9 @@ services
     margin: 2px 5px 20px; }
 
 .music {
-  padding-top: 5em; }
+  padding: 50px 0; }
+  .music h2 {
+    color: #000c2b; }
   .music .cards {
     list-style: none;
     text-align: center;
@@ -594,18 +607,21 @@ services
     display: inline-block;
     width: 350px;
     padding-top: 40px; }
-    .music .card h3 {
+    .music .card .music-info {
+      order: 2; }
+    .music .card p {
       color: #449AFF;
-      line-height: 30px;
-      font-weight: 400;
-      margin-top: 0px; }
-    .music .card h3:nth-of-type(2n) {
+      font-weight: 700;
+      margin-bottom: -10px;
+      text-transform: uppercase; }
+    .music .card p:nth-of-type(2) {
       color: #1b1b1c;
       font-style: italic;
+      font-weight: 400; }
+    .music .card p:last-of-type {
+      color: #1b1b1c;
       font-weight: 400;
-      margin-top: -10px; }
-    .music .card p {
-      margin-top: -10px; }
+      text-transform: capitalize; }
     .music .card iframe.musicPlayer {
       border: none;
       width: 220px;
@@ -621,7 +637,8 @@ services
 
 .prices {
   background-color: #000c2b;
-  padding: 40px 0; }
+  position: relative;
+  padding: 50px 0; }
   .prices h2 {
     color: white; }
   .prices h3 {
@@ -636,9 +653,12 @@ services
     padding: 5px; }
   .prices p:first-of-type {
     border-top: 1px solid #E1E4E8; }
+  .prices .empty-line {
+    height: 36px; }
+  .prices p.price-disclamer {
+    padding-top: 60px;
+    border: none; }
   .prices .icon {
-    height: 90px;
-    width: 90px;
     display: block;
     margin: 0 auto; }
   .prices .readMore {
@@ -657,22 +677,25 @@ services
     margin: 30px auto 60px; }
 
 /*--------------------------------------------------------------
-co-work
+contact
 --------------------------------------------------------------*/
-.contact .call-write {
-  text-align: center;
-  margin-top: 20px; }
-  .contact .call-write span:first-child {
-    font-size: 1.8em; }
-  .contact .call-write span:last-child {
-    font-size: 2.5em; }
-  .contact .call-write a {
-    color: #1b1b1c;
-    padding: 10px;
-    border-radius: 20px;
-    display: inline-block; }
-    .contact .call-write a:hover {
-      color: red; }
+.contact {
+  padding: 50px 0; }
+  .contact .call-write {
+    padding-bottom: 80px;
+    text-align: center;
+    margin-top: 20px; }
+    .contact .call-write span:first-child {
+      font-size: 1.8em; }
+    .contact .call-write span:last-child {
+      font-size: 2.5em; }
+    .contact .call-write a {
+      color: #1b1b1c;
+      padding: 10px;
+      border-radius: 20px;
+      display: inline-block; }
+      .contact .call-write a:hover {
+        color: red; }
 
 /*--------------------------------------------------------------
 Footer
@@ -709,6 +732,15 @@ Footer
         transform: rotate(-90deg); }
       .theEnd .footer-content p:hover {
         cursor: pointer; }
+
+.services .icon-cloud-line,
+.contact .icon-cloud-line,
+.co-work .icon-cloud-line,
+.music .icon-cloud-line,
+.about .icon-cloud-line,
+.services .icon-cloud-line,
+.staff .icon-cloud-line {
+  display: none; }
 
 @media screen and (min-width: 561px) and (max-width: 750px) {
   header .banner {
@@ -753,12 +785,13 @@ Footer
   font-family: helvetica;
   fill: #000c2b;
   stroke: transparent;
-  font-size: 30px; }
+  font-size: 30px;
+  text-transform: uppercase; }
   .text-on-cloud tspan:hover {
-    fill: #449AFF;
+    fill: red;
     cursor: pointer;
-    font-size: 31px;
-    transition: all 2s; }
+    font-size: 30px;
+    transition: all 1s; }
 
 .text-on tspan {
   font-family: helvetica;
@@ -775,6 +808,12 @@ svg.cloud {
   width: 75%;
   height: 75%;
   max-width: 75%;
+  height: auto; }
+
+svg.cloud-service {
+  width: 15%;
+  height: 15%;
+  max-width: 15%;
   height: auto; }
 
 .clouds {
@@ -887,8 +926,8 @@ svg.mixes {
   -webkit-animation: slidein 14s -6s alternate infinite linear; }
 
 .cloud-moves {
-  animation: slidein 13s  -2s alternate infinite linear;
-  -webkit-animation: slidein 13s  -2s alternate infinite linear; }
+  animation: slidein 13s -2s alternate infinite linear;
+  -webkit-animation: slidein 13s -2s alternate infinite linear; }
 
 .cloud-moves-4 {
   animation: slidein-other 16s -5s alternate infinite linear;
@@ -993,7 +1032,16 @@ svg.mixes {
     #navi li {
       font-size: 25px;
       text-align: center;
-      line-height: 80px; } }
+      line-height: 80px; }
+    #service-recording,
+    #service-mastering,
+    #service-mixing,
+    #service-sound-design,
+    #service-live-prep,
+    #service-consulting,
+    #service-live-tech {
+      margin-bottom: -80px;
+      margin-top: 40px; } }
   @media screen and (min-width: 751px) {
     /*--------------------------------------------------------------
 header desktop
@@ -1039,9 +1087,32 @@ header desktop
       align-items: center;
       justify-content: flex-start; }
       .open li {
-        font-size: 2.2em;
+        font-size: 1.8em;
         text-align: center;
         line-height: 80px; }
+    .contact-desk-wrapper {
+      position: relative;
+      display: block; }
+      .contact-desk-wrapper .contact-desk {
+        position: fixed;
+        bottom: 0;
+        left: 13px;
+        z-index: 98;
+        cursor: pointer; }
+        .contact-desk-wrapper .contact-desk p {
+          border: 2px solid #449AFF;
+          padding: 0 10px;
+          line-height: 40px;
+          text-align: center;
+          color: #1b1b1c; }
+          .contact-desk-wrapper .contact-desk p:hover {
+            background-color: #449AFF;
+            color: white; }
+        .contact-desk-wrapper .contact-desk p:first-child {
+          font-size: 1.8em; }
+        .contact-desk-wrapper .contact-desk p:last-child {
+          margin-top: -30px;
+          font-size: 2.5em; }
     .header-for-mobile {
       display: none; }
     .header-for-desktop {
@@ -1052,7 +1123,8 @@ header desktop
         display: grid;
         grid-template-columns: repeat(16, 1fr);
         grid-template-rows: auto;
-        grid-gap: 0; }
+        grid-gap: 0;
+        margin-bottom: 30px; }
         .header-for-desktop .grid-container .title {
           display: flex;
           font-size: 1em;
@@ -1068,7 +1140,7 @@ header desktop
           align-items: flex-start; }
         .header-for-desktop .grid-container .item2 {
           display: flex;
-          grid-column: 4/7;
+          grid-column: 5/8;
           grid-row: 1/2;
           justify-content: center;
           align-items: flex-end; }
@@ -1081,7 +1153,7 @@ header desktop
           align-items: flex-start; }
         .header-for-desktop .grid-container .item4 {
           display: flex;
-          grid-column: 11/14;
+          grid-column: 10/13;
           grid-row: 1/2;
           justify-content: center;
           align-items: flex-start; }
@@ -1094,9 +1166,9 @@ header desktop
         .header-for-desktop .grid-container .item6 {
           display: flex;
           grid-column: 12/15;
-          grid-row: 2/3;
-          justify-content: center;
-          align-items: flex-start; }
+          grid-row: 1/2;
+          justify-content: flex-start;
+          align-items: flex-end; }
         .header-for-desktop .grid-container .item7 {
           display: flex;
           grid-column: 4/7;
@@ -1105,7 +1177,7 @@ header desktop
           align-items: center; }
         .header-for-desktop .grid-container .item8 {
           display: flex;
-          grid-column: 9/12;
+          grid-column: 8/11;
           grid-row: 2/3;
           justify-content: center;
           align-items: flex-end; }
@@ -1132,12 +1204,6 @@ header desktop
           grid-column: 9/17;
           grid-row: 4/5;
           align-items: flex-start; }
-    .slogan {
-      background-attachment: fixed; }
-      .slogan h2 {
-        margin-left: 0; }
-    #quote {
-      padding: 150px 0; }
     /*--------------------------------------------------------------
 general styles
  --------------------------------------------------------------*/
@@ -1162,8 +1228,7 @@ general styles
     section .about-text-wrapper,
     section .co-work-text-wrapper {
       padding: 0 150px 100px;
-      margin: 0 auto;
-      max-width: 1400px; }
+      margin: 0 auto; }
     section .contact-text-wrapper {
       padding-bottom: 60px; }
     section .contact-text-wrapper a {
@@ -1178,10 +1243,6 @@ general styles
         padding: 10px;
         border-radius: 20px;
         display: inline-block; }
-    .staff .staff-pics figure.staff-pic img {
-      width: 200px; }
-    .staff .staff-pics figure.staff-pic {
-      margin: 40px; }
     /*--------------------------------------------------------------
  slide-show
  --------------------------------------------------------------*/
@@ -1213,41 +1274,63 @@ general styles
     /*--------------------------------------------------------------
  services
  --------------------------------------------------------------*/
-    .services {
-      margin-bottom: 50px;
+    .services,
+    .contact,
+    .co-work,
+    .music,
+    .about,
+    .prices,
+    .staff {
+      position: relative; }
+      .services .icon-cloud-line,
+      .contact .icon-cloud-line,
+      .co-work .icon-cloud-line,
+      .music .icon-cloud-line,
+      .about .icon-cloud-line,
+      .prices .icon-cloud-line,
+      .staff .icon-cloud-line {
+        display: block;
+        margin: 0;
+        padding: 0;
+        height: calc(113px);
+        width: calc(178px);
+        background-position: 50% 50%;
+        position: absolute;
+        top: 30px;
+        left: 140px; }
+    .services .service-header-wrap-left,
+    .services .service-header-wrap-other,
+    .services .service-header-wrap-right,
+    .services .service-more-text,
+    .services .service-text-right,
+    .services .service-text-right-dummy {
       margin: 0 auto;
-      max-width: 1400px; }
-      .services .service-header-wrap-left,
-      .services .service-header-wrap-other,
-      .services .service-header-wrap-right,
-      .services .service-more-text,
-      .services .service-text-right,
-      .services .service-text-right-dummy {
-        margin: 0 auto;
-        text-align: left; }
-      .services .viewLess {
-        margin: 20px auto; }
-      .services .service-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center; }
-      .services .service {
-        display: flex;
-        flex-direction: column;
-        padding: 4% 6%;
-        justify-content: center;
-        flex: 1 1 calc(25% - 20px);
-        min-height: 460px;
-        min-width: 300px;
-        margin: 10px; }
-      .services .service-header-wrap-other {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        flex: 1 1;
-        justify-items: flex-start;
-        align-items: flex-end; }
+      text-align: left; }
+    .services .viewLess {
+      margin: 20px auto; }
+    .services .service-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .services .service {
+      display: flex;
+      flex-direction: column;
+      padding: 4% 4%;
+      flex: 1 1 calc(25% - 20px);
+      min-height: 460px;
+      min-width: 300px; }
+    .services .service-header-wrap-other {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1;
+      justify-items: flex-start;
+      align-items: flex-end; }
+    .service:nth-child(2n) {
+      margin-top: 100px; }
+    .service:last-of-type {
+      margin-top: -50px; }
     /*--------------------------------------------------------------
 prices music 
  --------------------------------------------------------------*/
@@ -1261,41 +1344,41 @@ prices music
       align-items: center;
       flex: 1 1 calc(25% - 20px);
       margin: 10px; }
-    .music {
-      margin: 0 auto;
-      max-width: 1400px;
-      margin-bottom: 50px; }
-      .music .cards {
+    .music .cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .music .cards .card {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center; }
-        .music .cards .card {
+        flex-direction: column;
+        justify-content: flex-start;
+        flex: 1 1 calc(25% - 20px);
+        padding: 6% 6%;
+        min-height: 460px;
+        min-width: 300px;
+        margin: 10px;
+        align-items: center; }
+        .music .cards .card .music-info {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          flex: 1 1 calc(25% - 20px);
-          padding: 4% 6%;
-          min-height: 460px;
-          min-width: 300px;
-          margin: 10px;
-          padding-top: 80px; }
-          .music .cards .card .music-info {
-            display: flex;
-            flex-direction: column;
-            flex: 1 1;
-            justify-items: flex-end;
-            margin-bottom: 20px;
-            margin-top: -40px; }
-        .music .cards iframe.musicPlayer {
+          height: 100%;
+          justify-content: flex-start;
+          align-items: center; }
+        .music .cards .card .player-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          height: 100%;
+          margin-top: -10px;
+          margin-bottom: 20px; }
+        .music .cards .card iframe.musicPlayer {
           border: 0;
           width: 250px;
           height: 250px;
-          margin: 0 auto;
-          display: flex;
-          justify-content: flex-end; }
-      .music #loadMore {
-        margin-top: 40px; }
+          margin: 0 auto; }
+    .music #loadMore {
+      margin-top: 40px; }
     footer.theEnd .footer-content {
       text-align: left; } } }
 
