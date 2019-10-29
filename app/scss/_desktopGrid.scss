@@ -3,36 +3,30 @@
     @media screen and (min-width: 751px) and (max-width:1100px) {
 
         h1 {
-            font-size: 2.4em;
+            font-size: 2em;
 
         }
 
         #title-desk {
 
             background-color: white;
+            padding-right: 72px;
         }
 
         #grid-container {
-            height: 100vh;
+            height: 70vh;
+
+            .item3 {
+                grid-row: 1/3;
+                align-items: center;
+            }
+
+            .item12 {
+                justify-items: flex-end;
+            }
         }
 
 
-
-        #next,
-        #prev {
-
-            font-size: 2em;
-            top: calc(50% - 50px);
-        }
-
-        #prev span,
-        #next span {
-
-
-            padding: 9px 16px;
-
-
-        }
 
         #navi {
             li {
@@ -83,6 +77,19 @@ header desktop
         }
 
 
+
+        .cloud-menus {
+
+
+
+            svg {
+                display: block;
+            }
+
+
+        }
+
+
         .wrap-all {
             margin-left: 74px;
 
@@ -112,7 +119,7 @@ header desktop
             line-height: 20px;
             animation: appear 2s forwards;
             white-space: nowrap;
-            right: 0;
+            right: 2px;
             bottom: 100px;
         }
 
@@ -148,8 +155,8 @@ header desktop
 
                 position: fixed;
 
-                bottom: 0;
-                left: 13px;
+                top: 600px;
+                left: 11px;
                 z-index: 98;
                 cursor: pointer;
 
@@ -188,7 +195,7 @@ header desktop
         .header-for-desktop {
             display: block;
             margin: 10px auto;
-            width: 80vw;
+            width: 90vw;
 
 
 
@@ -197,7 +204,7 @@ header desktop
 
                 display: grid;
                 grid-template-columns: repeat(16, 1fr);
-                grid-template-rows: auto;
+                grid-template-rows: 110px 100px auto;
                 grid-gap: 0;
                 margin-bottom: 30px;
 
@@ -235,7 +242,7 @@ header desktop
                     display: flex;
                     padding-top: 36px;
                     grid-column: 7/11;
-                    grid-row: 1/4;
+                    grid-row: 1/3;
                     justify-content: center;
                     align-items: flex-start;
 
@@ -289,7 +296,7 @@ header desktop
                 .item10 {
                     display: flex;
                     grid-column: 1/8;
-                    grid-row: 3/4;
+                    grid-row: 3;
                     justify-content: flex-end;
                     align-items: flex-start;
                 }
@@ -297,7 +304,7 @@ header desktop
                 .item11 {
                     display: flex;
                     grid-column: 11/17;
-                    grid-row: 3/4;
+                    grid-row: 3;
                     justify-content: flex-start;
                     align-items: center;
                 }
@@ -305,7 +312,7 @@ header desktop
                 .item12 {
                     display: flex;
                     grid-column: 1/9;
-                    grid-row: 4/5;
+                    grid-row: 4;
                     justify-content: center;
                     align-items: flex-start;
 
@@ -315,7 +322,7 @@ header desktop
                 .item13 {
                     display: flex;
                     grid-column: 9/17;
-                    grid-row: 4/5;
+                    grid-row: 4;
 
                     align-items: flex-start;
 
@@ -663,5 +670,6 @@ prices music
         footer.theEnd .footer-content {
             text-align: left;
 
-        }   }
+        }
+    }
 }

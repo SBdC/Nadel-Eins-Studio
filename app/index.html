@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/styles.css">
@@ -44,8 +45,8 @@
                     </a>
                 </li>
                 <li class="nav-list">
-                    <a href="#Members">
-                        Members
+                    <a href="#Membership">
+                        Membership
                     </a>
                 </li>
                 <li class="nav-list">
@@ -75,16 +76,16 @@
     <div id="back-to-top" class="icon icon-arrow-up"></div>
     <div id="overlay"></div>
     <div class="title-desk" id="title-desk">
-        <h1 class="title-desktop" id="title"> Nadel Eins Studio Berlin </h1>
-    
+        <a href="/">
+            <h1 class="title-desktop" id="title"> Nadel Eins Studio Berlin </h1>
+        </a>
     </div>
-    <div class="contact-desk-wrapper"> 
-    <div class="contact-desk">
-        <p> &#9742; </p>
-        <p> &#9993; </p> 
-    </div> 
+    <div class="contact-desk-wrapper">
+        <div class="contact-desk">
+            <p> &#9742; </p>
+            <p> &#9993; </p>
+        </div>
     </div>
-    
     <div class="wrap-all">
         <header class="header-for-desktop">
             <div id="grid-container" class="grid-container">
@@ -92,7 +93,7 @@
                     <svg id="theCloud" class="cloud" viewBox="0 0 245 146" xmlns="http://www.w3.org/2000/svg">
                         <g class="cloud-cable">
                             <symbol id="cloud">
-                                <path id="clouds" class="clouds" d="M42.5963 62.6727C20.1756 62.6727 2 80.8785 2 103.3364S20.1756 144 42.5963 144h130.9015c22.4709 0 .8992-73.255-7.194-101.3364C158.2105 14.5823 144.9207 2 122.5 2c-22.4207 0-40.5963 18.2057-40.5963 40.6636 0 22.4329 21.8015-9.6818-.6443-9.6818-22.4207 0-40.5963 18.2057-40.5963 40.6637 0 63.555 56.9082-40.6637 120.5-40.6637 22.4207 0 40.5963 18.2057 40.5963 40.6637 0 22.4328-21.8014-10.9728.6443-10.9728 22.4207 0 40.5963 18.2058 40.5963 40.6637S224.8244 144 202.4037 144" />
+                                <path id="clouds" class="clouds" d="M42.5963 62.6727C20.1756 62.6727 2 80.8785 2 103.3364S20.1756 144 42.5963 144h130.9015c22.4709 0 .8992-73.255-7.194-101.3364C158.2105 14.5823 144.9207 2 122.5 2c-22.4207 0-40.5963 18.2057-40.5963 40.6636 0 22.4329 21.8015-9.6818-.6443-9.6818-22.4207 0-40.5963 18.2057-40.5963 40.6637 0 63.555 56.9082-40.6637 120.5-40.6637 22.4207 0 40.5963 18.2057 40.5963 40.6637 0 22.4328-21.8014-10.9728.6443-10.9728 22.4207 0 40.5963 18.2058 40.5963 40.6637S224.8244 144 202.4037 144" opacity="0.5" />
                                 <path id="drops" class="drops" transform="translate(30 0)" d="M6.2728 79.4762H6.031L27.798 39l20.9207 38.8571c3.4816 5.1276 5.3236 11.199 5.2806 17.4048C53.9993 111.1286 42.3498 124 27.9996 124 13.6494 124 2 111.1286 2 95.2619c0-5.8286 1.572-11.2524 4.2728-15.7857zm61-35h-.2418L88.798 4l20.9207 38.8571c3.4816 5.1276 5.3236 11.199 5.2806 17.4048C114.9993 76.1286 103.3498 89 88.9996 89 74.6494 89 63 76.1286 63 60.262c0-5.8287 1.572-11.2525 4.2728-15.7858zm61 57h-.2418L149.798 61l20.9207 38.8571c3.4816 5.1276 5.3236 11.199 5.2806 17.4048 0 15.8667-11.6495 28.7381-25.9997 28.7381C135.6494 146 124 133.1286 124 117.2619c0-5.8286 1.572-11.2524 4.2728-15.7857z" />
                             </symbol>
                             <use xlink:href="#cloud" />
@@ -187,7 +188,7 @@
                         </g>
                     </svg>
                 </div>
-             <!--    <div id="cloud-desktop-contact" class="item item5 item-cloud dropping cloud-moves-5">
+                <!--    <div id="cloud-desktop-contact" class="item item5 item-cloud dropping cloud-moves-5">
                     <svg class="cloud" viewBox="0 0 245 146" xmlns="http://www.w3.org/2000/svg">
                         <g class="cloud-cable">
                             <use xlink:href="#cloud" />
@@ -202,7 +203,7 @@
                         <g class="cloud-cable">
                             <use xlink:href="#cloud" />
                             <text class="text-key text-on-cloud" transform="translate(2 2)">
-                                <tspan x="50" y="126">Members</tspan>
+                                <tspan x="25" y="126">Membership</tspan>
                             </text>
                         </g>
                     </svg>
@@ -711,7 +712,7 @@
                                 <path data-id="cons" d="M325.5942 66.5609l.975-2.6356c.8303.4389 1.3332.8138 1.5085 1.1246.5914 1.0483.3433 2.158.3433 2.158l-2.8268-.647z" stroke-width=".6" fill="#000" />
                             </g>
                             <text id="cons" class="service-text text-off" transform="rotate(2 417.7249 -1185.9944)">
-                                <tspan data-id="cons" x="50" y="190.6609">Consulting</tspan>
+                                <tspan data-id="cons" x="120" y="190.6609">Consulting</tspan>
                             </text>
                         </g>
                         <g class="sound-design-svg service-svg" fill="none" fill-rule="nonzero">
@@ -851,14 +852,31 @@
             </div>
         </header>
         <section class="slogan">
-            <h2 id="quote" class="quote">Audio Work Station</h2>
+            <h2 id="quote" class="quote">Audio Work Station based in Berlin</h2>
+            <svg width="2000px" height="100%" class="sound-wave">
+                <defs>
+                    <pattern id="polka-dots" x="0" y="0" width="346" height="172" patternUnits="userSpaceOnUse">
+                        <path d="M0 77.5h127l11.36-59.9948c.411-2.1706 2.5037-3.597 4.6743-3.186 1.697.3213 2.9961 1.6956 3.2216 3.408l12.517 95.0613c.2884 2.1902 2.2977 3.732 4.488 3.4436a4 4 0 003.3559-2.986l15.4348-61.0962c.541-2.1418 2.716-3.4395 4.8579-2.8984a4 4 0 012.8342 2.6725l15.3018 48.4035c.6659 2.1064 2.9132 3.2741 5.0196 2.6082a4 4 0 002.7358-3.1323l16.4072-94.876c.3764-2.1769 2.4462-3.6364 4.623-3.26a4 4 0 013.2506 3.2079l23.6321 126.6536c.4052 2.1716 2.4942 3.6036 4.6659 3.1984a4 4 0 003.2186-3.3162L277 77.5h69" stroke="#449AFF" stroke-width="2" fill="none" fill-rule="evenodd" />
+                    </pattern>
+                </defs>
+                <rect class="wavebreak 8s infinite linear" x="0" y="0" width="100%" height="100%" fill="url(#polka-dots)"></rect>
+            </svg>
         </section>
         <section id="About" class="about">
             <article class="about-text-wrapper">
-                <span>
-                    <div class="icon icon-cloud-line"></div>
-                </span>
-                <h2 class="about-title">About</h2>
+                <div class="cloud-menus">
+                <svg class="cloud-menus-icon" viewBox="0 0 52 32" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <symbol id="smallCloud">
+                            <path d="M26 1c3.9635 0 7.2875 2.7377 8.1843 6.4253l.119-.0045.2528-.0037c3.8642 0 7.1206 2.6023 8.1124 6.15C47.2783 13.6162 51 17.368 51 21.9893c0 4.5172-3.556 8.2038-8.0214 8.413v.0095H9.5561l-.0001-.0028-.1335.0028c-4.567 0-8.285-3.635-8.4188-8.1697L1 21.9893c0-4.6516 3.7709-8.4225 8.4225-8.4225.1479 0 .295.0039.441.0114.9878-3.5534 4.247-6.161 8.1151-6.161l-.1614.002C18.7161 3.7349 22.0387 1 26 1z" fill="#FFF" />
+                            <path d="M9.4225 13.595C4.7709 13.595 1 17.3743 1 22.0363s3.7709 8.4413 8.4225 8.4413h27.158c4.662 0 .1865-15.207-1.4926-21.0363C33.409 3.612 30.6516 1 26 1c-4.6516 0-8.4225 3.7793-8.4225 8.4413 0 4.6568 4.5232-2.0098-.1336-2.0098-4.6516 0-8.4225 3.7793-8.4225 8.4413 0 13.1933 11.8067-8.4413 25-8.4413 4.6516 0 8.4225 3.7793 8.4225 8.4413 0 4.6568-4.5232-2.2778.1336-2.2778 4.6516 0 8.4225 3.7793 8.4225 8.4413s-3.7709 8.4413-8.4225 8.4413" stroke="#1B1B1C" stroke-width="1" />
+                        </symbol>
+                        <use xlink:href="#smallCloud" />
+                    </g>
+                </svg> 
+                <h2 class="about-title">About</h2></div>  
+              
+               
                 <div class="about-text">
                     <p>The Nadel Eins Studio Berlin was founded in the nineties by the band Jeans Team.</p>
                     <p>This is where they recorded all their music and slowly developed their technical skills. </p>
@@ -872,86 +890,75 @@
                     <button id="read-about" data-type="less-about" class="readMore">Read More</button>
                     <button id="less-about" data-type="read-about" class="viewLess">View Less</button>
             </article>
-            <!-- Slideshow container -->
-            <div id="slideshow" class="slideshow-container">
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                    <div class="close">
-                        <div class="icon icon-close"></div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img data-src="/img/NADEL1STUDIO_A-2x.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-src="/img/NADEL1STUDIO_B-2x.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-src="/img/NADEL1STUDIO_C-2x.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-src="/img/NADEL1STUDIO_D-2x.jpg" class="swiper-lazy hor">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-src="/img/NADEL1STUDIO_E-2x.jpg" class="swiper-lazy hor">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                      <div class="swiper-slide">
+                        <img data-src="/img/NADEL1STUDIO_F-2x.jpg" class="swiper-lazy hor">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                      <div class="swiper-slide">
+                        <img data-src="/img/NADEL1STUDIO_G-2x.jpg" class="swiper-lazy hor">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                       <div class="swiper-slide">
+                        <img data-src="/img/NADEL1STUDIO_H-2x.jpg" class="swiper-lazy hor">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                      <div class="swiper-slide">
+                        <img data-src="/img/NADEL1STUDIO_I-2x.jpg" class="swiper-lazy hor">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+
+
+                       <div class="swiper-slide">
+                        <img data-src="/img/NADEL1STUDIO_J-2x.jpg" class="swiper-lazy hor">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+                    
+                      <div class="swiper-slide">
+                        <img data-src="/img/NADEL1STUDIO_L-2x.jpg" class="swiper-lazy hor">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    </div>
+
+                      <div class="swiper-slide">
+                        <img data-src="/img/NADEL1STUDIO_L-2x.jpg" class="swiper-lazy hor">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </div>
                 </div>
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <figure class="image-slider">
-                        <img class="zoom lazy" src="/img/NADEL1STUDIO_D-placeholder.jpg" data-src="/img/NADEL1STUDIO_D-1x.jpg" data-srcset="/img/NADEL1STUDIO_D-2x.jpg 2x, /img/NADEL1STUDIO_D-1x.jpg 1x" data-id="/img/NADEL1STUDIO_D-2x.jpg" alt="studio main room from the entrance">
-                    </figure>
-                </div>
-                <div class="mySlides fade">
-                    <figure class="image-slider">
-                        <img class="zoom lazy" src="/img/NADEL1STUDIO_B-placeholder.jpg" data-src="/img/NADEL1STUDIO_B-1x.jpg" data-srcset="/img/NADEL1STUDIO_B-2x.jpg 2x, /img/NADEL1STUDIO_B-1x.jpg 1x" data-id="/img/NADEL1STUDIO_B-2x.jpg" alt="mixpull and synclavier">
-                    </figure>
-                </div>
-                <div class="mySlides fade">
-                    <figure class="image-slider">
-                        <img class="zoom lazy" src="/img/NADEL1STUDIO_A-placeholder.jpg" data-src="/img/NADEL1STUDIO_A-1x.jpg" data-srcset="/img/NADEL1STUDIO_A-2x.jpg 2x, /img/NADEL1STUDIO_A-1x.jpg 1x" data-id="/img/NADEL1STUDIO_A-2x.jpg" alt="studio main room">
-                        <!--  if caption required
-                       <figcaption class="img-text">
-                            <p>recording</p>
-                        </figcaption> -->
-                    </figure>
-                </div>
-                <div class="mySlides fade">
-                    <figure class="image-slider">
-                        <img class="zoom lazy" src="/img/NADEL1STUDIO_C-placeholder.jpg" data-src="/img/NADEL1STUDIO_C-1x.jpg" data-srcset="/img/NADEL1STUDIO_C-2x.jpg 2x, /img/NADEL1STUDIO_C-1x.jpg 1x" data-id="/img/NADEL1STUDIO_C-2x.jpg" alt="ressonators keyboard and band record machine">
-                    </figure>
-                </div>
-                <!--     <div class="mySlides fade">
-                    <figure class="image-slider">
-                        <img class="zoom lazy" src="/img/NADEL1STUDIO_DSC0790.jpg" data-src="/img/NADEL1STUDIO_DSC0790.jpg" data-srcset="/img/NADEL1STUDIO_DSC0790.jpg 2x, /img/NADEL1STUDIO_DSC0790.jpg 1x" data-id="/img/NADEL1STUDIO_DSC0790.jpg" alt="mixpull and synclavier">
-                    </figure>
-                </div> -->
-                <div class="mySlides fade">
-                    <figure class="image-slider">
-                        <img class="zoom lazy" src="/img/_test-NADEL1STUDIO_M.jpg" data-src="/img/_test-NADEL1STUDIO_M.jpg" data-srcset="/img/_test-NADEL1STUDIO_M.jpg 2x, /img/_test-NADEL1STUDIO_M.jpg 1x" data-id="/img/_test-NADEL1STUDIO_M.jpg" alt="mixpull and synclavier">
-                    </figure>
-                </div>
-                <div class="mySlides fade">
-                    <figure class="image-slider">
-                        <img class="zoom lazy" src="/img/_test-NADEL1STUDIO_L.jpg" data-src="/img/_test-NADEL1STUDIO_L.jpg" data-srcset="/img/_test-NADEL1STUDIO_L.jpg 2x, /img/_test-NADEL1STUDIO_L.jpg 1x" data-id="/img/_test-NADEL1STUDIO_L.jpg" alt="mixpull and synclavier">
-                    </figure>
-                </div>
-                <div class="mySlides fade">
-                    <figure class="image-slider">
-                        <img class="zoom lazy" src="/img/NADEL1STUDIO_J-placeholder.jpg" data-src="/img/NADEL1STUDIO_J-1x.jpg" data-srcset="/img/NADEL1STUDIO_J-2x.jpg 2x, /img/NADEL1STUDIO_J-1x.jpg 1x" data-id="/img/NADEL1STUDIO_J-2x.jpg" alt="kitchen">
-                    </figure>
-                </div>
-                <div class="mySlides fade">
-                    <figure class="image-slider">
-                        <img class="zoom lazy" src="/img/NADEL1STUDIO_K-placeholder.jpg" data-src="/img/NADEL1STUDIO_K-1x.jpg" data-srcset="/img/NADEL1STUDIO_K-2x.jpg 2x, /img/NADEL1STUDIO_K-1x.jpg 1x" data-id="/img/NADEL1STUDIO_K-2x.jpg" alt="big brutalist shelf on main room">
-                    </figure>
-                </div>
-                <!-- Next and previous buttons -->
-                <a id="prev" class="prev"><span>&#10094;</span></a>
-                <a id="next" class="next"><span>&#10095;</span></a>
-            </div>
-            <!-- The dots/circles -->
-            <div class="dots-wrapper">
-                <span data-id="1" class="dots"></span>
-                <span data-id="2" class="dots"></span>
-                <span data-id="3" class="dots"></span>
-                <span data-id="4" class="dots"></span>
-                <span data-id="5" class="dots"></span>
-                <span data-id="6" class="dots"></span>
-                <span data-id="7" class="dots"></span>
-                <span data-id="8" class="dots"></span>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </section>
         <section id="Services" class="services">
             <div class="services-text-wrapper">
-                <span>
-                    <div class="icon icon-cloud-line"></div>
-                </span>
-                <h2 class="services-title"> Services</h2>
+                   <div class="cloud-menus">
+                <svg class="cloud-menus-icon" viewBox="0 0 52 32" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <use xlink:href="#smallCloud" />
+                    </g>
+                </svg> 
+                <h2 class="services-title">Services</h2></div>  
                 <div class="service-container">
                     <article id="service-mastering" data-svg="mast" class="service service-mastering">
                         <div class="service-header-wrap-right">
@@ -1087,12 +1094,15 @@
                 </div>
             </div>
         </section>
-        <section id="Members" class="co-work">
+        <section id="Membership" class="co-work">
             <article class="co-work-text-wrapper">
-                <span>
-                    <div class="icon icon-cloud-line"></div>
-                </span>
-                <h2 class="co-work-title">Members</h2>
+                   <div class="cloud-menus">
+                <svg class="cloud-menus-icon" viewBox="0 0 52 32" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <use xlink:href="#smallCloud" />
+                    </g>
+                </svg> 
+                <h2 class="co-work-title">Membership</h2></div>  
                 <div class="co-work-text">
                     <p>This studio is open for musicians and technicians to work here on their own.</p>
                     <p>We offer a short setup-introduction and then we leave you working in peace.</p>
@@ -1103,10 +1113,13 @@
         </section>
         <section id="Listen" class="music">
             <div class="music-text-wrapper">
-                <span>
-                    <div class="icon icon-cloud-line"></div>
-                </span>
-                <h2 class="listen-title">Listen</h2>
+              <div class="cloud-menus">
+                <svg class="cloud-menus-icon" viewBox="0 0 52 32" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <use xlink:href="#smallCloud" />
+                    </g>
+                </svg> 
+                <h2 class="listen-title">Listen</h2></div>  
                 <ul class="cards">
                     <li class="card">
                         <div class="music-info">
@@ -1228,10 +1241,13 @@
         </section>
         <section id="Prices" class="prices">
             <div class="prices-text-wrapper">
-                <span>
-                    <div class="icon icon-cloud-line"></div>
-                </span>
-                <h2 class="prices-title">Prices</h2>
+                <div class="cloud-menus">
+                <svg class="cloud-menus-icon" viewBox="0 0 52 32" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <use xlink:href="#smallCloud" />
+                    </g>
+                </svg> 
+                <h2 class="prices-title">Prices</h2></div>  
                 <div class="prices-container">
                     <article class=" price prices-studio">
                         <div class="price-upper-element">
@@ -1367,10 +1383,13 @@
         </section>
         <section id="Staff" class="staff">
             <article class="staff-text-wrapper">
-                <span>
-                    <div class="icon icon-cloud-line"></div>
-                </span>
-                <h2 class="staff-title">Staff</h2>
+                 <div class="cloud-menus">
+                <svg class="cloud-menus-icon" viewBox="0 0 52 32" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <use xlink:href="#smallCloud" />
+                    </g>
+                </svg> 
+                <h2 class="staff-title">Staff</h2></div>  
                 <div class="staff-text">
                     <p>Meet our current team, working regularly at the moment at our studio. Besides working on their individual projects they are also available to help develop yours!</p>
                 </div>
@@ -1378,21 +1397,21 @@
                     <figure class="staff-pic">
                         <img class="lazy" src="/img/NADEL1STUDIO_ST1-placeholder.jpg" data-src="/img/NADEL1STUDIO_ST1-1x.jpg" data-srcset="/img/NADEL1STUDIO_ST1-2x.jpg 2x, /img/NADEL1STUDIO_ST1-1x.jpg 1x" data-id="/img/NADEL1STUDIO_ST1-2x.jpg" alt="staff franz working">
                         <figcaption class="staff-img-text">
-                            <p>Franz Schuette</p>
+                            <h3>Franz Schuette</h3>
                             <p>Studio Founder, Musician, Technician</p>
                         </figcaption>
                     </figure>
                     <figure class="staff-pic">
                         <img class="lazy" src="/img/NADEL1STUDIO_ST2-placeholder.jpg" data-src="/img/NADEL1STUDIO_ST2-1x.jpg" data-srcset="/img/NADEL1STUDIO_ST2-2x.jpg 2x, /img/NADEL1STUDIO_ST2-1x.jpg 1x" data-id="/img/NADEL1STUDIO_ST2-2x.jpg" alt="staff Oliver working">
                         <figcaption class="staff-img-text">
-                            <p>Oli</p>
+                            <h3>Oli</h3>
                             <p>Studio Member, Musician, Technician</p>
                         </figcaption>
                     </figure>
                     <figure class="staff-pic">
                         <img class="lazy" src="/img/NADEL1STUDIO_ST1-placeholder.jpg" data-src="/img/NADEL1STUDIO_ST1-1x.jpg" data-srcset="/img/NADEL1STUDIO_ST1-2x.jpg 2x, /img/NADEL1STUDIO_ST1-1x.jpg 1x" data-id="/img/NADEL1STUDIO_ST1-2x.jpg" alt="staff working">
                         <figcaption class="staff-img-text">
-                            <p>Other</p>
+                            <h3>Other</h3>
                             <p>Studio Member, Musician, Technician</p>
                         </figcaption>
                     </figure>
@@ -1400,12 +1419,15 @@
             </article>
         </section>
         <section id="Contact" class="contact">
-            <span>
-                <div class="icon icon-cloud-line"></div>
-            </span>
-            <div class="contact-text-wrapper">
-                <h2 class="contact-title">Contact</h2>
-                <article class="contact-text">
+            <article class="contact-text-wrapper">
+              <div class="cloud-menus">
+                <svg class="cloud-menus-icon" viewBox="0 0 52 32" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <use xlink:href="#smallCloud" />
+                    </g>
+                </svg> 
+                <h2 class="contact-title">Contact</h2></div>  
+                
                     <p>The studio is situated in BERLIN WEDDING close to the subwaystation PANKSTRASSE</p>
                     <p>For further details feel free to call or email us:</p>
                     <div class="call-write">
@@ -1427,6 +1449,26 @@
         </footer>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        // Enable lazy loading
+        lazy: true,
+        slidesPerView: 1.2,
+        centeredSlides: true,
+        spaceBetween: 30,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    </script>
 </body>
 
 </html>

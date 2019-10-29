@@ -1,4 +1,4 @@
-.icon-close, #back-to-top, .about .about-text-wrapper button, .dots, .services button, .music .load, .prices button, .theEnd .subscribe {
+.icon-close, #back-to-top, .about .about-text-wrapper button, .services button, .music .load, .prices button, .theEnd .subscribe {
   color: #000c2b;
   letter-spacing: 0.02em;
   background-color: white;
@@ -8,7 +8,7 @@
   padding: 8px 10px;
   box-shadow: #449AFF 4px 4px 0 0;
   transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
-  .icon-close:hover, #back-to-top:hover, .about .about-text-wrapper button:hover, .dots:hover, .services button:hover, .music .load:hover, .prices button:hover, .theEnd .subscribe:hover {
+  .icon-close:hover, #back-to-top:hover, .about .about-text-wrapper button:hover, .services button:hover, .music .load:hover, .prices button:hover, .theEnd .subscribe:hover {
     transform: translateX(2px) translateY(2px);
     box-shadow: 2px 2px 0 0; }
 
@@ -21,8 +21,8 @@
   padding: 0; }
 
 header .icon-cloud-line, .services .icon, .prices .icon {
-  height: calc(113px *1.2);
-  width: calc(178px *1.2);
+  height: calc(113px *1.1);
+  width: calc(178px *1.1);
   background-position: 50% 50%;
   background-size: contain;
   margin: 0;
@@ -33,11 +33,6 @@ header .icon-cloud-line, .services .icon, .prices .icon {
   padding: 10% 4%;
   min-width: 320px; }
 
-.about .about-text-wrapper h2, .co-work .co-work-text-wrapper h2, .staff .staff-text-wrapper h2, .services h2, .music h2, .prices h2, .contact h2 {
-  margin: 80px auto;
-  text-transform: uppercase;
-  color: #000c2b; }
-
 section .staff-text-wrapper,
 section .about-text-wrapper,
 section .co-work-text-wrapper,
@@ -45,7 +40,7 @@ section .music-text-wrapper,
 section .prices-text-wrapper,
 section .services-text-wrapper,
 section .contact-text-wrapper,
-section .footer-content, .theEnd .footer-content p {
+section .theEnd, .theEnd .footer-content p {
   padding: 0 20px 25px;
   margin: 0; }
 
@@ -155,6 +150,18 @@ Accessibility
   /* Above WP toolbar */ }
 
 @supports (display: flex) {
+  .cloud-menus {
+    display: flex; }
+    .cloud-menus svg {
+      display: none; }
+  .swiper-container {
+    width: 90%;
+    height: auto; }
+  .swiper-slide {
+    background: white; }
+  .hor {
+    width: 44.5%;
+    height: 44.5%; }
   .service-container {
     display: flex;
     flex-direction: row;
@@ -324,12 +331,15 @@ header .banner {
 
 .slogan {
   background-color: #000c2b;
-  z-index: 1; }
+  z-index: 1;
+  padding: 80px; }
   .slogan .quote {
     text-align: center;
     color: white;
-    font-weight: 400;
-    line-height: 80px; }
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    text-transform: capitalize; }
 
 /*--------------------------------------------------------------
 button
@@ -346,8 +356,7 @@ sections
 --------------------------------------------------------------*/
 section {
   margin: 0;
-  padding: 20px 0;
-  border-top: 3px solid #000c2b; }
+  padding: 20px 0; }
 
 /*--------------------------------------------------------------
 About and co-work
@@ -396,171 +405,24 @@ staff
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-around;
-      margin-top: 30px; }
+      justify-content: center;
+      margin: 30px; }
       .staff .staff-text-wrapper .staff-pics figure.staff-pic {
-        margin: 40px 15px; }
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        align-items: center; }
       .staff .staff-text-wrapper .staff-pics figure.staff-pic img {
-        width: 120px;
+        width: 250px;
         height: auto;
         border-radius: 100%;
         padding: 0 15px; }
       .staff .staff-text-wrapper .staff-pics .staff-img-text {
-        font-size: 0.8em;
-        width: 140px; }
-
-/*--------------------------------------------------------------
-slider
---------------------------------------------------------------*/
-.slideshow-wrapper {
-  padding-top: 100px;
-  padding-bottom: 80px; }
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 3000;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: #000c2b; }
-
-/* Modal Content (image) */
-.modal-content img {
-  margin: auto;
-  display: block;
-  width: 95%; }
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption-modal p {
-  background-color: transparent;
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #FFEE00;
-  padding: 10px 0;
-  height: 150px;
-  text-transform: capitalize; }
-
-/* Add Animation - Zoom in the Modal */
-#caption-modal,
-.modal-content {
-  animation-name: zoom;
-  animation-duration: 0.6s; }
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s; }
-
-.close:focus,
-.close:hover {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer; }
-
-/* Slideshow container */
-.slideshow-container {
-  position: relative;
-  max-width: 100vw;
-  margin: 0;
-  padding: 0; }
-
-.image-slider {
-  padding: 0;
-  margin: 0; }
-
-.image-slider img {
-  width: 100%;
-  height: auto;
-  cursor: zoom-in; }
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-  padding: 0 20px; }
-
-/* Next & previous buttons */
-.next,
-.prev {
-  cursor: pointer;
-  position: absolute;
-  top: 55%;
-  color: #449AFF;
-  font-size: 1em;
-  transition: 1s ease;
-  user-select: none; }
-
-/* Position the "next button" to the right */
-.next {
-  right: 0; }
-
-.prev {
-  left: 0; }
-
-.prev span,
-.next span {
-  border-radius: 100%;
-  padding: 5px 8px;
-  border: 1px solid #449AFF; }
-  .prev span:hover,
-  .next span:hover {
-    background-color: white; }
-
-/* Caption text */
-.img-text p {
-  display: none; }
-
-.img-text-reveal p {
-  background-color: transparent;
-  font-size: 1em;
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-  bottom: 10px;
-  padding: 0;
-  color: #FFEE00;
-  text-align: center;
-  letter-spacing: 0.8px;
-  text-transform: capitalize;
-  text-shadow: 0px 1px 2px #000000; }
-
-/* The dots/bullets/indicators */
-.dots-wrapper {
-  text-align: center;
-  margin: 30px; }
-
-.dots {
-  cursor: pointer;
-  height: 0.7em;
-  width: 0.7em;
-  padding: 6px;
-  margin: 4px;
-  border-radius: 50%;
-  display: inline-block; }
-
-.active,
-.dots:hover {
-  transform: translateX(2px) translateY(2px);
-  box-shadow: 2px 2px 0 0;
-  box-shadow: #449AFF 2px 2px 0 0;
-  background-color: #E1E4E8;
-  margin-top: -3px; }
-
-/* Fading animation */
-.fade {
-  -webkit-animation: fade 0.5s ease-in;
-  animation: fade 0.5s ease-in; }
+        text-align: center;
+        line-height: 10px; }
+        .staff .staff-text-wrapper .staff-pics .staff-img-text p {
+          font-size: 0.8em;
+          margin-top: -10px; }
 
 /*--------------------------------------------------------------
 services
@@ -585,8 +447,6 @@ services
     margin-bottom: 10px; }
   .services button {
     margin: 36px 5px 20px; }
-  .services h2 {
-    color: #000c2b; }
   .services article {
     margin: 0 6px; }
   .services .service-more-text {
@@ -596,8 +456,6 @@ services
 
 .music {
   padding: 50px 0; }
-  .music h2 {
-    color: #000c2b; }
   .music .cards {
     list-style: none;
     text-align: center;
@@ -608,7 +466,8 @@ services
     width: 350px;
     padding-top: 40px; }
     .music .card .music-info {
-      order: 2; }
+      order: 2;
+      margin-bottom: 20px; }
     .music .card p {
       color: #449AFF;
       font-weight: 700;
@@ -702,7 +561,7 @@ Footer
 --------------------------------------------------------------*/
 .theEnd {
   padding-top: 30px;
-  padding-left: 20px;
+  padding-left: 94px;
   background-color: #000c2b;
   background-size: contain;
   background-repeat: no-repeat;
@@ -756,11 +615,15 @@ Footer
       header .bannerTwo .title h1 {
         color: black;
         line-height: 60px;
-        max-width: 200px; }
-  #next,
-  #prev {
-    font-size: 1.5em;
-    top: calc(50% + 20px); } }
+        max-width: 200px; } }
+
+.sound-wave {
+  animation: waving 8s infinite linear; }
+
+.cloud-menus-icon {
+  width: 7%;
+  margin-right: 30px;
+  margin-top: -8px; }
 
 #mast tspan {
   font-size: 38px; }
@@ -783,10 +646,11 @@ Footer
 
 .text-on-cloud tspan {
   font-family: helvetica;
-  fill: #000c2b;
-  stroke: transparent;
+  fill: #449AFF;
   font-size: 30px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 1; }
   .text-on-cloud tspan:hover {
     fill: red;
     cursor: pointer;
@@ -807,7 +671,7 @@ Footer
 svg.cloud {
   width: 75%;
   height: 75%;
-  max-width: 75%;
+  max-width: 180px;
   height: auto; }
 
 svg.cloud-service {
@@ -866,9 +730,6 @@ svg.mixes {
   height: 60%;
   max-width: 60%;
   height: auto; }
-
-svg.mixes {
-  transform: translateY(-60px) translateX(20px); }
 
 .wheel {
   transform-origin: 230.69629669px 323.29627227783203px;
@@ -1017,18 +878,17 @@ svg.mixes {
 @supports (grid-area: auto) {
   @media screen and (min-width: 751px) and (max-width: 1100px) {
     h1 {
-      font-size: 2.4em; }
+      font-size: 2em; }
     #title-desk {
-      background-color: white; }
+      background-color: white;
+      padding-right: 72px; }
     #grid-container {
-      height: 100vh; }
-    #next,
-    #prev {
-      font-size: 2em;
-      top: calc(50% - 50px); }
-    #prev span,
-    #next span {
-      padding: 9px 16px; }
+      height: 70vh; }
+      #grid-container .item3 {
+        grid-row: 1/3;
+        align-items: center; }
+      #grid-container .item12 {
+        justify-items: flex-end; }
     #navi li {
       font-size: 25px;
       text-align: center;
@@ -1057,6 +917,8 @@ header desktop
       .title-desktop {
         text-align: left;
         padding: 0 90px; } }
+    .cloud-menus svg {
+      display: block; }
     .wrap-all {
       margin-left: 74px; }
     .title-desk {
@@ -1076,7 +938,7 @@ header desktop
       line-height: 20px;
       animation: appear 2s forwards;
       white-space: nowrap;
-      right: 0;
+      right: 2px;
       bottom: 100px; }
     .open {
       margin: 0;
@@ -1095,8 +957,8 @@ header desktop
       display: block; }
       .contact-desk-wrapper .contact-desk {
         position: fixed;
-        bottom: 0;
-        left: 13px;
+        top: 600px;
+        left: 11px;
         z-index: 98;
         cursor: pointer; }
         .contact-desk-wrapper .contact-desk p {
@@ -1118,11 +980,11 @@ header desktop
     .header-for-desktop {
       display: block;
       margin: 10px auto;
-      width: 80vw; }
+      width: 90vw; }
       .header-for-desktop .grid-container {
         display: grid;
         grid-template-columns: repeat(16, 1fr);
-        grid-template-rows: auto;
+        grid-template-rows: 110px 100px auto;
         grid-gap: 0;
         margin-bottom: 30px; }
         .header-for-desktop .grid-container .title {
@@ -1148,7 +1010,7 @@ header desktop
           display: flex;
           padding-top: 36px;
           grid-column: 7/11;
-          grid-row: 1/4;
+          grid-row: 1/3;
           justify-content: center;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item4 {
@@ -1184,25 +1046,25 @@ header desktop
         .header-for-desktop .grid-container .item10 {
           display: flex;
           grid-column: 1/8;
-          grid-row: 3/4;
+          grid-row: 3;
           justify-content: flex-end;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item11 {
           display: flex;
           grid-column: 11/17;
-          grid-row: 3/4;
+          grid-row: 3;
           justify-content: flex-start;
           align-items: center; }
         .header-for-desktop .grid-container .item12 {
           display: flex;
           grid-column: 1/9;
-          grid-row: 4/5;
+          grid-row: 4;
           justify-content: center;
           align-items: flex-start; }
         .header-for-desktop .grid-container .item13 {
           display: flex;
           grid-column: 9/17;
-          grid-row: 4/5;
+          grid-row: 4;
           align-items: flex-start; }
     /*--------------------------------------------------------------
 general styles
@@ -1399,6 +1261,18 @@ prices music
     stroke-dashoffset: 1000; }
   100% {
     stroke-dashoffset: 0; } }
+
+@keyframes dashi {
+  0% {
+    stroke-dashoffset: 1000; }
+  100% {
+    stroke-dashoffset: 0; } }
+
+@-webkit-keyframes waving {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(-346px, 0); } }
 
 @keyframes dashi {
   0% {

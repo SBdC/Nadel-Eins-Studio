@@ -1,3 +1,11 @@
+.sound-wave {
+  animation: waving 8s infinite linear; }
+
+.cloud-menus-icon {
+  width: 7%;
+  margin-right: 30px;
+  margin-top: -8px; }
+
 #mast tspan {
   font-size: 38px; }
 
@@ -19,10 +27,11 @@
 
 .text-on-cloud tspan {
   font-family: helvetica;
-  fill: #000c2b;
-  stroke: transparent;
+  fill: #449AFF;
   font-size: 30px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 1; }
   .text-on-cloud tspan:hover {
     fill: red;
     cursor: pointer;
@@ -43,7 +52,7 @@
 svg.cloud {
   width: 75%;
   height: 75%;
-  max-width: 75%;
+  max-width: 180px;
   height: auto; }
 
 svg.cloud-service {
@@ -102,9 +111,6 @@ svg.mixes {
   height: 60%;
   max-width: 60%;
   height: auto; }
-
-svg.mixes {
-  transform: translateY(-60px) translateX(20px); }
 
 .wheel {
   transform-origin: 230.69629669px 323.29627227783203px;

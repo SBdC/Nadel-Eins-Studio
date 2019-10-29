@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "del": "^3.0.0",
-    "gulp-eslint": "^5.0.0"
+    "gulp-eslint": "^5.0.0",
+    "swiper": "^5.2.0"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",

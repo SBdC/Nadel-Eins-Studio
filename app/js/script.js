@@ -115,137 +115,6 @@ erases.forEach(erase => erase.addEventListener("click", hideText, false));
 
 
 
-//slider
-
-let slideIndex = 1;
-showSlides(slideIndex);
-const SLIDESHOW = document.getElementById("slideshow");
-
-let dots = Array.from(document.querySelectorAll(".dots"));
-let prev = document.getElementById("prev");
-let next = document.getElementById("next");
-
-let captions = Array.from(document.querySelectorAll(".img-text"));
-
-function revealCaption() {
-
-    captions.forEach(caption => caption.classList.add("img-text-reveal"));
-    captions.forEach(caption => caption.classList.remove("img-text"));
-
-}
-
-function hideCaption() {
-
-    captions.forEach(caption => caption.classList.remove("img-text-reveal"));
-    captions.forEach(caption => caption.classList.add("img-text"));
-
-}
-
-SLIDESHOW.addEventListener("mouseout", hideCaption, false);
-SLIDESHOW.addEventListener("mouseover", revealCaption, false);
-
-
-// Next/previous controls
-function plusSlides() {
-    showSlides(slideIndex += 1);
-
-}
-
-function minusSlides() {
-    showSlides(slideIndex -= 1);
-
-
-
-}
-
-// buttons image controls
-
-function currentSlide(n) {
-
-    showSlides(slideIndex = `${n.target.dataset.id}`);
-}
-
-
-
-
-function showSlides(n) {
-
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dots");
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-
-}
-
-prev.addEventListener("click", minusSlides, false);
-next.addEventListener("click", plusSlides, false);
-
-dots.forEach(dot => dot.addEventListener("click", currentSlide, false));
-
-
-
-
-//Modal for zooming images
-// Get the <span> element that closes the modal
-const MODAL = document.getElementById("myModal");
-const SPAN = document.getElementsByClassName("close")[0];
-
-const BODY = document.getElementsByTagName("BODY")[0];
-
-
-
-// When the user clicks on <span> (x), close the modal
-SPAN.onclick = function() {
-    let modalImg = document.getElementById("img01");
-    let captionText = document.getElementById("caption-modal");
-    MODAL.removeChild(modalImg);
-    MODAL.removeChild(captionText);
-    MODAL.style.display = "none";
-};
-
-
-// let zoomImage = (e) => {
-//   MODAL.style.display = "block";
-
-//   modalImg.src = e.target.src;
-//   captionText.innerHTML = e.target.nextElementSibling.innerHTML;
-//   BODY.style.overflow = "hidden";
-// };
-// imgs.forEach(img => img.addEventListener("click", zoomImage, false));
-
-let zoomImage = (e) => {
-    MODAL.style.display = "block";
-    let src = e.target.dataset.id;
-    let img = document.createElement("img");
-    let div = document.createElement("div");
-
-    MODAL.appendChild(img);
-    MODAL.appendChild(div);
-
-    img.setAttribute("src", src);
-    img.setAttribute("class", "modal-content");
-    img.setAttribute("id", "img01");
-    div.setAttribute("id", "caption-modal");
-    div.innerHTML = e.target.nextElementSibling.innerHTML;
-    BODY.style.overflow = "hidden";
-};
-imgs.forEach(img => img.addEventListener("click", zoomImage, false));
-
-
-
 
 
 //google wed development lazy load images
@@ -286,10 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("resize", lazyLoad);
     window.addEventListener("orientationchange", lazyLoad);
 
-    prev.addEventListener("click", lazyLoad);
-    next.addEventListener("click", lazyLoad);
 
-    dots.forEach(dot => dot.addEventListener("click", lazyLoad));
 });
 
 
@@ -491,7 +357,7 @@ let thunderOn = () => {
     smileBar.style.stroke = "transparent";
     surprise.style.fill = "white";
     surprise.style.stroke = "black";
-    title.style.color = "white";
+    title.style.color = "red";
     document.body.style.background = "snow";
     // city.style.background="snow";
 
@@ -520,6 +386,9 @@ let thunderOff = () => {
 // face.addEventListener("click", thunderOn, false);
 
 
+
+title.addEventListener("mouseover", thunderOn, false);
+title.addEventListener("mouseout", thunderOff, false);
 
 
 
@@ -658,6 +527,44 @@ serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseover", highl
 serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseout", highlightSvgOFF, false));
 
 
+//Modal for zooming images
+// Get the <span> element that closes the modal
+const MODAL = document.getElementById("myModal");
+const SPAN = document.getElementsByClassName("close")[0];
+
+const BODY = document.getElementsByTagName("BODY")[0];
+
+
+
+// When the user clicks on <span> (x), close the modal
+// SPAN.onclick = function() {
+//     let modalImg = document.getElementById("img01");
+//     let captionText = document.getElementById("caption-modal");
+//     MODAL.removeChild(modalImg);
+//     MODAL.removeChild(captionText);
+//     MODAL.style.display = "none";
+// };
+
+
+let zoomImage = (e) => {
+    MODAL.style.display = "block";
+    let src = e.target.dataset.id;
+    let img = document.createElement("img");
+    let div = document.createElement("div");
+
+    MODAL.appendChild(img);
+    MODAL.appendChild(div);
+
+    img.setAttribute("src", src);
+    img.setAttribute("class", "modal-content");
+    img.setAttribute("id", "img01");
+    div.setAttribute("id", "caption-modal");
+    div.innerHTML = e.target.nextElementSibling.innerHTML;
+    BODY.style.overflow = "hidden";
+};
+imgs.forEach(img => img.addEventListener("click", zoomImage, false));
+
+
 
 
 // const contactCloud = document.getElementById("cloud-desktop-contact");
@@ -668,7 +575,7 @@ serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseout", highli
 // // Listen for scroll events
 // window.addEventListener("scroll", function() {
 
-  
+
 
 //     // Set a timeout to run after scrolling ends
 //     isScrolling = setTimeout(function() {
@@ -676,7 +583,7 @@ serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseout", highli
 //             contactCloud.classList.remove("cloud-moves-5");
 //            contactCloud.style.position="fixed";
 //            contactCloud.style.width="250px";
-           
+
 //             }
 //             else{
 //                  title.classList.add("cloud-moves-5");
@@ -686,11 +593,3 @@ serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseout", highli
 //     }, 66);
 
 // }, false);
-
-
-
-
-
-
-
-
