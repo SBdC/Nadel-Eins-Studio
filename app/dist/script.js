@@ -85,118 +85,6 @@ reads.forEach(function (read) {
 });
 erases.forEach(function (erase) {
   return erase.addEventListener("click", hideText, false);
-}); //slider
-
-var slideIndex = 1;
-showSlides(slideIndex);
-var SLIDESHOW = document.getElementById("slideshow");
-var dots = Array.from(document.querySelectorAll(".dots"));
-var prev = document.getElementById("prev");
-var next = document.getElementById("next");
-var captions = Array.from(document.querySelectorAll(".img-text"));
-
-function revealCaption() {
-  captions.forEach(function (caption) {
-    return caption.classList.add("img-text-reveal");
-  });
-  captions.forEach(function (caption) {
-    return caption.classList.remove("img-text");
-  });
-}
-
-function hideCaption() {
-  captions.forEach(function (caption) {
-    return caption.classList.remove("img-text-reveal");
-  });
-  captions.forEach(function (caption) {
-    return caption.classList.add("img-text");
-  });
-}
-
-SLIDESHOW.addEventListener("mouseout", hideCaption, false);
-SLIDESHOW.addEventListener("mouseover", revealCaption, false); // Next/previous controls
-
-function plusSlides() {
-  showSlides(slideIndex += 1);
-}
-
-function minusSlides() {
-  showSlides(slideIndex -= 1);
-} // buttons image controls
-
-
-function currentSlide(n) {
-  showSlides(slideIndex = "".concat(n.target.dataset.id));
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dots");
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
-
-prev.addEventListener("click", minusSlides, false);
-next.addEventListener("click", plusSlides, false);
-dots.forEach(function (dot) {
-  return dot.addEventListener("click", currentSlide, false);
-}); //Modal for zooming images
-// Get the <span> element that closes the modal
-
-var MODAL = document.getElementById("myModal");
-var SPAN = document.getElementsByClassName("close")[0];
-var BODY = document.getElementsByTagName("BODY")[0]; // When the user clicks on <span> (x), close the modal
-
-SPAN.onclick = function () {
-  var modalImg = document.getElementById("img01");
-  var captionText = document.getElementById("caption-modal");
-  MODAL.removeChild(modalImg);
-  MODAL.removeChild(captionText);
-  MODAL.style.display = "none";
-}; // let zoomImage = (e) => {
-//   MODAL.style.display = "block";
-//   modalImg.src = e.target.src;
-//   captionText.innerHTML = e.target.nextElementSibling.innerHTML;
-//   BODY.style.overflow = "hidden";
-// };
-// imgs.forEach(img => img.addEventListener("click", zoomImage, false));
-
-
-var zoomImage = function zoomImage(e) {
-  MODAL.style.display = "block";
-  var src = e.target.dataset.id;
-  var img = document.createElement("img");
-  var div = document.createElement("div");
-  MODAL.appendChild(img);
-  MODAL.appendChild(div);
-  img.setAttribute("src", src);
-  img.setAttribute("class", "modal-content");
-  img.setAttribute("id", "img01");
-  div.setAttribute("id", "caption-modal");
-  div.innerHTML = e.target.nextElementSibling.innerHTML;
-  BODY.style.overflow = "hidden";
-};
-
-imgs.forEach(function (img) {
-  return img.addEventListener("click", zoomImage, false);
 }); //google wed development lazy load images
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -231,11 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("scroll", lazyLoad);
   window.addEventListener("resize", lazyLoad);
   window.addEventListener("orientationchange", lazyLoad);
-  prev.addEventListener("click", lazyLoad);
-  next.addEventListener("click", lazyLoad);
-  dots.forEach(function (dot) {
-    return dot.addEventListener("click", lazyLoad);
-  });
 }); //load more music albums
 
 var parent = document.querySelector("ul"),
@@ -353,7 +236,7 @@ var thunderOn = function thunderOn() {
   smileBar.style.stroke = "transparent";
   surprise.style.fill = "white";
   surprise.style.stroke = "black";
-  title.style.color = "white";
+  title.style.color = "red";
   document.body.style.background = "snow"; // city.style.background="snow";
 };
 
@@ -372,6 +255,8 @@ var thunderOff = function thunderOff() {
 }; // face.addEventListener("click", thunderOn, false);
 
 
+title.addEventListener("mouseover", thunderOn, false);
+title.addEventListener("mouseout", thunderOff, false);
 faces.forEach(function (face) {
   return face.addEventListener("mouseover", thunderOn, false);
 });
@@ -489,6 +374,37 @@ serviceSvgs.forEach(function (serviceSvg) {
 });
 serviceSvgs.forEach(function (serviceSvg) {
   return serviceSvg.addEventListener("mouseout", highlightSvgOFF, false);
+}); //Modal for zooming images
+// Get the <span> element that closes the modal
+
+var MODAL = document.getElementById("myModal"); // const SPAN = document.getElementsByClassName("close")[0];
+
+var BODY = document.getElementsByTagName("BODY")[0]; // When the user clicks on <span> (x), close the modal
+// SPAN.onclick = function() {
+//     let modalImg = document.getElementById("img01");
+//     let captionText = document.getElementById("caption-modal");
+//     MODAL.removeChild(modalImg);
+//     MODAL.removeChild(captionText);
+//     MODAL.style.display = "none";
+// };
+
+var zoomImage = function zoomImage(e) {
+  MODAL.style.display = "block";
+  var src = e.target.dataset.id;
+  var img = document.createElement("img");
+  var div = document.createElement("div");
+  MODAL.appendChild(img);
+  MODAL.appendChild(div);
+  img.setAttribute("src", src);
+  img.setAttribute("class", "modal-content");
+  img.setAttribute("id", "img01");
+  div.setAttribute("id", "caption-modal");
+  div.innerHTML = e.target.nextElementSibling.innerHTML;
+  BODY.style.overflow = "hidden";
+};
+
+imgs.forEach(function (img) {
+  return img.addEventListener("click", zoomImage, false);
 }); // const contactCloud = document.getElementById("cloud-desktop-contact");
 // // Listen for scroll events
 // window.addEventListener("scroll", function() {

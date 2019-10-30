@@ -530,7 +530,7 @@ serviceSvgs.forEach(serviceSvg => serviceSvg.addEventListener("mouseout", highli
 //Modal for zooming images
 // Get the <span> element that closes the modal
 const MODAL = document.getElementById("myModal");
-const SPAN = document.getElementsByClassName("close")[0];
+// const SPAN = document.getElementsByClassName("close")[0];
 
 const BODY = document.getElementsByTagName("BODY")[0];
 
