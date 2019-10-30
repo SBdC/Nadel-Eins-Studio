@@ -4,8 +4,7 @@
   background-color: white;
   border: #449AFF 1px solid;
   cursor: pointer;
-  margin-top: 30px;
-  padding: 8px 10px;
+  padding: 4px 6px;
   box-shadow: #449AFF 4px 4px 0 0;
   transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
   .icon-close:hover, #back-to-top:hover, .about .about-text-wrapper button:hover, .services button:hover, .music .load:hover, .prices button:hover, .theEnd .subscribe:hover {
@@ -159,9 +158,6 @@ Accessibility
     height: auto; }
   .swiper-slide {
     background: white; }
-  .hor {
-    width: 44.5%;
-    height: 44.5%; }
   .service-container {
     display: flex;
     flex-direction: row;
@@ -406,7 +402,7 @@ staff
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 30px; }
+      margin-top: 30px; }
       .staff .staff-text-wrapper .staff-pics figure.staff-pic {
         display: flex;
         flex-direction: column;
@@ -445,8 +441,6 @@ services
     margin: 2px 5px 20px; }
   .services .icon {
     margin-bottom: 10px; }
-  .services button {
-    margin: 36px 5px 20px; }
   .services article {
     margin: 0 6px; }
   .services .service-more-text {
@@ -1096,8 +1090,6 @@ general styles
     section .contact-text-wrapper a {
       font-size: 1.3em;
       text-align: center; }
-    .services button {
-      margin-top: 40px; }
     .call-write {
       margin-left: 180px; }
       .call-write a {
