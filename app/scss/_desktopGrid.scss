@@ -54,6 +54,16 @@
 
     @media screen and (min-width: 751px) {
 
+        .swiper-container {
+            width: 90%;
+            
+        }
+
+        .swiper-button-next,
+    .swiper-button-prev{
+        display:block;
+    }
+
         /*--------------------------------------------------------------
 header desktop
  --------------------------------------------------------------*/

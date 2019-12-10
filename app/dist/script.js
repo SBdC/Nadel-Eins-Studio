@@ -33,8 +33,12 @@ CLOSE.addEventListener("click", revealMenu, false); //READ MORE
 
 var reads = Array.from(document.querySelectorAll(".readMore"));
 var erases = Array.from(document.querySelectorAll(".viewLess"));
+var openText = false;
 
 var revealText = function revealText(e) {
+  emptyText(e);
+  openText = true;
+  console.log(openText + "is open text");
   var idTarget = e.target.id;
   var dropDown = document.querySelector("div[data-key=\"".concat(idTarget, "\"]"));
   dropDown.style.display = "block";
@@ -42,22 +46,45 @@ var revealText = function revealText(e) {
   button.style.display = "none";
   var otherButton = document.querySelector("button[data-type=\"".concat(idTarget, "\"]"));
   otherButton.style.display = "block";
+  var firstParent = e.target.parentElement;
+  var greatParent = firstParent.parentElement;
+  var greatGreatParent = greatParent.parentElement;
+  greatGreatParent.style.flex = "0 1 calc(100%)"; //greatGreatParent.style.order = "-1";
 
-  if (idTarget != "read-about") {
-    var firstParent = e.target.parentElement;
-    var greatParent = firstParent.parentElement;
-    var greatGreatParent = greatParent.parentElement;
-    greatGreatParent.style.flex = "0 1 calc(100%)";
-    greatGreatParent.style.order = "-1";
-    greatGreatParent.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "center"
-    });
-  }
+  greatGreatParent.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "center"
+  });
+};
+
+var emptyText = function emptyText(e) {
+  openText = false;
+  var targetService = e.target.id;
+  console.log(targetService);
+  var goUp = document.querySelector("div[data-hide=\"".concat(targetService, "\"]"));
+  console.log(goUp); //   goUp.style.display = "none";
+  //   goUp.style.transition = "all 2s";
+  //   let otherButton = document.getElementById(`${targetService }`);
+  //   otherButton.style.display = "none";
+  //   let button = document.querySelector(`button[data-type="${targetService }"]`);
+  //   button.style.display = "block";
+  //   let firstParent = e.target.parentElement;
+  //   let greatParent = firstParent.parentElement;
+  //   let greatGreatParent = greatParent.parentElement;
+  //   greatGreatParent.style.flex = "";
+  //   // greatGreatParent.style.order = "";
+  //   let targetServiveElemnt = document.getElementById(targetService);
+  //   let parentTargetServiveElemnt = targetServiveElemnt.parentElement;
+  //   parentTargetServiveElemnt.scrollIntoView({
+  //       behavior: "smooth",
+  //       block: "center",
+  //       inline: "center"
+  //   });
 };
 
 var hideText = function hideText(e) {
+  openText = false;
   var targetService = e.target.id;
   var goUp = document.querySelector("div[data-hide=\"".concat(targetService, "\"]"));
   goUp.style.display = "none";
@@ -69,8 +96,8 @@ var hideText = function hideText(e) {
   var firstParent = e.target.parentElement;
   var greatParent = firstParent.parentElement;
   var greatGreatParent = greatParent.parentElement;
-  greatGreatParent.style.flex = "";
-  greatGreatParent.style.order = "";
+  greatGreatParent.style.flex = ""; // greatGreatParent.style.order = "";
+
   var targetServiveElemnt = document.getElementById(targetService);
   var parentTargetServiveElemnt = targetServiveElemnt.parentElement;
   parentTargetServiveElemnt.scrollIntoView({

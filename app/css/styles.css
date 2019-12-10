@@ -156,8 +156,10 @@ Accessibility
     width: 100%;
     height: auto;
     cursor: grab; }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none; }
   .swiper-pagination {
-    background-color: white;
     width: 100%;
     padding: 10px; }
   .swiper-slide {
@@ -186,10 +188,10 @@ Accessibility
     font-size: 12px;
     color: #000;
     opacity: 1;
-    background: rgba(0, 0, 0, 0.2); }
+    background: #E1E4E8; }
   .swiper-pagination-bullet-active {
     color: #fff;
-    background: #007aff; }
+    background: #449AFF; }
   .service-container {
     display: flex;
     flex-direction: row;
@@ -443,7 +445,7 @@ staff
         align-items: center; }
       .staff .staff-text-wrapper .staff-pics figure.staff-pic img {
         width: 250px;
-        height: auto;
+        height: 250px;
         border-radius: 100%;
         padding: 0 15px; }
       .staff .staff-text-wrapper .staff-pics .staff-img-text {
@@ -928,6 +930,11 @@ svg.mixes {
     #service-live-tech {
       margin-top: 20px; } }
   @media screen and (min-width: 751px) {
+    .swiper-container {
+      width: 90%; }
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: block; }
     /*--------------------------------------------------------------
 header desktop
  --------------------------------------------------------------*/
