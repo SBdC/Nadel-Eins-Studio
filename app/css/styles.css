@@ -1,15 +1,14 @@
 .icon-close, #back-to-top, .about .about-text-wrapper button, .services button, .music .load, .prices button, .theEnd .subscribe {
-  color: #000c2b;
+  color: #449AFF;
   letter-spacing: 0.02em;
-  background-color: white;
-  border: #449AFF 1px solid;
+  border-bottom: #449AFF 1px solid;
   cursor: pointer;
   padding: 4px 6px;
-  box-shadow: #449AFF 4px 4px 0 0;
+  box-shadow: #449AFF 0px 4px 0 0;
   transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
   .icon-close:hover, #back-to-top:hover, .about .about-text-wrapper button:hover, .services button:hover, .music .load:hover, .prices button:hover, .theEnd .subscribe:hover {
     transform: translateX(2px) translateY(2px);
-    box-shadow: 2px 2px 0 0; }
+    box-shadow: 0px 2px 0 0; }
 
 .icon-close, #back-to-top {
   height: 40px;
@@ -154,10 +153,43 @@ Accessibility
     .cloud-menus svg {
       display: none; }
   .swiper-container {
-    width: 90%;
-    height: auto; }
+    width: 100%;
+    height: auto;
+    cursor: grab; }
+  .swiper-pagination {
+    background-color: white;
+    width: 100%;
+    padding: 10px; }
   .swiper-slide {
-    background: white; }
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center; }
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2); }
+  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff; }
   .service-container {
     display: flex;
     flex-direction: row;
@@ -172,7 +204,9 @@ Accessibility
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center; } }
+    justify-content: center; }
+    .prices-container article {
+      margin: 40px  5px; } }
 
 body {
   background-image: url("../img/cable-test-12.svg");
@@ -328,14 +362,14 @@ header .banner {
 .slogan {
   background-color: #000c2b;
   z-index: 1;
-  padding: 80px; }
+  padding: 80px 10px; }
   .slogan .quote {
     text-align: center;
     color: white;
     font-weight: 600;
     margin-top: 20px;
     margin-bottom: 60px;
-    text-transform: capitalize; }
+    text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 button
@@ -364,8 +398,7 @@ About and co-work
     .about .about-text-wrapper p {
       color: #1b1b1c;
       padding: 10px;
-      border-radius: 20px;
-      margin-bottom: -20px; }
+      border-radius: 20px; }
     .about .about-text-wrapper button {
       margin-bottom: 40px; }
     .about .about-text-wrapper .about-more-text {
@@ -615,9 +648,8 @@ Footer
   animation: waving 8s infinite linear; }
 
 .cloud-menus-icon {
-  width: 7%;
-  margin-right: 30px;
-  margin-top: -8px; }
+  width: 10%;
+  margin-right: 50px; }
 
 #mast tspan {
   font-size: 38px; }
@@ -894,8 +926,7 @@ svg.mixes {
     #service-live-prep,
     #service-consulting,
     #service-live-tech {
-      margin-bottom: -80px;
-      margin-top: 40px; } }
+      margin-top: 20px; } }
   @media screen and (min-width: 751px) {
     /*--------------------------------------------------------------
 header desktop
@@ -1075,7 +1106,7 @@ general styles
     section .services-text-wrapper,
     section .contact-text-wrapper,
     section .footer-content {
-      padding: 0 150px; }
+      padding: 0 100px; }
     section h2 {
       font-size: 2.7em;
       margin-left: -20px; }
@@ -1083,7 +1114,7 @@ general styles
     section .prices-text-wrapper,
     section .about-text-wrapper,
     section .co-work-text-wrapper {
-      padding: 0 150px 100px;
+      padding: 0 100px 100px;
       margin: 0 auto; }
     section .contact-text-wrapper {
       padding-bottom: 60px; }
