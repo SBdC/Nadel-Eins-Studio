@@ -42,10 +42,7 @@ let openText = false;
 
 let revealText = (e) => {
 
-emptyText(e);
 
-
-  openText = true;
     console.log(openText +"is open text");
     let idTarget = e.target.id;
 
@@ -63,62 +60,24 @@ emptyText(e);
         let firstParent = e.target.parentElement;
         let greatParent = firstParent.parentElement;
         let greatGreatParent = greatParent.parentElement;
-        greatGreatParent.style.flex = "0 1 calc(100%)";
+        //greatGreatParent.style.flex = "0 1 calc(100%)";
         //greatGreatParent.style.order = "-1";
         
 
         greatGreatParent.scrollIntoView({
             behavior: "smooth",
-            block: "center",
-            inline: "center"
+            block: "center"
         });
 
 
 
 };
 
-let emptyText = (e) => {
-
-    openText = false;
-      let targetService = e.target.id;
-        console.log(targetService);
-
-
-     const goUp = document.querySelector(`div[data-hide="${targetService }"]`);
-     console.log(goUp );
-    //   goUp.style.display = "none";
-    //   goUp.style.transition = "all 2s";
-  
-    //   let otherButton = document.getElementById(`${targetService }`);
-    //   otherButton.style.display = "none";
-    //   let button = document.querySelector(`button[data-type="${targetService }"]`);
-    //   button.style.display = "block";
-  
-  
-  
-    //   let firstParent = e.target.parentElement;
-    //   let greatParent = firstParent.parentElement;
-    //   let greatGreatParent = greatParent.parentElement;
-    //   greatGreatParent.style.flex = "";
-    //   // greatGreatParent.style.order = "";
-  
-    //   let targetServiveElemnt = document.getElementById(targetService);
-    //   let parentTargetServiveElemnt = targetServiveElemnt.parentElement;
-    //   parentTargetServiveElemnt.scrollIntoView({
-    //       behavior: "smooth",
-    //       block: "center",
-    //       inline: "center"
-    //   });
-  
-  
-  
-  };
-  
 
 
 let hideText = (e) => {
 
-  openText = false;
+  
     let targetService = e.target.id;
     const goUp = document.querySelector(`div[data-hide="${targetService }"]`);
     goUp.style.display = "none";
@@ -134,15 +93,14 @@ let hideText = (e) => {
     let firstParent = e.target.parentElement;
     let greatParent = firstParent.parentElement;
     let greatGreatParent = greatParent.parentElement;
-    greatGreatParent.style.flex = "";
+    //greatGreatParent.style.flex = "";
     // greatGreatParent.style.order = "";
 
     let targetServiveElemnt = document.getElementById(targetService);
     let parentTargetServiveElemnt = targetServiveElemnt.parentElement;
     parentTargetServiveElemnt.scrollIntoView({
         behavior: "smooth",
-        block: "center",
-        inline: "center"
+        block: "center"
     });
 
 
