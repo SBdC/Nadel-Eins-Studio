@@ -1,10 +1,10 @@
 .icon-close, #back-to-top, .about .about-text-wrapper button, .services button, .music .load, .prices button, .theEnd .subscribe {
-  color: #449AFF;
+  color: #A5BDD8;
   letter-spacing: 0.02em;
-  border-bottom: #449AFF 1px solid;
+  border-bottom: #A5BDD8 1px solid;
   cursor: pointer;
   padding: 4px 6px;
-  box-shadow: #449AFF 0px 4px 0 0;
+  box-shadow: #A5BDD8 0px 4px 0 0;
   transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
   .icon-close:hover, #back-to-top:hover, .about .about-text-wrapper button:hover, .services button:hover, .music .load:hover, .prices button:hover, .theEnd .subscribe:hover {
     transform: translateX(2px) translateY(2px);
@@ -191,7 +191,7 @@ Accessibility
     background: #E1E4E8; }
   .swiper-pagination-bullet-active {
     color: #fff;
-    background: #449AFF; }
+    background: #A5BDD8; }
   .service-container {
     display: flex;
     flex-direction: row;
@@ -243,7 +243,7 @@ button {
 
 .open {
   position: fixed;
-  background-color: #000c2b;
+  background-color: #A5BDD8;
   list-style: none;
   height: 100vh;
   width: 100vw;
@@ -300,8 +300,8 @@ buttons close and arrow-up
   right: 20px;
   background-color: white;
   border-radius: 50%;
-  border: #449AFF 2px solid;
-  box-shadow: #449AFF 2px 2px 0px 0px;
+  border: #1b1b1c 2px solid;
+  box-shadow: #1b1b1c 2px 2px 0px 0px;
   z-index: 99; }
 
 .btn-entrance {
@@ -343,7 +343,7 @@ header .icon-cloud-line {
     margin-top: 65px;
     color: #1b1b1c; }
     header .icon-cloud-line p:hover {
-      color: #449AFF;
+      color: #A5BDD8;
       cursor: pointer; }
 
 header .bannerTwo {
@@ -362,15 +362,15 @@ header .banner {
       max-width: 200px; }
 
 .slogan {
-  background-color: #000c2b;
+  background-color: #A5BDD8;
   z-index: 1;
-  padding: 80px 10px; }
+  padding: 40px 10px; }
   .slogan .quote {
     text-align: center;
     color: white;
     font-weight: 600;
     margin-top: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     text-transform: uppercase; }
 
 /*--------------------------------------------------------------
@@ -411,14 +411,8 @@ About and co-work
 co-work
 --------------------------------------------------------------*/
 .co-work {
-  padding: 50px 0; }
-  .co-work .co-work-text-wrapper {
-    padding-bottom: 80px; }
-    .co-work .co-work-text-wrapper p {
-      color: #1b1b1c;
-      padding: 10px;
-      border-radius: 20px;
-      margin-bottom: -20px; }
+  padding: 50px 0;
+  background-color: #A5BDD8; }
 
 /*--------------------------------------------------------------
 staff
@@ -446,8 +440,7 @@ staff
       .staff .staff-text-wrapper .staff-pics figure.staff-pic img {
         width: 250px;
         height: 250px;
-        border-radius: 100%;
-        padding: 0 15px; }
+        border-radius: 100%; }
       .staff .staff-text-wrapper .staff-pics .staff-img-text {
         text-align: center;
         line-height: 10px; }
@@ -466,7 +459,7 @@ services
   .services h3 {
     text-align: center;
     margin: 0;
-    color: #449AFF; }
+    color: #A5BDD8; }
   .services .service-header-wrap-right {
     float: right; }
   .services .service-header-wrap-left {
@@ -498,16 +491,16 @@ services
       order: 2;
       margin-bottom: 20px; }
     .music .card p {
-      color: #449AFF;
+      color: #1b1b1c;
       font-weight: 700;
       margin-bottom: -10px;
       text-transform: uppercase; }
     .music .card p:nth-of-type(2) {
-      color: #1b1b1c;
+      color: #A5BDD8;
       font-style: italic;
       font-weight: 400; }
     .music .card p:last-of-type {
-      color: #1b1b1c;
+      color: #A5BDD8;
       font-weight: 400;
       text-transform: capitalize; }
     .music .card iframe.musicPlayer {
@@ -516,6 +509,7 @@ services
       height: 220px;
       margin: 0 auto; }
   .music .load {
+    color: #1b1b1c;
     margin: 0 auto;
     display: block; }
   .music .visually-hidden {
@@ -524,25 +518,28 @@ services
     clip: rect(0 0 0 0); }
 
 .prices {
-  background-color: #000c2b;
+  background-color: #A5BDD8;
   position: relative;
   padding: 50px 0; }
   .prices h2 {
-    color: white; }
+    color: #1b1b1c; }
   .prices h3 {
-    color: #449AFF;
+    color: #1b1b1c;
     text-align: center; }
   .prices p {
     min-width: 300px;
-    color: #E1E4E8;
+    color: #1b1b1c;
     text-align: center;
-    border-bottom: 1px solid #E1E4E8;
-    margin: 0;
-    padding: 5px; }
+    height: 50px;
+    border-bottom: 1px solid #1b1b1c;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   .prices p:first-of-type {
-    border-top: 1px solid #E1E4E8; }
+    border-top: 1px solid #1b1b1c; }
   .prices .empty-line {
-    height: 36px; }
+    height: 70px; }
   .prices p.price-disclamer {
     padding-top: 60px;
     border: none; }
@@ -553,10 +550,10 @@ services
     display: block;
     margin: 40px auto 80px; }
   .prices button {
-    background-color: #000c2b;
+    background-color: #A5BDD8;
     color: white;
-    border: #449AFF 1px solid;
-    box-shadow: #449AFF 4px 4px 0 0; }
+    border: #A5BDD8 1px solid;
+    box-shadow: #A5BDD8 4px 4px 0 0; }
   .prices .prices-more-text {
     display: none; }
   .prices .prices-sound-design {
@@ -568,7 +565,8 @@ services
 contact
 --------------------------------------------------------------*/
 .contact {
-  padding: 50px 0; }
+  padding: 50px 0;
+  background-color: #A5BDD8; }
   .contact .call-write {
     padding-bottom: 80px;
     text-align: center;
@@ -591,29 +589,28 @@ Footer
 .theEnd {
   padding-top: 30px;
   padding-left: 94px;
-  background-color: #000c2b;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top left;
-  color: white; }
+  color: #1b1b1c; }
   .theEnd .flicker-5 {
     -webkit-animation: flicker-5 8s linear infinite both;
     animation: flicker-5 8s linear infinite both; }
   .theEnd .subscribe {
     margin-left: 20px;
-    color: white;
-    background-color: #000c2b;
+    color: #1b1b1c;
+    background-color: #A5BDD8;
     padding: 10px 20px; }
   .theEnd .footer-content {
     margin-top: 30px;
     padding-top: 20px;
     text-align: right; }
     .theEnd .footer-content a {
-      color: #449AFF; }
+      color: #A5BDD8; }
     .theEnd .footer-content p {
       line-height: 1.3;
       font-size: 0.8em;
-      color: white; }
+      color: #1b1b1c; }
       .theEnd .footer-content p span {
         margin-left: 3px;
         display: inline-block;
@@ -687,7 +684,7 @@ Footer
 
 .text-on tspan {
   font-family: helvetica;
-  fill: #449AFF;
+  fill: #A5BDD8;
   stroke: transparent; }
   .text-on tspan:hover {
     cursor: pointer; }
@@ -715,7 +712,7 @@ svg.cloud-service {
   height: auto; }
 
 .cloud-fill {
-  fill: #EDEDED; }
+  fill: #E1E4E8; }
 
 .cloud-outline {
   stroke: #1b1b1c;
@@ -750,7 +747,7 @@ svg.cloud-service {
   .mixtech-svg:hover,
   .consulting-svg:hover,
   .soundDesign-svg:hover {
-    stroke: #449AFF;
+    stroke: #A5BDD8;
     cursor: pointer; }
 
 svg.speaker-comp,
@@ -1002,13 +999,13 @@ header desktop
         z-index: 98;
         cursor: pointer; }
         .contact-desk-wrapper .contact-desk p {
-          border: 2px solid #449AFF;
+          border: 2px solid #A5BDD8;
           padding: 0 10px;
           line-height: 40px;
           text-align: center;
           color: #1b1b1c; }
           .contact-desk-wrapper .contact-desk p:hover {
-            background-color: #449AFF;
+            background-color: #A5BDD8;
             color: white; }
         .contact-desk-wrapper .contact-desk p:first-child {
           font-size: 1.8em; }

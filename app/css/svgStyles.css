@@ -39,7 +39,7 @@
 
 .text-on tspan {
   font-family: helvetica;
-  fill: #449AFF;
+  fill: #A5BDD8;
   stroke: transparent; }
   .text-on tspan:hover {
     cursor: pointer; }
@@ -67,7 +67,7 @@ svg.cloud-service {
   height: auto; }
 
 .cloud-fill {
-  fill: #EDEDED; }
+  fill: #E1E4E8; }
 
 .cloud-outline {
   stroke: #1b1b1c;
@@ -102,7 +102,7 @@ svg.cloud-service {
   .mixtech-svg:hover,
   .consulting-svg:hover,
   .soundDesign-svg:hover {
-    stroke: #449AFF;
+    stroke: #A5BDD8;
     cursor: pointer; }
 
 svg.speaker-comp,
