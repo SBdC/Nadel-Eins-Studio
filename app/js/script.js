@@ -334,6 +334,8 @@ const smileBar = document.querySelector(".smileBar");
 
 
 const clouds = document.getElementById("clouds");
+const cloudFill = document.querySelector(".cloud-fill");
+const cloudOutline = document.querySelector(".cloud-outline");
 const drops = document.getElementById("drops");
 
 const keys = Array.from(document.querySelectorAll(".text-key"));
@@ -429,8 +431,10 @@ keys.forEach(key => key.addEventListener("click", explodeAndReveal, false));
 
 function rain() {
 
-    clouds.style.stroke = "transparent";
+    cloudFill.style.fill = "transparent";
+    cloudOutline.style.stroke = "transparent";
     drops.style.stroke = "#449AFF";
+    drops.style.fill = "#449AFF";
     droppings.forEach(dropping => dropping.classList.add("drops-go-down"));
 
 
@@ -446,8 +450,10 @@ function rain() {
 
 function cloudySky() {
 
-    clouds.style.stroke = "#449AFF";
+    cloudOutline.style.stroke = "#1b1b1c";
+    cloudFill.style.fill = "#EDEDED";
     drops.style.stroke = "transparent";
+    drops.style.fill = "transparent";
     droppings.forEach(dropping => dropping.classList.remove("drops-go-down"));
 
     keys.forEach(key => key.classList.remove("text-off"));
