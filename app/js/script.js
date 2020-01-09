@@ -90,9 +90,9 @@ let hideText = (e) => {
 
 
 
-    let firstParent = e.target.parentElement;
-    let greatParent = firstParent.parentElement;
-    let greatGreatParent = greatParent.parentElement;
+    //let firstParent = e.target.parentElement;
+   // let greatParent = firstParent.parentElement;
+    //let greatGreatParent = greatParent.parentElement;
     //greatGreatParent.style.flex = "";
     // greatGreatParent.style.order = "";
 
@@ -333,7 +333,7 @@ const smile = document.querySelector(".smile");
 const smileBar = document.querySelector(".smileBar");
 
 
-const clouds = document.getElementById("clouds");
+//const clouds = document.getElementById("clouds");
 const cloudFill = document.querySelector(".cloud-fill");
 const cloudOutline = document.querySelector(".cloud-outline");
 const drops = document.getElementById("drops");

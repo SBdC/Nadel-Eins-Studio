@@ -1,4 +1,4 @@
-$lightgrey: #EDEDED;
+$lightgrey:#EDEDED;
 $text: #1b1b1c;
 $black: #000c2b;
 $lightblue: #C0D5ED;
@@ -9,7 +9,7 @@ $blue: #449AFF;
 
 
 .sound-wave{
-animation: waving 8s infinite linear
+animation: waving 8s infinite linear;
 
 }
 .cloud-menus-icon {
@@ -195,8 +195,7 @@ svg.cloud-service {
 
 
 svg.speaker-comp,
-svg.live-master-speaker,
-    {
+svg.live-master-speaker{
     width: 50%;
     height: 50%;
     max-width: 50%;
@@ -377,9 +376,7 @@ svg.mixes {
 
 
         .needle,
-        .bottom,
-
-            {
+        .bottom {
             fill: white;
 
         }
