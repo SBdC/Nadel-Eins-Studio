@@ -10,7 +10,8 @@ var NAV = document.querySelector(".navigation");
 var MENUITEMS = document.querySelector(".menu-items");
 var screenReaderText = document.querySelector(".trigger .screen-reader-text");
 var points = Array.from(document.querySelectorAll(".nav-list"));
-var imgs = Array.from(document.querySelectorAll(".zoom"));
+var TITLEDESK = document.getElementById("title-desk");
+var TITLE = document.getElementById("title");
 
 function revealMenu() {
   OVERLAY.classList.toggle("opaque");
@@ -18,6 +19,11 @@ function revealMenu() {
   BURGERBLACK.classList.toggle("burger-white");
   BURGERWHITE.classList.toggle("burger-black");
   BURGERWHITE.classList.toggle("burger-white");
+  TITLEDESK.classList.toggle("title-desk-light");
+  TITLEDESK.classList.toggle("title-desk-dark");
+  TITLE.classList.toggle("title-dark");
+  TITLE.classList.toggle("title-light");
+  TITLE.classList.contains("title-light") ? TITLE.style.color = "white" : TITLE.style.color = "#1b1b1c";
   MENUITEMS.classList.toggle("open");
   TRIGGER.getAttribute("aria-expanded") == "false" ? CLOSE.setAttribute("aria-expanded", true) : CLOSE.setAttribute("aria-expanded", false);
   screenReaderText.innerHTML == "Reveal menu" ? screenReaderText.innerHTML = "Hide menu" : screenReaderText.innerHTML = "Reveal menu";
@@ -36,8 +42,6 @@ var erases = Array.from(document.querySelectorAll(".viewLess"));
 var openText = false;
 
 var revealText = function revealText(e) {
-  emptyText(e);
-  openText = true;
   console.log(openText + "is open text");
   var idTarget = e.target.id;
   var dropDown = document.querySelector("div[data-key=\"".concat(idTarget, "\"]"));
@@ -48,43 +52,16 @@ var revealText = function revealText(e) {
   otherButton.style.display = "block";
   var firstParent = e.target.parentElement;
   var greatParent = firstParent.parentElement;
-  var greatGreatParent = greatParent.parentElement;
-  greatGreatParent.style.flex = "0 1 calc(100%)"; //greatGreatParent.style.order = "-1";
+  var greatGreatParent = greatParent.parentElement; //greatGreatParent.style.flex = "0 1 calc(100%)";
+  //greatGreatParent.style.order = "-1";
 
   greatGreatParent.scrollIntoView({
     behavior: "smooth",
-    block: "center",
-    inline: "center"
+    block: "center"
   });
 };
 
-var emptyText = function emptyText(e) {
-  openText = false;
-  var targetService = e.target.id;
-  console.log(targetService);
-  var goUp = document.querySelector("div[data-hide=\"".concat(targetService, "\"]"));
-  console.log(goUp); //   goUp.style.display = "none";
-  //   goUp.style.transition = "all 2s";
-  //   let otherButton = document.getElementById(`${targetService }`);
-  //   otherButton.style.display = "none";
-  //   let button = document.querySelector(`button[data-type="${targetService }"]`);
-  //   button.style.display = "block";
-  //   let firstParent = e.target.parentElement;
-  //   let greatParent = firstParent.parentElement;
-  //   let greatGreatParent = greatParent.parentElement;
-  //   greatGreatParent.style.flex = "";
-  //   // greatGreatParent.style.order = "";
-  //   let targetServiveElemnt = document.getElementById(targetService);
-  //   let parentTargetServiveElemnt = targetServiveElemnt.parentElement;
-  //   parentTargetServiveElemnt.scrollIntoView({
-  //       behavior: "smooth",
-  //       block: "center",
-  //       inline: "center"
-  //   });
-};
-
 var hideText = function hideText(e) {
-  openText = false;
   var targetService = e.target.id;
   var goUp = document.querySelector("div[data-hide=\"".concat(targetService, "\"]"));
   goUp.style.display = "none";
@@ -92,18 +69,17 @@ var hideText = function hideText(e) {
   var otherButton = document.getElementById("".concat(targetService));
   otherButton.style.display = "none";
   var button = document.querySelector("button[data-type=\"".concat(targetService, "\"]"));
-  button.style.display = "block";
-  var firstParent = e.target.parentElement;
-  var greatParent = firstParent.parentElement;
-  var greatGreatParent = greatParent.parentElement;
-  greatGreatParent.style.flex = ""; // greatGreatParent.style.order = "";
+  button.style.display = "block"; //let firstParent = e.target.parentElement;
+  // let greatParent = firstParent.parentElement;
+  //let greatGreatParent = greatParent.parentElement;
+  //greatGreatParent.style.flex = "";
+  // greatGreatParent.style.order = "";
 
   var targetServiveElemnt = document.getElementById(targetService);
   var parentTargetServiveElemnt = targetServiveElemnt.parentElement;
   parentTargetServiveElemnt.scrollIntoView({
     behavior: "smooth",
-    block: "center",
-    inline: "center"
+    block: "center"
   });
 };
 
@@ -221,12 +197,14 @@ backTop.addEventListener("click", backToTop);
 
 function backToTop() {
   window.scrollTo(0, 0);
-}
+} //copyright
+
 
 var today = new Date();
 var year = today.getFullYear();
 var COPY = document.getElementById("copyright");
-COPY.innerHTML = "<p> Franz Schuette " + year + " &#x24B8; All rights reserved</p>";
+COPY.innerHTML = "<p> Franz Schuette " + year + " &#x24B8; All rights reserved</p>"; //impressum
+
 var IMPRESSUM = document.getElementById("impressum");
 var impressumText = document.getElementById("impressum-text");
 var impressumArrow = document.getElementById("impressum-arrow");
@@ -245,14 +223,15 @@ var face = document.getElementById("face");
 var thunder = document.querySelector(".thunder");
 var surprise = document.querySelector(".surprise");
 var smile = document.querySelector(".smile");
-var smileBar = document.querySelector(".smileBar");
-var clouds = document.getElementById("clouds");
+var smileBar = document.querySelector(".smileBar"); //const clouds = document.getElementById("clouds");
+
+var cloudFill = document.querySelector(".cloud-fill");
+var cloudOutline = document.querySelector(".cloud-outline");
 var drops = document.getElementById("drops");
 var keys = Array.from(document.querySelectorAll(".text-key"));
 var faces = Array.from(document.querySelectorAll(".faces"));
 var droppings = Array.from(document.querySelectorAll(".dropping"));
-var serviceSvgs = Array.from(document.querySelectorAll(".service-svg"));
-var title = document.getElementById("title"); //thunders gets drawn
+var serviceSvgs = Array.from(document.querySelectorAll(".service-svg")); //thunders gets drawn
 
 var thunderOn = function thunderOn() {
   face.style.fill = "red";
@@ -263,7 +242,7 @@ var thunderOn = function thunderOn() {
   smileBar.style.stroke = "transparent";
   surprise.style.fill = "white";
   surprise.style.stroke = "black";
-  title.style.color = "red";
+  TITLE.style.color = "red";
   document.body.style.background = "snow"; // city.style.background="snow";
 };
 
@@ -278,12 +257,12 @@ var thunderOff = function thunderOff() {
   surprise.style.fill = "transparent";
   surprise.style.stroke = "transparent";
   document.body.style.background = "";
-  title.style.color = black;
+  TITLE.classList.contains("title-light") ? TITLE.style.color = "white" : TITLE.style.color = "#1b1b1c";
 }; // face.addEventListener("click", thunderOn, false);
 
 
-title.addEventListener("mouseover", thunderOn, false);
-title.addEventListener("mouseout", thunderOff, false);
+TITLE.addEventListener("mouseover", thunderOn, false);
+TITLE.addEventListener("mouseout", thunderOff, false);
 faces.forEach(function (face) {
   return face.addEventListener("mouseover", thunderOn, false);
 });
@@ -309,8 +288,9 @@ keys.forEach(function (key) {
 });
 
 function rain() {
-  clouds.style.stroke = "transparent";
-  drops.style.stroke = "#449AFF";
+  cloudFill.style.fill = "transparent";
+  cloudOutline.style.stroke = "transparent";
+  drops.style.fill = "rgba(165,189,216,0.7)";
   droppings.forEach(function (dropping) {
     return dropping.classList.add("drops-go-down");
   });
@@ -324,8 +304,9 @@ function rain() {
 }
 
 function cloudySky() {
-  clouds.style.stroke = "#449AFF";
-  drops.style.stroke = "transparent";
+  cloudOutline.style.stroke = "#1b1b1c";
+  cloudFill.style.fill = "rgba(165,189,216,0.7)";
+  drops.style.fill = "transparent";
   droppings.forEach(function (dropping) {
     return dropping.classList.remove("drops-go-down");
   });
@@ -339,9 +320,9 @@ function cloudySky() {
 
 var svgToService = function svgToService(e) {
   var mainEl = e.target.dataset.id;
-  var matchingService = document.querySelector("article[data-svg=\"".concat(mainEl, "\"]"));
-  matchingService.style.flex = "0 1 calc(100%)";
-  matchingService.style.order = "-1";
+  var matchingService = document.querySelector("article[data-svg=\"".concat(mainEl, "\"]")); //   matchingService.style.flex = "0 1 calc(100%)";
+  //   matchingService.style.order = "-1";
+
   var dropDown = document.querySelector("div[data-text=\"".concat(mainEl, "\"]"));
   dropDown.style.display = "block";
   var button = document.querySelector("button[data-svgRead=\"".concat(mainEl, "\"]"));
@@ -362,13 +343,13 @@ var highlightSvg = function highlightSvg(e) {
   var svgEllipses = Array.from(document.querySelectorAll("ellipse[data-id=\"".concat(mainEl, "\"]")));
   var svgRet = Array.from(document.querySelectorAll("ret[data-id=\"".concat(mainEl, "\"]")));
   svgPaths.forEach(function (svgPath) {
-    return svgPath.style.stroke = "#449AFF";
+    return svgPath.style.stroke = "#A5BDD8";
   });
   svgEllipses.forEach(function (svgPath) {
-    return svgPath.style.stroke = "#449AFF";
+    return svgPath.style.stroke = "#A5BDD8";
   });
   svgRet.forEach(function (svgPath) {
-    return svgPath.style.stroke = "#449AFF";
+    return svgPath.style.stroke = "#A5BDD8";
   });
   svgText.classList.remove("text-off");
   svgText.classList.add("text-on");
@@ -403,10 +384,11 @@ serviceSvgs.forEach(function (serviceSvg) {
   return serviceSvg.addEventListener("mouseout", highlightSvgOFF, false);
 }); //Modal for zooming images
 // Get the <span> element that closes the modal
-
-var MODAL = document.getElementById("myModal"); // const SPAN = document.getElementsByClassName("close")[0];
-
-var BODY = document.getElementsByTagName("BODY")[0]; // When the user clicks on <span> (x), close the modal
+// const MODAL = document.getElementById("myModal");
+// const SPAN = document.getElementsByClassName("close")[0];
+// let imgs = Array.from(document.querySelectorAll(".zoom"));
+// const BODY = document.getElementsByTagName("BODY")[0];
+// When the user clicks on <span> (x), close the modal
 // SPAN.onclick = function() {
 //     let modalImg = document.getElementById("img01");
 //     let captionText = document.getElementById("caption-modal");
@@ -414,25 +396,22 @@ var BODY = document.getElementsByTagName("BODY")[0]; // When the user clicks on 
 //     MODAL.removeChild(captionText);
 //     MODAL.style.display = "none";
 // };
-
-var zoomImage = function zoomImage(e) {
-  MODAL.style.display = "block";
-  var src = e.target.dataset.id;
-  var img = document.createElement("img");
-  var div = document.createElement("div");
-  MODAL.appendChild(img);
-  MODAL.appendChild(div);
-  img.setAttribute("src", src);
-  img.setAttribute("class", "modal-content");
-  img.setAttribute("id", "img01");
-  div.setAttribute("id", "caption-modal");
-  div.innerHTML = e.target.nextElementSibling.innerHTML;
-  BODY.style.overflow = "hidden";
-};
-
-imgs.forEach(function (img) {
-  return img.addEventListener("click", zoomImage, false);
-}); // const contactCloud = document.getElementById("cloud-desktop-contact");
+// let zoomImage = (e) => {
+//     MODAL.style.display = "block";
+//     let src = e.target.dataset.id;
+//     let img = document.createElement("img");
+//     let div = document.createElement("div");
+//     MODAL.appendChild(img);
+//     MODAL.appendChild(div);
+//     img.setAttribute("src", src);
+//     img.setAttribute("class", "modal-content");
+//     img.setAttribute("id", "img01");
+//     div.setAttribute("id", "caption-modal");
+//     div.innerHTML = e.target.nextElementSibling.innerHTML;
+//     BODY.style.overflow = "hidden";
+// };
+// imgs.forEach(img => img.addEventListener("click", zoomImage, false));
+// const contactCloud = document.getElementById("cloud-desktop-contact");
 // // Listen for scroll events
 // window.addEventListener("scroll", function() {
 //     // Set a timeout to run after scrolling ends

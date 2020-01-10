@@ -1392,15 +1392,13 @@ prices music
     transform: translateX(20px); } }
 
 @-webkit-keyframes slidedown {
-  0% {
-    transform: translateY(86px); }
   100% {
     transform: translateY(1200px);
     opacity: 0; } }
 
 @keyframes slidedown {
   0% {
-    transform: translateY(86px); }
+    transform: translateX(86px); }
   100% {
     transform: translateY(1200px);
     opacity: 0; } }
