@@ -1,12 +1,12 @@
-.icon-close, #back-to-top, .about .about-text-wrapper button, .services button, .music .load, .prices button, .theEnd .subscribe {
-  color: #A5BDD8;
+.icon-close, #back-to-top, .about .about-text-wrapper button, .services button, .music .load, .prices button {
+  color: #a5bdd8;
   letter-spacing: 0.02em;
-  border-bottom: #A5BDD8 1px solid;
+  border-bottom: #a5bdd8 1px solid;
   cursor: pointer;
   padding: 4px 6px;
-  box-shadow: #A5BDD8 0px 4px 0 0;
-  transition: transform .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out, opacity .25s ease-out; }
-  .icon-close:hover, #back-to-top:hover, .about .about-text-wrapper button:hover, .services button:hover, .music .load:hover, .prices button:hover, .theEnd .subscribe:hover {
+  box-shadow: #a5bdd8 0px 4px 0 0;
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out, box-shadow 0.25s ease-out, opacity 0.25s ease-out; }
+  .icon-close:hover, #back-to-top:hover, .about .about-text-wrapper button:hover, .services button:hover, .music .load:hover, .prices button:hover {
     transform: translateX(2px) translateY(2px);
     box-shadow: 0px 2px 0 0; }
 
@@ -19,8 +19,8 @@
   padding: 0; }
 
 header .icon-cloud-line, .services .icon, .prices .icon {
-  height: calc(113px *1.1);
-  width: calc(178px *1.1);
+  height: calc(113px * 1.1);
+  width: calc(178px * 1.1);
   background-position: 50% 50%;
   background-size: contain;
   margin: 0;
@@ -188,10 +188,10 @@ Accessibility
     font-size: 12px;
     color: #000;
     opacity: 1;
-    background: #E1E4E8; }
+    background: #e1e4e8; }
   .swiper-pagination-bullet-active {
     color: #fff;
-    background: #A5BDD8; }
+    background: #a5bdd8; }
   .service-container {
     display: flex;
     flex-direction: row;
@@ -208,7 +208,7 @@ Accessibility
     flex-wrap: wrap;
     justify-content: center; }
     .prices-container article {
-      margin: 40px  5px; } }
+      margin: 40px 5px; } }
 
 body {
   background-image: url("../img/cable-test-12.svg");
@@ -243,7 +243,7 @@ button {
 
 .open {
   position: fixed;
-  background-color: #A5BDD8;
+  background-color: #a5bdd8;
   list-style: none;
   height: 100vh;
   width: 100vw;
@@ -254,13 +254,13 @@ button {
     margin-left: 30px; }
     .open li a {
       line-height: 55px;
-      color: #C0D5ED;
+      color: white;
       z-index: 100;
       font-size: 1.6em;
       text-transform: uppercase;
       font-weight: 700; }
       .open li a:hover {
-        color: #FF0000;
+        color: #ff0000;
         cursor: pointer; }
 
 .burger:hover {
@@ -343,7 +343,7 @@ header .icon-cloud-line {
     margin-top: 65px;
     color: #1b1b1c; }
     header .icon-cloud-line p:hover {
-      color: #A5BDD8;
+      color: #a5bdd8;
       cursor: pointer; }
 
 header .bannerTwo {
@@ -362,7 +362,7 @@ header .banner {
       max-width: 200px; }
 
 .slogan {
-  background-color: #A5BDD8;
+  background-color: #a5bdd8;
   z-index: 1;
   padding: 40px 10px; }
   .slogan .quote {
@@ -412,7 +412,7 @@ co-work
 --------------------------------------------------------------*/
 .co-work {
   padding: 50px 0;
-  background-color: #A5BDD8; }
+  background-color: #a5bdd8; }
 
 /*--------------------------------------------------------------
 staff
@@ -459,7 +459,7 @@ services
   .services h3 {
     text-align: center;
     margin: 0;
-    color: #A5BDD8; }
+    color: #a5bdd8; }
   .services .service-header-wrap-right {
     float: right; }
   .services .service-header-wrap-left {
@@ -496,11 +496,11 @@ services
       margin-bottom: -10px;
       text-transform: uppercase; }
     .music .card p:nth-of-type(2) {
-      color: #A5BDD8;
+      color: #a5bdd8;
       font-style: italic;
       font-weight: 400; }
     .music .card p:last-of-type {
-      color: #A5BDD8;
+      color: #a5bdd8;
       font-weight: 400;
       text-transform: capitalize; }
     .music .card iframe.musicPlayer {
@@ -518,7 +518,7 @@ services
     clip: rect(0 0 0 0); }
 
 .prices {
-  background-color: #A5BDD8;
+  background-color: #a5bdd8;
   position: relative;
   padding: 50px 0; }
   .prices h2 {
@@ -550,10 +550,10 @@ services
     display: block;
     margin: 40px auto 80px; }
   .prices button {
-    background-color: #A5BDD8;
+    background-color: #a5bdd8;
     color: white;
-    border: #A5BDD8 1px solid;
-    box-shadow: #A5BDD8 4px 4px 0 0; }
+    border: #a5bdd8 1px solid;
+    box-shadow: #a5bdd8 4px 4px 0 0; }
   .prices .prices-more-text {
     display: none; }
   .prices .prices-sound-design {
@@ -566,15 +566,15 @@ contact
 --------------------------------------------------------------*/
 .contact {
   padding: 50px 0;
-  background-color: #A5BDD8; }
+  background-color: #a5bdd8; }
   .contact .call-write {
     padding-bottom: 80px;
     text-align: center;
     margin-top: 20px; }
     .contact .call-write span:first-child {
-      font-size: 1.8em; }
+      font-size: 32px; }
     .contact .call-write span:last-child {
-      font-size: 2.5em; }
+      font-size: 44px; }
     .contact .call-write a {
       color: #1b1b1c;
       padding: 10px;
@@ -587,8 +587,10 @@ contact
 Footer
 --------------------------------------------------------------*/
 .theEnd {
-  padding-top: 30px;
-  padding-left: 94px;
+  padding-top: 50px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top left;
@@ -597,19 +599,28 @@ Footer
     -webkit-animation: flicker-5 8s linear infinite both;
     animation: flicker-5 8s linear infinite both; }
   .theEnd .subscribe {
+    letter-spacing: 0.02em;
+    border-bottom: #a5bdd8 4px solid;
+    cursor: pointer;
+    padding: 4px 6px;
+    box-shadow: #1b1b1c 4px 4px 0 0;
+    transition: transform 0.25s ease-out, opacity 0.25s ease-out, box-shadow 0.25s ease-out, opacity 0.25s ease-out;
     margin-left: 20px;
     color: #1b1b1c;
-    background-color: #A5BDD8;
-    padding: 10px 20px; }
+    background-color: #a5bdd8; }
+    .theEnd .subscribe:hover {
+      transform: translateX(2px) translateY(2px);
+      box-shadow: 0px 2px 0 0; }
+  .theEnd .footer-content-second {
+    margin: 0 20px; }
   .theEnd .footer-content {
-    margin-top: 30px;
-    padding-top: 20px;
-    text-align: right; }
+    margin-top: 12px;
+    text-align: left; }
     .theEnd .footer-content a {
-      color: #A5BDD8; }
+      color: #a5bdd8; }
     .theEnd .footer-content p {
       line-height: 1.3;
-      font-size: 0.8em;
+      margin-top: 52px;
       color: #1b1b1c; }
       .theEnd .footer-content p span {
         margin-left: 3px;
@@ -712,7 +723,7 @@ svg.cloud-service {
   height: auto; }
 
 .cloud-fill {
-  fill: #E1E4E8; }
+  fill: rgba(165, 189, 216, 0.7); }
 
 .cloud-outline {
   stroke: #1b1b1c;
@@ -913,8 +924,8 @@ svg.mixes {
     h1 {
       font-size: 2em; }
     #title-desk {
-      background-color: white;
-      padding-right: 72px; }
+      padding-right: 72px;
+      z-index: 200; }
     #grid-container {
       height: 70vh; }
       #grid-container .item3 {
@@ -936,10 +947,14 @@ svg.mixes {
       margin-top: 20px; } }
   @media screen and (min-width: 751px) {
     .swiper-container {
-      width: 90%; }
+      width: 100%;
+      height: 100%; }
     .swiper-button-next,
     .swiper-button-prev {
-      display: block; }
+      display: block;
+      color: #A5BDD8; }
+    .swiper-button-prev {
+      margin-left: 8px; }
     /*--------------------------------------------------------------
 header desktop
  --------------------------------------------------------------*/
@@ -950,7 +965,7 @@ header desktop
         margin-left: 0px;
         line-height: 20px;
         width: 100vw;
-        z-index: 1; }
+        z-index: 200; }
       .title-desktop {
         text-align: left;
         padding: 0 90px; } }
@@ -967,8 +982,11 @@ header desktop
       transform: rotate(180deg);
       padding-right: 80px;
       border-left: 3px solid black;
-      background-color: white;
-      z-index: 1; }
+      z-index: 200; }
+    .title-desk-light {
+      background-color: white; }
+    .title-desk-dark {
+      background-color: #1b1b1c; }
     .title-desktop {
       position: fixed;
       text-align: right;
@@ -977,6 +995,10 @@ header desktop
       white-space: nowrap;
       right: 2px;
       bottom: 100px; }
+    .title-dark {
+      color: #1b1b1c; }
+    .title-light {
+      color: white; }
     .open {
       margin: 0;
       width: 100vw;
@@ -996,22 +1018,23 @@ header desktop
         position: fixed;
         top: 600px;
         left: 11px;
-        z-index: 98;
-        cursor: pointer; }
+        z-index: 201; }
         .contact-desk-wrapper .contact-desk p {
           border: 2px solid #A5BDD8;
           padding: 0 10px;
           line-height: 40px;
           text-align: center;
-          color: #1b1b1c; }
+          color: #1b1b1c;
+          background-color: white; }
           .contact-desk-wrapper .contact-desk p:hover {
             background-color: #A5BDD8;
-            color: white; }
-        .contact-desk-wrapper .contact-desk p:first-child {
-          font-size: 1.8em; }
-        .contact-desk-wrapper .contact-desk p:last-child {
-          margin-top: -30px;
-          font-size: 2.5em; }
+            color: white;
+            cursor: pointer; }
+        .contact-desk-wrapper .contact-desk #phone-side-bar {
+          font-size: 30px; }
+        .contact-desk-wrapper .contact-desk #email-side-bar {
+          margin-top: -33px;
+          font-size: 42px; }
     .header-for-mobile {
       display: none; }
     .header-for-desktop {
@@ -1276,8 +1299,13 @@ prices music
           margin: 0 auto; }
     .music #loadMore {
       margin-top: 40px; }
-    footer.theEnd .footer-content {
-      text-align: left; } } }
+    footer.theEnd {
+      padding-left: 94px;
+      justify-content: space-between;
+      align-content: flex-start;
+      flex-direction: row; }
+    footer.theEnd .subscribe {
+      margin-top: 0px; } } }
 
 @-webkit-keyframes twink {
   0% {

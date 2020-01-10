@@ -67,7 +67,7 @@ svg.cloud-service {
   height: auto; }
 
 .cloud-fill {
-  fill: #E1E4E8; }
+  fill: rgba(165, 189, 216, 0.7); }
 
 .cloud-outline {
   stroke: #1b1b1c;
