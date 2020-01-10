@@ -438,8 +438,8 @@ staff
         margin: 20px;
         align-items: center; }
       .staff .staff-text-wrapper .staff-pics figure.staff-pic img {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
         border-radius: 100%; }
       .staff .staff-text-wrapper .staff-pics .staff-img-text {
         text-align: center;
@@ -521,6 +521,10 @@ services
   background-color: #a5bdd8;
   position: relative;
   padding: 50px 0; }
+  .prices #price-contact {
+    color: white; }
+    .prices #price-contact:hover {
+      color: #1b1b1c; }
   .prices h2 {
     color: #1b1b1c; }
   .prices h3 {
@@ -947,14 +951,12 @@ svg.mixes {
       margin-top: 20px; } }
   @media screen and (min-width: 751px) {
     .swiper-container {
-      width: 100%;
-      height: 100%; }
+      width: 90%;
+      height: 90%; }
     .swiper-button-next,
     .swiper-button-prev {
       display: block;
       color: #A5BDD8; }
-    .swiper-button-prev {
-      margin-left: 8px; }
     /*--------------------------------------------------------------
 header desktop
  --------------------------------------------------------------*/

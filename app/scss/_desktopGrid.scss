@@ -43,8 +43,9 @@
 
   @media screen and (min-width: 751px) {
     .swiper-container {
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      height: 90%;
+      
     }
 
     .swiper-button-next,
@@ -53,9 +54,9 @@
       color: $blue;
     }
 
-    .swiper-button-prev {
-      margin-left: 8px;
-    }
+    // .swiper-button-prev {
+    //   margin-left: 8px;
+    // }
 
     /*--------------------------------------------------------------
 header desktop

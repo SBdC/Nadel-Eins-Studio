@@ -240,12 +240,17 @@ function backToTop() {
   window.scrollTo(0, 0);
 }
 
+//copyright
+
+
 let today = new Date();
 let year = today.getFullYear();
 
 const COPY = document.getElementById("copyright");
 COPY.innerHTML =
   "<p> Franz Schuette " + year + " &#x24B8; All rights reserved</p>";
+
+//impressum
 
 const IMPRESSUM = document.getElementById("impressum");
 let impressumText = document.getElementById("impressum-text");
@@ -390,8 +395,8 @@ let svgToService = e => {
 
   let matchingService = document.querySelector(`article[data-svg="${mainEl}"]`);
 
-  matchingService.style.flex = "0 1 calc(100%)";
-  matchingService.style.order = "-1";
+//   matchingService.style.flex = "0 1 calc(100%)";
+//   matchingService.style.order = "-1";
 
   let dropDown = document.querySelector(`div[data-text="${mainEl}"]`);
   dropDown.style.display = "block";
