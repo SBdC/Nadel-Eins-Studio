@@ -145,6 +145,9 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("orientationchange", lazyLoad);
 });
 
+
+
+
 //load more music albums
 
 let parent = document.querySelector("ul"),

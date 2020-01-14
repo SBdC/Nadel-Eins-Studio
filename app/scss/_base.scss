@@ -46,6 +46,14 @@ Accessibility
     }
   }
 
+
+  .swiper-lazy-preloader{
+    width:150px;
+    height:150px;
+    margin:60px auto;
+  }
+
+
   .swiper-container {
     width: 100%;
     height: auto;
@@ -619,11 +627,11 @@ services
   position: relative;
   padding: 50px 0;
 
-  #price-contact{
-      color:white;
-      &:hover{
-          color:$text;
-      }
+  #price-contact {
+    color: white;
+    &:hover {
+      color: $text;
+    }
   }
 
   h2 {
@@ -659,13 +667,20 @@ services
   p.price-disclamer {
     padding-top: 60px;
     border: none;
+    display:block;
+
   }
 
   .icon {
     @extend %icon-cloud-style;
-
     display: block;
     margin: 0 auto;
+  }
+
+  .icon.icon-studio {
+    height: 100px;
+    width: 100px;
+    margin: 10px auto 39px;
   }
 
   .readMore {
@@ -750,16 +765,14 @@ Footer
 
   .subscribe {
     letter-spacing: 0.02em;
-
     border-bottom: $blue 4px solid;
     cursor: pointer;
-
-    padding: 4px 6px;
+    padding: 8px 10px;
     box-shadow: $text 4px 4px 0 0;
     transition: transform 0.25s ease-out, opacity 0.25s ease-out,
       box-shadow 0.25s ease-out, opacity 0.25s ease-out;
     margin-left: 20px;
-    margin-bottom:52px;
+    margin-bottom: 48px;
     color: $text;
     background-color: $black;
 
@@ -771,19 +784,15 @@ Footer
 
   .footer-content-second {
     margin: 0 20px;
+    a {
+      color: $blue;
+    }
   }
 
   .footer-content {
     margin-top: 12px;
 
     text-align: left;
-
-    a {
-      color: $blue;
-    }
-
-
-   
 
     p {
       line-height: 1.3;
