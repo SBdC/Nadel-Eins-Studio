@@ -759,6 +759,7 @@ Footer
     transition: transform 0.25s ease-out, opacity 0.25s ease-out,
       box-shadow 0.25s ease-out, opacity 0.25s ease-out;
     margin-left: 20px;
+    margin-bottom:52px;
     color: $text;
     background-color: $black;
 
@@ -781,10 +782,13 @@ Footer
       color: $blue;
     }
 
+
+   
+
     p {
       line-height: 1.3;
       @extend %text-margin;
-      margin-top: 52px;
+
       color: $text;
 
       span {

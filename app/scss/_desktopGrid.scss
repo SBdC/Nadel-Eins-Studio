@@ -4,13 +4,17 @@
       font-size: 2em;
     }
 
+    #quote {
+      font-size: 2em;
+      padding: 0 100px;
+    }
     #title-desk {
       padding-right: 72px;
       z-index: 200;
     }
 
     #grid-container {
-      height: 70vh;
+      min-height: 70vh;
 
       .item3 {
         grid-row: 1/3;
