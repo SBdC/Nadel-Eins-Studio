@@ -123,19 +123,21 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", lazyLoad);
   window.addEventListener("orientationchange", lazyLoad);
 }); //load more music albums
+// let parent = document.querySelector("ul"),
+//   items = parent.querySelectorAll("li"),
 
-var parent = document.querySelector("ul"),
-    items = parent.querySelectorAll("li"),
-    loadMoreBtn = document.querySelector("#loadMore"),
+var loadMoreBtn = document.querySelector("#loadMore"),
     loadLessBtn = document.querySelector("#loadless"),
     maxItems = 10,
     hiddenClass = "visually-hidden",
-    showClass = "visually";
-[].forEach.call(items, function (item, idx) {
-  if (idx > maxItems - 1) {
-    item.classList.add(hiddenClass);
-  }
-});
+    showClass = "visually"; // [].forEach.call(items, function(item, idx) {
+//   if (idx > maxItems - 1) {
+//     console.log(maxItems);
+//     console.log("hellloooo");
+//     item.classList.add(hiddenClass);
+//   }
+// });
+
 loadMoreBtn.addEventListener("click", function () {
   [].forEach.call(document.querySelectorAll("." + hiddenClass), function (item, idx) {
     if (idx < maxItems - 1) {
