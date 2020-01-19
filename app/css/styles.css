@@ -507,11 +507,19 @@ services
       color: #a5bdd8;
       font-weight: 400;
       text-transform: capitalize; }
+    .music .card .player-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      padding-bottom: 100%; }
     .music .card iframe.musicPlayer {
-      border: none;
-      width: 220px;
-      height: 220px;
-      margin: 0 auto; }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0; }
   .music .load {
     color: #1b1b1c;
     margin: 0 auto;
@@ -549,7 +557,7 @@ services
   .prices .empty-line {
     height: 70px; }
   .prices p.price-disclamer {
-    padding-top: 60px;
+    padding-top: 40px 0;
     border: none;
     display: block; }
   .prices .icon {
@@ -1251,7 +1259,7 @@ general styles
       display: flex;
       flex-direction: column;
       padding: 4% 4%;
-      flex: 1 1 calc(25% - 20px);
+      flex: 0 1 calc(25% - 20px);
       min-height: 460px;
       min-width: 300px; }
     .services .service-header-wrap-other {
@@ -1268,16 +1276,18 @@ general styles
     /*--------------------------------------------------------------
 prices music 
  --------------------------------------------------------------*/
-    .prices-container .price {
-      display: flex;
-      flex-direction: column;
-      padding: 4% 6%;
-      min-height: 460px;
-      min-width: 300px;
-      justify-content: flex-start;
-      align-items: center;
-      flex: 1 1 calc(25% - 20px);
-      margin: 10px; }
+    .prices-container {
+      margin-bottom: 40px; }
+      .prices-container .price {
+        display: flex;
+        flex-direction: column;
+        padding: 4% 4%;
+        min-height: 460px;
+        min-width: 300px;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 0 1 calc(25% - 20px);
+        margin: 10px; }
     .music .cards {
       display: flex;
       flex-direction: row;
@@ -1287,8 +1297,8 @@ prices music
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        flex: 1 1 calc(25% - 20px);
-        padding: 6% 6%;
+        flex: 0 1 calc(25% - 20px);
+        padding: 4% 4%;
         min-height: 460px;
         min-width: 300px;
         margin: 10px;
@@ -1302,15 +1312,7 @@ prices music
         .music .cards .card .player-wrapper {
           display: flex;
           flex-direction: column;
-          justify-content: flex-start;
-          height: 100%;
-          margin-top: -10px;
-          margin-bottom: 20px; }
-        .music .cards .card iframe.musicPlayer {
-          border: 0;
-          width: 250px;
-          height: 250px;
-          margin: 0 auto; }
+          justify-content: flex-start; }
     .music #loadMore {
       margin-top: 40px; }
     footer.theEnd {

@@ -49,7 +49,6 @@
     .swiper-container {
       width: 90%;
       height: 90%;
-      
     }
 
     .swiper-button-next,
@@ -470,7 +469,7 @@ general styles
         display: flex;
         flex-direction: column;
         padding: 4% 4%;
-        flex: 1 1 calc(25% - 20px);
+        flex: 0 1 calc(25% - 20px);
         min-height: 460px;
         min-width: 300px;
       }
@@ -498,15 +497,16 @@ prices music
  --------------------------------------------------------------*/
 
     .prices-container {
+      margin-bottom: 40px;
       .price {
         display: flex;
         flex-direction: column;
-        padding: 4% 6%;
+        padding: 4% 4%;
         min-height: 460px;
         min-width: 300px;
         justify-content: flex-start;
         align-items: center;
-        flex: 1 1 calc(25% - 20px);
+        flex: 0 1 calc(25% - 20px);
         margin: 10px;
       }
     }
@@ -522,8 +522,8 @@ prices music
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-          flex: 1 1 calc(25% - 20px);
-          padding: 6% 6%;
+          flex: 0 1 calc(25% - 20px);
+          padding: 4% 4%;
           min-height: 460px;
           min-width: 300px;
           margin: 10px;
@@ -541,16 +541,6 @@ prices music
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            height: 100%;
-            margin-top: -10px;
-            margin-bottom: 20px;
-          }
-
-          iframe.musicPlayer {
-            border: 0;
-            width: 250px;
-            height: 250px;
-            margin: 0 auto;
           }
         }
       }

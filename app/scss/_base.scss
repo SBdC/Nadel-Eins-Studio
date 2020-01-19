@@ -46,13 +46,11 @@ Accessibility
     }
   }
 
-
-  .swiper-lazy-preloader{
-    width:150px;
-    height:150px;
-    margin:60px auto;
+  .swiper-lazy-preloader {
+    width: 150px;
+    height: 150px;
+    margin: 60px auto;
   }
-
 
   .swiper-container {
     width: 100%;
@@ -600,11 +598,21 @@ services
       text-transform: capitalize;
     }
 
+    .player-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      padding-bottom: 100%;
+    }
+
     iframe.musicPlayer {
-      border: none;
-      width: 220px;
-      height: 220px;
-      margin: 0 auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
   }
 
@@ -667,8 +675,7 @@ services
   p.price-disclamer {
     padding-top: 40px 0;
     border: none;
-    display:block;
-
+    display: block;
   }
 
   .icon {
