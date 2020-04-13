@@ -1274,7 +1274,7 @@ general styles
     .service:last-of-type {
       margin-top: -50px; }
     /*--------------------------------------------------------------
-prices music 
+prices + music 
  --------------------------------------------------------------*/
     .prices-container {
       margin-bottom: 40px; }
@@ -1299,9 +1299,7 @@ prices music
         justify-content: flex-start;
         flex: 0 1 calc(25% - 20px);
         padding: 4% 4%;
-        min-height: 460px;
-        min-width: 300px;
-        margin: 10px;
+        min-width: 250px;
         align-items: center; }
         .music .cards .card .music-info {
           display: flex;
@@ -1309,6 +1307,8 @@ prices music
           height: 100%;
           justify-content: flex-start;
           align-items: center; }
+          .music .cards .card .music-info p {
+            font-size: 12px; }
         .music .cards .card .player-wrapper {
           display: flex;
           flex-direction: column;

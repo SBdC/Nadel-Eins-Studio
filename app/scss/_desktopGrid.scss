@@ -493,7 +493,7 @@ general styles
     }
 
     /*--------------------------------------------------------------
-prices music 
+prices + music 
  --------------------------------------------------------------*/
 
     .prices-container {
@@ -524,9 +524,9 @@ prices music
           justify-content: flex-start;
           flex: 0 1 calc(25% - 20px);
           padding: 4% 4%;
-          min-height: 460px;
-          min-width: 300px;
-          margin: 10px;
+          //min-height: 460px;
+          min-width: 250px;
+          //margin: 10px;
           align-items: center;
 
           .music-info {
@@ -535,6 +535,10 @@ prices music
             height: 100%;
             justify-content: flex-start;
             align-items: center;
+
+            p{
+              font-size: 12px;
+            }
           }
 
           .player-wrapper {
