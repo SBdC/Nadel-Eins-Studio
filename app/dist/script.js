@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 var loadMoreBtn = document.querySelector("#loadMore"),
     loadLessBtn = document.querySelector("#loadless"),
-    maxItems = 10,
+    maxItems = 14,
     hiddenClass = "visually-hidden",
     showClass = "visually"; // [].forEach.call(items, function(item, idx) {
 //   if (idx > maxItems - 1) {
@@ -333,7 +333,7 @@ var svgToService = function svgToService(e) {
   otherButton.style.display = "block";
   matchingService.scrollIntoView({
     behavior: "smooth",
-    block: "center",
+    block: "start",
     inline: "center"
   });
 };

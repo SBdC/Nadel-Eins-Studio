@@ -298,9 +298,10 @@ header {
     animation: appear 2s forwards;
 
     p {
-      margin-left: 40px;
-      margin-top: 65px;
+      margin-left: 22px;
+      margin-top: 75px;
       color: $text;
+      text-transform: uppercase;
 
       &:hover {
         color: $blue;

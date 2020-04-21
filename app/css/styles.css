@@ -343,9 +343,10 @@ header .icon-cloud-line {
   width: calc(178px);
   animation: appear 2s forwards; }
   header .icon-cloud-line p {
-    margin-left: 40px;
-    margin-top: 65px;
-    color: #1b1b1c; }
+    margin-left: 22px;
+    margin-top: 75px;
+    color: #1b1b1c;
+    text-transform: uppercase; }
     header .icon-cloud-line p:hover {
       color: #a5bdd8;
       cursor: pointer; }

@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //   items = parent.querySelectorAll("li"),
   let loadMoreBtn = document.querySelector("#loadMore"),
   loadLessBtn = document.querySelector("#loadless"),
-  maxItems = 10,
+  maxItems = 14,
   hiddenClass = "visually-hidden",
   showClass = "visually";
 
@@ -413,7 +413,7 @@ let svgToService = e => {
 
   matchingService.scrollIntoView({
     behavior: "smooth",
-    block: "center",
+    block: "start",
     inline: "center"
   });
 };
