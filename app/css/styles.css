@@ -111,6 +111,22 @@ h3 {
   font-size: 1.8em;
   font-weight: 400; }
 
+div#cookiescript_accept {
+  background-color: #a5bdd8;
+  color: #1b1b1c; }
+  div#cookiescript_accept:hover {
+    background-color: white; }
+
+#cookiescript_badgetext {
+  font-family: 'Helvetica', 'Arial', sans-serif; }
+
+#cookiescript_wrapper {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  border-radius: 0; }
+
+iframe.musicPlayer img {
+  width: 100%; }
+
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
