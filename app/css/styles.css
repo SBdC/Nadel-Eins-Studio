@@ -504,6 +504,10 @@ services
     text-align: center;
     padding: 0;
     margin: 0; }
+  .music .card.featured {
+    flex: 1 1 100% !important; }
+    .music .card.featured .player-wrapper {
+      padding-bottom: 56.25% !important; }
   .music .card {
     display: inline-block;
     width: 350px;
@@ -517,11 +521,11 @@ services
       margin-bottom: -10px;
       text-transform: uppercase; }
     .music .card p:nth-of-type(2) {
-      color: #a5bdd8;
+      color: #1b1b1c;
       font-style: italic;
       font-weight: 400; }
     .music .card p:last-of-type {
-      color: #a5bdd8;
+      color: #1b1b1c;
       font-weight: 400;
       text-transform: capitalize; }
     .music .card .player-wrapper {

@@ -1,3 +1,5 @@
+
+
 //NAVIGATION
 const OVERLAY = document.getElementById("overlay");
 const TRIGGER = document.querySelector(".trigger");
@@ -467,6 +469,8 @@ serviceSvgs.forEach(serviceSvg =>
 serviceSvgs.forEach(serviceSvg =>
   serviceSvg.addEventListener("mouseout", highlightSvgOFF, false)
 );
+
+
 
 
 //Modal for zooming images

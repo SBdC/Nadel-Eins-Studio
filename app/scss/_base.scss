@@ -566,6 +566,15 @@ services
     margin: 0;
   }
 
+  .card.featured{
+    flex: 1 1 100% !important;
+
+      .player-wrapper{
+        padding-bottom: 56.25% !important;
+    }
+  }
+
+
   .card {
     display: inline-block;
 
@@ -587,13 +596,13 @@ services
     }
 
     p:nth-of-type(2) {
-      color: $blue;
+      color: $text;
       font-style: italic;
       font-weight: 400;
     }
 
     p:last-of-type {
-      color: $blue;
+      color: $text;
 
       font-weight: 400;
       text-transform: capitalize;
