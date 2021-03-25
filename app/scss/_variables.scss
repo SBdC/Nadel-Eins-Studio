@@ -5,19 +5,22 @@ $lightblue: #c0d5ed;
 
 $red: #ff0000;
 $yellow: #ffee00;
-$blue: #a5bdd8;
-//$blue: #449AFF;
-$black: #a5bdd8;
+$cloudblue: #a5bdd8;
+$blue: #798c81;
+$black: #798c81;
 
 %button-style-simple {
-  color: $blue;
+  color: $text;
   letter-spacing: 0.02em;
-
-  border-bottom: $blue 1px solid;
+  border-top: $text 1px solid;
+  border-left: $text 1px solid;
+  border-right: $text 1px solid;
+  border-bottom: $text 1.5px solid;
+  background-color: white;
   cursor: pointer;
   // margin-top: 30px;
   padding: 4px 6px;
-  box-shadow: $blue 0px 4px 0 0;
+  box-shadow: $text 0px 4px 0 0;
   transition: transform 0.25s ease-out, opacity 0.25s ease-out,
     box-shadow 0.25s ease-out, opacity 0.25s ease-out;
 

@@ -26,7 +26,7 @@
 
 .text-on-cloud tspan {
   font-family: helvetica;
-  fill: #000c2b;
+  fill: #1b1b1c;
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 500;
@@ -39,7 +39,7 @@
 
 .text-on tspan {
   font-family: helvetica;
-  fill: #A5BDD8;
+  fill: #798c81;
   stroke: transparent; }
   .text-on tspan:hover {
     cursor: pointer; }
@@ -102,7 +102,7 @@ svg.cloud-service {
   .mixtech-svg:hover,
   .consulting-svg:hover,
   .soundDesign-svg:hover {
-    stroke: #A5BDD8;
+    stroke: #798c81;
     cursor: pointer; }
 
 svg.speaker-comp,
@@ -133,7 +133,7 @@ svg.mixes {
   0% {
     fill: #EDEDED; }
   50% {
-    fill: #C0D5ED; }
+    fill: #c0d5ed; }
   80% {
     fill: rgba(204, 253, 212, 0.6); }
   100% {
@@ -143,7 +143,7 @@ svg.mixes {
   0% {
     fill: #EDEDED; }
   50% {
-    fill: #C0D5ED; }
+    fill: #c0d5ed; }
   80% {
     fill: rgba(204, 253, 212, 0.6); }
   100% {
@@ -212,7 +212,7 @@ svg.mixes {
     stroke-width: 3;
     stroke: black; }
   .logo .nadel-eins-logo .smiley .face {
-    fill: #FFEE00; }
+    fill: #ffee00; }
   .logo .nadel-eins-logo .smiley .eye-right,
   .logo .nadel-eins-logo .smiley .eye-left {
     fill: black;

@@ -1,11 +1,13 @@
-$lightgrey:#E1E4E8;
+$lightgrey: #e1e4e8;
 $text: #1b1b1c;
-$black: #000c2b;
-$lightblue: #C0D5ED;
-$red: #FF0000;
-$yellow:#FFEE00;
-//$blue: #449AFF;
-$blue: #A5BDD8;
+//$black: #000c2b;
+$lightblue: #c0d5ed;
+
+$red: #ff0000;
+$yellow: #ffee00;
+$cloudblue: #a5bdd8;
+$blue: #798c81;
+$black: #798c81;
 
 
 
@@ -68,7 +70,7 @@ margin-right:50px;
 
 .text-on-cloud tspan {
     font-family: helvetica;
-    fill: $black;
+    fill: $text;
     
     font-size: 30px;
     text-transform: uppercase;
@@ -144,7 +146,7 @@ svg.cloud-service {
 
 .cloud-fill {
   
-   fill:rgba($blue, 0.7);
+   fill:rgba($cloudblue, 0.7);
 
 }
 

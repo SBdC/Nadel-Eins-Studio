@@ -54,6 +54,7 @@ let openText = false;
 
 let revealText = e => {
   console.log(openText + "is open text");
+  console.log("heyho");
   let idTarget = e.target.id;
 
   let dropDown = document.querySelector(`div[data-key="${idTarget}"]`);
@@ -67,8 +68,8 @@ let revealText = e => {
   let firstParent = e.target.parentElement;
   let greatParent = firstParent.parentElement;
   let greatGreatParent = greatParent.parentElement;
-  //greatGreatParent.style.flex = "0 1 calc(100%)";
-  //greatGreatParent.style.order = "-1";
+  greatGreatParent.style.flex = "0 1 calc(100%)";
+  greatGreatParent.style.order = "-1";
 
   greatGreatParent.scrollIntoView({
     behavior: "smooth",
@@ -81,17 +82,18 @@ let hideText = e => {
   const goUp = document.querySelector(`div[data-hide="${targetService}"]`);
   goUp.style.display = "none";
   goUp.style.transition = "all 2s";
+  
 
   let otherButton = document.getElementById(`${targetService}`);
   otherButton.style.display = "none";
   let button = document.querySelector(`button[data-type="${targetService}"]`);
   button.style.display = "block";
 
-  //let firstParent = e.target.parentElement;
-  // let greatParent = firstParent.parentElement;
-  //let greatGreatParent = greatParent.parentElement;
-  //greatGreatParent.style.flex = "";
-  // greatGreatParent.style.order = "";
+  let firstParent = e.target.parentElement;
+  let greatParent = firstParent.parentElement;
+  let greatGreatParent = greatParent.parentElement;
+  greatGreatParent.style.flex = "";
+  greatGreatParent.style.order = "";
 
   let targetServiveElemnt = document.getElementById(targetService);
   let parentTargetServiveElemnt = targetServiveElemnt.parentElement;
@@ -402,8 +404,8 @@ let svgToService = e => {
 
   let matchingService = document.querySelector(`article[data-svg="${mainEl}"]`);
 
-//   matchingService.style.flex = "0 1 calc(100%)";
-//   matchingService.style.order = "-1";
+  matchingService.style.flex = "0 1 calc(100%)";
+  matchingService.style.order = "-1";
 
   let dropDown = document.querySelector(`div[data-text="${mainEl}"]`);
   dropDown.style.display = "block";
@@ -420,6 +422,8 @@ let svgToService = e => {
   });
 };
 
+let colorStroke = "#798c81";
+
 let highlightSvg = e => {
   let mainEl = e.target.dataset.id;
   let svgText = document.querySelector(`text[id="${mainEl}"]`);
@@ -433,9 +437,9 @@ let highlightSvg = e => {
   let svgRet = Array.from(
     document.querySelectorAll(`ret[data-id="${mainEl}"]`)
   );
-  svgPaths.forEach(svgPath => (svgPath.style.stroke = "#A5BDD8"));
-  svgEllipses.forEach(svgPath => (svgPath.style.stroke = "#A5BDD8"));
-  svgRet.forEach(svgPath => (svgPath.style.stroke = "#A5BDD8"));
+  svgPaths.forEach(svgPath => (svgPath.style.stroke = colorStroke));
+  svgEllipses.forEach(svgPath => (svgPath.style.stroke = colorStroke));
+  svgRet.forEach(svgPath => (svgPath.style.stroke = colorStroke));
   svgText.classList.remove("text-off");
   svgText.classList.add("text-on");
 };
@@ -528,3 +532,279 @@ serviceSvgs.forEach(serviceSvg =>
 //     }, 66);
 
 // }, false);
+
+const albums = [{
+  name: "Jemek Jemowit",
+  albumName: "wróg publiczny no. 1",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3621352702/size=large/bgcol=ffffff/",
+  service: "Recording / Mixing / Mastering",
+  hidden: "true"
+ 
+  
+},
+{
+  name: "Mittekill",
+  albumName: "Leaving the Wor_d ",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=519492224/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: "true"
+  
+  
+},
+{
+  name: "Matias Aguayo &amp; Desdemonas",
+  albumName: "Sofarnopolis",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=1066105529/size=large/bgcol=ffffff/",
+  service: "recording",
+  hidden: "true"
+ 
+},
+{
+  name: "Mononoke",
+  albumName: "Pech+Schwefel",
+  source: "https://bandcamp.com/EmbeddedPlayer/track=1495086853/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: "true"
+
+},
+{
+  name: "Best Of Both Worlds",
+  albumName: "Sandilé",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=2954250729/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: "true"
+
+},
+{
+  name: "Farr",
+  albumName: "Convoluted ",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3725643485/size=large/bgcol=ffffff/",
+  service: "Mixing",
+  hidden: "true"
+
+},
+{
+  name: "Gateway",
+  albumName: "Michal Wolski",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=968543870/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: "true"
+
+},
+{
+  name: "Specific Objects",
+  albumName: "Twice Infinity EP ",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=26754830/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: "true"
+ 
+},
+
+{
+  name: "Rosa Rendl",
+  albumName: "Opportunity Lover",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=1288873486/size=large/bgcol=ffffff/",
+  service: "Recording / Mixing (Partly)",
+  hidden: "true"
+  
+  
+},
+
+{
+  name: "NOHE NOSHE",
+  albumName: "Rescue",
+  source: "https://bandcamp.com/EmbeddedPlayer/track=1729605102/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: "true"
+},
+{
+  name: "Jemek Jemowit",
+  albumName: "Tekkno Polo (2020 remastered Version)",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=667803919/size=large/bgcol=ffffff/",
+  service: "Mixing / Mastering",
+  hidden: "true"
+},
+{
+  name: "Philipp Gorbachev &amp; The Naked Man",
+  albumName: "I Don't Give A Snare ",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=952157788/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: "true"
+},
+{
+  name: "Jemek Jemowit",
+  albumName: "Das Satanische Album",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=886540149/size=large/bgcol=ffffff/",
+  service: "Mixing / Mastering",
+  hidden: "true"
+},
+{
+  name: "Thieves like us",
+  albumName: "Thieves like us",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3325742885/size=large/bgcol=ffffff/",
+  service: "Mixing / Mastering",
+  hidden: "true"
+},
+{
+  name: "Marie Davidson",
+  albumName: "Chasing the light",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=2501281015/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: "true"
+},
+
+{
+  name: "Jaakko Eino Kalevi",
+  albumName: "Out of Touch",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=2035736336/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: "true"
+},
+{
+  name: "Jeans Team",
+  albumName: "Baby VHS Soundtracks",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=4109086013/size=large/bgcol=ffffff/",
+  service: "Recording / Mixing / Mastering",
+  hidden: "true"
+},
+{
+  name: "Eric Fetcher",
+  albumName: "Extension",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=4005746737/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: "true"
+},
+{
+  name: "Nohe Noshe",
+  albumName: "Where are you",
+  source: "https://bandcamp.com/EmbeddedPlayer/track=2807766807/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: "true"
+},
+{
+  name: "Nancea",
+  albumName: "Comfort",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=1567242607/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: "true"
+},
+{
+  name: "Essaie Pas",
+  albumName: "New Path (The Remixes)",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=2068900144/size=large/bgcol=ffffff/",
+  service: "Mixing",
+  hidden: "true"
+},
+{
+  name: "Jeans Team",
+  albumName: "Kings of Dings",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=4011681791/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: "true"
+},
+
+{
+  name: "Jeans Team",
+  albumName: "HADDU BOMBERJÄECKCHEN NAMOSH REMIX",
+  source: "https://bandcamp.com/EmbeddedPlayer/track=2488020357/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: "true"
+},
+{
+  name: "Jeans Team",
+  albumName: "Keine Melodien",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=436594029/size=large/bgcol=ffffff/",
+  service: "Recording, Mixing and Mastering",
+  hidden: "true"
+},
+{
+  name: "Jeans Team",
+  albumName: "Ding Dong",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=799794558/size=large/bgcol=ffffff/",
+  service: "Recording, Mixing and Mastering",
+  hidden: "true"
+},
+{
+  name: "Jemek Jemowit",
+  albumName: "Jemek Jemowit is Doktor Dres",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3395150044/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: "true"
+},
+{
+  name: "Johnny Batard",
+  albumName: "What Do You Want Me To Say? ",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=2674310104/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: "true"
+},
+{
+  name: "Aemong",
+  albumName: "1000",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=773116255/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: "true"
+},
+{
+  name: "Yula Kasp",
+  albumName: "Ocean Blues",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3717284526/size=large/bgcol=ffffff/",
+  service: "Mixing",
+  hidden: "true"
+},
+{
+  name: "Marie Davidson &amp; Lamusa II",
+  albumName: "La Ecstase",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=10704035/size=large/bgcol=ffffff/",
+  service: "Mixing",
+  hidden: "true"
+},
+];
+
+function listenSection() {
+  const ul = document.querySelector(".cards");
+  const fragment = document.createDocumentFragment();
+
+
+  for (let album in albums) {
+
+    const li = document.createElement("li");
+    li.className = "card";
+    const hidden = `${albums[album].hidden}`;
+    
+    if (hidden === "false") { li.className = "card visually-hidden"; }
+    const div = document.createElement("div");
+    div.className = "music-info";
+    const p = document.createElement("p");
+    const p2 = document.createElement("p");
+    const p3 = document.createElement("p");
+
+    p.innerHTML = `${albums[album].name}`;
+    p2.innerHTML = `${albums[album].albumName}`;
+    p3.innerHTML = `${albums[album].service}`;
+
+    const player = document.createElement("div");
+    player.className = "player-wrapper";
+    const iframe = document.createElement("iframe");
+    iframe.className = "musicPlayer";
+    
+    iframe.setAttribute("title", `${albums[album].name}`);
+    iframe.setAttribute("alt", `Please accept cookies to be able to listen ${albums[album].name}`);
+    iframe.setAttribute("data-cookiescript", "accepted");
+    iframe.setAttribute("data-src", `${albums[album].source}`);
+
+
+    fragment.appendChild(li);
+    li.appendChild(div);
+    div.appendChild(p);
+    div.appendChild(p2);
+    div.appendChild(p3);
+    li.appendChild(player);
+    player.appendChild(iframe);
+  }
+
+  ul.appendChild(fragment);
+
+}
+
+listenSection();

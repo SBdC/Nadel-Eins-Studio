@@ -43,6 +43,7 @@ var openText = false;
 
 var revealText = function revealText(e) {
   console.log(openText + "is open text");
+  console.log("heyho");
   var idTarget = e.target.id;
   var dropDown = document.querySelector("div[data-key=\"".concat(idTarget, "\"]"));
   dropDown.style.display = "block";
@@ -52,9 +53,9 @@ var revealText = function revealText(e) {
   otherButton.style.display = "block";
   var firstParent = e.target.parentElement;
   var greatParent = firstParent.parentElement;
-  var greatGreatParent = greatParent.parentElement; //greatGreatParent.style.flex = "0 1 calc(100%)";
-  //greatGreatParent.style.order = "-1";
-
+  var greatGreatParent = greatParent.parentElement;
+  greatGreatParent.style.flex = "0 1 calc(100%)";
+  greatGreatParent.style.order = "-1";
   greatGreatParent.scrollIntoView({
     behavior: "smooth",
     block: "center"
@@ -69,12 +70,12 @@ var hideText = function hideText(e) {
   var otherButton = document.getElementById("".concat(targetService));
   otherButton.style.display = "none";
   var button = document.querySelector("button[data-type=\"".concat(targetService, "\"]"));
-  button.style.display = "block"; //let firstParent = e.target.parentElement;
-  // let greatParent = firstParent.parentElement;
-  //let greatGreatParent = greatParent.parentElement;
-  //greatGreatParent.style.flex = "";
-  // greatGreatParent.style.order = "";
-
+  button.style.display = "block";
+  var firstParent = e.target.parentElement;
+  var greatParent = firstParent.parentElement;
+  var greatGreatParent = greatParent.parentElement;
+  greatGreatParent.style.flex = "";
+  greatGreatParent.style.order = "";
   var targetServiveElemnt = document.getElementById(targetService);
   var parentTargetServiveElemnt = targetServiveElemnt.parentElement;
   parentTargetServiveElemnt.scrollIntoView({
@@ -322,9 +323,9 @@ function cloudySky() {
 
 var svgToService = function svgToService(e) {
   var mainEl = e.target.dataset.id;
-  var matchingService = document.querySelector("article[data-svg=\"".concat(mainEl, "\"]")); //   matchingService.style.flex = "0 1 calc(100%)";
-  //   matchingService.style.order = "-1";
-
+  var matchingService = document.querySelector("article[data-svg=\"".concat(mainEl, "\"]"));
+  matchingService.style.flex = "0 1 calc(100%)";
+  matchingService.style.order = "-1";
   var dropDown = document.querySelector("div[data-text=\"".concat(mainEl, "\"]"));
   dropDown.style.display = "block";
   var button = document.querySelector("button[data-svgRead=\"".concat(mainEl, "\"]"));
@@ -338,6 +339,8 @@ var svgToService = function svgToService(e) {
   });
 };
 
+var colorStroke = "#798c81";
+
 var highlightSvg = function highlightSvg(e) {
   var mainEl = e.target.dataset.id;
   var svgText = document.querySelector("text[id=\"".concat(mainEl, "\"]"));
@@ -345,13 +348,13 @@ var highlightSvg = function highlightSvg(e) {
   var svgEllipses = Array.from(document.querySelectorAll("ellipse[data-id=\"".concat(mainEl, "\"]")));
   var svgRet = Array.from(document.querySelectorAll("ret[data-id=\"".concat(mainEl, "\"]")));
   svgPaths.forEach(function (svgPath) {
-    return svgPath.style.stroke = "#A5BDD8";
+    return svgPath.style.stroke = colorStroke;
   });
   svgEllipses.forEach(function (svgPath) {
-    return svgPath.style.stroke = "#A5BDD8";
+    return svgPath.style.stroke = colorStroke;
   });
   svgRet.forEach(function (svgPath) {
-    return svgPath.style.stroke = "#A5BDD8";
+    return svgPath.style.stroke = colorStroke;
   });
   svgText.classList.remove("text-off");
   svgText.classList.add("text-on");
@@ -429,3 +432,68 @@ serviceSvgs.forEach(function (serviceSvg) {
 //             }
 //     }, 66);
 // }, false);
+
+var albums = [{
+  name: "Matthias",
+  album: "sofa",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=1066105529/size=large/bgcol=ffffff/track=753121495/",
+  service: "recording",
+  hidden: false,
+  featured: false
+}, {
+  name: "Matthias",
+  album: "sofa",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=1066105529/size=large/bgcol=ffffff/track=753121495/",
+  service: "recording",
+  hidden: true,
+  featured: false
+}, {
+  name: "Matthias",
+  album: "sofa",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=1066105529/size=large/bgcol=ffffff/track=753121495/",
+  service: "recording",
+  hidden: true,
+  featured: true
+}];
+
+function setAttributes(el, attrs) {
+  for (var key in attrs) {
+    el.setAttribute(key, attrs[key]);
+  }
+}
+
+function listenSection() {
+  var ul = document.querySelector(".cards");
+  var fragment = document.createDocumentFragment();
+
+  for (var album in albums) {
+    var li = document.createElement("li");
+    li.className = "card";
+    var div = document.createElement("div");
+    div.className = "music-info";
+    var p = document.createElement("p");
+    var p2 = document.createElement("p");
+    var p3 = document.createElement("p");
+    p.innerHTML = "".concat(albums[album].name);
+    var player = document.createElement("div");
+    player.className = "player-wrapper";
+    var iframe = document.createElement("iframe");
+    iframe.className = "musicPlayer";
+    setAttributes(iframe, {
+      "title": "".concat(albums[album].name),
+      "alt": "Please accept cookies to be able to listen",
+      "data-cookiescript": "accepted",
+      "data-src": "".concat(albums[album].source)
+    });
+    fragment.appendChild(li);
+    fragment.appendChild(div);
+    div.appendChild(p);
+    div.appendChild(p2);
+    div.appendChild(p3);
+    fragment.appendChild(player);
+  }
+
+  ul.appendChild(fragment);
+}
+
+listenSection();

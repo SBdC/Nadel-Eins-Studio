@@ -45,7 +45,9 @@ Accessibility
       display: none;
     }
   }
-
+  .swiper-lazy.swiper-lazy-loaded {
+    filter: saturate(70%);
+}
   .swiper-lazy-preloader {
     width: 150px;
     height: 150px;
@@ -188,7 +190,8 @@ button {
       font-weight: 700;
 
       &:hover {
-        color: $red;
+        color: $red
+;
         cursor: pointer;
       }
     }
@@ -401,7 +404,8 @@ section {
 About and co-work
 --------------------------------------------------------------*/
 .about {
-  padding: 50px 0;
+  padding: 50px 0 100px;
+  
 
   .about-text-wrapper {
     padding-bottom: 80px;
@@ -431,6 +435,9 @@ co-work
   padding: 50px 0;
   background-color: $blue;
 
+  h2{
+    color:white;
+  }
   // .co-work-text-wrapper {
 
   //     padding-bottom: 80px;
@@ -501,15 +508,19 @@ services
 .services {
   position: relative;
   padding: 50px 0;
+  background-color: $blue;
 
   a {
     text-decoration: underline;
   }
 
+  h2{
+    color: white;
+  }
   h3 {
     text-align: center;
     margin: 0;
-    color: $blue;
+    color: $text;
   }
 
   .service {
@@ -571,6 +582,13 @@ services
 
       .player-wrapper{
         padding-bottom: 56.25% !important;
+
+        img {
+          border-left:2px solid $text;
+          border-right:2px solid $text;
+          border-bottom:2px solid $text;
+
+        }
     }
   }
 
@@ -641,12 +659,13 @@ services
 }
 
 .prices {
-  background-color: $blue;
+  //background-color: $blue;
   position: relative;
   padding: 50px 0;
 
   #price-contact {
-    color: white;
+    //color: white;
+    color: $blue;
     &:hover {
       color: $text;
     }
@@ -730,13 +749,17 @@ services
 contact
 --------------------------------------------------------------*/
 .contact {
-  padding: 50px 0;
+  padding: 50px 0 0;
   background-color: $blue;
+
+  h2{
+    color: white;
+  }
 
   .call-write {
     padding-bottom: 80px;
 
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
 
     span:first-child {
@@ -782,16 +805,14 @@ Footer
 
   .subscribe {
     letter-spacing: 0.02em;
-    border-bottom: $blue 4px solid;
+  
     cursor: pointer;
     padding: 8px 10px;
-    box-shadow: $text 4px 4px 0 0;
-    transition: transform 0.25s ease-out, opacity 0.25s ease-out,
-      box-shadow 0.25s ease-out, opacity 0.25s ease-out;
+    @extend %button-style-simple;
     margin-left: 20px;
     margin-bottom: 48px;
     color: $text;
-    background-color: $black;
+    
 
     &:hover {
       transform: translateX(2px) translateY(2px);

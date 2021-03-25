@@ -20,7 +20,7 @@ html, body{
   margin:0;
   overflow-x: hidden;
   font-family:  'Helvetica', 'Arial', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
 
 }
@@ -89,7 +89,7 @@ font-weight: 400;
 }
 
 div#cookiescript_accept{
-	background-color:#a5bdd8;
+	background-color:$blue;
 	color: $text;
 	&:hover{
 		background-color:white;
@@ -104,6 +104,12 @@ div#cookiescript_accept{
 #cookiescript_wrapper {
 	font-family:  'Helvetica', 'Arial', sans-serif;
 	border-radius: 0;
+}
+
+#cookiescript_badge {
+
+    left: 80px !important;
+
 }
 
 iframe.musicPlayer {

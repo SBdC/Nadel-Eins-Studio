@@ -1,12 +1,16 @@
-.icon-close, #back-to-top, .about .about-text-wrapper button, .services button, .music .load, .prices button {
-  color: #a5bdd8;
+.icon-close, #back-to-top, .about .about-text-wrapper button, .services button, .music .load, .prices button, .theEnd .subscribe {
+  color: #1b1b1c;
   letter-spacing: 0.02em;
-  border-bottom: #a5bdd8 1px solid;
+  border-top: #1b1b1c 1px solid;
+  border-left: #1b1b1c 1px solid;
+  border-right: #1b1b1c 1px solid;
+  border-bottom: #1b1b1c 1.5px solid;
+  background-color: white;
   cursor: pointer;
   padding: 4px 6px;
-  box-shadow: #a5bdd8 0px 4px 0 0;
+  box-shadow: #1b1b1c 0px 4px 0 0;
   transition: transform 0.25s ease-out, opacity 0.25s ease-out, box-shadow 0.25s ease-out, opacity 0.25s ease-out; }
-  .icon-close:hover, #back-to-top:hover, .about .about-text-wrapper button:hover, .services button:hover, .music .load:hover, .prices button:hover {
+  .icon-close:hover, #back-to-top:hover, .about .about-text-wrapper button:hover, .services button:hover, .music .load:hover, .prices button:hover, .theEnd .subscribe:hover {
     transform: translateX(2px) translateY(2px);
     box-shadow: 0px 2px 0 0; }
 
@@ -60,7 +64,7 @@ html, body {
   margin: 0;
   overflow-x: hidden;
   font-family: 'Helvetica', 'Arial', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5; }
 
 body {
@@ -112,7 +116,7 @@ h3 {
   font-weight: 400; }
 
 div#cookiescript_accept {
-  background-color: #a5bdd8;
+  background-color: #798c81;
   color: #1b1b1c; }
   div#cookiescript_accept:hover {
     background-color: white; }
@@ -123,6 +127,9 @@ div#cookiescript_accept {
 #cookiescript_wrapper {
   font-family: 'Helvetica', 'Arial', sans-serif;
   border-radius: 0; }
+
+#cookiescript_badge {
+  left: 80px !important; }
 
 iframe.musicPlayer img {
   width: 100%; }
@@ -168,6 +175,8 @@ Accessibility
     display: flex; }
     .cloud-menus svg {
       display: none; }
+  .swiper-lazy.swiper-lazy-loaded {
+    filter: saturate(70%); }
   .swiper-lazy-preloader {
     width: 150px;
     height: 150px;
@@ -211,7 +220,7 @@ Accessibility
     background: #e1e4e8; }
   .swiper-pagination-bullet-active {
     color: #fff;
-    background: #a5bdd8; }
+    background: #798c81; }
   .service-container {
     display: flex;
     flex-direction: row;
@@ -263,7 +272,7 @@ button {
 
 .open {
   position: fixed;
-  background-color: #a5bdd8;
+  background-color: #798c81;
   list-style: none;
   height: 100vh;
   width: 100vw;
@@ -364,7 +373,7 @@ header .icon-cloud-line {
     color: #1b1b1c;
     text-transform: uppercase; }
     header .icon-cloud-line p:hover {
-      color: #a5bdd8;
+      color: #798c81;
       cursor: pointer; }
 
 header .bannerTwo {
@@ -383,7 +392,7 @@ header .banner {
       max-width: 200px; }
 
 .slogan {
-  background-color: #a5bdd8;
+  background-color: #798c81;
   z-index: 1;
   padding: 40px 10px; }
   .slogan .quote {
@@ -415,7 +424,7 @@ section {
 About and co-work
 --------------------------------------------------------------*/
 .about {
-  padding: 50px 0; }
+  padding: 50px 0 100px; }
   .about .about-text-wrapper {
     padding-bottom: 80px; }
     .about .about-text-wrapper p {
@@ -433,7 +442,9 @@ co-work
 --------------------------------------------------------------*/
 .co-work {
   padding: 50px 0;
-  background-color: #a5bdd8; }
+  background-color: #798c81; }
+  .co-work h2 {
+    color: white; }
 
 /*--------------------------------------------------------------
 staff
@@ -474,13 +485,16 @@ services
 --------------------------------------------------------------*/
 .services {
   position: relative;
-  padding: 50px 0; }
+  padding: 50px 0;
+  background-color: #798c81; }
   .services a {
     text-decoration: underline; }
+  .services h2 {
+    color: white; }
   .services h3 {
     text-align: center;
     margin: 0;
-    color: #a5bdd8; }
+    color: #1b1b1c; }
   .services .service-header-wrap-right {
     float: right; }
   .services .service-header-wrap-left {
@@ -508,6 +522,10 @@ services
     flex: 1 1 100% !important; }
     .music .card.featured .player-wrapper {
       padding-bottom: 56.25% !important; }
+      .music .card.featured .player-wrapper img {
+        border-left: 2px solid #1b1b1c;
+        border-right: 2px solid #1b1b1c;
+        border-bottom: 2px solid #1b1b1c; }
   .music .card {
     display: inline-block;
     width: 350px;
@@ -551,11 +569,10 @@ services
     clip: rect(0 0 0 0); }
 
 .prices {
-  background-color: #a5bdd8;
   position: relative;
   padding: 50px 0; }
   .prices #price-contact {
-    color: white; }
+    color: #798c81; }
     .prices #price-contact:hover {
       color: #1b1b1c; }
   .prices h2 {
@@ -592,10 +609,10 @@ services
     display: block;
     margin: 40px auto 80px; }
   .prices button {
-    background-color: #a5bdd8;
+    background-color: #798c81;
     color: white;
-    border: #a5bdd8 1px solid;
-    box-shadow: #a5bdd8 4px 4px 0 0; }
+    border: #798c81 1px solid;
+    box-shadow: #798c81 4px 4px 0 0; }
   .prices .prices-more-text {
     display: none; }
   .prices .prices-sound-design {
@@ -607,11 +624,13 @@ services
 contact
 --------------------------------------------------------------*/
 .contact {
-  padding: 50px 0;
-  background-color: #a5bdd8; }
+  padding: 50px 0 0;
+  background-color: #798c81; }
+  .contact h2 {
+    color: white; }
   .contact .call-write {
     padding-bottom: 80px;
-    text-align: center;
+    text-align: left;
     margin-top: 20px; }
     .contact .call-write span:first-child {
       font-size: 32px; }
@@ -642,22 +661,18 @@ Footer
     animation: flicker-5 8s linear infinite both; }
   .theEnd .subscribe {
     letter-spacing: 0.02em;
-    border-bottom: #a5bdd8 4px solid;
     cursor: pointer;
     padding: 8px 10px;
-    box-shadow: #1b1b1c 4px 4px 0 0;
-    transition: transform 0.25s ease-out, opacity 0.25s ease-out, box-shadow 0.25s ease-out, opacity 0.25s ease-out;
     margin-left: 20px;
     margin-bottom: 48px;
-    color: #1b1b1c;
-    background-color: #a5bdd8; }
+    color: #1b1b1c; }
     .theEnd .subscribe:hover {
       transform: translateX(2px) translateY(2px);
       box-shadow: 0px 2px 0 0; }
   .theEnd .footer-content-second {
     margin: 0 20px; }
     .theEnd .footer-content-second a {
-      color: #a5bdd8; }
+      color: #798c81; }
   .theEnd .footer-content {
     margin-top: 12px;
     text-align: left; }
@@ -724,7 +739,7 @@ Footer
 
 .text-on-cloud tspan {
   font-family: helvetica;
-  fill: #000c2b;
+  fill: #1b1b1c;
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 500;
@@ -737,7 +752,7 @@ Footer
 
 .text-on tspan {
   font-family: helvetica;
-  fill: #A5BDD8;
+  fill: #798c81;
   stroke: transparent; }
   .text-on tspan:hover {
     cursor: pointer; }
@@ -800,7 +815,7 @@ svg.cloud-service {
   .mixtech-svg:hover,
   .consulting-svg:hover,
   .soundDesign-svg:hover {
-    stroke: #A5BDD8;
+    stroke: #798c81;
     cursor: pointer; }
 
 svg.speaker-comp,
@@ -831,7 +846,7 @@ svg.mixes {
   0% {
     fill: #EDEDED; }
   50% {
-    fill: #C0D5ED; }
+    fill: #c0d5ed; }
   80% {
     fill: rgba(204, 253, 212, 0.6); }
   100% {
@@ -841,7 +856,7 @@ svg.mixes {
   0% {
     fill: #EDEDED; }
   50% {
-    fill: #C0D5ED; }
+    fill: #c0d5ed; }
   80% {
     fill: rgba(204, 253, 212, 0.6); }
   100% {
@@ -910,7 +925,7 @@ svg.mixes {
     stroke-width: 3;
     stroke: black; }
   .logo .nadel-eins-logo .smiley .face {
-    fill: #FFEE00; }
+    fill: #ffee00; }
   .logo .nadel-eins-logo .smiley .eye-right,
   .logo .nadel-eins-logo .smiley .eye-left {
     fill: black;
@@ -997,7 +1012,7 @@ svg.mixes {
     .swiper-button-next,
     .swiper-button-prev {
       display: block;
-      color: #A5BDD8; }
+      color: #798c81; }
     /*--------------------------------------------------------------
 header desktop
  --------------------------------------------------------------*/
@@ -1012,8 +1027,10 @@ header desktop
       .title-desktop {
         text-align: left;
         padding: 0 90px; } }
-    .cloud-menus svg {
-      display: block; }
+    .cloud-menus {
+      padding: 30px 0 60px; }
+      .cloud-menus svg {
+        display: block; }
     .wrap-all {
       margin-left: 74px; }
     .title-desk {
@@ -1063,14 +1080,14 @@ header desktop
         left: 11px;
         z-index: 201; }
         .contact-desk-wrapper .contact-desk p {
-          border: 2px solid #A5BDD8;
+          border: 2px solid #798c81;
           padding: 0 10px;
           line-height: 40px;
           text-align: center;
           color: #1b1b1c;
           background-color: white; }
           .contact-desk-wrapper .contact-desk p:hover {
-            background-color: #A5BDD8;
+            background-color: #798c81;
             color: white;
             cursor: pointer; }
         .contact-desk-wrapper .contact-desk #phone-side-bar {
