@@ -558,7 +558,8 @@ services
       left: 0;
       width: 100%;
       height: 100%;
-      border: 0; }
+      border: 0;
+      background-color: #a5bdd8; }
   .music .load {
     color: #1b1b1c;
     margin: 0 auto;
@@ -1335,8 +1336,8 @@ prices + music
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        flex: 0 1 calc(25% - 20px);
-        padding: 4% 4%;
+        flex: 0 1 20%;
+        padding: 2% 4%;
         min-width: 250px;
         align-items: center; }
         .music .cards .card .music-info {

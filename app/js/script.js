@@ -152,64 +152,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-//load more music albums
-
-// let parent = document.querySelector("ul"),
-//   items = parent.querySelectorAll("li"),
-  let loadMoreBtn = document.querySelector("#loadMore"),
-  loadLessBtn = document.querySelector("#loadless"),
-  maxItems = 14,
-  hiddenClass = "visually-hidden",
-  showClass = "visually";
-
-// [].forEach.call(items, function(item, idx) {
-//   if (idx > maxItems - 1) {
-//     console.log(maxItems);
-//     console.log("hellloooo");
-//     item.classList.add(hiddenClass);
-//   }
-// });
-
-loadMoreBtn.addEventListener("click", function() {
-  [].forEach.call(document.querySelectorAll("." + hiddenClass), function(
-    item,
-    idx
-  ) {
-    if (idx < maxItems - 1) {
-      item.classList.remove(hiddenClass);
-      item.classList.add(showClass);
-    }
-
-    if (document.querySelectorAll("." + hiddenClass).length === 0) {
-      loadMoreBtn.style.display = "none";
-      loadLessBtn.style.display = "block";
-    }
-  });
-});
-
-loadLessBtn.addEventListener("click", function(e) {
-  [].forEach.call(document.querySelectorAll("." + showClass), function(
-    item,
-    idx
-  ) {
-    if (idx < maxItems - 1) {
-      item.classList.remove(showClass);
-      item.classList.add(hiddenClass);
-    }
-
-    if (document.querySelectorAll("." + showClass).length === 0) {
-      loadMoreBtn.style.display = "block";
-      loadLessBtn.style.display = "none";
-
-      e.target.previousElementSibling.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center"
-      });
-    }
-  });
-});
-
 //back-to-top
 
 const backTop = document.querySelector("#back-to-top");
@@ -538,7 +480,8 @@ const albums = [{
   albumName: "wróg publiczny no. 1",
   source: "https://bandcamp.com/EmbeddedPlayer/album=3621352702/size=large/bgcol=ffffff/",
   service: "Recording / Mixing / Mastering",
-  hidden: "true"
+  hidden: true,
+  order: 1
  
   
 },
@@ -547,7 +490,8 @@ const albums = [{
   albumName: "Leaving the Wor_d ",
   source: "https://bandcamp.com/EmbeddedPlayer/album=519492224/size=large/bgcol=ffffff/",
   service: "Mastering",
-  hidden: "true"
+  hidden: false,
+  order: 4
   
   
 },
@@ -556,7 +500,8 @@ const albums = [{
   albumName: "Sofarnopolis",
   source: "https://bandcamp.com/EmbeddedPlayer/album=1066105529/size=large/bgcol=ffffff/",
   service: "recording",
-  hidden: "true"
+  hidden: false,
+  order: 27
  
 },
 {
@@ -564,7 +509,8 @@ const albums = [{
   albumName: "Pech+Schwefel",
   source: "https://bandcamp.com/EmbeddedPlayer/track=1495086853/size=large/bgcol=ffffff/",
   service: "Mastering",
-  hidden: "true"
+  hidden: false,
+  order: 12
 
 },
 {
@@ -572,7 +518,8 @@ const albums = [{
   albumName: "Sandilé",
   source: "https://bandcamp.com/EmbeddedPlayer/album=2954250729/size=large/bgcol=ffffff/",
   service: "Mastering",
-  hidden: "true"
+  hidden: false,
+  order: 3
 
 },
 {
@@ -580,7 +527,8 @@ const albums = [{
   albumName: "Convoluted ",
   source: "https://bandcamp.com/EmbeddedPlayer/album=3725643485/size=large/bgcol=ffffff/",
   service: "Mixing",
-  hidden: "true"
+  hidden: false,
+  order: 9
 
 },
 {
@@ -588,7 +536,8 @@ const albums = [{
   albumName: "Michal Wolski",
   source: "https://bandcamp.com/EmbeddedPlayer/album=968543870/size=large/bgcol=ffffff/",
   service: "Mastering",
-  hidden: "true"
+  hidden: false,
+  order: 6
 
 },
 {
@@ -596,7 +545,8 @@ const albums = [{
   albumName: "Twice Infinity EP ",
   source: "https://bandcamp.com/EmbeddedPlayer/album=26754830/size=large/bgcol=ffffff/",
   service: "Mastering",
-  hidden: "true"
+  hidden: false,
+  order: 7
  
 },
 
@@ -605,9 +555,8 @@ const albums = [{
   albumName: "Opportunity Lover",
   source: "https://bandcamp.com/EmbeddedPlayer/album=1288873486/size=large/bgcol=ffffff/",
   service: "Recording / Mixing (Partly)",
-  hidden: "true"
-  
-  
+  hidden: false,
+  order: 5
 },
 
 {
@@ -615,42 +564,49 @@ const albums = [{
   albumName: "Rescue",
   source: "https://bandcamp.com/EmbeddedPlayer/track=1729605102/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: "true"
+  hidden: false,
+  order: 9
+  
 },
 {
   name: "Jemek Jemowit",
   albumName: "Tekkno Polo (2020 remastered Version)",
   source: "https://bandcamp.com/EmbeddedPlayer/album=667803919/size=large/bgcol=ffffff/",
   service: "Mixing / Mastering",
-  hidden: "true"
+  hidden: false,
+  order: 8
 },
 {
   name: "Philipp Gorbachev &amp; The Naked Man",
   albumName: "I Don't Give A Snare ",
   source: "https://bandcamp.com/EmbeddedPlayer/album=952157788/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: "true"
+  hidden: false,
+  order: 26
 },
 {
   name: "Jemek Jemowit",
   albumName: "Das Satanische Album",
   source: "https://bandcamp.com/EmbeddedPlayer/album=886540149/size=large/bgcol=ffffff/",
   service: "Mixing / Mastering",
-  hidden: "true"
+  hidden: false,
+  order: 16
 },
 {
   name: "Thieves like us",
   albumName: "Thieves like us",
   source: "https://bandcamp.com/EmbeddedPlayer/album=3325742885/size=large/bgcol=ffffff/",
   service: "Mixing / Mastering",
-  hidden: "true"
+  hidden: false,
+  order: 28
 },
 {
   name: "Marie Davidson",
   albumName: "Chasing the light",
   source: "https://bandcamp.com/EmbeddedPlayer/album=2501281015/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: "true"
+  hidden: false,
+  order: 13
 },
 
 {
@@ -658,49 +614,57 @@ const albums = [{
   albumName: "Out of Touch",
   source: "https://bandcamp.com/EmbeddedPlayer/album=2035736336/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: "true"
+  hidden: false,
+  order: 29
 },
 {
   name: "Jeans Team",
   albumName: "Baby VHS Soundtracks",
   source: "https://bandcamp.com/EmbeddedPlayer/album=4109086013/size=large/bgcol=ffffff/",
   service: "Recording / Mixing / Mastering",
-  hidden: "true"
+  hidden: false,
+  order: 19
 },
 {
   name: "Eric Fetcher",
   albumName: "Extension",
   source: "https://bandcamp.com/EmbeddedPlayer/album=4005746737/size=large/bgcol=ffffff/",
   service: "Mastering",
-  hidden: "true"
+  hidden: false,
+  order: 20
 },
 {
   name: "Nohe Noshe",
   albumName: "Where are you",
   source: "https://bandcamp.com/EmbeddedPlayer/track=2807766807/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: "true"
+  hidden: false,
+  order: 1,
+  
 },
 {
   name: "Nancea",
   albumName: "Comfort",
   source: "https://bandcamp.com/EmbeddedPlayer/album=1567242607/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: "true"
+  hidden: false,
+  order: 21
 },
 {
   name: "Essaie Pas",
   albumName: "New Path (The Remixes)",
   source: "https://bandcamp.com/EmbeddedPlayer/album=2068900144/size=large/bgcol=ffffff/",
   service: "Mixing",
-  hidden: "true"
+  hidden: false,
+  order: 22
 },
 {
   name: "Jeans Team",
   albumName: "Kings of Dings",
   source: "https://bandcamp.com/EmbeddedPlayer/album=4011681791/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: "true"
+  hidden: false,
+  order: 18
 },
 
 {
@@ -708,71 +672,84 @@ const albums = [{
   albumName: "HADDU BOMBERJÄECKCHEN NAMOSH REMIX",
   source: "https://bandcamp.com/EmbeddedPlayer/track=2488020357/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: "true"
+  hidden: false,
+  order: 23
 },
 {
   name: "Jeans Team",
   albumName: "Keine Melodien",
   source: "https://bandcamp.com/EmbeddedPlayer/album=436594029/size=large/bgcol=ffffff/",
   service: "Recording, Mixing and Mastering",
-  hidden: "true"
+  hidden: false,
+  order: 24
 },
 {
   name: "Jeans Team",
   albumName: "Ding Dong",
   source: "https://bandcamp.com/EmbeddedPlayer/album=799794558/size=large/bgcol=ffffff/",
   service: "Recording, Mixing and Mastering",
-  hidden: "true"
+  hidden: false,
+  order: 1
 },
 {
   name: "Jemek Jemowit",
   albumName: "Jemek Jemowit is Doktor Dres",
   source: "https://bandcamp.com/EmbeddedPlayer/album=3395150044/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: "true"
+  hidden: false,
+  order: 30
 },
 {
   name: "Johnny Batard",
   albumName: "What Do You Want Me To Say? ",
   source: "https://bandcamp.com/EmbeddedPlayer/album=2674310104/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: "true"
+  hidden: false,
+  order: 25
 },
 {
   name: "Aemong",
   albumName: "1000",
   source: "https://bandcamp.com/EmbeddedPlayer/album=773116255/size=large/bgcol=ffffff/",
   service: "Mastering",
-  hidden: "true"
+  hidden: false,
+  order: 21
 },
 {
   name: "Yula Kasp",
   albumName: "Ocean Blues",
   source: "https://bandcamp.com/EmbeddedPlayer/album=3717284526/size=large/bgcol=ffffff/",
   service: "Mixing",
-  hidden: "true"
+  hidden: false,
+  order: 22
 },
 {
   name: "Marie Davidson &amp; Lamusa II",
   albumName: "La Ecstase",
   source: "https://bandcamp.com/EmbeddedPlayer/album=10704035/size=large/bgcol=ffffff/",
   service: "Mixing",
-  hidden: "true"
+  hidden: false,
+  order: 17
 },
 ];
+
+let featuredItems = 12,
+    albumsTotalNumber = albums.length;
 
 function listenSection() {
   const ul = document.querySelector(".cards");
   const fragment = document.createDocumentFragment();
-
+  
 
   for (let album in albums) {
 
     const li = document.createElement("li");
     li.className = "card";
-    const hidden = `${albums[album].hidden}`;
-    
-    if (hidden === "false") { li.className = "card visually-hidden"; }
+    const order = `${albums[album].order}`;
+    //const hidden = `${albums[album].hidden}`;
+   //alert(albums.length);
+    if (order > featuredItems ) { li.className = "card visually-hidden"; }
+    //if (hidden === "true" ) { li.className = "card visually-hidden"; }
     const div = document.createElement("div");
     div.className = "music-info";
     const p = document.createElement("p");
@@ -795,6 +772,7 @@ function listenSection() {
 
 
     fragment.appendChild(li);
+    li.style.order = `${albums[album].order}`;
     li.appendChild(div);
     div.appendChild(p);
     div.appendChild(p2);
@@ -808,3 +786,62 @@ function listenSection() {
 }
 
 listenSection();
+
+
+//load more music albums
+
+// let parent = document.querySelector("ul"),
+//   items = parent.querySelectorAll("li"),
+let loadMoreBtn = document.querySelector("#loadMore"),
+loadLessBtn = document.querySelector("#loadless"),
+restOfAlbuns = albumsTotalNumber - featuredItems,
+hiddenClass = "visually-hidden",
+showClass = "visually";
+
+// [].forEach.call(items, function(item, idx) {
+//   if (idx > maxItems - 1) {
+//     console.log(maxItems);
+//     console.log("hellloooo");
+//     item.classList.add(hiddenClass);
+//   }
+// });
+
+loadMoreBtn.addEventListener("click", function() {
+[].forEach.call(document.querySelectorAll("." + hiddenClass), function(
+  item,
+  idx
+) {
+  if (idx < restOfAlbuns - 1) {
+    item.classList.remove(hiddenClass);
+    item.classList.add(showClass);
+  }
+
+  if (document.querySelectorAll("." + hiddenClass).length === 0) {
+    loadMoreBtn.style.display = "none";
+    loadLessBtn.style.display = "block";
+  }
+});
+});
+
+loadLessBtn.addEventListener("click", function(e) {
+[].forEach.call(document.querySelectorAll("." + showClass), function(
+  item,
+  idx
+) {
+  if (idx < restOfAlbuns - 1) {
+    item.classList.remove(showClass);
+    item.classList.add(hiddenClass);
+  }
+
+  if (document.querySelectorAll("." + showClass).length === 0) {
+    loadMoreBtn.style.display = "block";
+    loadLessBtn.style.display = "none";
+
+    e.target.previousElementSibling.scrollIntoView({
+      behavior: "smooth",
+      block: "top",
+      inline: "center"
+    });
+  }
+});
+});
