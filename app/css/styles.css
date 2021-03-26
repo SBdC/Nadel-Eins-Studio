@@ -30,7 +30,7 @@ header .icon-cloud-line, .services .icon, .prices .icon {
   margin: 0;
   padding: 0; }
 
-.services .service, .music .card {
+.services .service {
   margin: 0 auto;
   padding: 10% 4%;
   min-width: 320px; }
@@ -230,7 +230,7 @@ Accessibility
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center; }
+    justify-content: space-around; }
   .prices-container {
     display: flex;
     flex-direction: row;
@@ -395,13 +395,18 @@ header .banner {
   background-color: #798c81;
   z-index: 1;
   padding: 40px 10px; }
-  .slogan .quote {
+  .slogan .quote, .slogan h3 {
     text-align: center;
-    color: white;
-    font-weight: 600;
+    margin-bottom: 20px; }
+  .slogan .quote {
     margin-top: 20px;
-    margin-bottom: 20px;
-    text-transform: uppercase; }
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white; }
+  .slogan h3 {
+    font-weight: normal;
+    color: white;
+    margin-top: -20px; }
 
 /*--------------------------------------------------------------
 button
@@ -450,7 +455,10 @@ co-work
 staff
 --------------------------------------------------------------*/
 .staff {
-  padding: 50px 0; }
+  padding: 50px 0;
+  background-color: #798c81; }
+  .staff h2 {
+    color: white; }
   .staff .staff-text-wrapper {
     padding-bottom: 80px; }
     .staff .staff-text-wrapper p {
@@ -495,6 +503,8 @@ services
     text-align: center;
     margin: 0;
     color: #1b1b1c; }
+  .services article {
+    max-width: 80%; }
   .services .service-header-wrap-right {
     float: right; }
   .services .service-header-wrap-left {
@@ -527,8 +537,13 @@ services
         border-right: 2px solid #1b1b1c;
         border-bottom: 2px solid #1b1b1c; }
   .music .card {
-    display: inline-block;
-    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 0 1 20%;
+    padding: 2% 0%;
+    min-width: 152px;
+    align-items: center;
     padding-top: 40px; }
     .music .card .music-info {
       order: 2;
@@ -616,8 +631,6 @@ services
     box-shadow: #798c81 4px 4px 0 0; }
   .prices .prices-more-text {
     display: none; }
-  .prices .prices-sound-design {
-    margin-bottom: 156px; }
   .prices .center-viewLess {
     margin: 30px auto 60px; }
 
@@ -625,10 +638,7 @@ services
 contact
 --------------------------------------------------------------*/
 .contact {
-  padding: 50px 0 0;
-  background-color: #798c81; }
-  .contact h2 {
-    color: white; }
+  padding: 50px 0 0; }
   .contact .call-write {
     padding-bottom: 80px;
     text-align: left;
@@ -650,6 +660,7 @@ Footer
 --------------------------------------------------------------*/
 .theEnd {
   padding-top: 50px;
+  background-color: #798c81;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -673,7 +684,7 @@ Footer
   .theEnd .footer-content-second {
     margin: 0 20px; }
     .theEnd .footer-content-second a {
-      color: #798c81; }
+      color: white; }
   .theEnd .footer-content {
     margin-top: 12px;
     text-align: left; }
@@ -1333,13 +1344,8 @@ prices + music
       flex-wrap: wrap;
       justify-content: center; }
       .music .cards .card {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        flex: 0 1 20%;
-        padding: 2% 4%;
-        min-width: 250px;
-        align-items: center; }
+        min-width: 200px;
+        margin: 0 20px; }
         .music .cards .card .music-info {
           display: flex;
           flex-direction: column;

@@ -521,15 +521,10 @@ prices + music
         justify-content: center;
 
         .card {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          flex: 0 1 20%;
-          padding: 2% 4%;
-          //min-height: 460px;
-          min-width: 250px;
-          //margin: 10px;
-          align-items: center;
+        
+          min-width: 200px;
+          margin: 0 20px;
+        
 
           .music-info {
             display: flex;
