@@ -123,52 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("scroll", lazyLoad);
   window.addEventListener("resize", lazyLoad);
   window.addEventListener("orientationchange", lazyLoad);
-}); //load more music albums
-// let parent = document.querySelector("ul"),
-//   items = parent.querySelectorAll("li"),
-
-var loadMoreBtn = document.querySelector("#loadMore"),
-    loadLessBtn = document.querySelector("#loadless"),
-    maxItems = 14,
-    hiddenClass = "visually-hidden",
-    showClass = "visually"; // [].forEach.call(items, function(item, idx) {
-//   if (idx > maxItems - 1) {
-//     console.log(maxItems);
-//     console.log("hellloooo");
-//     item.classList.add(hiddenClass);
-//   }
-// });
-
-loadMoreBtn.addEventListener("click", function () {
-  [].forEach.call(document.querySelectorAll("." + hiddenClass), function (item, idx) {
-    if (idx < maxItems - 1) {
-      item.classList.remove(hiddenClass);
-      item.classList.add(showClass);
-    }
-
-    if (document.querySelectorAll("." + hiddenClass).length === 0) {
-      loadMoreBtn.style.display = "none";
-      loadLessBtn.style.display = "block";
-    }
-  });
-});
-loadLessBtn.addEventListener("click", function (e) {
-  [].forEach.call(document.querySelectorAll("." + showClass), function (item, idx) {
-    if (idx < maxItems - 1) {
-      item.classList.remove(showClass);
-      item.classList.add(hiddenClass);
-    }
-
-    if (document.querySelectorAll("." + showClass).length === 0) {
-      loadMoreBtn.style.display = "block";
-      loadLessBtn.style.display = "none";
-      e.target.previousElementSibling.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center"
-      });
-    }
-  });
 }); //back-to-top
 
 var backTop = document.querySelector("#back-to-top"); // Setup isScrolling variable
@@ -434,33 +388,218 @@ serviceSvgs.forEach(function (serviceSvg) {
 // }, false);
 
 var albums = [{
-  name: "Matthias",
-  album: "sofa",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=1066105529/size=large/bgcol=ffffff/track=753121495/",
+  name: "Jemek Jemowit",
+  albumName: "wróg publiczny no. 1",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3621352702/size=large/bgcol=ffffff/",
+  service: "Recording / Mixing / Mastering",
+  hidden: true,
+  order: 1
+}, {
+  name: "Mittekill",
+  albumName: "Leaving the Wor_d ",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=519492224/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: false,
+  order: 4
+}, {
+  name: "Matias Aguayo &amp; Desdemonas",
+  albumName: "Sofarnopolis",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=1066105529/size=large/bgcol=ffffff/",
   service: "recording",
   hidden: false,
-  featured: false
+  order: 27
 }, {
-  name: "Matthias",
-  album: "sofa",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=1066105529/size=large/bgcol=ffffff/track=753121495/",
-  service: "recording",
-  hidden: true,
-  featured: false
+  name: "Mononoke",
+  albumName: "Pech+Schwefel",
+  source: "https://bandcamp.com/EmbeddedPlayer/track=1495086853/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: false,
+  order: 12
 }, {
-  name: "Matthias",
-  album: "sofa",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=1066105529/size=large/bgcol=ffffff/track=753121495/",
-  service: "recording",
-  hidden: true,
-  featured: true
+  name: "Best Of Both Worlds",
+  albumName: "Sandilé",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=2954250729/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: false,
+  order: 3
+}, {
+  name: "Farr",
+  albumName: "Convoluted ",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3725643485/size=large/bgcol=ffffff/",
+  service: "Mixing",
+  hidden: false,
+  order: 9
+}, {
+  name: "Gateway",
+  albumName: "Michal Wolski",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=968543870/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: false,
+  order: 6
+}, {
+  name: "Specific Objects",
+  albumName: "Twice Infinity EP ",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=26754830/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: false,
+  order: 7
+}, {
+  name: "Rosa Rendl",
+  albumName: "Opportunity Lover",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=1288873486/size=large/bgcol=ffffff/",
+  service: "Recording / Mixing (Partly)",
+  hidden: false,
+  order: 5
+}, {
+  name: "NOHE NOSHE",
+  albumName: "Rescue",
+  source: "https://bandcamp.com/EmbeddedPlayer/track=1729605102/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: false,
+  order: 9
+}, {
+  name: "Jemek Jemowit",
+  albumName: "Tekkno Polo (2020 remastered Version)",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=667803919/size=large/bgcol=ffffff/",
+  service: "Mixing / Mastering",
+  hidden: false,
+  order: 8
+}, {
+  name: "Philipp Gorbachev &amp; The Naked Man",
+  albumName: "I Don't Give A Snare ",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=952157788/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: false,
+  order: 26
+}, {
+  name: "Jemek Jemowit",
+  albumName: "Das Satanische Album",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=886540149/size=large/bgcol=ffffff/",
+  service: "Mixing / Mastering",
+  hidden: false,
+  order: 16
+}, {
+  name: "Thieves like us",
+  albumName: "Thieves like us",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3325742885/size=large/bgcol=ffffff/",
+  service: "Mixing / Mastering",
+  hidden: false,
+  order: 28
+}, {
+  name: "Marie Davidson",
+  albumName: "Chasing the light",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=2501281015/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: false,
+  order: 13
+}, {
+  name: "Jaakko Eino Kalevi",
+  albumName: "Out of Touch",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=2035736336/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: false,
+  order: 29
+}, {
+  name: "Jeans Team",
+  albumName: "Baby VHS Soundtracks",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=4109086013/size=large/bgcol=ffffff/",
+  service: "Recording / Mixing / Mastering",
+  hidden: false,
+  order: 19
+}, {
+  name: "Eric Fetcher",
+  albumName: "Extension",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=4005746737/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: false,
+  order: 20
+}, {
+  name: "Nohe Noshe",
+  albumName: "Where are you",
+  source: "https://bandcamp.com/EmbeddedPlayer/track=2807766807/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: false,
+  order: 1
+}, {
+  name: "Nancea",
+  albumName: "Comfort",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=1567242607/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: false,
+  order: 21
+}, {
+  name: "Essaie Pas",
+  albumName: "New Path (The Remixes)",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=2068900144/size=large/bgcol=ffffff/",
+  service: "Mixing",
+  hidden: false,
+  order: 22
+}, {
+  name: "Jeans Team",
+  albumName: "Kings of Dings",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=4011681791/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: false,
+  order: 18
+}, {
+  name: "Jeans Team",
+  albumName: "HADDU BOMBERJÄECKCHEN NAMOSH REMIX",
+  source: "https://bandcamp.com/EmbeddedPlayer/track=2488020357/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: false,
+  order: 23
+}, {
+  name: "Jeans Team",
+  albumName: "Keine Melodien",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=436594029/size=large/bgcol=ffffff/",
+  service: "Recording, Mixing and Mastering",
+  hidden: false,
+  order: 24
+}, {
+  name: "Jeans Team",
+  albumName: "Ding Dong",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=799794558/size=large/bgcol=ffffff/",
+  service: "Recording, Mixing and Mastering",
+  hidden: false,
+  order: 1
+}, {
+  name: "Jemek Jemowit",
+  albumName: "Jemek Jemowit is Doktor Dres",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3395150044/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: false,
+  order: 30
+}, {
+  name: "Johnny Batard",
+  albumName: "What Do You Want Me To Say? ",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=2674310104/size=large/bgcol=ffffff/",
+  service: "Recording",
+  hidden: false,
+  order: 25
+}, {
+  name: "Aemong",
+  albumName: "1000",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=773116255/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  hidden: false,
+  order: 21
+}, {
+  name: "Yula Kasp",
+  albumName: "Ocean Blues",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3717284526/size=large/bgcol=ffffff/",
+  service: "Mixing",
+  hidden: false,
+  order: 22
+}, {
+  name: "Marie Davidson &amp; Lamusa II",
+  albumName: "La Ecstase",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=10704035/size=large/bgcol=ffffff/",
+  service: "Mixing",
+  hidden: false,
+  order: 17
 }];
-
-function setAttributes(el, attrs) {
-  for (var key in attrs) {
-    el.setAttribute(key, attrs[key]);
-  }
-}
+var featuredItems = 12,
+    albumsTotalNumber = albums.length;
 
 function listenSection() {
   var ul = document.querySelector(".cards");
@@ -469,31 +608,87 @@ function listenSection() {
   for (var album in albums) {
     var li = document.createElement("li");
     li.className = "card";
+    var order = "".concat(albums[album].order); //const hidden = `${albums[album].hidden}`;
+    //alert(albums.length);
+
+    if (order > featuredItems) {
+      li.className = "card visually-hidden";
+    } //if (hidden === "true" ) { li.className = "card visually-hidden"; }
+
+
     var div = document.createElement("div");
     div.className = "music-info";
     var p = document.createElement("p");
     var p2 = document.createElement("p");
     var p3 = document.createElement("p");
     p.innerHTML = "".concat(albums[album].name);
+    p2.innerHTML = "".concat(albums[album].albumName);
+    p3.innerHTML = "".concat(albums[album].service);
     var player = document.createElement("div");
     player.className = "player-wrapper";
     var iframe = document.createElement("iframe");
     iframe.className = "musicPlayer";
-    setAttributes(iframe, {
-      "title": "".concat(albums[album].name),
-      "alt": "Please accept cookies to be able to listen",
-      "data-cookiescript": "accepted",
-      "data-src": "".concat(albums[album].source)
-    });
+    iframe.setAttribute("title", "".concat(albums[album].name));
+    iframe.setAttribute("alt", "Please accept cookies to be able to listen ".concat(albums[album].name));
+    iframe.setAttribute("data-cookiescript", "accepted");
+    iframe.setAttribute("data-src", "".concat(albums[album].source));
     fragment.appendChild(li);
-    fragment.appendChild(div);
+    li.style.order = "".concat(albums[album].order);
+    li.appendChild(div);
     div.appendChild(p);
     div.appendChild(p2);
     div.appendChild(p3);
-    fragment.appendChild(player);
+    li.appendChild(player);
+    player.appendChild(iframe);
   }
 
   ul.appendChild(fragment);
 }
 
-listenSection();
+listenSection(); //load more music albums
+// let parent = document.querySelector("ul"),
+//   items = parent.querySelectorAll("li"),
+
+var loadMoreBtn = document.querySelector("#loadMore"),
+    loadLessBtn = document.querySelector("#loadless"),
+    restOfAlbuns = albumsTotalNumber - featuredItems,
+    hiddenClass = "visually-hidden",
+    showClass = "visually"; // [].forEach.call(items, function(item, idx) {
+//   if (idx > maxItems - 1) {
+//     console.log(maxItems);
+//     console.log("hellloooo");
+//     item.classList.add(hiddenClass);
+//   }
+// });
+
+loadMoreBtn.addEventListener("click", function () {
+  [].forEach.call(document.querySelectorAll("." + hiddenClass), function (item, idx) {
+    if (idx < restOfAlbuns - 1) {
+      item.classList.remove(hiddenClass);
+      item.classList.add(showClass);
+    }
+
+    if (document.querySelectorAll("." + hiddenClass).length === 0) {
+      loadMoreBtn.style.display = "none";
+      loadLessBtn.style.display = "block";
+    }
+  });
+});
+loadLessBtn.addEventListener("click", function (e) {
+  [].forEach.call(document.querySelectorAll("." + showClass), function (item, idx) {
+    if (idx < restOfAlbuns - 1) {
+      item.classList.remove(showClass);
+      item.classList.add(hiddenClass);
+    }
+
+    if (document.querySelectorAll("." + showClass).length === 0) {
+      loadMoreBtn.style.display = "block";
+      loadLessBtn.style.display = "none";
+      e.target.previousElementSibling.scrollIntoView({
+        behavior: "smooth",
+        block: "top",
+        inline: "center"
+      });
+    }
+  });
+});

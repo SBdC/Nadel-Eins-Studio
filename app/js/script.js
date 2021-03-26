@@ -50,11 +50,9 @@ CLOSE.addEventListener("click", revealMenu, false);
 let reads = Array.from(document.querySelectorAll(".readMore"));
 let erases = Array.from(document.querySelectorAll(".viewLess"));
 
-let openText = false;
 
 let revealText = e => {
-  console.log(openText + "is open text");
-  console.log("heyho");
+ 
   let idTarget = e.target.id;
 
   let dropDown = document.querySelector(`div[data-key="${idTarget}"]`);
@@ -798,28 +796,22 @@ restOfAlbuns = albumsTotalNumber - featuredItems,
 hiddenClass = "visually-hidden",
 showClass = "visually";
 
-// [].forEach.call(items, function(item, idx) {
-//   if (idx > maxItems - 1) {
-//     console.log(maxItems);
-//     console.log("hellloooo");
-//     item.classList.add(hiddenClass);
-//   }
-// });
-
 loadMoreBtn.addEventListener("click", function() {
 [].forEach.call(document.querySelectorAll("." + hiddenClass), function(
   item,
   idx
 ) {
-  if (idx < restOfAlbuns - 1) {
+  if (idx < restOfAlbuns ) {
     item.classList.remove(hiddenClass);
     item.classList.add(showClass);
   }
 
-  if (document.querySelectorAll("." + hiddenClass).length === 0) {
+  if (document.querySelectorAll("." + hiddenClass).length === restOfAlbuns) {
     loadMoreBtn.style.display = "none";
-    loadLessBtn.style.display = "block";
+    loadLessBtn.classList.remove("visually-hidden");
+   
   }
+ 
 });
 });
 
@@ -828,18 +820,18 @@ loadLessBtn.addEventListener("click", function(e) {
   item,
   idx
 ) {
-  if (idx < restOfAlbuns - 1) {
+  if (idx < restOfAlbuns ) {
     item.classList.remove(showClass);
     item.classList.add(hiddenClass);
   }
 
   if (document.querySelectorAll("." + showClass).length === 0) {
     loadMoreBtn.style.display = "block";
-    loadLessBtn.style.display = "none";
-
+    loadLessBtn.classList.add("visually-hidden");
+  
     e.target.previousElementSibling.scrollIntoView({
       behavior: "smooth",
-      block: "top",
+      block: "center",
       inline: "center"
     });
   }
