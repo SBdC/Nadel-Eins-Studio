@@ -473,69 +473,99 @@ serviceSvgs.forEach(serviceSvg =>
 
 // }, false);
 
-const albums = [{
+const albums = [
+  {
+    name: "Yula Kasp & Mi.RO",
+    albumName: "Mayumi",
+    source: "https://bandcamp.com/EmbeddedPlayer/album=400103678/size=large/bgcol=ffffff/",
+    service: "Mastering",
+    order: 1
+  
+  },
+
+  {
+    name: "The Zenmenn",
+    albumName: "Enter the Zenmenn",
+    source: "https://bandcamp.com/EmbeddedPlayer/album=1477325246/size=large/bgcol=ffffff/",
+    service: "Recording",
+    order: 2
+  
+  },
+  {
+    name: "Servicio al Cliente",
+    albumName: "Servicio al Cliente",
+    source: "https://bandcamp.com/EmbeddedPlayer/album=2655763897/size=large/bgcol=ffffff/",
+    service: "Mixing / Mastering",
+    order: 3
+   
+    
+  },
+  {
   name: "Jemek Jemowit",
   albumName: "wróg publiczny no. 1",
   source: "https://bandcamp.com/EmbeddedPlayer/album=3621352702/size=large/bgcol=ffffff/",
   service: "Recording / Mixing / Mastering",
   hidden: true,
-  order: 1
- 
-  
-},
-{
-  name: "Mittekill",
-  albumName: "Leaving the Wor_d ",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=519492224/size=large/bgcol=ffffff/",
-  service: "Mastering",
-  hidden: false,
   order: 4
-  
-  
-},
-{
-  name: "Matias Aguayo &amp; Desdemonas",
-  albumName: "Sofarnopolis",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=1066105529/size=large/bgcol=ffffff/",
-  service: "recording",
-  hidden: false,
-  order: 27
  
+  
 },
-{
-  name: "Mononoke",
-  albumName: "Pech+Schwefel",
-  source: "https://bandcamp.com/EmbeddedPlayer/track=1495086853/size=large/bgcol=ffffff/",
-  service: "Mastering",
-  hidden: false,
-  order: 12
 
+{
+  name: "Nohe Noshe",
+  albumName: "Where are you",
+  source: "https://bandcamp.com/EmbeddedPlayer/track=2807766807/size=large/bgcol=ffffff/",
+  service: "Recording",
+  order: 5,
+  
 },
+
+{
+  name: "Jeans Team",
+  albumName: "Ding Dong",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=799794558/size=large/bgcol=ffffff/",
+  service: "Recording, Mixing and Mastering",
+  order: 6
+},
+
+
 {
   name: "Best Of Both Worlds",
   albumName: "Sandilé",
   source: "https://bandcamp.com/EmbeddedPlayer/album=2954250729/size=large/bgcol=ffffff/",
   service: "Mastering",
-  hidden: false,
-  order: 3
+  order: 7
 
 },
 {
-  name: "Farr",
-  albumName: "Convoluted ",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=3725643485/size=large/bgcol=ffffff/",
-  service: "Mixing",
+  name: "Rosa Rendl",
+  albumName: "Opportunity Lover",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=1288873486/size=large/bgcol=ffffff/",
+  service: "Recording / Mixing (Partly)",
   hidden: false,
-  order: 9
-
+  order: 8
 },
+
+{
+  name: "Mittekill",
+  albumName: "Leaving the Wor_d ",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=519492224/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  order: 9
+  
+},
+
+
+
+
+
+
 {
   name: "Gateway",
   albumName: "Michal Wolski",
   source: "https://bandcamp.com/EmbeddedPlayer/album=968543870/size=large/bgcol=ffffff/",
   service: "Mastering",
-  hidden: false,
-  order: 6
+  order: 10
 
 },
 {
@@ -543,18 +573,15 @@ const albums = [{
   albumName: "Twice Infinity EP ",
   source: "https://bandcamp.com/EmbeddedPlayer/album=26754830/size=large/bgcol=ffffff/",
   service: "Mastering",
-  hidden: false,
-  order: 7
+  order: 11
  
 },
-
 {
-  name: "Rosa Rendl",
-  albumName: "Opportunity Lover",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=1288873486/size=large/bgcol=ffffff/",
-  service: "Recording / Mixing (Partly)",
-  hidden: false,
-  order: 5
+  name: "Jemek Jemowit",
+  albumName: "Tekkno Polo (2020 remastered Version)",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=667803919/size=large/bgcol=ffffff/",
+  service: "Mixing / Mastering",
+  order: 12
 },
 
 {
@@ -562,107 +589,98 @@ const albums = [{
   albumName: "Rescue",
   source: "https://bandcamp.com/EmbeddedPlayer/track=1729605102/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: false,
-  order: 9
+  order: 13
   
 },
 {
-  name: "Jemek Jemowit",
-  albumName: "Tekkno Polo (2020 remastered Version)",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=667803919/size=large/bgcol=ffffff/",
-  service: "Mixing / Mastering",
-  hidden: false,
-  order: 8
+  name: "Farr",
+  albumName: "Convoluted ",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3725643485/size=large/bgcol=ffffff/",
+  service: "Mixing",
+  order: 14
+
 },
 {
-  name: "Philipp Gorbachev &amp; The Naked Man",
-  albumName: "I Don't Give A Snare ",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=952157788/size=large/bgcol=ffffff/",
+  name: "Mononoke",
+  albumName: "Pech+Schwefel",
+  source: "https://bandcamp.com/EmbeddedPlayer/track=1495086853/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  order: 15
+
+},
+
+{
+  name: "Marie Davidson",
+  albumName: "Chasing the light",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=2501281015/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: false,
-  order: 26
+  order: 16
 },
 {
   name: "Jemek Jemowit",
   albumName: "Das Satanische Album",
   source: "https://bandcamp.com/EmbeddedPlayer/album=886540149/size=large/bgcol=ffffff/",
   service: "Mixing / Mastering",
-  hidden: false,
-  order: 16
-},
-{
-  name: "Thieves like us",
-  albumName: "Thieves like us",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=3325742885/size=large/bgcol=ffffff/",
-  service: "Mixing / Mastering",
-  hidden: false,
-  order: 28
-},
-{
-  name: "Marie Davidson",
-  albumName: "Chasing the light",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=2501281015/size=large/bgcol=ffffff/",
-  service: "Recording",
-  hidden: false,
-  order: 13
-},
-
-{
-  name: "Jaakko Eino Kalevi",
-  albumName: "Out of Touch",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=2035736336/size=large/bgcol=ffffff/",
-  service: "Recording",
-  hidden: false,
-  order: 29
+  order: 17
 },
 {
   name: "Jeans Team",
   albumName: "Baby VHS Soundtracks",
   source: "https://bandcamp.com/EmbeddedPlayer/album=4109086013/size=large/bgcol=ffffff/",
   service: "Recording / Mixing / Mastering",
-  hidden: false,
+  order: 18
+},
+
+{
+  name: "Marie Davidson &amp; Lamusa II",
+  albumName: "La Ecstase",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=10704035/size=large/bgcol=ffffff/",
+  service: "Mixing",
   order: 19
 },
+
+{
+  name: "Jeans Team",
+  albumName: "Kings of Dings",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=4011681791/size=large/bgcol=ffffff/",
+  service: "Recording",
+  order: 20
+},
+
 {
   name: "Eric Fetcher",
   albumName: "Extension",
   source: "https://bandcamp.com/EmbeddedPlayer/album=4005746737/size=large/bgcol=ffffff/",
   service: "Mastering",
-  hidden: false,
-  order: 20
-},
-{
-  name: "Nohe Noshe",
-  albumName: "Where are you",
-  source: "https://bandcamp.com/EmbeddedPlayer/track=2807766807/size=large/bgcol=ffffff/",
-  service: "Recording",
-  hidden: false,
-  order: 1,
-  
+  order: 21
 },
 {
   name: "Nancea",
   albumName: "Comfort",
   source: "https://bandcamp.com/EmbeddedPlayer/album=1567242607/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: false,
-  order: 21
+  order: 22
+},
+{
+  name: "Aemong",
+  albumName: "1000",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=773116255/size=large/bgcol=ffffff/",
+  service: "Mastering",
+  order: 23
+},
+{
+  name: "Yula Kasp",
+  albumName: "Ocean Blues",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3717284526/size=large/bgcol=ffffff/",
+  service: "Mixing",
+  order: 24
 },
 {
   name: "Essaie Pas",
   albumName: "New Path (The Remixes)",
   source: "https://bandcamp.com/EmbeddedPlayer/album=2068900144/size=large/bgcol=ffffff/",
   service: "Mixing",
-  hidden: false,
-  order: 22
-},
-{
-  name: "Jeans Team",
-  albumName: "Kings of Dings",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=4011681791/size=large/bgcol=ffffff/",
-  service: "Recording",
-  hidden: false,
-  order: 18
+  order: 25
 },
 
 {
@@ -670,65 +688,68 @@ const albums = [{
   albumName: "HADDU BOMBERJÄECKCHEN NAMOSH REMIX",
   source: "https://bandcamp.com/EmbeddedPlayer/track=2488020357/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: false,
-  order: 23
+  order: 26
 },
 {
   name: "Jeans Team",
   albumName: "Keine Melodien",
   source: "https://bandcamp.com/EmbeddedPlayer/album=436594029/size=large/bgcol=ffffff/",
   service: "Recording, Mixing and Mastering",
-  hidden: false,
-  order: 24
+  order: 27
 },
+
 {
-  name: "Jeans Team",
-  albumName: "Ding Dong",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=799794558/size=large/bgcol=ffffff/",
-  service: "Recording, Mixing and Mastering",
-  hidden: false,
-  order: 1
-},
-{
-  name: "Jemek Jemowit",
-  albumName: "Jemek Jemowit is Doktor Dres",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=3395150044/size=large/bgcol=ffffff/",
+  name: "Philipp Gorbachev &amp; The Naked Man",
+  albumName: "I Don't Give A Snare ",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=952157788/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: false,
-  order: 30
+  order: 28
 },
+
 {
   name: "Johnny Batard",
   albumName: "What Do You Want Me To Say? ",
   source: "https://bandcamp.com/EmbeddedPlayer/album=2674310104/size=large/bgcol=ffffff/",
   service: "Recording",
-  hidden: false,
-  order: 25
+  order: 29
 },
 {
-  name: "Aemong",
-  albumName: "1000",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=773116255/size=large/bgcol=ffffff/",
-  service: "Mastering",
-  hidden: false,
-  order: 21
+  name: "Matias Aguayo &amp; Desdemonas",
+  albumName: "Sofarnopolis",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=1066105529/size=large/bgcol=ffffff/",
+  service: "recording",
+  order: 30
+ 
 },
 {
-  name: "Yula Kasp",
-  albumName: "Ocean Blues",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=3717284526/size=large/bgcol=ffffff/",
-  service: "Mixing",
-  hidden: false,
-  order: 22
+  name: "Thieves like us",
+  albumName: "Thieves like us",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3325742885/size=large/bgcol=ffffff/",
+  service: "Mixing / Mastering",
+  order: 31
 },
+
 {
-  name: "Marie Davidson &amp; Lamusa II",
-  albumName: "La Ecstase",
-  source: "https://bandcamp.com/EmbeddedPlayer/album=10704035/size=large/bgcol=ffffff/",
-  service: "Mixing",
-  hidden: false,
-  order: 17
+  name: "Jaakko Eino Kalevi",
+  albumName: "Out of Touch",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=2035736336/size=large/bgcol=ffffff/",
+  service: "Recording",
+  order: 32
 },
+
+
+
+
+{
+  name: "Jemek Jemowit",
+  albumName: "Jemek Jemowit is Doktor Dres",
+  source: "https://bandcamp.com/EmbeddedPlayer/album=3395150044/size=large/bgcol=ffffff/",
+  service: "Recording",
+  order: 33
+},
+
+
+
 ];
 
 let featuredItems = 12,
@@ -744,19 +765,18 @@ function listenSection() {
     const li = document.createElement("li");
     li.className = "card";
     const order = `${albums[album].order}`;
-    //const hidden = `${albums[album].hidden}`;
-   //alert(albums.length);
+
     if (order > featuredItems ) { li.className = "card visually-hidden"; }
-    //if (hidden === "true" ) { li.className = "card visually-hidden"; }
+  
     const div = document.createElement("div");
     div.className = "music-info";
     const p = document.createElement("p");
     const p2 = document.createElement("p");
-    const p3 = document.createElement("p");
+    
 
     p.innerHTML = `${albums[album].name}`;
     p2.innerHTML = `${albums[album].albumName}`;
-    p3.innerHTML = `${albums[album].service}`;
+   
 
     const player = document.createElement("div");
     player.className = "player-wrapper";
@@ -774,7 +794,7 @@ function listenSection() {
     li.appendChild(div);
     div.appendChild(p);
     div.appendChild(p2);
-    div.appendChild(p3);
+  
     li.appendChild(player);
     player.appendChild(iframe);
   }

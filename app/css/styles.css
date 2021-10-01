@@ -260,6 +260,9 @@ button {
   border: none;
   background-color: transparent; }
 
+svg title {
+  display: none; }
+
 .opaque {
   z-index: 99;
   position: fixed;
@@ -528,14 +531,29 @@ services
     text-align: center;
     padding: 0;
     margin: 0; }
+  .music .featured-section {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0; }
+    .music .featured-section li:first-of-type {
+      margin-right: 10px; }
+    .music .featured-section li:last-of-type {
+      margin-left: 10px; }
   .music .card.featured {
-    flex: 1 1 100% !important; }
+    flex: 1 1 100%; }
     .music .card.featured .player-wrapper {
       padding-bottom: 56.25% !important; }
+      .music .card.featured .player-wrapper iframe {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; }
       .music .card.featured .player-wrapper img {
-        border-left: 2px solid #1b1b1c;
-        border-right: 2px solid #1b1b1c;
-        border-bottom: 2px solid #1b1b1c; }
+        border: 2px solid #1b1b1c; }
   .music .card {
     display: flex;
     flex-direction: column;
@@ -706,6 +724,10 @@ Footer
 .services .icon-cloud-line,
 .staff .icon-cloud-line {
   display: none; }
+
+@media screen and (min-width: 561px) {
+  .card.featured {
+    flex: 1 0 49% !important; } }
 
 @media screen and (min-width: 561px) and (max-width: 750px) {
   header .banner {

@@ -157,6 +157,12 @@ button {
   background-color: transparent;
 }
 
+svg {
+  title{
+    display: none;
+  }
+}
+
 .opaque {
   z-index: 99;
   position: fixed;
@@ -599,16 +605,41 @@ services
     margin: 0;
   }
 
+.featured-section{
+
+ display: flex; 
+flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+
+
+
+ li:first-of-type {
+   margin-right: 10px;
+ }
+ li:last-of-type {
+  margin-left: 10px;
+}
+}
   .card.featured{
-    flex: 1 1 100% !important;
+    flex: 1 1 100%;
 
       .player-wrapper{
         padding-bottom: 56.25% !important;
 
+        iframe{
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
         img {
-          border-left:2px solid $text;
-          border-right:2px solid $text;
-          border-bottom:2px solid $text;
+          border:2px solid $text;
 
         }
     }
@@ -893,6 +924,13 @@ Footer
     display: none;
   }
 }
+
+@media screen and (min-width: 561px){
+  .card.featured{
+    flex: 1 0 49% !important;
+}
+}
+
 
 @media screen and (min-width: 561px) and (max-width: 750px) {
   header {
