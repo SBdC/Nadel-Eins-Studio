@@ -1,4 +1,4 @@
-
+console.log("hey");
 
 //NAVIGATION
 const OVERLAY = document.getElementById("overlay");

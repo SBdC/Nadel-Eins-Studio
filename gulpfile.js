@@ -50,6 +50,7 @@ function scriptsLint() {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
+    
 }
 
 

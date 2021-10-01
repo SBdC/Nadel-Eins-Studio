@@ -725,7 +725,7 @@ Footer
 .staff .icon-cloud-line {
   display: none; }
 
-@media screen and (min-width: 561px) {
+@media screen and (min-width: 510px) {
   .card.featured {
     flex: 1 0 49% !important; } }
 
